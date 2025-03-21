@@ -1,9 +1,8 @@
 
 > [!faq] About this Definition
-> Class: COMP2009
 > Subject: #dataStructuresAndAlgorthims
+> Topics: #definition #coding/language/cpp #coding/language/c 
 > Date: 21/03/2025 at 11:10AM
-> Topics: #definition #coding/cpp #coding/c 
 
 ## What is Big O Notation?
 

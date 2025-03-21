@@ -1,9 +1,8 @@
 
 > [!faq] About this Definition
-> Class: COMP2019
 > Subject: #systemsProgramming1 #dataStructuresAndAlgorthims 
-> Date: 21/02/2025 at ~11:00AM
-> Topics: #definition  #coding/c #coding/cpp 
+> Topics: #definition  #coding/language/c #coding/language/cpp 
+> Date: 21/03/2025 at 3:18PM
 
 ## Definition  
 `malloc` (**memory allocation**) is a function in C that dynamically allocates a block of memory on the **heap**. It allows you to create variables or arrays at runtime instead of defining a fixed size at compile-time.

@@ -1,9 +1,12 @@
 
 > [!faq] About this Definition
-> Class: COMP2019
 > Subject: #systemsProgramming1 
-> Date: 21/02/2025 at ~11:00AM
-> Topics: #definition  #coding/c #coding/cpp 
+> Topics: #definition  #coding/language/c #coding/language/cpp 
+> Date: 20/03/2025 at 1:15PM
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/F8AbOfQwl1c" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Definition  
 A **linked list** is a data structure used to store a sequence of elements, where each element (called a **node**) contains:  

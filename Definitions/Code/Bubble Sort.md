@@ -2,8 +2,8 @@
 > [!faq] About this Definition
 > Class: COMP2009
 > Subject: #dataStructuresAndAlgorthims 
-> Date: 21/02/2025 at ~11:00AM
-> Topics: #definition  #coding/c #coding/cpp 
+> Topics: #definition  #coding/language/c #coding/language/cpp 
+> Date: 21/03/2025 at 12:50PM
 
 ## How does the bubble sort work?
 

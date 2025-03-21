@@ -1,8 +1,9 @@
+
 > [!faq] About this Lecture
 > Class: COMP1014
 > Subject: #thinkingAboutData
 > Date: 2025-03-21 at 12:00
-> Topics: #coding/r  #math 
+> Topics: #coding/language/r  #math 
 
 ## Overview
 

@@ -1,3 +1,4 @@
+
 > [!faq] About this Lecture
 > Class: MATH1006
 > Subject: #discreteMathematics 

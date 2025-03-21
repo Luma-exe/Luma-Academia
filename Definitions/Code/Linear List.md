@@ -1,8 +1,7 @@
 > [!faq] About this Definition
-> Class: COMP2009
 > Subject: #dataStructuresAndAlgorthims 
-> Date: 21/02/2025 at ~11:00AM
-> Topics: #definition  #coding/c #coding/cpp 
+> Topics: #definition  #coding/language/c #coding/language/cpp 
+> Date: 21/03/2025 at 1:23PM
 
 ## What is a Linear List?  
 A **linear list** (or linear data structure) is a collection of elements **arranged in a sequential order**. Each element has a unique **predecessor** (except the first) and a **successor** (except the last). The order of elements in the list is **determined by their logical relationships**, not by physical memory locations.
@@ -35,6 +34,9 @@ A **linear list** (or linear data structure) is a collection of elements **arran
   - **Deletion** – More efficient than arrays but requires traversal (`O(n)`).  
   - **Traversal** – `O(n)`, since nodes are accessed sequentially.  
   - **Searching** – `O(n)` in an unordered list.  
+
+> [!faq] Recap
+> Quick Recap on [[Linked List]] and on what is [[Big O Notation]]?
 
 ---
 

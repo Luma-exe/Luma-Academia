@@ -1,9 +1,8 @@
 
 > [!faq] About this Definition
-> Class: COMP2019
 > Subject: #dataStructuresAndAlgorthims 
-> Date: 21/02/2025 at ~11:00AM
-> Topics: #definition #coding/cpp 
+> Topics: #definition #coding/language/cpp 
+> Date: 20/03/2025 at 1:18PM
 
 ## Definition  
 **Operator overloading** allows us to redefine how operators work for user-defined types (classes). This makes it possible to use operators (`+`, `-`, `*`, `==`, etc.) with objects just like with built-in types.

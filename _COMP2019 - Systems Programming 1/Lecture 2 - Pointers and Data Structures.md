@@ -3,58 +3,76 @@
 > Class: COMP2019
 > Subject: #systemsProgramming1
 > Date: 21/02/2025 at ~11:00AM
-> Topics: #coding #coding/c
+> Topics:  #coding/language/c 
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/DplxIq0mc_Y" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Pointers
 
 - Memory addresses of variables.
 - Access and modify addresses.
-- Declaration syntax: `t *` refers to the address of a variable of type `t`.
 
 ```c
 int x = 10;
 int *px = &x;
 ```
 
-- Dereferencing:
+- `x` is an integer variable with a value of `10`.
+- `&x` gets the memory address of `x`.
+- `int *px` declares `px` as a pointer to an integer (`int *`), and it stores the address of `x` (`&x`).
+
+So, `px` holds the memory address where `x` is stored.
+
+- To be able to get the value of x after creating a pointer to it we must dereference. To do this we do the a `*`  followed by the name of the pointer so `*px`. This will give us the value which is stored at the address which `px` holds.
 
 ```c
 *px = 20;
 ```
 
-## Pointer Operations
+### Pointer Operations
 
-- `&amp;` : address of a variable.
+- `&` : address of a variable.
 - `*` : dereferencing, fetches contents of a pointer.
+	- Although `variable type *px` is also used when creating a pointer e.g. `int *px`
 - `=` : assignment.
 - `==`, `!=` : equality checks.
 - `++`, `--`, `+`, `-` : incrementing and decrementing.
 - Pointer arithmetic examples:
     - `p = p + n;`: moves pointer `p` to point to the n-th object.
 
-## Predefined Pointer
+### Predefined Pointer
 
-- Only predefined pointer constant is `(void *)0`, often defined as `NULL`.
-- Represents no reference to anything.
+- The only predefined pointer constant is **`(void *)0`**, which is often defined as **`NULL`**.
+- **`(void *)0`** is a pointer that points to **no memory address** (null pointer).
+    - **`(void *)`** means it's a pointer of **generic type** (void pointer), which can point to any data type.
+    - **`0`** is the value that indicates "no address."
+- **`NULL`** is a more commonly used alias for this value and represents a pointer that doesn’t point to any valid memory.
 
-## Example of Pointer
+In simple terms, **`NULL`** or **`(void *)0`** means the pointer isn't pointing to any object or memory location.
+
+#### Example of Pointer
 
 ```c
 #include <stdio.h>
-```
 
-int main() { int x = 100; // x is an integer variable int *ptr = &x; // ptr is a pointer to an integer x printf("x = %d\n", x); printf("ptr = %p\n", ptr); } ```
+int main() {
+    int x = 100; // x is an integer variable
+    int *ptr = &x; // ptr is a pointer to an integer
 
-## Pointer Examples
+    printf("x = %d\n", x); // Print the value of x
+    printf("ptr = %p\n", ptr); // Print the address stored in ptr (address of x)
 
-```c
-int x = 10, y = 20, z[5];
-int *p; // p is a pointer to int
-p = &amp;x; // p now points to x
-y = *p; // y is now 10
-*p = 100; // x is now 100
-p = &z[0]; // p now points to z[0]
-p++; // p now points to z[1]
+    // Pointer example
+    int x_val = 10, y = 20, z[5];
+    int *p; // p is a pointer to int
+    p = &x_val; // p now points to x_val
+    y = *p; // y is now 10 (the value at the address pointed by p)
+    *p = 100; // x_val is now 100 (modifying the value at the address pointed by p)
+    p = &z[0]; // p now points to the first element of array z
+    p++; // p now points to the second element of array z
+}
 ```
 
 ## Why Pointers?

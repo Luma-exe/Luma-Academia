@@ -3,7 +3,7 @@
 > Class: COMP1014
 > Subject: #thinkingAboutData
 > Date: 21/02/2025 at ~11:00AM
-> Topics: #coding/r #math
+> Topics: #coding/language/r #math
 
 ## 2.1 Iraqi Refugees
 

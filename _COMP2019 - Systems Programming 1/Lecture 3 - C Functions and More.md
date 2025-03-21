@@ -3,7 +3,7 @@
 > Class: COMP2019
 > Subject: #systemsProgramming1
 > Date: 21/02/2025 at ~11:00AM
-> Topics: #coding #coding/c
+> Topics: #coding #coding/language/c
 
 ## Source Files (.c)
 

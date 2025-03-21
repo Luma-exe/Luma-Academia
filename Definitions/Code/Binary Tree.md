@@ -1,9 +1,8 @@
 
 > [!faq] About this Definition
-> Class: COMP2019
 > Subject: #systemsProgramming1 
+> Topics: #definition  #coding/language/c #coding/language/cpp 
 > Date: 21/02/2025 at ~11:00AM
-> Topics: #definition  #coding/c #coding/cpp 
 
 ## Definition  
 A **binary tree** is a hierarchical data structure in which each node has at most **two children**:  

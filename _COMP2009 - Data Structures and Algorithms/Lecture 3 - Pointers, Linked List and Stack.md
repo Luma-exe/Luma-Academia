@@ -1,8 +1,9 @@
+
 > [!faq] About this Lecture
 > Class: COMP2009
 > Subject: #dataStructuresAndAlgorthims 
 > Date: 2025-03-21 at 11:55
-> Topics: #coding/cpp  
+> Topics: #coding/language/cpp  
 
 ## Main Contents of Lecture
 

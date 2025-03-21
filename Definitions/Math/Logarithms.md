@@ -1,10 +1,8 @@
-#definition
 
 > [!faq] About this Definition
-> Class: MATH1006
 > Subject: #discreteMathematics 
-> Date: 21/02/2025 at ~11:00AM
 > Topics: #definition #math/discreteMathematics 
+> Date: 20/03/2025 at 11:34AM
 
 ### What is a Logarithms?
 

@@ -2,8 +2,8 @@
 > [!faq] About this Lecture
 > Class: COMP2009
 > Subject: #dataStructuresAndAlgorthims
-> Date: 21/02/2025 at ~11:00AM
-> Topics: #coding #coding/cpp 
+> Date: 13/03/2025 at 12:03AM
+> Topics: #coding #coding/language/cpp 
 
 ### Program Complexity
 
