@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "4bc298789e441413",
+        "id": "fb8dec45ccad5bcf",
         "type": "tabs",
         "children": [
           {
-            "id": "2b4ea27e983726ab",
+            "id": "1def349437ca17a9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_COMP2019 - Systems Programming 1/Lecture 2 - Pointers and Data Structures.md",
+                "file": "_COMP2019 - Systems Programming 1/Lecture 3 - C Functions and More.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 2 - Pointers and Data Structures"
+              "title": "Lecture 3 - C Functions and More"
             }
           }
         ]
@@ -54,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#math/discreteMathematics",
+                "query": "tag:#coding",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_COMP2019 - Systems Programming 1/Lecture 2 - Pointers and Data Structures.md",
+                "file": "_COMP2019 - Systems Programming 1/Lecture 3 - C Functions and More.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Lecture 2 - Pointers and Data Structures"
+              "title": "Backlinks for Lecture 3 - C Functions and More"
             }
           },
           {
@@ -114,12 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Definitions/Code/Bubble Sort.md",
+                "file": "_COMP2019 - Systems Programming 1/Lecture 3 - C Functions and More.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Bubble Sort"
+              "title": "Outgoing links from Lecture 3 - C Functions and More"
             }
           },
           {
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_COMP2019 - Systems Programming 1/Lecture 2 - Pointers and Data Structures.md",
+                "file": "_COMP2019 - Systems Programming 1/Lecture 3 - C Functions and More.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 2 - Pointers and Data Structures"
+              "title": "Outline of Lecture 3 - C Functions and More"
             }
           },
           {
@@ -186,34 +186,34 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "_MATH1006 - Discrete Mathematics/Lecture 3 - Functions.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 2 - Sets Continued.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 1 - Counting & Sets.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 3 - Pointers, Linked List and Stack.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 2 - Algorithm Analysis and Search Algorithms.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 1 - Introduction and Algorithm Design Part A.md",
     "_COMP2019 - Systems Programming 1/Lecture 3 - C Functions and More.md",
+    "Definitions/Code/Structs.md",
+    "Definitions/Code/Enumerated.md",
+    "Definitions/Code/typedef.md",
     "_COMP2019 - Systems Programming 1/Lecture 2 - Pointers and Data Structures.md",
-    "_COMP2019 - Systems Programming 1/Lecture 1 - Introduction.md",
-    "_COMP1014 - Thinking about Data/Lecture 3 - Maternal Smoking and Birth Weight.md",
-    "_COMP1014 - Thinking about Data/Lecture 2 - Counting Eels and Iraqi Refugees.md",
-    "_COMP1014 - Thinking about Data/Lecture 1 - Introduction to Data Science.md",
-    "_COMP1014 - Thinking about Data/Lecture 0 - Introduction to R.md",
-    "language",
-    "Images/Images.md",
-    "Images/Pasted image 20250320105548.png",
-    "Definitions/Math/Logarithms.md",
-    "Definitions/Definitions.md",
-    "Definitions/Math/Math.md",
-    "Definitions/Code/Operator Overloading.md",
-    "Definitions/Code/Malloc.md",
+    "Definitions/Code/Unions.md",
     "Definitions/Code/Linked List.md",
-    "Definitions/Code/Linear List.md",
-    "Definitions/Code/Format Specifiers.md",
-    "Definitions/Code/Constructor and Deconstructor.md",
-    "Definitions/Code/Bubble Sort.md",
-    "Definitions/Code/Code.md",
+    "Definitions/Code/Malloc.md",
+    "Templates/Youtube Video.md",
+    "Templates/Templates.md",
+    "Templates/Recap.md",
+    "Templates/Notes.md",
+    "Templates/Note Template.md",
+    "Templates/Lecture Template.md",
+    "Templates/Definition Template.md",
+    "Definitions/Code/Abstraction.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 2 - Algorithm Analysis and Search Algorithms.md",
+    "Definitions/Code/Key Rules of C Programming.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 3 - Pointers, Linked List and Stack.md",
     "Definitions/Code/Binary Tree.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 2 - Sets Continued.md",
+    "_COMP2019 - Systems Programming 1/Lecture 1 - Introduction.md",
+    "language",
+    "README.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 3 - Functions.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 1 - Counting & Sets.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 1 - Introduction and Algorithm Design Part A.md",
+    "Images/Pasted image 20250320105548.png",
     "codingasd",
     "Tags/#math",
     "coding/language/c/pointers",

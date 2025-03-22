@@ -21,17 +21,16 @@
 
 ## Pointers
 
+> [!faq] Notes
+> More in-depth notes on [[Lecture 2 - Pointers and Data Structures]]
+
 - Essential for programming in C/C++
-    
 - Definition: A variable that stores a memory address.
-    
 - Characteristics:
-    
     - Can be initialized by NULL/null.
     - Function names and array names are pointers.
     - Can be passed to and returned from functions.
 - **Key Concepts**:
-    
     - Distinction between object pointer, address, and value of the pointer.
 
 - **Pointer Declarations**:

@@ -16,7 +16,7 @@ void* malloc(size_t size);
 - Returns a `void*` pointer to the allocated memory, or `NULL` if allocation fails.
 - The allocated memory **is not initialized** (it contains garbage values).
 
-## Example: Allocating an Integer
+### Example: Allocating an Integer
 
 ```c
 #include <stdio.h>
@@ -38,7 +38,7 @@ int main() {
 }
 ```
 
-## Example: Allocating an Array
+### Example: Allocating an Array
 
 ```c
 #include <stdio.h>
@@ -75,3 +75,8 @@ int main() {
 - Always check if `malloc` returns `NULL` to avoid segmentation faults.
 - The allocated memory contains **garbage values** (use `calloc` if you need zero-initialized memory).
 - Always **free** allocated memory using `free(ptr)` to avoid memory leaks.
+
+## Further Notes on Malloc used in Linked Lists
+
+> [!faq] Malloc used in Linked List
+> Here you can find notes on malloc being used in a linked list ![[Linked List#What is malloc?]]

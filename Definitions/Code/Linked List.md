@@ -91,6 +91,9 @@ int main() {
 
 # What is malloc?
 
+> [!faq] Notes
+> More in-depth notes on [[Malloc]]
+
 Here's another example of creating a linked list but with for loops and we'll break down malloc is.
 
 ```c
