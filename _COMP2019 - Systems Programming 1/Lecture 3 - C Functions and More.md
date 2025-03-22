@@ -32,6 +32,9 @@
     
 - Acts as a less error-prone way to include content
 
+> [!faq] Notes
+> More in-depth notes on [[Header Files]]
+
 ## Basics of Functions
 
 - Collection of statements to perform a specific task
@@ -45,6 +48,8 @@
     
     ```c
     return_type function_name(parameter list);
+    
+	// e.g. int returnNum(int input)
     ```
     
 - Parameter names are optional but types are required
@@ -76,7 +81,7 @@
 
 ## Visibility
 
-- Functions are visible from their declaration throughout the program
+- Functions are visible from (so not before) their declaration throughout the program
 - `static` qualifier makes a function invisible outside its source file
 - C standard library provides many built-in functions
 
@@ -85,12 +90,27 @@
 ```c
 #include <stdio.h>
 
+void swapit(int, int); // we do this so we can call the function in main as it is declared after main
 
-void swapit(int, int);
+int main() {
+    int a = 1, b = 2;
 
-int main() { int a=1, b=2; printf("main: a is %d and b is %d\n", a, b); swapit(a, b); printf("main: after change, a is %d and b is %d\n", a, b); }
+    printf("main: a is %d and b is %d\n", a, b);
+    swapit(a, b);
+    printf("main: after change, a is %d and b is %d\n", a, b);
 
-void swapit(int a, int b) { int temp; temp=a; a=b; b=temp; printf("swapit: a is %d and b is %d\n", a,b); } 
+    return 0;
+}
+
+void swapit(int a, int b) {
+    int temp;
+    
+    temp = a;
+    a = b;
+    b = temp;
+
+    printf("swapit: a is %d and b is %d\n", a, b);
+}
 ```
 
 ## Pass by Value
@@ -99,17 +119,37 @@ void swapit(int a, int b) { int temp; temp=a; a=b; b=temp; printf("swapit: a is 
 - Function parameters allocated on the stack
 - Reference parameters require pointers
 
-## Example for Passing by Reference
+## Passing by Reference
+
+- Passing by reference means passing the memory address of a variable to a function instead of its value.
+- This allows the function to modify the original variable directly.
+- In C, this is done using pointers (`*`) and the address-of operator (`&`).
+
 
 ```c
 #include <stdio.h>
 
-
 void swapit(int *, int *);
 
-int main() { int a=1, b=2; printf("main: a is %d and b is %d\n", a, b); swapit(&a, &b); printf("main: after change, a is %d and b is %d\n", a, b); }
+int main() {
+    int a = 1, b = 2;
 
-void swapit(int *a, int *b) { int temp; temp=*a; *a=*b; *b=temp; printf("swapit: a is %d and b is %d\n", *a,*b); } 
+    printf("main: a is %d and b is %d\n", a, b);
+    swapit(&a, &b);
+    printf("main: after change, a is %d and b is %d\n", a, b);
+
+    return 0;
+}
+
+void swapit(int *a, int *b) {
+    int temp;
+
+    temp = *a;
+    *a = *b;
+    *b = temp;
+
+    printf("swapit: a is %d and b is %d\n", *a, *b);
+} 
 ```
 
 ## Recursive Functions
@@ -140,29 +180,36 @@ int sum(int n) {
 - Problem with rules for moving disks
 
 ```c
-#include .h>
+#include <stdio.h> // Include the correct header file for printf()
 
-void hanoi(int n, char *a, char *b, char *c) { 
-	if (n==1) 
-	{ 
-		printf("move disk 1 from %s to %s\n", a,c); 
-		return; 
-	}
-	hanoi(n-1, a,c,b); 
-	printf("move disk %d from %s to %s\n", n, a,c); 
-	hanoi(n-1, b,a,c); 
+void hanoi(int n, char from, char aux, char to) {
+    if (n == 1) { 
+        printf("Move disk 1 from %c to %c\n", from, to);
+        return;
+    }
+    
+    hanoi(n - 1, from, to, aux); // Move n-1 disks from 'from' to 'aux'
+    printf("Move disk %d from %c to %c\n", n, from, to);
+    hanoi(n - 1, aux, from, to); // Move n-1 disks from 'aux' to 'to'
 }
-	
-int main() 
-{ 
-	hanoi(3, "A", "B", "C"); // 3 disks 
+
+int main() {
+    int num_disks = 3; // Number of disks
+    hanoi(num_disks, 'A', 'B', 'C'); // Solve for 3 disks
+    return 0;
 }
 ```
+
+> [!faq] Notes
+> More in-depth notes on [[Towers of Hanoi]]
 
 ## Binary Tree
 
 - Tree structure with nodes having at most two children
 - Nodes: left child, right child, parent, and root
+
+> [!faq] Notes
+> More in-depth notes on [[Binary Tree]]
 
 ### Binary Tree Structure
 
