@@ -56,6 +56,9 @@ Board* s = new Board;
 search</board*>Board.push_back(s);
 ```
 
+> [!faq] Recap
+> Quick Recap on [[Vectors in C++]]?
+
 ## Linked List
 
 > [!faq] Recap

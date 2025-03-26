@@ -76,6 +76,9 @@ public:
 
 template struct Node { TYPE data; Node *next; }; ```
 
+> [!faq] Notes
+> More in-depth notes on [[Templates in C++]]
+
 ## Algorithm Design Example
 
 - Problem: Deliver packages to 100 houses along a road.
