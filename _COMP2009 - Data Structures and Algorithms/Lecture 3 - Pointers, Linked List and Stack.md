@@ -161,6 +161,10 @@ void unorderedLinkedList<type>::deleteNode(const Type &amp;deleteItem) {
 
 ## Stack Abstract Data Type
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/CRTR5ljBjPM" frameborder="0" allowfullscreen></iframe>
+</div>
+
 - **Definition**: A linear list where the most recently inserted item is the only one that can be removed (Last In First Out - LIFO).
 
 - **Basic Operations**:

@@ -67,7 +67,10 @@ IntPointer p;
 **Struct Aliases:**
 
 ```c
-typedef struct {     int x;     int y; } Point;
+typedef struct {     
+	int x;     
+	int y; 
+} Point;
 ```
 
 ---

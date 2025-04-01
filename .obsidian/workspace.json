@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_COMP1014 - Thinking about Data/Lecture 4 - Mapping Disease Summary.md",
+                "file": "_COMP2019 - Systems Programming 1/Lecture 5 - Directories and File Systems Overview.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 4 - Mapping Disease Summary"
+              "title": "Lecture 5 - Directories and File Systems Overview"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_COMP1014 - Thinking about Data/Lecture 4 - Mapping Disease Summary.md",
+                "file": "_COMP2019 - Systems Programming 1/Lecture 5 - Directories and File Systems Overview.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 4 - Mapping Disease Summary"
+              "title": "Outline of Lecture 5 - Directories and File Systems Overview"
             }
           },
           {
@@ -181,38 +181,37 @@
       "obsidian-importer:Open Importer": false,
       "omnisearch:Omnisearch": false,
       "obsidian-git:Open Git source control": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "remotely-save:Remotely Save": false
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "_MATH1006 - Discrete Mathematics/Lecture 4 - Counting Principles.md",
-    "_COMP1014 - Thinking about Data/Lecture 4 - Mapping Disease Summary.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 3 - Functions and Pigeonhole Principal.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 4 - Algorithms with Queues and Priority Queues.md",
     "_COMP2019 - Systems Programming 1/Lecture 4 - Unix and System Calls.md",
+    "_COMP2019 - Systems Programming 1/Lecture 5 - Directories and File Systems Overview.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 4 - Algorithms with Queues and Priority Queues.md",
+    "To Do List.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 2 - Algorithm Analysis and Search Algorithms.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 3 - Pointers, Linked List and Stack.md",
+    "Definitions/Code/Structs.md",
+    "Definitions/Code/typedef.md",
+    "Definitions/Code/Vectors in C++.md",
+    "_COMP1014 - Thinking about Data/Lecture 4 - Mapping Disease Summary.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 4 - Counting Principles.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 3 - Functions and Pigeonhole Principal.md",
     "_COMP2019 - Systems Programming 1/Lecture 1 - Introduction.md",
     "_COMP2019 - Systems Programming 1/Lecture 2 - Pointers and Data Structures.md",
     "_COMP2019 - Systems Programming 1/Lecture 3 - C Functions and More.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 3 - Pointers, Linked List and Stack.md",
-    "Definitions/Code/Vectors in C++.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 2 - Algorithm Analysis and Search Algorithms.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 1 - Introduction and Algorithm Design Part A.md",
     "Definitions/Code/Templates in C++.md",
     "Definitions/Code/Bubble Sort.md",
     "Definitions/Code/Key Rules of C Programming.md",
     "Definitions/Code/Operator Overloading.md",
-    "Definitions/Code/Structs.md",
     "Templates/Note Template.md",
     "_COMP1014 - Thinking about Data/Lecture 2 - Counting Eels and Iraqi Refugees.md",
     "Definitions/Code/Binary Tree.md",
     "Definitions/Code/Towers of Hanoi.md",
     "Definitions/Code/Header Files.md",
     "Definitions/Code/Enumerated.md",
-    "Definitions/Code/typedef.md",
-    "Definitions/Code/Unions.md",
-    "Definitions/Code/Linked List.md",
     "language",
     "Images/Pasted image 20250320105548.png",
     "codingasd",
