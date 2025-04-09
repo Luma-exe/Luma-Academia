@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_COMP2019 - Systems Programming 1/Lecture 5 - Directories and File Systems Overview.md",
+                "file": "_COMP2019 - Systems Programming 1/Lecture 6 - Devices and Terminal Control.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 5 - Directories and File Systems Overview"
+              "title": "Lecture 6 - Devices and Terminal Control"
             }
           }
         ]
@@ -54,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#systemsProgramming1",
+                "query": "tag:#coding",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_COMP2009 - Data Structures and Algorithms/Lecture 1 - Introduction and Algorithm Design Part A.md",
+                "file": "_COMP2019 - Systems Programming 1/Lecture 6 - Devices and Terminal Control.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Lecture 1 - Introduction and Algorithm Design Part A"
+              "title": "Backlinks for Lecture 6 - Devices and Terminal Control"
             }
           },
           {
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_COMP2019 - Systems Programming 1/Lecture 5 - Directories and File Systems Overview.md",
+                "file": "_COMP2019 - Systems Programming 1/Lecture 6 - Devices and Terminal Control.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 5 - Directories and File Systems Overview"
+              "title": "Outline of Lecture 6 - Devices and Terminal Control"
             }
           },
           {
@@ -188,30 +188,32 @@
   "lastOpenFiles": [
     "_COMP2019 - Systems Programming 1/Lecture 4 - Unix and System Calls.md",
     "_COMP2019 - Systems Programming 1/Lecture 5 - Directories and File Systems Overview.md",
+    "_COMP2019 - Systems Programming 1/Lecture 6 - Devices and Terminal Control.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 6 - Hashing Algorithms.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 5 - Recursion.md",
+    "_COMP1014 - Thinking about Data/Lecture 6 - Observation or Experiment.md",
+    "_COMP1014 - Thinking about Data/Lecture 5 - Mapping Disease.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 6 - Unordered Selections Continued.md",
+    "_COMP1014 - Thinking about Data/Untitled",
+    "_MATH1006 - Discrete Mathematics/Lecture 5 - Unordered Selections.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 4 - Counting Principles.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 3 - Functions and Pigeonhole Principal.md",
+    "Definitions/Code/Stack.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 3 - Pointers, Linked List and Stack.md",
+    "LICENSE",
     "_COMP2009 - Data Structures and Algorithms/Lecture 4 - Algorithms with Queues and Priority Queues.md",
     "To Do List.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 2 - Algorithm Analysis and Search Algorithms.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 3 - Pointers, Linked List and Stack.md",
     "Definitions/Code/Structs.md",
     "Definitions/Code/typedef.md",
     "Definitions/Code/Vectors in C++.md",
     "_COMP1014 - Thinking about Data/Lecture 4 - Mapping Disease Summary.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 4 - Counting Principles.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 3 - Functions and Pigeonhole Principal.md",
     "_COMP2019 - Systems Programming 1/Lecture 1 - Introduction.md",
     "_COMP2019 - Systems Programming 1/Lecture 2 - Pointers and Data Structures.md",
     "_COMP2019 - Systems Programming 1/Lecture 3 - C Functions and More.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 1 - Introduction and Algorithm Design Part A.md",
     "Definitions/Code/Templates in C++.md",
     "Definitions/Code/Bubble Sort.md",
-    "Definitions/Code/Key Rules of C Programming.md",
-    "Definitions/Code/Operator Overloading.md",
-    "Templates/Note Template.md",
-    "_COMP1014 - Thinking about Data/Lecture 2 - Counting Eels and Iraqi Refugees.md",
-    "Definitions/Code/Binary Tree.md",
-    "Definitions/Code/Towers of Hanoi.md",
-    "Definitions/Code/Header Files.md",
-    "Definitions/Code/Enumerated.md",
     "language",
     "Images/Pasted image 20250320105548.png",
     "codingasd",
@@ -221,8 +223,6 @@
     "coding/language",
     "coding",
     "Excalidraw",
-    "Tags/#coding",
-    "Tags",
     "Images/Pasted image 20250320133522.png",
     "Images/Pasted image 20250320111159.png",
     "Images/Pasted image 20250320110616.png",
