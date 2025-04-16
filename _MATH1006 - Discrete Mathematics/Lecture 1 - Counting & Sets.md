@@ -73,3 +73,7 @@
 
 - **Subset**: $A \subseteq B$ means each element of $A$ is in $B$.
 - **Power Set**: The set of all subsets of a set $A$ denoted as $P(A)$.
+
+![[Pasted image 20250409155005.png]]
+![[Pasted image 20250409155017.png]]
+![[Pasted image 20250409155033.png]]

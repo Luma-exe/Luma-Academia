@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_COMP2019 - Systems Programming 1/Lecture 6 - Devices and Terminal Control.md",
+                "file": "_COMP1014 - Thinking about Data/Lecture 7 - Correlation test.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 6 - Devices and Terminal Control"
+              "title": "Lecture 7 - Correlation test"
             }
           }
         ]
@@ -54,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#coding",
+                "query": "tag:#systemsProgramming1",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_COMP2019 - Systems Programming 1/Lecture 6 - Devices and Terminal Control.md",
+                "file": "_COMP1014 - Thinking about Data/Lecture 7 - Correlation test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Lecture 6 - Devices and Terminal Control"
+              "title": "Backlinks for Lecture 7 - Correlation test"
             }
           },
           {
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_COMP2019 - Systems Programming 1/Lecture 6 - Devices and Terminal Control.md",
+                "file": "_COMP1014 - Thinking about Data/Lecture 7 - Correlation test.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 6 - Devices and Terminal Control"
+              "title": "Outline of Lecture 7 - Correlation test"
             }
           },
           {
@@ -186,34 +186,37 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "_COMP2019 - Systems Programming 1/Lecture 4 - Unix and System Calls.md",
-    "_COMP2019 - Systems Programming 1/Lecture 5 - Directories and File Systems Overview.md",
-    "_COMP2019 - Systems Programming 1/Lecture 6 - Devices and Terminal Control.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 6 - Hashing Algorithms.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 5 - Recursion.md",
-    "_COMP1014 - Thinking about Data/Lecture 6 - Observation or Experiment.md",
-    "_COMP1014 - Thinking about Data/Lecture 5 - Mapping Disease.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 6 - Unordered Selections Continued.md",
-    "_COMP1014 - Thinking about Data/Untitled",
     "_MATH1006 - Discrete Mathematics/Lecture 5 - Unordered Selections.md",
+    "_COMP1014 - Thinking about Data/Lecture 7 - Correlation test.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 7 - Boolean Expressions, Karnaugh Maps.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 6 - Inclusion-Exclusion Principle, Multinomial Coefficients.md",
+    "_COMP2019 - Systems Programming 1/Lecture 7 - Event Driven Programming.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 7 - Basic Concepts of Trees, Binary Trees, and BST.md",
+    "_COMP1014 - Thinking about Data/Lecture 6 - Observation or Experiment.md",
+    "Definitions/Code/Binary Tree.md",
+    "Definitions/Code/Linear List.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 2 - Algorithm Analysis and Search Algorithms.md",
+    "_COMP2019 - Systems Programming 1/Lecture 5 - Directories and File Systems Overview.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 1 - Counting & Sets.md",
     "_MATH1006 - Discrete Mathematics/Lecture 4 - Counting Principles.md",
     "_MATH1006 - Discrete Mathematics/Lecture 3 - Functions and Pigeonhole Principal.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 2 - Sets Continued.md",
+    "Images/Pasted image 20250409155033.png",
+    "Images/Pasted image 20250409155017.png",
+    "Images/Pasted image 20250409155005.png",
+    "_MATH1006 - Discrete Mathematics/Class Test 1 - Notes.md",
+    "_COMP2019 - Systems Programming 1/Lecture 6 - Devices and Terminal Control.md",
+    "_COMP2019 - Systems Programming 1/Lecture 4 - Unix and System Calls.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 6 - Hashing Algorithms.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 5 - Recursion.md",
+    "_COMP1014 - Thinking about Data/Lecture 5 - Mapping Disease.md",
+    "_COMP1014 - Thinking about Data/Untitled",
     "Definitions/Code/Stack.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 3 - Pointers, Linked List and Stack.md",
     "LICENSE",
     "_COMP2009 - Data Structures and Algorithms/Lecture 4 - Algorithms with Queues and Priority Queues.md",
     "To Do List.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 2 - Algorithm Analysis and Search Algorithms.md",
     "Definitions/Code/Structs.md",
-    "Definitions/Code/typedef.md",
-    "Definitions/Code/Vectors in C++.md",
-    "_COMP1014 - Thinking about Data/Lecture 4 - Mapping Disease Summary.md",
-    "_COMP2019 - Systems Programming 1/Lecture 1 - Introduction.md",
-    "_COMP2019 - Systems Programming 1/Lecture 2 - Pointers and Data Structures.md",
-    "_COMP2019 - Systems Programming 1/Lecture 3 - C Functions and More.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 1 - Introduction and Algorithm Design Part A.md",
-    "Definitions/Code/Templates in C++.md",
-    "Definitions/Code/Bubble Sort.md",
     "language",
     "Images/Pasted image 20250320105548.png",
     "codingasd",
@@ -229,9 +232,6 @@
     "Exported image 20250320010621-9.png",
     "Exported image 20250320010615-7.png",
     "Exported image 20250320010540-14.png",
-    "Exported image 20250320010450-0.png",
-    "Exported image 20250320010441-0.png",
-    "Exported image 20250320010436-1.png",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
