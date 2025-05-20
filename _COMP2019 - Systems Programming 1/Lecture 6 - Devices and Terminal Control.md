@@ -123,32 +123,60 @@ struct termios {
 
 ```c
 #include <stdio.h>
+#include <stdlib.h>     // for exit()
 #include <termios.h>
-```
+#include <unistd.h>     // for STDIN_FILENO
 
-main() { struct termios info; int rv; rv = tcgetattr(0, &info); /* Get values from driver */ if (rv == -1) { perror("tcgetattr"); exit(1); } if (info.c_lflag & ECHO) printf("echo is on, since its bit is 1\n"); else printf("echo is OFF, since its bit is 0\n"); } ```
+int main() {
+    struct termios info;
+    int rv;
+
+    rv = tcgetattr(STDIN_FILENO, &info);  // Get values from driver
+
+    if (rv == -1) {
+        perror("tcgetattr");
+        exit(1);
+    }
+
+    if (info.c_lflag & ECHO)
+        printf("echo is ON, since its bit is 1\n");
+    else
+        printf("echo is OFF, since its bit is 0\n");
+
+    return 0;
+}
+```
 
 ## Example: Set Echo
 
 ```c
 #include <stdio.h>
-#include <termios.h>
-#define oops(s,x) { perror(s); exit(x); }
+#include <stdlib.h>     // for exit()
+#include <termios.h>    // for terminal I/O settings
+#include <unistd.h>     // for STDIN_FILENO
+
+#define oops(s, x) { perror(s); exit(x); }
+
+int main(int ac, char *av[]) {
+    struct termios info;
+
+    if (ac == 1)
+        exit(0);
+
+    if (tcgetattr(STDIN_FILENO, &info) == -1)
+        oops("tcgetattr", 1);
+
+    if (av[1][0] == 'y')
+        info.c_lflag |= ECHO;    // Turn on echo
+    else
+        info.c_lflag &= ~ECHO;   // Turn off echo
+
+    if (tcsetattr(STDIN_FILENO, TCSANOW, &info) == -1)
+        oops("tcsetattr", 2);
+
+    return 0;
+}
 ```
-
-main(int ac, char *av[]) { struct termios info; if (ac == 1) exit(0); if (tcgetattr(0, &info) == -1) oops("tcgetattr", 1);
-
-```
-if (av[1][0] == 'y')
-    info.c_lflag |= ECHO; /* Turn on bit */
-else
-    info.c_lflag &amp;= ~ECHO; /* Turn off bit */
-
-if (tcsetattr(0, TCSANOW, &info) == -1)
-    oops("tcsetattr", 2);
-```
-
-} ```
 
 ## Other Devices: ioctl
 
@@ -189,15 +217,36 @@ int main() { int c; while ((c = getchar()) != EOF) { if (c == 'z') c = 'a'; else
 
 ```c
 #include <stdio.h>
-#include &lt;</stdio.h>termios.h>
-#define QUESTION "Do you want another transaction"
+#include <termios.h>  // Correct include for terminal control
+
+#define QUESTION "Do you want another transaction?"
+
+int get_response(char *question);
+
+int main() {
+    int response;
+
+    response = get_response(QUESTION);  // Get answer
+
+    return response;
+}
+
+int get_response(char *question) {
+    printf("%s (y/n)? ", question);
+
+    while (1) {
+        switch (getchar()) {
+            case 'y':
+            case 'Y':
+                return 0;
+            case 'n':
+            case 'N':
+            case EOF:
+                return 1;
+        }
+    }
+}
 ```
-
-int get_response(char *);
-
-int main() { int response; response = get_response(QUESTION); /* Get answer */ return response; }
-
-int get_response(char *question) { printf("%s (y/n)?", question); while (1) { switch (getchar()) { case 'y': case 'Y': return 0; case 'n': case 'N': case EOF: return 1; } } } ```
 
 ## Blocking & Nonblocking Input
 
@@ -247,11 +296,27 @@ signal(signum, action);
 ```c
 #include <stdio.h>
 #include <signal.h>
+#include <unistd.h>  // for sleep()
+
+// Signal handler function
+void f(int signum) {
+    printf("SIGINT received from signal handler.\n");
+}
+
+int main() {
+    int i;
+
+    // Install the signal handler
+    signal(SIGINT, f);
+
+    for (i = 0; i < 10; i++) {
+        printf("Hello from main program.\n");
+        sleep(1);
+    }
+
+    return 0;
+}
 ```
-
-main() { void f(int); /* Declare the handler _/ int i; signal(SIGINT, f); /_ Install the handler */ for (i = 0; i < 10; i++) { printf("Hello from main program.\n"); sleep(1); } }
-
-void f(int signum) /* Signal handler function */ { printf("SIGINT received from signal handler.\n"); } ```
 
 ## Signal Handling Exercise
 

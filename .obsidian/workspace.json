@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_MATH1006 - Discrete Mathematics/Lecture 7 - Boolean Expressions, Karnaugh Maps.md",
+                "file": "_COMP2009 - Data Structures and Algorithms/Lecture 8 - Graphs.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 7 - Boolean Expressions, Karnaugh Maps"
+              "title": "Lecture 8 - Graphs"
             }
           }
         ]
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_MATH1006 - Discrete Mathematics/Lecture 7 - Boolean Expressions, Karnaugh Maps.md",
+                "file": "_COMP2009 - Data Structures and Algorithms/Lecture 8 - Graphs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Lecture 7 - Boolean Expressions, Karnaugh Maps"
+              "title": "Backlinks for Lecture 8 - Graphs"
             }
           },
           {
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_MATH1006 - Discrete Mathematics/Lecture 7 - Boolean Expressions, Karnaugh Maps.md",
+                "file": "_COMP2009 - Data Structures and Algorithms/Lecture 8 - Graphs.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 7 - Boolean Expressions, Karnaugh Maps"
+              "title": "Outline of Lecture 8 - Graphs"
             }
           },
           {
@@ -186,8 +186,9 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "_MATH1006 - Discrete Mathematics/Lecture 8 -.md",
+    "_COMP2019 - Systems Programming 1/Lecture 6 - Devices and Terminal Control.md",
     "_MATH1006 - Discrete Mathematics/Lecture 7 - Boolean Expressions, Karnaugh Maps.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 8 -.md",
     "_MATH1006 - Discrete Mathematics/Lecture 6 - Inclusion-Exclusion Principle, Multinomial Coefficients.md",
     "_COMP1014 - Thinking about Data/Lecture 8 - No Really, Do Taller People Earn More.md",
     "_COMP2019 - Systems Programming 1/Lecture 8 - Processes.md",
@@ -203,7 +204,6 @@
     "Images/Pasted image 20250409155017.png",
     "Images/Pasted image 20250409155005.png",
     "_COMP2019 - Systems Programming 1/Lecture 7 - Event Driven Programming.md",
-    "_COMP2019 - Systems Programming 1/Lecture 6 - Devices and Terminal Control.md",
     "_MATH1006 - Discrete Mathematics/Lecture 5 - Unordered Selections.md",
     "_MATH1006 - Discrete Mathematics/Class Test 1 - Notes.md",
     "To Do List.md",
