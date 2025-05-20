@@ -7,13 +7,9 @@
 
 **Contains content from Lecture 4 to Lecture 8**
 
-# Discrete Mathematics - MATH 1006 Notes
-
-  
-
 ## Counting Principles
 
-  
+
 
 ### Inclusion-Exclusion Principle
 
@@ -69,7 +65,8 @@
 
 - The Cartesian product directly relates to the multiplication principle
 
-  
+
+![[Pasted image 20250521025029.png]]
 
 ## Ordered Selections
 
@@ -107,7 +104,9 @@
 
 - Example: Number of ways to arrange 5 books on a shelf = $5! = 5 \times 4 \times 3 \times 2 \times 1 = 120$
 
-  
+  <div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/XJnIdRXUi7A" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### Derangements
 
@@ -163,7 +162,16 @@
 
 - Example: $(3x - 5y)^5 = \sum_{i=0}^{5} \binom{5}{i} (3x)^i (-5y)^{5-i}$
 
-  
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/videoseries?list=PL5KkMZvBpo5Bcz-V51UHtlg_eBW-PtQ7_" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+  </iframe>
+</div>
+
 
 ### Pascal's Triangle
 
@@ -184,6 +192,8 @@
   - Row 4: 1 4 6 4 1
 
   - Row 5: 1 5 10 10 5 1
+
+![[Pasted image 20250521031709.png]]
 
 - The sum of the entries in row $n$ is $2^n$
 
