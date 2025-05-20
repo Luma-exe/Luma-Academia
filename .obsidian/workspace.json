@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_COMP2009 - Data Structures and Algorithms/Lecture 8 - Graphs.md",
+                "file": "_MATH1006 - Discrete Mathematics/Class Test 2 - Notes.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 8 - Graphs"
+              "title": "Class Test 2 - Notes"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_COMP2009 - Data Structures and Algorithms/Lecture 8 - Graphs.md",
+                "file": "_MATH1006 - Discrete Mathematics/Class Test 2 - Notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 8 - Graphs"
+              "title": "Outline of Class Test 2 - Notes"
             }
           },
           {
@@ -186,13 +186,17 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "_COMP2019 - Systems Programming 1/Lecture 6 - Devices and Terminal Control.md",
+    "_MATH1006 - Discrete Mathematics/Class Test 1 - Notes.md",
+    "_MATH1006 - Discrete Mathematics/Class Test 2 - Notes.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 8 - Logic.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 9 - Logic Overview.md",
     "_MATH1006 - Discrete Mathematics/Lecture 7 - Boolean Expressions, Karnaugh Maps.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 8 -.md",
     "_MATH1006 - Discrete Mathematics/Lecture 6 - Inclusion-Exclusion Principle, Multinomial Coefficients.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 8 - Graphs.md",
+    "_COMP2019 - Systems Programming 1/Lecture 6 - Devices and Terminal Control.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 8 -.md",
     "_COMP1014 - Thinking about Data/Lecture 8 - No Really, Do Taller People Earn More.md",
     "_COMP2019 - Systems Programming 1/Lecture 8 - Processes.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 8 - Graphs.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 7 - Basic Concepts of Trees, Binary Trees, and BST.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 4 - Algorithms with Queues and Priority Queues.md",
     "_COMP1014 - Thinking about Data/Lecture 7 - Correlation test.md",
@@ -205,16 +209,12 @@
     "Images/Pasted image 20250409155005.png",
     "_COMP2019 - Systems Programming 1/Lecture 7 - Event Driven Programming.md",
     "_MATH1006 - Discrete Mathematics/Lecture 5 - Unordered Selections.md",
-    "_MATH1006 - Discrete Mathematics/Class Test 1 - Notes.md",
     "To Do List.md",
     "_COMP2019 - Systems Programming 1/Lecture 5 - Directories and File Systems Overview.md",
     "Definitions/Code/Binary Tree.md",
     "Definitions/Code/Linear List.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 2 - Algorithm Analysis and Search Algorithms.md",
     "_MATH1006 - Discrete Mathematics/Lecture 1 - Counting & Sets.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 4 - Counting Principles.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 3 - Functions and Pigeonhole Principal.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 2 - Sets Continued.md",
     "_COMP1014 - Thinking about Data/Untitled",
     "LICENSE",
     "language",
