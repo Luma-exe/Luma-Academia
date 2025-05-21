@@ -94,7 +94,7 @@
 
 - Connection to functions: The number of injective (one-to-one) functions $f: A \rightarrow B$ with $|A| = k$ and $|B| = n$ is $n^{(k)}$
 
-  
+
 
 ### Permutations
 
@@ -347,7 +347,9 @@
 
   5. Write the simplified expression as the OR of terms from each group
 
-  
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/RO5alU6PpSU" frameborder="0" allowfullscreen></iframe>
+</div>  
 
 ## Logic
 
@@ -389,51 +391,33 @@
 
 - For $p \wedge q$:
 
-  | $p$ | $q$ | $p \wedge q$ |
+| $p$ | $q$ | $p \wedge q$ |
+| --- | --- | ------------ |
+| T   | T   | T            |
+| T   | F   | F            |
+| F   | T   | F            |
+| F   | F   | F            |
 
-  |-----|-----|-------------|
-
-  | T   | T   | T           |
-
-  | T   | F   | F           |
-
-  | F   | T   | F           |
-
-  | F   | F   | F           |
-
-  
 
 - For $p \vee q$:
 
-  | $p$ | $q$ | $p \vee q$ |
+| $p$ | $q$ | $p \vee q$ |
+| --- | --- | ---------- |
+| T   | T   | T          |
+| T   | F   | T          |
+| F   | T   | T          |
+| F   | F   | F          |
 
-  |-----|-----|------------|
-
-  | T   | T   | T          |
-
-  | T   | F   | T          |
-
-  | F   | T   | T          |
-
-  | F   | F   | F          |
-
-  
 
 - For $p \rightarrow q$:
 
-  | $p$ | $q$ | $p \rightarrow q$ |
+| $p$ | $q$ |  $p \rightarrow q$ |
+| --- | --- | ------------------ |
+| T   | T   | T                  |
+| T   | F   | F                  |
+| F   | T   | T                  |
+| F   | F   | T                  |
 
-  |-----|-----|------------------|
-
-  | T   | T   | T                |
-
-  | T   | F   | F                |
-
-  | F   | T   | T                |
-
-  | F   | F   | T                |
-
-  
 
 ### Logical Equivalence
 
@@ -458,28 +442,34 @@
   
 
 ### Converse, Contrapositive, and Negation
-
 - For an implication $p \rightarrow q$:
 
-  - Converse: $q \rightarrow p$
+e.g. If I am hungry, then I will eat pizza
+	hungry is p and pizza is q
 
-  - Contrapositive: $\sim q \rightarrow \sim p$
+  - Negation: If I am not hungry, then I will eat pizza 
+	  - $\sim(p)$, then q
+		  - First term becomes opposite
+		  - $\sim(p \rightarrow q)$, which is equivalent to $p \wedge \sim q$
 
-  - Negation: $\sim(p \rightarrow q)$, which is equivalent to $p \wedge \sim q$
+  - Converse: If I eat pizza, then I will be hungry 
+	  - If q, then p
+		  - Switch first and second term around - $q \rightarrow p$
 
-- The contrapositive is logically equivalent to the original implication
+  - Inverse: If I am not hungry, then I will not eat pizza 
+	  - If $\sim(p)$, then $\sim(q)$
+		  - First and second term becomes opposite
+		  - $\sim(p \rightarrow q)$, which is equivalent to $p \wedge \sim q$
 
-- The converse is not necessarily equivalent to the original implication
+  - Contrapositive: If I don't eat pizza, then I will not be hungry
+	  - If $\sim(q)$, then $\sim(p)$
+		  - Switch first and second and make then opposite - $\sim q \rightarrow \sim p$
+		  - The contrapositive is logically equivalent to the original implication`
 
-- Example: "If it rains, the ground gets wet"
 
-  - Converse: "If the ground gets wet, it rains" (not necessarily true)
-
-  - Contrapositive: "If the ground doesn't get wet, it doesn't rain" (logically equivalent to original)
-
-  - Negation: "It rains and the ground doesn't get wet" (contradiction of original)
-
-  
+  <div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/TCBu8PD4Lls" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### Tautologies and Contradictions
 
