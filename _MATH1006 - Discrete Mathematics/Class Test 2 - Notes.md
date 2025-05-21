@@ -66,11 +66,13 @@
 - The Cartesian product directly relates to the multiplication principle
 
 
-![[Pasted image 20250521025029.png]]
 
 ## Ordered Selections
 
-  
+![[Pasted image 20250521025029.png]]
+
+  > [!faq] Recap
+> Quick Recap on [[Lecture 4 - Counting Principles]]?
 
 ### Ordered Selections with Repetition
 
@@ -86,7 +88,7 @@
 
 - Where $n^{(k)} = n(n-1)(n-2)\ldots(n-k+1)$ (falling factorial)
 
-- Also written as $\frac{n!}{(n-k)!}$ or sometimes as $_nP_k$
+- Also written as $\frac{n!}{(n-k)!}$ or sometimes as $_nP_k$ - The P stands for Premutations
 
 - Example: Selecting a 3-digit number with different digits = $9 \times 9 \times 8 = 648$ possibilities
 
@@ -99,6 +101,8 @@
 ### Permutations
 
 - A permutation is an ordered arrangement of distinct objects
+	- For instance ABC can be 
+		- ABC, ACB, BAC, BCA, CBA, CAB... so there is 3! = 6 possibilities 
 
 - Number of permutations of $n$ distinct objects = $n! = n \times (n-1) \times (n-2) \times \ldots \times 2 \times 1$
 
@@ -122,7 +126,12 @@
 
 ## Unordered Selections
 
-  
+  <div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/-4PpUzZU26M" frameborder="0" allowfullscreen></iframe>
+</div>
+
+> [!faq] Recap
+> Quick Recap on [[Lecture 5 - Unordered Selections]]?
 
 ### Binomial Coefficients
 
@@ -255,19 +264,13 @@
 
 - Truth tables for basic operations:
 
-  | $x$ | $y$ | $x \wedge y$ | $x \vee y$ | $\sim x$ | $x \oplus y$ |
+| $x$ | $y$ | $x \wedge y$ | $x \vee y$ | $\sim x$ | $x \oplus y$ |
+| --- | --- | ------------ | ---------- | -------- | ------------ |
+| 1   | 1   | 1            | 1          | 0        | 0            |
+| 1   | 0   | 0            | 1          | 0        | 1            |
+| 0   | 1   | 0            | 1          | 1        | 1            |
+| 0   | 0   | 0            | 0          | 1        | 0            |
 
-  |-----|-----|-------------|------------|----------|-------------|
-
-  | 1   | 1   | 1           | 1          | 0        | 0           |
-
-  | 1   | 0   | 0           | 1          | 0        | 1           |
-
-  | 0   | 1   | 0           | 1          | 1        | 1           |
-
-  | 0   | 0   | 0           | 0          | 1        | 0           |
-
-  
 
 ### Boolean Algebra Laws
 
@@ -447,10 +450,10 @@
 e.g. If I am hungry, then I will eat pizza
 	hungry is p and pizza is q
 
-  - Negation: If I am not hungry, then I will eat pizza 
-	  - $\sim(p)$, then q
-		  - First term becomes opposite
-		  - $\sim(p \rightarrow q)$, which is equivalent to $p \wedge \sim q$
+  - Negation: If I am not hungry, then I will eat pizza  
+	- Negation: ¬(p → q)  
+	  - This is logically equivalent to: p ∧ ¬q  
+	  - Meaning: I am not hungry **and** I will **not** eat pizza  
 
   - Converse: If I eat pizza, then I will be hungry 
 	  - If q, then p
@@ -465,6 +468,15 @@ e.g. If I am hungry, then I will eat pizza
 	  - If $\sim(q)$, then $\sim(p)$
 		  - Switch first and second and make then opposite - $\sim q \rightarrow \sim p$
 		  - The contrapositive is logically equivalent to the original implication`
+
+| Name               | Logical Form                                        | English Meaning                                           |
+| ------------------ | --------------------------------------------------- | --------------------------------------------------------- |
+| **Original**       | $p→qp \rightarrow q$                                | If p, then q                                              |
+| **Negation**       | $¬(p→q)=p∧¬q\neg(p \rightarrow q) = p \land \neg q$ | p **and** not q (this makes the original FALSE            |
+| **Converse**       | $q→pq \rightarrow p$                                | If q, then p                                              |
+| **Inverse**        | $¬p→¬q\neg p \rightarrow \neg q$                    | If **not p**, then **not q**                              |
+| **Contrapositive** | $¬q→¬p\neg q \rightarrow \neg p$                    | If **not q**, then **not p** (logically same as original) |
+|                    |                                                     |                                                           |
 
 
   <div style="display: flex; justify-content: center; align-items: center;">

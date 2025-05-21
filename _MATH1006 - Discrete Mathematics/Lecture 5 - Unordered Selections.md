@@ -83,6 +83,8 @@
     1. Start with 1's on the sides.
     2. Add adjacent numbers to derive new numbers below.
 
+![[Pasted image 20250521031709.png]]
+
 ## Recurrence Relations for Binomial Coefficients
 
 - Base case: $$ \binom{n}{0} = \binom{n}{n} = 1 \text{ for } n \geq 0 $$
