@@ -46,18 +46,16 @@
 #include <iostream>
 #include <fstream>
 #include <list>
-```
+
 
 class Graph { int gSize; std::list* graph;
 
 public: Graph(int size) { gSize = size; graph = new std::list[gSize]; }
 
-```
 void addEdge(int src, int dest) {
     graph[src].push_back(dest); 
     graph[dest].push_back(src); // For undirected graph
 }
-```
 
 }; ```
 

@@ -125,18 +125,36 @@ main() {
 /* forkdemo1.c */
 #include <stdio.h>
 #include <unistd.h>
-```
 
-main() { int ret_from_fork, mypid; mypid = getpid(); printf("Before: my pid is %d\n", mypid); ret_from_fork = fork(); sleep(1); printf("After: my pid is %d, fork() said %d\n", getpid(), ret_from_fork); } ```
+main() { 
+	int ret_from_fork, mypid; mypid = getpid(); 
+	
+	printf("Before: my pid is %d\n", mypid); 
+	ret_from_fork = fork(); 
+	sleep(1); 
+	printf("After: my pid is %d, fork() said %d\n", getpid(), ret_from_fork); 
+} 
+```
 
 ## Distinguishing Parent from Child
 
 ```c
 /* forkdemo3.c */
 #include <stdio.h>
-```
 
-main() { int fork_rv; printf("Before: my pid is %d\n", getpid()); fork_rv = fork(); if (fork_rv == -1) perror("fork"); else if (fork_rv == 0) printf("I am the child. my pid=%d\n", getpid()); else printf("I am the parent. my child is %d\n", fork_rv); } ```
+main() { 
+	int fork_rv; 
+	
+	printf("Before: my pid is %d\n", getpid()); 
+	fork_rv = fork(); 
+	
+	if (fork_rv == -1) 
+		perror("fork"); 
+	else if (fork_rv == 0) 
+		printf("I am the child. my pid=%d\n", getpid()); 
+	else 
+		printf("I am the parent. my child is %d\n", fork_rv); 
+} ```
 
 ## Waiting for Child Process
 
@@ -161,16 +179,46 @@ main() { int fork_rv; printf("Before: my pid is %d\n", getpid()); fork_rv = fork
 ```c
 /* waitdemo2.c */
 #include <stdio.h>
-#include <unistd.h>
-```
+#include <stdlib.h>   // for exit()
+#include <unistd.h>   // for fork(), sleep()
+#include <sys/types.h> // for pid_t
+#include <sys/wait.h>  // for wait()
 
 #define DELAY 5
 
-void child_code(int delay) { printf("child %d here. will sleep for %d seconds\n", getpid(), delay); sleep(delay); printf("child done. about to exit\n"); exit(17); }
+void child_code(int delay) {
+    printf("child %d here. will sleep for %d seconds\n", getpid(), delay);
+    sleep(delay);
+    printf("child done. about to exit\n");
+    exit(17);
+}
 
-void parent_code(int childpid) { int wait_rv; int child_status; wait_rv = wait(&child_status); printf("done waiting for %d. Wait returned: %d\n", childpid, wait_rv); printf("status: exit=%d\n", child_status >> 8); }
+void parent_code(int childpid) {
+    int wait_rv;
+    int child_status;
 
-main() { int newpid; printf("before: mypid is %d\n", getpid()); if ((newpid = fork()) == -1) perror("fork"); else if (newpid == 0) child_code(DELAY); else parent_code(newpid); } ```
+    wait_rv = wait(&child_status);  // wait for any child
+    printf("done waiting for %d. Wait returned: %d\n", childpid, wait_rv);
+    printf("status: exit=%d\n", child_status >> 8);  // extract exit code
+}
+
+int main() {
+    int newpid;
+
+    printf("before: mypid is %d\n", getpid());
+
+    if ((newpid = fork()) == -1) {
+        perror("fork");
+        return 1;
+    } else if (newpid == 0) {
+        child_code(DELAY);  // in child
+    } else {
+        parent_code(newpid);  // in parent
+    }
+
+    return 0;
+}
+ ```
 
 ## Exit System Call
 
