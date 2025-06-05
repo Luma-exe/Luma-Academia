@@ -1,3 +1,4 @@
+*No classes in week 9 so lecture 8 is skipped*
 
 > [!faq] About this Lecture
 > Class: COMP2009

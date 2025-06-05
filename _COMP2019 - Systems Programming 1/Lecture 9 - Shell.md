@@ -2,7 +2,7 @@
 > [!faq] About this Lecture
 > Class: COMP2019
 > Subject: #systemsProgramming1
-> Topics: #coding 
+> Topics: #coding/language/c 
 > Date: 2025-05-29 at 15:59
 
 ## The Shell

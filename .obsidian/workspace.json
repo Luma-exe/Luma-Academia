@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "fb8dec45ccad5bcf",
+        "id": "098267f8f4996719",
         "type": "tabs",
         "children": [
           {
-            "id": "d02a1a436459d2f0",
+            "id": "446694acb093229b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_COMP2019 - Systems Programming 1/Lecture 12 - Threads & Concurrency.md",
+                "file": "_COMP1014 - Thinking about Data/Lecture 12 - Case Studies.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 12 - Threads & Concurrency"
+              "title": "Lecture 12 - Case Studies"
             }
           }
         ]
@@ -54,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#systemsProgramming1",
+                "query": "tag:#thinkingAboutData",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_COMP2019 - Systems Programming 1/Lecture 12 - Threads & Concurrency.md",
+                "file": "_COMP1014 - Thinking about Data/Lecture 12 - Case Studies.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 12 - Threads & Concurrency"
+              "title": "Outline of Lecture 12 - Case Studies"
             }
           },
           {
@@ -186,37 +186,37 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "_COMP2019 - Systems Programming 1/Lecture 11 - Servers & Sockets.md",
+    "_COMP1014 - Thinking about Data/Lecture 11 - Normality tests and Transformations.md",
+    "_COMP1014 - Thinking about Data/Lecture 10 - Normality.md",
+    "_COMP1014 - Thinking about Data/Lecture 9 - ANOVA and Post-hoc tests.md",
+    "_COMP1014 - Thinking about Data/Lecture 8 - Simple Linear Regression.md",
+    "_COMP1014 - Thinking about Data/Lecture 12 - Case Studies.md",
+    "_COMP1014 - Thinking about Data/Lecture 1 - Randomness.md",
+    "_COMP1014 - Thinking about Data/Lecture 2 - Chi-squared Test.md",
+    "_COMP1014 - Thinking about Data/Lecture 3 - Descriptive statistics, Randomisation.md",
+    "_COMP1014 - Thinking about Data/Lecture 4 - T-test, Confidence Intervals, Bootstrapping.md",
+    "_COMP1014 - Thinking about Data/Lecture 5 - Binomial and Poisson Distribution.md",
+    "_COMP1014 - Thinking about Data/Lecture 6 - Experimental Design.md",
+    "_COMP1014 - Thinking about Data/Lecture 7 - Correlation test.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 11 - Graph Theory.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 10 - Induction, Recursion.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 9 - Number Theory.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 13 - Algorithm Design Techniques.md",
     "_COMP2019 - Systems Programming 1/Lecture 12 - Threads & Concurrency.md",
-    "_COMP2019 - Systems Programming 1/Lecture 10 - IO Redirection & Pipes.md",
-    "_COMP2019 - Systems Programming 1/Lecture 9 - Shell.md",
-    "_COMP2019 - Systems Programming 1/Lecture 8 - Processes.md",
-    "_COMP1014 - Thinking about Data/Lecture 8 - No Really, Do Taller People Earn More.md",
-    "Definitions/Code/Big O Notation.md",
-    "Definitions/Code/Header Files.md",
-    "Definitions/Code/Linked List.md",
-    "Definitions/Code/Structs.md",
-    "Definitions/Code/Linear List.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 7 - Basic Concepts of Trees, Binary Trees, and BST.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 8 - Graphs.md",
-    "_COMP2019 - Systems Programming 1/Lecture 6 - Devices and Terminal Control.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 9 - Graphs.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 14 - Review.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 12 - Sorting Algorithms.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 11 - B-Trees and Heaps.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 10 - AVL Trees.md",
     "_COMP2019 - Systems Programming 1/Lecture 7 - Event Driven Programming.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 9 - Logic Overview.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 8 - Logic.md",
-    "_MATH1006 - Discrete Mathematics/Class Test 2 - Notes.md",
-    "Templates/Youtube Video Playlist.md",
-    "Personal/Lua/Lua - Guide.md",
+    "_COMP2019 - Systems Programming 1/Lecture 8 - Processes.md",
+    "_COMP2019 - Systems Programming 1/Lecture 9 - Shell.md",
+    "_COMP2019 - Systems Programming 1/Lecture 10 - IO Redirection & Pipes.md",
     "Personal/Lua",
     "Personal",
     "Images/Pasted image 20250521031709.png",
     "Images/Pasted image 20250521031700.png",
     "Images/Pasted image 20250521025029.png",
-    "_MATH1006 - Discrete Mathematics/Lecture 7 - Boolean Expressions, Karnaugh Maps.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 8 -.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 6 - Inclusion-Exclusion Principle, Multinomial Coefficients.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 4 - Algorithms with Queues and Priority Queues.md",
-    "_COMP1014 - Thinking about Data/Lecture 7 - Correlation test.md",
-    "_COMP1014 - Thinking about Data/Lecture 6 - Observation or Experiment.md",
     "Images/Pasted image 20250409155033.png",
     "Images/Pasted image 20250409155017.png",
     "Images/Pasted image 20250409155005.png",

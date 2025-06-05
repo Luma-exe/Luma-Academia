@@ -2,7 +2,7 @@
 > [!faq] About this Lecture
 > Class: COMP2019
 > Subject: #systemsProgramming1
-> Topics: #coding 
+> Topics: #coding/language/c 
 > Date: 2025-05-05 at 12:51
 
 ## Overview of Processes
