@@ -3,7 +3,7 @@
 > Class: MATH1006
 > Subject: #discreteMathematics
 > Date: 21/02/2025 at ~11:00AM
-> Topics: #math
+> Topics: #math/discreteMathematics 
 
 ## Chapter 2: Sets
 

@@ -3,7 +3,7 @@
 > Class: MATH1006
 > Subject: #discreteMathematics 
 > Date: 2025-03-21 at 12:05
-> Topics: #math
+> Topics: #math/discreteMathematics 
 
 ## Chapter 3: Functions
 
@@ -52,6 +52,11 @@
 - If there are $n$ pigeons and $k$ pigeonholes with $n > k$, then at least one pigeonhole contains multiple pigeons.
 
 ### Injective and Surjective Functions
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/BmboPeuGcYA" frameborder="0" allowfullscreen></iframe>
+</div>
+
 #### Definition of Injective Function
 
 - Function $f : A \rightarrow B$ is injective (one-to-one) if different inputs map to different outputs:

@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_COMP1014 - Thinking about Data/Lecture 12 - Case Studies.md",
+                "file": "_MATH1006 - Discrete Mathematics/Lecture 3 - Functions and Pigeonhole Principal.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 12 - Case Studies"
+              "title": "Lecture 3 - Functions and Pigeonhole Principal"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_COMP1014 - Thinking about Data/Lecture 12 - Case Studies.md",
+                "file": "_MATH1006 - Discrete Mathematics/Lecture 3 - Functions and Pigeonhole Principal.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 12 - Case Studies"
+              "title": "Outline of Lecture 3 - Functions and Pigeonhole Principal"
             }
           },
           {
@@ -186,11 +186,22 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
+    "_MATH1006 - Discrete Mathematics/Lecture 9 - Number Theory.md",
+    "_MATH1006 - Discrete Mathematics/Class Test 2 - Notes.md",
+    "_MATH1006 - Discrete Mathematics/Class Test 1 - Notes.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 2 - Sets Continued.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 3 - Functions and Pigeonhole Principal.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 4 - Counting Principles.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 6 - Inclusion-Exclusion Principle, Multinomial Coefficients.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 5 - Unordered Selections.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 1 - Counting & Sets.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 11 - Graph Theory.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 10 - AVL Trees.md",
+    "_COMP1014 - Thinking about Data/Lecture 12 - Case Studies.md",
     "_COMP1014 - Thinking about Data/Lecture 11 - Normality tests and Transformations.md",
     "_COMP1014 - Thinking about Data/Lecture 10 - Normality.md",
     "_COMP1014 - Thinking about Data/Lecture 9 - ANOVA and Post-hoc tests.md",
     "_COMP1014 - Thinking about Data/Lecture 8 - Simple Linear Regression.md",
-    "_COMP1014 - Thinking about Data/Lecture 12 - Case Studies.md",
     "_COMP1014 - Thinking about Data/Lecture 1 - Randomness.md",
     "_COMP1014 - Thinking about Data/Lecture 2 - Chi-squared Test.md",
     "_COMP1014 - Thinking about Data/Lecture 3 - Descriptive statistics, Randomisation.md",
@@ -198,20 +209,9 @@
     "_COMP1014 - Thinking about Data/Lecture 5 - Binomial and Poisson Distribution.md",
     "_COMP1014 - Thinking about Data/Lecture 6 - Experimental Design.md",
     "_COMP1014 - Thinking about Data/Lecture 7 - Correlation test.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 11 - Graph Theory.md",
     "_MATH1006 - Discrete Mathematics/Lecture 10 - Induction, Recursion.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 9 - Number Theory.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 13 - Algorithm Design Techniques.md",
     "_COMP2019 - Systems Programming 1/Lecture 12 - Threads & Concurrency.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 9 - Graphs.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 14 - Review.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 12 - Sorting Algorithms.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 11 - B-Trees and Heaps.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 10 - AVL Trees.md",
-    "_COMP2019 - Systems Programming 1/Lecture 7 - Event Driven Programming.md",
-    "_COMP2019 - Systems Programming 1/Lecture 8 - Processes.md",
-    "_COMP2019 - Systems Programming 1/Lecture 9 - Shell.md",
-    "_COMP2019 - Systems Programming 1/Lecture 10 - IO Redirection & Pipes.md",
     "Personal/Lua",
     "Personal",
     "Images/Pasted image 20250521031709.png",

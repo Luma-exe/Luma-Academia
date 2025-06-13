@@ -49,9 +49,13 @@
 ## Number Theory Basics
 
 - **Definition**: The study of integers' properties and relationships.
-- **Division Algorithm**: For integers $a$, $b$ (with $b > 0$), there exist unique integers $q$, $r$ such that: [ a = qb + r \quad (0 \leq r < b) ]
+- **Division Algorithm**: For integers $a$, $b$ (with $b > 0$), there exist unique integers $q$, $r$ such that: $a = qb + r \quad (0 \leq r < b)$
 
 ## Divisibility and Common Divisors
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/JUzYl1TYMcU" frameborder="0" allowfullscreen></iframe>
+</div>
 
 - **Divisibility**: We write $a | b$ if $a$ divides $b$.
 - **Greatest Common Divisor (gcd)**: Largest integer $d$ such that $d | a$ and $d | b$, denoted as $\text{gcd}(a, b)$.

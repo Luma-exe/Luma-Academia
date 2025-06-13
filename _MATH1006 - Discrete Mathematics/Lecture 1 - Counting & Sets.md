@@ -3,7 +3,7 @@
 > Class: MATH1006
 > Subject: #discreteMathematics
 > Date: 21/02/2025 at ~11:00AM
-> Topics: #math
+> Topics: #math/discreteMathematics 
 
 ## Chapter 1: Counting
 
@@ -21,7 +21,7 @@
 - $F_4 = 5$
 - Recursive relation:  
     $F_n = F_{n-1} + F_{n-2}$ for $n \geq 2$.
-
+	
 ### Fibonacci Sequence Facts
 
 - General formula:  
