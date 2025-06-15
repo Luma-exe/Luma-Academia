@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "098267f8f4996719",
+        "id": "fb8dec45ccad5bcf",
         "type": "tabs",
         "children": [
           {
-            "id": "446694acb093229b",
+            "id": "d02a1a436459d2f0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_MATH1006 - Discrete Mathematics/Lecture 3 - Functions and Pigeonhole Principal.md",
+                "file": "_MATH1006 - Discrete Mathematics/Final - Notes.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 3 - Functions and Pigeonhole Principal"
+              "title": "Final - Notes"
             }
           }
         ]
@@ -54,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#thinkingAboutData",
+                "query": "tag:#systemsProgramming1",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_MATH1006 - Discrete Mathematics/Lecture 3 - Functions and Pigeonhole Principal.md",
+                "file": "_MATH1006 - Discrete Mathematics/Final - Notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 3 - Functions and Pigeonhole Principal"
+              "title": "Outline of Final - Notes"
             }
           },
           {
@@ -167,7 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 305.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -186,32 +186,32 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "_MATH1006 - Discrete Mathematics/Lecture 9 - Number Theory.md",
     "_MATH1006 - Discrete Mathematics/Class Test 2 - Notes.md",
-    "_MATH1006 - Discrete Mathematics/Class Test 1 - Notes.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 2 - Sets Continued.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 3 - Functions and Pigeonhole Principal.md",
+    "_MATH1006 - Discrete Mathematics/Final - Notes.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 1 - Counting & Sets.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 9 - Number Theory.md",
     "_MATH1006 - Discrete Mathematics/Lecture 4 - Counting Principles.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 3 - Functions and Pigeonhole Principal.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 2 - Sets Continued.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 8 - Logic.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 7 - Boolean Expressions, Karnaugh Maps.md",
     "_MATH1006 - Discrete Mathematics/Lecture 6 - Inclusion-Exclusion Principle, Multinomial Coefficients.md",
     "_MATH1006 - Discrete Mathematics/Lecture 5 - Unordered Selections.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 1 - Counting & Sets.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 11 - Graph Theory.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 10 - AVL Trees.md",
-    "_COMP1014 - Thinking about Data/Lecture 12 - Case Studies.md",
-    "_COMP1014 - Thinking about Data/Lecture 11 - Normality tests and Transformations.md",
-    "_COMP1014 - Thinking about Data/Lecture 10 - Normality.md",
-    "_COMP1014 - Thinking about Data/Lecture 9 - ANOVA and Post-hoc tests.md",
-    "_COMP1014 - Thinking about Data/Lecture 8 - Simple Linear Regression.md",
-    "_COMP1014 - Thinking about Data/Lecture 1 - Randomness.md",
-    "_COMP1014 - Thinking about Data/Lecture 2 - Chi-squared Test.md",
-    "_COMP1014 - Thinking about Data/Lecture 3 - Descriptive statistics, Randomisation.md",
-    "_COMP1014 - Thinking about Data/Lecture 4 - T-test, Confidence Intervals, Bootstrapping.md",
-    "_COMP1014 - Thinking about Data/Lecture 5 - Binomial and Poisson Distribution.md",
-    "_COMP1014 - Thinking about Data/Lecture 6 - Experimental Design.md",
-    "_COMP1014 - Thinking about Data/Lecture 7 - Correlation test.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 3 - Pointers, Linked List and Stack.md",
+    "_COMP2019 - Systems Programming 1/Lecture 2 - Pointers and Data Structures.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 11 - B-Trees and Heaps.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 9 - Graphs.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 4 - Algorithms with Queues and Priority Queues.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 5 - Recursion.md",
     "_MATH1006 - Discrete Mathematics/Lecture 10 - Induction, Recursion.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 13 - Algorithm Design Techniques.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 12 - Sorting Algorithms.md",
+    "_COMP2019 - Systems Programming 1/Lecture 7 - Event Driven Programming.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 11 - Graph Theory.md",
     "_COMP2019 - Systems Programming 1/Lecture 12 - Threads & Concurrency.md",
+    "_COMP1014 - Thinking about Data/Lecture 11 - Normality tests and Transformations.md",
+    "_COMP1014 - Thinking about Data/Lecture 12 - Case Studies.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 13 - Algorithm Design Techniques.md",
     "Personal/Lua",
     "Personal",
     "Images/Pasted image 20250521031709.png",
