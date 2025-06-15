@@ -148,7 +148,7 @@ $$c_n = \frac{1}{n+1} \binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}$$
 
 - **Domain:** Set A (input set)
 
-- **Codomain:** Set B (output set) Â 
+- **Codomain:** Set B (output set)
 
 - **Range:** $\{f(a) : a \in A\}$ (actual outputs)
 
@@ -580,7 +580,7 @@ Functions mapping $\{0,1\}^n \rightarrow \{0,1\}$
 
 - **AND ($\land$):** True only when both inputs are true
 
-- **OR ($\lor$):** True when at least one input is true Â 
+- **OR ($\lor$):** True when at least one input is true
 
 - **NOT ($\neg$):** Flips the truth value
 
