@@ -287,15 +287,63 @@ void swapit(int a, int b) {
 ### The `open` System Call
 
 ```c
-
 #include <sys/types.h>
-
 #include <sys/stat.h>
-
 #include <fcntl.h>
 
 int open(const char *path, int oflag, mode_t mode);
+```
 
+**Common flags:**
+- `O_RDONLY`: Read only
+- `O_WRONLY`: Write only  
+- `O_RDWR`: Read and write
+- `O_CREAT`: Create file if it doesn't exist
+- `O_TRUNC`: Truncate file to zero length
+- `O_APPEND`: Append to end of file
+
+**Example:**
+```c
+int fd = open("file.txt", O_RDWR | O_CREAT, 0644);
+if (fd == -1) {
+    perror("open failed");
+    exit(1);
+}
+```
+
+### File Operations
+
+**Reading:**
+```c
+ssize_t read(int fd, void *buf, size_t count);
+```
+
+**Writing:**
+```c
+ssize_t write(int fd, const void *buf, size_t count);
+```
+
+**Seeking:**
+```c
+off_t lseek(int fd, off_t offset, int whence);
+// whence: SEEK_SET, SEEK_CUR, SEEK_END
+```
+
+**Closing:**
+```c
+int close(int fd);
+```
+
+### File Information
+
+**stat() system call:**
+```c
+struct stat {
+    mode_t st_mode;    // File type and permissions
+    off_t st_size;     // File size in bytes
+    time_t st_mtime;   // Last modification time
+    // ... other fields
+};
 ```
 
 - Flags: `O_RDONLY`, `O_TRUNC`, etc.
@@ -466,12 +514,37 @@ int main() {
 ### Fork
 
 ```c
-
 pid_t pid = fork();
-
-if (pid == 0) { /* child */ } else { /* parent */ }
-
+if (pid == 0) { 
+    /* child process */
+    execl("/bin/ls", "ls", "-l", NULL);
+    perror("exec failed");
+    exit(1);
+} else if (pid > 0) { 
+    /* parent process */
+    wait(NULL); // Wait for child to complete
+} else {
+    /* fork failed */
+    perror("fork failed");
+    exit(1);
+}
 ```
+
+### Process Creation Pattern
+
+1. **fork()** creates an exact copy of the current process
+2. **exec()** replaces the process image with a new program
+3. **wait()** allows parent to wait for child completion
+4. **exit()** terminates the process
+
+### Key Process Functions
+
+- `fork()`: Creates child process, returns 0 to child, PID to parent
+- `exec()` family: Replaces current process with new program
+- `wait()`: Parent waits for any child to terminate
+- `waitpid()`: Wait for specific child process
+- `getpid()`: Get current process ID
+- `getppid()`: Get parent process ID
 
 ---
 
@@ -505,27 +578,67 @@ echo "Hello, $USER"
 
 ### Standard Streams
 
-- `stdin` (0), `stdout` (1), `stderr` (2)
+- `stdin` (file descriptor 0): Standard input
+- `stdout` (file descriptor 1): Standard output  
+- `stderr` (file descriptor 2): Standard error
 
-### Redirection
+### Shell Redirection
 
 ```bash
-
-command > out.txt
-
-command < in.txt
-
-command 2> err.txt
-
-command1 | command2
-
+command > out.txt        # Redirect stdout to file
+command < in.txt         # Redirect stdin from file
+command 2> err.txt       # Redirect stderr to file
+command >> out.txt       # Append stdout to file
+command1 | command2      # Pipe stdout of cmd1 to stdin of cmd2
 ```
 
 ### C Redirection Methods
 
-- Close then open
+**Method 1: Close and Open**
+```c
+close(1);                    // Close stdout
+open("output.txt", O_CREAT|O_WRONLY, 0644); // Opens as fd 1
+printf("This goes to file\n");
+```
 
-- `dup()`, `dup2()`
+**Method 2: dup2()**
+```c
+int fd = open("output.txt", O_CREAT|O_WRONLY, 0644);
+dup2(fd, 1);                 // Copy fd to stdout
+close(fd);                   // Close original fd
+printf("This goes to file\n");
+```
+
+### Pipes in C
+
+**Creating Pipes:**
+```c
+int pipefd[2];
+if (pipe(pipefd) == -1) {
+    perror("pipe failed");
+    exit(1);
+}
+// pipefd[0] is read end, pipefd[1] is write end
+```
+
+**Fork and Pipe Pattern:**
+```c
+int pipefd[2];
+pipe(pipefd);
+if (fork() == 0) {
+    // Child: close read end, write to pipe
+    close(pipefd[0]);
+    dup2(pipefd[1], 1);    // Redirect stdout to pipe
+    close(pipefd[1]);
+    execlp("ls", "ls", NULL);
+} else {
+    // Parent: close write end, read from pipe
+    close(pipefd[1]);
+    dup2(pipefd[0], 0);    // Redirect stdin from pipe
+    close(pipefd[0]);
+    execlp("wc", "wc", "-l", NULL);
+}
+```
 
 ---
 
@@ -534,10 +647,48 @@ command1 | command2
 ### Client/Server Model
 
 - Data flow via pipes or sockets
+- Clients request services, servers provide them
+- Can be on same machine (local) or different machines (network)
+
+### Socket Programming Basics
+
+**Socket Creation:**
+```c
+int socket(int domain, int type, int protocol);
+// domain: AF_INET (IPv4), AF_UNIX (local)
+// type: SOCK_STREAM (TCP), SOCK_DGRAM (UDP)
+```
+
+**Server Socket Setup:**
+```c
+int sockfd = socket(AF_INET, SOCK_STREAM, 0);
+struct sockaddr_in server_addr;
+server_addr.sin_family = AF_INET;
+server_addr.sin_port = htons(PORT);
+server_addr.sin_addr.s_addr = INADDR_ANY;
+
+bind(sockfd, (struct sockaddr*)&server_addr, sizeof(server_addr));
+listen(sockfd, 5); // Queue up to 5 connections
+```
+
+**Client Connection:**
+```c
+int sockfd = socket(AF_INET, SOCK_STREAM, 0);
+struct sockaddr_in server_addr;
+// ... set up server_addr ...
+connect(sockfd, (struct sockaddr*)&server_addr, sizeof(server_addr));
+```
+
+**Data Transfer:**
+```c
+send(sockfd, message, strlen(message), 0);
+recv(sockfd, buffer, sizeof(buffer), 0);
+```
 
 ### Unix Calculator: bc & dc
 
 - `bc` as client, `dc` as server
+- Communication through pipes
 
 ### tinybc.c Example
 
@@ -549,13 +700,40 @@ command1 | command2
 
 ### Threads vs Processes
 
-- Threads share memory, processes do not
+- **Threads**: Share memory space, lighter weight, faster communication
+- **Processes**: Separate memory spaces, more isolated, heavier weight
 
 ### pthreads
 
-- `pthread_create()`, `pthread_join()`
+**Thread Creation:**
+```c
+#include <pthread.h>
+pthread_t thread;
+int pthread_create(&thread, NULL, function, arg);
+int pthread_join(thread, NULL); // Wait for thread completion
+```
 
-- Mutexes and condition variables
+**Mutex (Mutual Exclusion):**
+```c
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_lock(&mutex);
+// Critical section
+pthread_mutex_unlock(&mutex);
+```
+
+**Condition Variables:**
+```c
+pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
+pthread_cond_wait(&cond, &mutex); // Wait for condition
+pthread_cond_signal(&cond);       // Signal one waiting thread
+pthread_cond_broadcast(&cond);    // Signal all waiting threads
+```
+
+### Thread Safety Issues
+
+- **Race Conditions**: Multiple threads accessing shared data
+- **Deadlock**: Threads waiting for each other indefinitely
+- **Starvation**: Thread never gets access to resources
 
 ### Example: Multithreaded Animation
 
@@ -566,3 +744,155 @@ void *moving_msg(char *msg) {
     }
 }
 ```
+
+---
+
+## Summary
+
+### Core Systems Programming Concepts
+
+#### Key System Calls to Remember
+- **File Operations**: `open()`, `close()`, `read()`, `write()`, `lseek()`
+- **Process Management**: `fork()`, `exec()`, `wait()`, `exit()`
+- **Communication**: `pipe()`, `socket()`, `bind()`, `listen()`, `accept()`
+- **Thread Management**: `pthread_create()`, `pthread_join()`, `pthread_mutex_lock()```
+
+#### Memory Management Fundamentals
+- **Pointers**: Essential for C programming - understand pointer arithmetic, dereferencing, and memory allocation
+- **Dynamic Allocation**: `malloc()`, `free()`, `calloc()`, `realloc()` - always check for NULL returns
+- **Memory Layout**: Stack (local variables), Heap (dynamic allocation), Data segment, Code segment
+
+#### Process vs Thread Comparison
+| Aspect | Processes | Threads |
+|--------|-----------|---------|
+| Memory | Separate address spaces | Shared memory space |
+| Communication | IPC (pipes, sockets, shared memory) | Direct memory access |
+| Creation Cost | Expensive (`fork()`) | Lighter (`pthread_create()`) |
+| Isolation | High - crash doesn't affect others | Low - crash affects all threads |
+
+### Critical System Programming Patterns
+
+#### Error Handling Best Practices
+```c
+// Always check system call return values
+if (open("file.txt", O_RDONLY) == -1) {
+    perror("open failed");
+    exit(1);
+}
+
+// Use errno for detailed error information
+if (result == -1) {
+    fprintf(stderr, "Error: %s\n", strerror(errno));
+}
+```
+
+#### Safe String Handling
+- Use `strncpy()` instead of `strcpy()`
+- Always null-terminate strings manually with `strncpy()`
+- Check buffer bounds to prevent overflow
+
+#### File Descriptor Management
+- Always close file descriptors when done
+- Use `dup2()` for I/O redirection
+- Remember: stdin=0, stdout=1, stderr=2
+
+### Important Unix/Linux Concepts
+
+#### File System Hierarchy
+- Everything is a file (devices, directories, regular files)
+- Absolute paths start with `/`
+- Relative paths are relative to current working directory
+- Use `stat()` to get file information
+
+#### Process Lifecycle
+1. **Creation**: `fork()` creates identical copy
+2. **Execution**: `exec()` family replaces process image
+3. **Termination**: `exit()` or return from main
+4. **Cleanup**: Parent calls `wait()` to collect exit status
+
+#### I/O Redirection and Pipes
+- `>` redirects stdout to file
+- `<` redirects stdin from file
+- `|` creates pipe between processes
+- `dup2()` duplicates file descriptors for redirection
+
+### Network Programming Essentials
+
+#### Socket Programming Flow
+**Server**:
+1. `socket()` - create socket
+2. `bind()` - bind to address/port
+3. `listen()` - listen for connections
+4. `accept()` - accept client connections
+5. `read()`/`write()` - communicate
+6. `close()` - cleanup
+
+**Client**:
+1. `socket()` - create socket
+2. `connect()` - connect to server
+3. `read()`/`write()` - communicate
+4. `close()` - cleanup
+
+#### Address Structures
+```c
+struct sockaddr_in server_addr;
+server_addr.sin_family = AF_INET;
+server_addr.sin_port = htons(port);
+server_addr.sin_addr.s_addr = INADDR_ANY;
+```
+
+### Concurrency and Synchronization
+
+#### Thread Synchronization Tools
+- **Mutexes**: Protect shared resources from race conditions
+- **Condition Variables**: Allow threads to wait for specific conditions
+- **Semaphores**: Control access to limited resources
+
+#### Race Condition Prevention
+```c
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+
+// Critical section
+pthread_mutex_lock(&mutex);
+// Access shared resource here
+pthread_mutex_unlock(&mutex);
+```
+
+### Debugging and Development Tips
+
+#### Common Debugging Tools
+- `gdb` - GNU debugger for step-by-step execution
+- `valgrind` - memory leak detection
+- `strace` - trace system calls
+- `ps`, `top` - monitor processes
+
+#### Compilation Flags
+```bash
+gcc -Wall -Wextra -g -o program program.c  # Enable warnings and debug info
+gcc -pthread -o program program.c          # Link pthread library
+```
+
+### Exam Preparation Checklist
+
+#### Must-Know Code Patterns
+- [ ] Basic `fork()` and `exec()` usage
+- [ ] Simple pipe creation and usage
+- [ ] Basic socket server/client
+- [ ] Thread creation with `pthread_create()`
+- [ ] Proper error handling with return value checking
+
+#### Key Concepts to Review
+- [ ] Difference between processes and threads
+- [ ] How pipes work and when to use them
+- [ ] Socket programming basics (TCP)
+- [ ] File descriptor manipulation
+- [ ] Signal handling basics
+- [ ] Memory management (malloc/free)
+- [ ] Pointer arithmetic and usage
+
+#### Common Exam Question Types
+1. **Code Tracing**: Follow execution of `fork()`, pipe, or thread code
+2. **Error Identification**: Find bugs in system call usage
+3. **Code Completion**: Fill in missing system calls or error handling
+4. **Concept Explanation**: Explain process vs thread, client-server model, etc.
+5. **Design Problems**: Design simple client-server or producer-consumer solutions
