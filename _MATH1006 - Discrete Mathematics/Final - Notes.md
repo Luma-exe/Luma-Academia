@@ -1049,8 +1049,11 @@ To find minimum spanning tree:
 
 ### Number Theory
 
-- **Division Algorithm:**  
-  $a = qb + r$, with $0 \leq r < b$
+- **Greatest Common Divisor (GCD):**  
+  $a = q_1 b + r_1$, with $0 \leq r < b$
+	- 120 = 9 x 13 + 3
+	- 9 = 3 x 3 + 0
+		- Thus the GCD is 3
 
 - **Euclidean Algorithm:**  
   Repeated division to compute $\gcd(a,b)$
