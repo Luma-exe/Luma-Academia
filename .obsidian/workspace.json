@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_MATH1006 - Discrete Mathematics/Final - Notes.md",
+                "file": "_COMP2019 - Systems Programming 1/Systems Programming 1 Final - Notes.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Final - Notes"
+              "title": "Systems Programming 1 Final - Notes"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_MATH1006 - Discrete Mathematics/Final - Notes.md",
+                "file": "_COMP2019 - Systems Programming 1/Systems Programming 1 Final - Notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Final - Notes"
+              "title": "Outline of Systems Programming 1 Final - Notes"
             }
           },
           {
@@ -186,8 +186,9 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
+    "_MATH1006 - Discrete Mathematics/Discrete Mathematics Final - Notes.md",
+    "_COMP2019 - Systems Programming 1/Systems Programming 1 Final - Notes.md",
     "_MATH1006 - Discrete Mathematics/Class Test 2 - Notes.md",
-    "_MATH1006 - Discrete Mathematics/Final - Notes.md",
     "_MATH1006 - Discrete Mathematics/Class Test 1 - Notes.md",
     "_MATH1006 - Discrete Mathematics/Lecture 11 - Graph Theory.md",
     "_MATH1006 - Discrete Mathematics/Lecture 10 - Induction, Recursion.md",
@@ -211,7 +212,6 @@
     "_COMP2019 - Systems Programming 1/Lecture 7 - Event Driven Programming.md",
     "_COMP2019 - Systems Programming 1/Lecture 12 - Threads & Concurrency.md",
     "_COMP1014 - Thinking about Data/Lecture 11 - Normality tests and Transformations.md",
-    "_COMP1014 - Thinking about Data/Lecture 12 - Case Studies.md",
     "Personal/Lua",
     "Personal",
     "Images/Pasted image 20250521031709.png",
