@@ -76,6 +76,10 @@ $$c_n = \frac{1}{n+1} \binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}$$
 
 **Sequence:** 1, 1, 2, 5, 14, 42, 132, 429, 1430, ...
 
+![[Pasted image 20250409155005.png]]
+![[Pasted image 20250409155017.png]]
+![[Pasted image 20250409155033.png]]
+
 ---
 
 ## Chapter 2: Sets
@@ -149,6 +153,10 @@ $$c_n = \frac{1}{n+1} \binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}$$
 - **Range:** $\{f(a) : a \in A\}$ (actual outputs)
 
 ### Types of Functions
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/BmboPeuGcYA" frameborder="0" allowfullscreen></iframe>
+</div>
 
 #### **Injective (One-to-One)**
 
@@ -335,11 +343,19 @@ There are $2 \times 3 = 6$ ordered pairs.
 
 ### Permutations
 
+  <div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/XJnIdRXUi7A" frameborder="0" allowfullscreen></iframe>
+</div>
+
 Number of ways to arrange n distinct objects: $n!$
  
 ---
 
 ## Chapter 5: Unordered Selections & Binomial Coefficients
+
+  <div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/-4PpUzZU26M" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### Binomial Coefficients
 
@@ -394,6 +410,15 @@ To compute $\binom{5}{2}$ using the identity:
 $$\binom{5}{2}=\binom{1}{4}+\binom{4}{2}=4+6=10$$
 
 ### Binomial Theorem
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/videoseries?list=PL5KkMZvBpo5Bcz-V51UHtlg_eBW-PtQ7_" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+  </iframe>
+</div>
 
 The binomial theorem gives a formula for expanding powers of a binomial expression $(x + y)^n$.
 
@@ -577,6 +602,10 @@ Functions mapping $\{0,1\}^n \rightarrow \{0,1\}$
 
 ### Karnaugh Maps
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/RO5alU6PpSU" frameborder="0" allowfullscreen></iframe>
+</div>  
+
 Visual method for simplifying Boolean expressions:
 
 1. Create grid for all variable combinations
@@ -598,14 +627,94 @@ Visual method for simplifying Boolean expressions:
 
 ### Logical Connectives
 
-| Connective   | Symbol      | Name      | Truth Condition                                    |
-|--------------|-------------|-----------|--------------------------------------------------|
-| Conjunction  | $\land$     | AND       | Both true                                        |
-| Disjunction  | $\lor$      | OR        | At least one true                                |
-| Negation     | $\sim$      | NOT       | Opposite truth value                             |
-| Implication  | $\Rightarrow$ | IF-THEN  | False only when antecedent true and consequent false |
-| Biconditional| $\Leftrightarrow$ | IFF    | Same truth values                                |
+| Connective    | Symbol            | Name    | Truth Condition                                      |
+| ------------- | ----------------- | ------- | ---------------------------------------------------- |
+| Conjunction   | $\land$           | AND     | Both true                                            |
+| Disjunction   | $\lor$            | OR      | At least one true                                    |
+| Negation      | $\sim$            | NOT     | Opposite truth value                                 |
+| Implication   | $\Rightarrow$     | IF-THEN | False only when antecedent true and consequent false |
+| Biconditional | $\Leftrightarrow$ | IFF     | Same truth values                                    |
 
+### Converse, Contrapositive, and Negation
+**Statement:**  
+"If I am hungry, then I will eat pizza."
+
+Let:  
+- $p$: I am hungry  
+- $q$: I will eat pizza  
+- Original implication: $p \rightarrow q$
+
+---
+
+#### 1. **Negation**
+
+- Statement: "It is **not** true that if I am hungry, then I will eat pizza."
+- Symbolically: $\neg(p \rightarrow q)$
+- Equivalent to: $p \land \neg q$
+- Meaning: I **am** hungry **and** I will **not** eat pizza
+
+---
+
+#### 2. **Converse**
+
+- Statement: "If I eat pizza, then I will be hungry."
+- Symbolically: $q \rightarrow p$
+- Meaning: Switch the order of the original implication
+
+---
+
+#### 3. **Inverse**
+
+- Statement: "If I am **not** hungry, then I will **not** eat pizza."
+- Symbolically: $\neg p \rightarrow \neg q$
+- Meaning: Negate both the hypothesis and the conclusion
+
+---
+
+#### 4. **Contrapositive**
+
+- Statement: "If I do **not** eat pizza, then I will **not** be hungry."
+- Symbolically: $\neg q \rightarrow \neg p$
+- Meaning: Switch and negate both parts
+- **Important:** This is **logically equivalent** to the original implication $p \rightarrow q$`
+
+
+  <div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/TCBu8PD4Lls" frameborder="0" allowfullscreen></iframe>
+</div>
+
+---
+
+### Tautologies, Contradictions, and Contingencies
+
+#### **Tautology**
+A **tautology** is a compound proposition that is **always true**, regardless of the truth values of its components.
+
+- Example: $p \vee \neg p$  
+  (This is always true — either $p$ is true or it's not)
+
+- Example: $(p \rightarrow q) \leftrightarrow (\neg p \vee q)$  
+  (This logical equivalence always holds)
+
+---
+
+#### **Contradiction**
+A **contradiction** is a compound proposition that is **always false**, no matter what truth values are assigned to its variables.
+
+- Example: $p \wedge \neg p$  
+  (This can never be true — a statement can't be both true and false)
+
+- Example: $p \wedge \neg p \wedge q$  
+  (Still always false due to $p \wedge \neg p$)
+
+---
+
+#### **Contingency**
+A **contingency** is a compound proposition that is **sometimes true and sometimes false**, depending on the truth values of its components.
+
+- Example: $p \wedge q$  
+  (True only if both $p$ and $q$ are true; otherwise false)
+ 
 ---
 
 ### Truth Tables
