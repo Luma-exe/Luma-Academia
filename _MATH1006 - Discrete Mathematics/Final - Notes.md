@@ -150,33 +150,101 @@ $$c_n = \frac{1}{n+1} \binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}$$
 
 ### Types of Functions
 
-**Injective (One-to-One):**
+#### **Injective (One-to-One)**
 
-- Different inputs â†’ different outputs
+- **Definition**: Different inputs → different outputs  
+    If $x \ne y$, then $f(x) \ne f(y)$
+    
+- **Condition**:  
+    $|A| \leq |B|$ — The codomain must be **at least as big** as the domain
+    
+- **How to Prove**:  
+    Assume $f(x_1) = f(x_2)$ and show that this leads to $x_1 = x_2$
+    
+- **Counting Injective Functions**:  
+    If $|A| = n$, $|B| = m$, and $n \leq m$:
+    
+    Number of injective functions = $P(m,n)=\frac{m!}{(m-n)!}$
 
-- If $x \neq y$, then $f(x) \neq f(y)$
+---
 
-- $|A| \leq |B|$
+#### **Surjective (Onto)**
 
-**Surjective (Onto):**
+- **Definition**: Every element of $B$ is an output  
+    Range = Codomain
+    
+- **Condition**:  
+    $|A| \geq |B|$ — The domain must be **at least as big** as the codomain
+    
+- **How to Prove**:  
+    Show that for **every** $b \in B$, there exists **some** $a \in A$ such that $f(a) = b$
+    
+- **Counting Surjective Functions**:  
+    If $|A| = n$, $|B| = m$, and $n \geq m$:
+    
+    Number of surjective functions = $m!$ x $S(n,m)$
+    
+    where $S(n, m)$ is the **Stirling number of the second kind**
+    
 
-- Every element of B is an output
+---
 
-- Range = Codomain
+#### **Bijective (One-to-One and Onto)**
 
-- $|A| \geq |B|$
-
-**Bijective:**
-
-- Both injective and surjective
-
-- $|A| = |B|$
-
-- Has an inverse function
+- **Definition**: Each input has a unique output **and** every output is used
+    
+- **Condition**:  
+    $|A| = |B|$
+    
+- **How to Prove**:  
+    Prove both injectivity and surjectivity  
+    Or show the function has a **two-sided inverse**
+    
+- **Counting Bijective Functions**:  
+    If $|A| = |B| = n$:
+    
+    Number of bijective functions = $n!$
 
 ### Function Composition
 
-$(g \circ f)(x) = g(f(x))$
+Function composition means **applying one function to the result of another**.
+
+---
+
+#### Definition:
+
+$(g∘f)(x)=g(f(x))$
+
+This reads as:
+
+> "**g composed with f** at x **is the same as applying** f **first**, then applying **g** to the result."
+
+---
+
+#### Step by Step:
+
+1. Take the input $x$
+2. Plug it into function $f$ → get $f(x)$
+3. Then plug $f(x)$ into function $g$ → get $g(f(x))$
+
+---
+
+####  Example:
+
+Let
+
+- $f(x) = 2x + 3$
+- $g(x) = x^2$
+
+Then:
+
+$$(g∘f)(x)=g(f(x))=g(2x+3)=(2x+3)^2$$
+
+But:
+
+$$(f∘g)(x)=f(g(x))=f(x^2)=2x^2+3$$
+
+Composition is **not** commutative!  Thus in general, $(g \circ f)(x) \ne (f \circ g)(x)$.
 
 ### Inverse Functions
 
@@ -199,9 +267,9 @@ $f: A \rightarrow B$ is invertible if $\exists g: B \rightarrow A$ such that:
 
 If tasks can be done in m or n ways (mutually exclusive), total ways = m + n
 
-### Multiplication Principle Â 
+### Multiplication Principle
 
-If task 1 has m ways and task 2 has n ways (independent), total ways = m Ã— n
+If task 1 has $m$ ways and task 2 has $n$ ways (independent), then the total number of ways = $m \times n$
 
 ### Inclusion-Exclusion Principle
 
@@ -215,9 +283,49 @@ $$|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |
 
 ### Cartesian Product
 
-$A \times B = \{(a,b) : a \in A, b \in B\}$
+The **Cartesian product** of two sets $A$ and $B$ is the set of **all ordered pairs** where:
 
-If $|A| = m$ and $|B| = n$, then $|A \times B| = mn$
+- The first element is from $A$
+- The second element is from $B$
+
+---
+
+#### Definition:
+
+$$A×B={(a,b)∣a∈A, b∈B}$$
+
+---
+
+#### Size of the Product:
+
+If $|A| = m$ and $|B| = n$, then:
+
+$$∣A×B∣=m×n$$
+
+> You're choosing 1 element from $A$ and 1 from $B$, so by the **multiplication principle**, you get $m \times n$ combinations.
+
+---
+
+#### Example:
+
+Let:  
+$A = {1, 2}$  
+$B = {x, y, z}$
+
+Then:
+
+$$A×B={(1,x),(1,y),(1,z),(2,x),(2,y),(2,z)}$$
+
+There are $2 \times 3 = 6$ ordered pairs.
+
+---
+
+#### Note:
+
+- Cartesian product is **not commutative**:  
+    $A \times B \ne B \times A$ (unless $A = B$)
+    
+- In $A \times B$, each **pair is ordered** — $(a, b) \ne (b, a)$ in general.
 
 ### Ordered Selections
 
@@ -228,7 +336,7 @@ If $|A| = m$ and $|B| = n$, then $|A \times B| = mn$
 ### Permutations
 
 Number of ways to arrange n distinct objects: $n!$
-
+ 
 ---
 
 ## Chapter 5: Unordered Selections & Binomial Coefficients
@@ -243,27 +351,101 @@ Number of ways to arrange n distinct objects: $n!$
 
 ### Unordered Selection Counts
 
-- **Without Repetition:** $\binom{n}{k}$
+- **Without Repetition:** $\binom{n}{k}$ which then becomes $\frac{n!}{k!(n-k)!}$
 
-- **With Repetition:** $\binom{n+k-1}{k}$
+- **With Repetition:** $\binom{n+k-1}{k}$ which then becomes $\frac{(n+k-1)!}{k!(n-k)!}$
 
 ### Pascal's Triangle
 
-Each entry is the sum of the two entries above it:
+Each entry in Pascal's Triangle is the **sum of the two entries directly above it**.
 
 $$\binom{n+1}{k} = \binom{n}{k-1} + \binom{n}{k}$$
 
+This identity shows how the triangle is built **row by row**, where:
+
+- $\binom{n}{k}$ is the **binomial coefficient**, read as “n choose k”
+- It represents the number of ways to choose $k$ elements from a set of $n$ elements
+
+---
+
+#### Structure:
+
+- Row 0:       $1$
+- Row 1:      $1 \quad 1$
+- Row 2:     $1 \quad 2 \quad 1$
+- Row 3:    $1 \quad 3 \quad 3 \quad 1$
+- Row 4:   $1 \quad 4 \quad 6 \quad 4 \quad 1$
+- And so on...
+
+---
+
+#### Properties:
+
+- The $n$th row contains the coefficients of the expansion of $(a + b)^n$
+- It is symmetric: $\binom{n}{k} = \binom{n}{n-k}$
+- The sum of the entries in row $n$ is $2^n$
+
+---
+
+#### Example using the rule:
+
+To compute $\binom{5}{2}$ using the identity:
+
+$$\binom{5}{2}=\binom{1}{4}+\binom{4}{2}=4+6=10$$
+
 ### Binomial Theorem
 
+The binomial theorem gives a formula for expanding powers of a binomial expression $(x + y)^n$.
+
 $$(x + y)^n = \sum_{k=0}^{n} \binom{n}{k} x^k y^{n-k}$$
+---
+
+#### Explanation:
+
+- The sum runs from $k = 0$ to $n$
+    
+- Each term is made up of:
+    
+    - The **binomial coefficient** $\binom{n}{k}$, which counts how many ways to choose $k$ items out of $n$
+        
+    - $x$ raised to the power $k$
+        
+    - $y$ raised to the power $n-k$
+        
+- This formula expands $(x + y)^n$ into a sum of $(n+1)$ terms
+    
+
+---
+
+#### Example for $n=3$:
+
+$$
+(x + y)^3 = \binom{3}{0} x^0 y^3 + \binom{3}{1} x^1 y^2 + \binom{3}{2} x^2 y^1 + \binom{3}{3} x^3 y^0
+$$
+
+Simplifying the binomial coefficients and powers:
+
+$$
+= 1 \cdot y^3 + 3 \cdot x y^2 + 3 \cdot x^2 y + 1 \cdot x^3
+$$
+
+Or simply:
+
+$$
+= y^3 + 3 x y^2 + 3 x^2 y + x^3
+$$
 
 ### Key Identities
 
-- $\binom{n}{0} = \binom{n}{n} = 1$
+- $\displaystyle \binom{n}{0} = \binom{n}{n} = 1$  
+  This means there is exactly one way to choose no elements or all elements from a set of size $n$.
 
-- $\binom{n}{k} = \binom{n}{n-k}$
+- $\displaystyle \binom{n}{k} = \binom{n}{n-k}$  
+  This symmetry property shows that choosing $k$ elements is the same as choosing the $n-k$ elements to leave out.
 
-- $\sum_{k=0}^{n} \binom{n}{k} = 2^n$
+- $\displaystyle \sum_{k=0}^{n} \binom{n}{k} = 2^n$  
+  The sum of all binomial coefficients for a fixed $n$ equals $2^n$.  
+  This corresponds to the total number of subsets of an $n$-element set (each element either included or not).
 
 ---
 
@@ -286,13 +468,78 @@ $$d(n) = n! \sum_{k=0}^{n} \frac{(-1)^k}{k!}$$
 
 ### Multinomial Coefficients
 
-$$\binom{n}{k_1, k_2, \ldots, k_m} = \frac{n!}{k_1! k_2! \cdots k_m!}$$
+The multinomial coefficient generalizes the binomial coefficient for dividing $n$ items into $m$ groups of specified sizes.
 
-where $k_1 + k_2 + \cdots + k_m = n$
+$$
+\binom{n}{k_1, k_2, \ldots, k_m} = \frac{n!}{k_1! \, k_2! \, \cdots \, k_m!}
+$$
+
+where
+
+$$
+k_1 + k_2 + \cdots + k_m = n
+$$
+
+---
+
+#### Explanation:
+
+- $n!$ is the factorial of the total number of items.
+- Each $k_i!$ in the denominator accounts for the indistinguishability within the $i$th group of size $k_i$.
+- The multinomial coefficient counts the number of ways to arrange $n$ items into $m$ groups of sizes $k_1, k_2, \ldots, k_m$.
+
+---
+
+#### Example:
+
+If you want to arrange 5 objects into groups of sizes 2, 2, and 1, the number of distinct arrangements is:
+
+$$
+\binom{5}{2, 2, 1} = \frac{5!}{2! \cdot 2! \cdot 1!} = \frac{120}{2 \cdot 2 \cdot 1} = 30
+$$
 
 ### Multinomial Theorem
 
-$$(x_1 + x_2 + \cdots + x_m)^n = \sum \binom{n}{k_1, k_2, \ldots, k_m} x_1^{k_1} x_2^{k_2} \cdots x_m^{k_m}$$
+The multinomial theorem generalizes the binomial theorem for expressions with more than two terms:
+
+$$
+(x_1 + x_2 + \cdots + x_m)^n = \sum_{k_1 + k_2 + \cdots + k_m = n} \binom{n}{k_1, k_2, \ldots, k_m} x_1^{k_1} x_2^{k_2} \cdots x_m^{k_m}
+$$
+
+---
+
+#### Explanation:
+
+- The sum is taken over all non-negative integer tuples $(k_1, k_2, \ldots, k_m)$ such that 
+
+  $$
+  k_1 + k_2 + \cdots + k_m = n
+  $$
+
+- Each term in the expansion corresponds to one way of distributing the power $n$ among the variables $x_1, x_2, \ldots, x_m$.
+- The multinomial coefficient 
+
+  $$
+  \binom{n}{k_1, k_2, \ldots, k_m} = \frac{n!}{k_1! k_2! \cdots k_m!}
+  $$
+
+  gives the number of ways to arrange these powers.
+
+---
+
+#### Example:
+
+For $m=3$ and $n=2$:
+
+$$
+(x + y + z)^2 = \sum_{k_1 + k_2 + k_3 = 2} \binom{2}{k_1, k_2, k_3} x^{k_1} y^{k_2} z^{k_3}
+$$
+
+which expands to:
+
+$$
+x^2 + y^2 + z^2 + 2xy + 2xz + 2yz
+$$
 
 ---
 
@@ -351,35 +598,26 @@ Visual method for simplifying Boolean expressions:
 
 ### Logical Connectives
 
-| Connective | Symbol | Name | Truth Condition |
+| Connective   | Symbol      | Name      | Truth Condition                                    |
+|--------------|-------------|-----------|--------------------------------------------------|
+| Conjunction  | $\land$     | AND       | Both true                                        |
+| Disjunction  | $\lor$      | OR        | At least one true                                |
+| Negation     | $\sim$      | NOT       | Opposite truth value                             |
+| Implication  | $\Rightarrow$ | IF-THEN  | False only when antecedent true and consequent false |
+| Biconditional| $\Leftrightarrow$ | IFF    | Same truth values                                |
 
-|------------|--------|------|-----------------|
-
-| Conjunction | $\land$ | AND | Both true |
-
-| Disjunction | $\lor$ | OR | At least one true |
-
-| Negation | $\sim$ | NOT | Opposite truth value |
-
-| Implication | $\Rightarrow$ | IF-THEN | False only when antecedent true and consequent false |
-
-| Biconditional | $\Leftrightarrow$ | IFF | Same truth values |
+---
 
 ### Truth Tables
 
 **Implication ($p \Rightarrow q$):**
 
-| p | q | $p \Rightarrow q$ |
-
-|---|---|---|
-
-| T | T | T |
-
-| T | F | F |
-
-| F | T | T |
-
-| F | F | T |
+| $p$ | $q$ | $p \Rightarrow q$ |
+|-----|-----|-------------------|
+| T   | T   | T                 |
+| T   | F   | F                 |
+| F   | T   | T                 |
+| F   | F   | T                 |
 
 ### Logical Equivalences
 
@@ -395,15 +633,61 @@ Visual method for simplifying Boolean expressions:
 
 ### Quantifiers
 
-- **Universal ($\forall$):** "for all"
+Quantifiers are symbols used in logic to express the extent to which a predicate applies to a set of elements.
 
-- **Existential ($\exists$):** "there exists"
+- **Universal Quantifier ($\forall$):**  
+  Means "for all" or "for every".  
+  The statement $(\forall x) P(x)$ means that the property $P(x)$ is true for **every** element $x$ in the domain.
 
-**Negation of Quantifiers:**
+- **Existential Quantifier ($\exists$):**  
+  Means "there exists" or "there is at least one".  
+  The statement $(\exists x) P(x)$ means that there is **at least one** element $x$ in the domain for which the property $P(x)$ is true.
 
-- $\sim(\forall x)P(x) \equiv (\exists x)\sim P(x)$
+---
 
-- $\sim(\exists x)P(x) \equiv (\forall x)\sim P(x)$
+### Negation of Quantifiers
+
+Negating quantified statements changes the quantifier and negates the predicate:
+
+- Negation of a universal statement:
+
+  $$
+  \sim (\forall x) P(x) \equiv (\exists x) \sim P(x)
+  $$
+
+  This means:  
+  "It is **not** true that $P(x)$ holds for all $x$" is equivalent to  
+  "There exists at least one $x$ for which $P(x)$ does **not** hold."
+
+- Negation of an existential statement:
+
+  $$
+  \sim (\exists x) P(x) \equiv (\forall x) \sim P(x)
+  $$
+
+  This means:  
+  "It is **not** true that there exists an $x$ such that $P(x)$ holds" is equivalent to  
+  "For **all** $x$, $P(x)$ does **not** hold."
+
+---
+
+### Example:
+
+If $P(x)$ means "$x$ is even", then:
+
+- $(\forall x) P(x)$ means "All $x$ are even."
+- Negating it: $\sim (\forall x) P(x)$ means "Not all $x$ are even," which is equivalent to "There exists an $x$ that is not even":
+
+  $$
+  \sim (\forall x) P(x) \equiv (\exists x) \sim P(x)
+  $$
+
+- $(\exists x) P(x)$ means "There exists an $x$ that is even."
+- Negating it: $\sim (\exists x) P(x)$ means "There does not exist any even $x$," which is equivalent to "For all $x$, $x$ is not even":
+
+  $$
+  \sim (\exists x) P(x) \equiv (\forall x) \sim P(x)
+  $$
 
 ---
 
@@ -417,37 +701,149 @@ $$a = qb + r \quad (0 \leq r < b)$$
 
 ### Divisibility
 
-$a | b$ means "a divides b" (i.e., $b = ka$ for some integer $k$)
+The notation
 
-### Greatest Common Divisor
+$$
+a \mid b
+$$
 
-$\gcd(a,b)$ is the largest positive integer that divides both $a$ and $b$
+means **"a divides b"**, which is defined as:
+
+- There exists an integer $k$ such that:
+
+  $$
+  b = k \times a
+  $$
+
+- In other words, when $b$ is divided by $a$, the remainder is zero.
+
+---
+
+#### Examples:
+
+- $3 \mid 12$ because $12 = 3 \times 4$ with $k=4$.
+- $5 \nmid 12$ because there is no integer $k$ such that $12 = 5k$ (division leaves remainder 2).
+
+---
+
+#### Properties of Divisibility:
+
+- If $a \mid b$ and $a \mid c$, then $a \mid (b + c)$.
+- If $a \mid b$, then $a \mid (b \times k)$ for any integer $k$.
+- If $a \mid b$ and $b \mid c$, then $a \mid c$.
+
+### Greatest Common Divisor (GCD)
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/JUzYl1TYMcU" frameborder="0" allowfullscreen></iframe>
+</div>
+
+The **greatest common divisor** of two integers $a$ and $b$, denoted $\gcd(a, b)$, is the largest positive integer that divides both $a$ and $b$ without leaving a remainder.
+
+---
 
 ### Euclidean Algorithm
 
-To find $\gcd(a,b)$:
+A method to efficiently compute $\gcd(a, b)$:
 
-1. $a = q_1b + r_1$
+1. Divide $a$ by $b$ to get quotient $q_1$ and remainder $r_1$:
 
-2. $b = q_2r_1 + r_2$ Â 
+   $$
+   a = q_1 b + r_1, \quad 0 \leq r_1 < b
+   $$
 
-3. $r_1 = q_3r_2 + r_3$
+2. Divide $b$ by $r_1$ to get quotient $q_2$ and remainder $r_2$:
 
-4. Continue until remainder is 0
+   $$
+   b = q_2 r_1 + r_2, \quad 0 \leq r_2 < r_1
+   $$
 
-5. Last non-zero remainder is $\gcd(a,b)$
+3. Repeat this process:
+
+   $$
+   r_1 = q_3 r_2 + r_3, \quad 0 \leq r_3 < r_2
+   $$
+
+4. Continue until the remainder is 0:
+
+   $$
+   r_{k-2} = q_k r_{k-1} + 0
+   $$
+
+5. The last non-zero remainder $r_{k-1}$ is the $\gcd(a, b)$.
+
+---
 
 ### Modular Arithmetic
 
-$a \equiv b \pmod{n}$ means $n | (a-b)$
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/6dZLq77gSGU" frameborder="0" allowfullscreen></iframe>
+</div>
 
-**Properties:**
+The notation
 
-- If $a \equiv b \pmod{n}$ and $c \equiv d \pmod{n}$, then:
+$$
+a \equiv b \pmod{n}
+$$
 
-Â  - $a + c \equiv b + d \pmod{n}$
+means that $a$ and $b$ leave the same remainder when divided by $n$, or equivalently,
 
-Â  - $ac \equiv bd \pmod{n}$
+$$
+n \mid (a - b)
+$$
+
+which reads "n divides (a minus b)".
+
+#### Example
+
+Consider the statement:
+
+$$
+17 \equiv 5 \pmod{12}
+$$
+
+- When you divide 17 by 12, the remainder is 5, because:
+
+  $$
+  17 = 12 \times 1 + 5
+  $$
+
+- The difference between 17 and 5 is:
+
+  $$
+  17 - 5 = 12
+  $$
+
+- Since 12 divides the difference exactly ($12 \mid 12$), the statement $17 \equiv 5 \pmod{12}$ is true.
+
+This means 17 and 5 are congruent modulo 12.
+
+
+---
+
+### Properties of Modular Arithmetic
+
+If
+
+$$
+a \equiv b \pmod{n} \quad \text{and} \quad c \equiv d \pmod{n}
+$$
+
+then:
+
+- **Addition:**
+
+  $$
+  a + c \equiv b + d \pmod{n}
+  $$
+
+- **Multiplication:**
+
+  $$
+  a \cdot c \equiv b \cdot d \pmod{n}
+  $$
+
+These properties allow you to perform addition and multiplication inside modular arithmetic, simplifying calculations by working with remainders.
 
 ### Prime Numbers
 
@@ -566,12 +962,12 @@ $$\sum_{v \in V} \deg(v) = 2|E|$$
 
 ### Euler's Theorems
 
-> [!important] Euler's Theorems
-> For a connected graph:
->
-> - Has Euler circuit âŸº all vertices have even degree
->
-> - Has Euler path âŸº exactly 0 or 2 vertices have odd degree
+> [!important] Euler's Theorems  
+> For a connected graph:  
+> 
+> - Has **Euler circuit** ⟹ all vertices have **even degree**  
+> 
+> - Has **Euler path** ⟹ exactly **0 or 2 vertices** have **odd degree**
 
 ### Trees
 
@@ -608,48 +1004,81 @@ To find minimum spanning tree:
 
 3. Repeat until tree is complete
 
-### Applications of Graph Theory
-
-- Social networks
-
-- Computer networks Â 
-
-- Transportation systems
-
-- Circuit design
-
-- Scheduling problems
-
 ---
 
 ## Summary of Key Formulas
 
 ### Counting
 
-- Permutations: $P(n,k) = \frac{n!}{(n-k)!}$
+- **Permutations:**  
+  $P(n,k) = \frac{n!}{(n-k)!}$
 
-- Combinations: $C(n,k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}$
+- **Combinations:**  
+  $C(n,k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}$
 
-- Inclusion-Exclusion: $|A \cup B| = |A| + |B| - |A \cap B|$
+- **Inclusion-Exclusion (2 sets):**  
+  $|A \cup B| = |A| + |B| - |A \cap B|$
+
+- **Inclusion-Exclusion (3 sets):**  
+  $|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|$
+
+- **Multinomial Coefficient:**  
+  $\binom{n}{k_1, k_2, \dots, k_m} = \frac{n!}{k_1!k_2!\cdots k_m!}$
+
+- **Number of Functions:**
+  - Total functions from $A \to B$: $|B|^{|A|}$
+  - Injective functions (if $|A| \leq |B|$): $P(|B|, |A|)$
+  - Bijective functions (if $|A| = |B|$): $n!$
+  - Surjective functions: $m! \cdot S(n,m)$ where $S(n,m)$ is the Stirling number of the second kind
+
+---
 
 ### Special Numbers
 
-- Fibonacci: $F_n = F_{n-1} + F_{n-2}$
+- **Fibonacci:**  
+  $F_n = F_{n-1} + F_{n-2}$, with $F_0 = 0$, $F_1 = 1$
 
-- Catalan: $c_n = \frac{1}{n+1}\binom{2n}{n}$
+- **Catalan:**  
+  $C_n = \frac{1}{n+1} \binom{2n}{n}$
 
-- Derangements: $d_n \approx \frac{n!}{e}$
+- **Derangements:**  
+  $D_n = n! \sum_{k=0}^{n} \frac{(-1)^k}{k!}$  
+  or approx: $D_n \approx \frac{n!}{e}$
+
+---
 
 ### Number Theory
 
-- Division Algorithm: $a = qb + r$, $0 \leq r < b$
+- **Division Algorithm:**  
+  $a = qb + r$, with $0 \leq r < b$
 
-- Euclidean Algorithm for $\gcd(a,b)$
+- **Euclidean Algorithm:**  
+  Repeated division to compute $\gcd(a,b)$
 
-- Modular arithmetic: $a \equiv b \pmod{n}$
+- **Modular Arithmetic:**  
+  $a \equiv b \pmod{n} \iff n \mid (a - b)$
+
+- **Mod Properties:**  
+  - $a \equiv b \pmod{n} \Rightarrow a + c \equiv b + c \pmod{n}$  
+  - $a \equiv b \pmod{n},\ c \equiv d \pmod{n} \Rightarrow ac \equiv bd \pmod{n}$
+
+---
 
 ### Graph Theory
 
-- Handshaking Lemma: $\sum \deg(v) = 2|E|$
+- **Handshaking Lemma:**  
+  $\sum \deg(v) = 2|E|$
 
-- Trees: $|E| = |V| - 1$
+- **Trees:**  
+  - A tree with $n$ vertices has $n - 1$ edges  
+  - Every connected acyclic graph is a tree
+
+- **Euler Paths and Circuits:**  
+  - Euler circuit: All vertices have even degree  
+  - Euler path: Exactly 0 or 2 vertices have odd degree
+
+- **Complete Graph $K_n$ edges:**  
+  $|E| = \binom{n}{2}$
+
+- **Bipartite Graph (complete):**  
+  If sets have $m$ and $n$ vertices: $|E| = m \cdot n$
