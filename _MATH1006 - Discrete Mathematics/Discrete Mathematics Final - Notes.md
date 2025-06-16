@@ -32,7 +32,7 @@
 
 ---
 
-## Chapter 1: Counting & Sequences
+ ## Chapter 1: Counting & Sequences
 
 ### Fibonacci Numbers
 
@@ -156,6 +156,10 @@ $$c_n = \frac{1}{n+1} \binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}$$
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/BmboPeuGcYA" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/bZred_Ksz2k" frameborder="0" allowfullscreen></iframe>
 </div>
 
 #### **Injective (One-to-One)**
@@ -636,6 +640,11 @@ Visual method for simplifying Boolean expressions:
 | Biconditional | $\Leftrightarrow$ | IFF     | Same truth values                                    |
 
 ### Converse, Contrapositive, and Negation
+
+  <div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/TCBu8PD4Lls" frameborder="0" allowfullscreen></iframe>
+</div>
+
 **Statement:**  
 "If I am hungry, then I will eat pizza."
 
@@ -677,11 +686,6 @@ Let:
 - Symbolically: $\neg q \rightarrow \neg p$
 - Meaning: Switch and negate both parts
 - **Important:** This is **logically equivalent** to the original implication $p \rightarrow q$`
-
-
-  <div style="display: flex; justify-content: center; align-items: center;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/TCBu8PD4Lls" frameborder="0" allowfullscreen></iframe>
-</div>
 
 ---
 
@@ -1119,10 +1123,16 @@ To find minimum spanning tree:
 
 ### Counting
 
-- **Permutations:**  
+- Ordered With Repetition:  
+  $n^k$
+
+- Ordered without Repetition - **Permutations:**  
   $P(n,k) = \frac{n!}{(n-k)!}$
 
-- **Combinations:**  
+- Unordered With Repetition:  
+  $\binom{n+k-1}{k}$
+
+- Unordered without Repetition - **Combinations:**  
   $C(n,k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}$
 
 - **Inclusion-Exclusion (2 sets):**  
