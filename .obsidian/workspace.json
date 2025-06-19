@@ -13,6 +13,21 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "_COMP2009 - Data Structures and Algorithms/Data Structures and Algorithms Final - Notes.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Data Structures and Algorithms Final - Notes"
+            }
+          },
+          {
+            "id": "b5a87443ea849de5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "_COMP1014 - Thinking about Data/Thinking About Data Final - Notes.md",
                 "mode": "source",
                 "source": false,
@@ -143,13 +158,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_COMP1014 - Thinking about Data/Thinking About Data Final - Notes.md",
+                "file": "_COMP2009 - Data Structures and Algorithms/Data Structures and Algorithms Final - Notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Thinking About Data Final - Notes"
+              "title": "Outline of Data Structures and Algorithms Final - Notes"
             }
           },
           {
@@ -186,8 +201,10 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "_COMP2009 - Data Structures and Algorithms/Lecture 10 - AVL Trees.md",
     "_COMP1014 - Thinking about Data/Thinking About Data Final - Notes.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 1 - Introduction and Algorithm Design Part A.md",
+    "_COMP2009 - Data Structures and Algorithms/Data Structures and Algorithms Final - Notes.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 10 - AVL Trees.md",
     "_COMP1014 - Thinking about Data/Lecture 10 - Normality.md",
     "_COMP2019 - Systems Programming 1/Systems Programming 1 Final - Notes.md",
     "_MATH1006 - Discrete Mathematics/Class Test 2 - Notes.md",
@@ -210,8 +227,6 @@
     "_COMP2009 - Data Structures and Algorithms/Lecture 9 - Graphs.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 4 - Algorithms with Queues and Priority Queues.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 5 - Recursion.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 12 - Sorting Algorithms.md",
-    "_COMP2019 - Systems Programming 1/Lecture 7 - Event Driven Programming.md",
     "Personal/Lua",
     "Personal",
     "Images/Pasted image 20250521031709.png",
