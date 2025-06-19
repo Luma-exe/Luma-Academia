@@ -5,8 +5,6 @@
 > Topics: #coding/language/r #math
 > Date: 2025-06-20 at 14:00
 
-# COMP1014 - Thinking About Data: Complete Study Guide
-
 **What is this subject about?**
 This course teaches you how to analyze data using statistics and the R programming language. You'll learn to answer questions like "Does smoking affect birth weight?" or "Is there a relationship between height and income?" using real data.
 
