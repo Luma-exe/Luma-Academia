@@ -1,4 +1,3 @@
-
 > [!faq] About this Note
 >
 > Class: COMP1014
@@ -691,76 +690,201 @@ Use adequate sample size
 
 ---
 
-## Summary: Quick Reference Guide for Exams
+## EXAM-SPECIFIC SECTIONS
 
-### When to Use Each Test
+### Box Plot Interpretation (Key Exam Skill)
 
-| Your Question | Data Type | Test to Use | R Command |
-|---------------|-----------|-------------|-----------|
-| Is this coin fair? | Categorical counts | Chi-squared goodness-of-fit | `chisq.test(counts, p=probs)` |
-| Are gender and preference related? | 2 categorical variables | Chi-squared independence | `chisq.test(table)` |
-| Is group mean different from known value? | 1 continuous variable | One-sample t-test | `t.test(data, mu=value)` |
-| Do two groups have different means? | 1 continuous, 1 categorical (2 groups) | Two-sample t-test | `t.test(data ~ group)` |
-| Are before/after measurements different? | Paired continuous data | Paired t-test | `t.test(before, after, paired=TRUE)` |
-| Are 3+ groups different? | 1 continuous, 1 categorical (3+ groups) | ANOVA | `aov(data ~ group)` |
-| Which groups are different? | Follow-up to ANOVA | Tukey HSD | `TukeyHSD(aov_result)` |
-| How strong is linear relationship? | 2 continuous variables | Correlation | `cor.test(x, y)` |
-| Can I predict Y from X? | 2 continuous variables | Linear regression | `lm(y ~ x)` |
+**What Box Plots Show**:
+- **Box**: Interquartile range (IQR) - middle 50% of data
+- **Line in box**: Median (50th percentile)
+- **Whiskers**: Extend to furthest points within 1.5×IQR
+- **Dots**: Outliers beyond whiskers
 
-### Key Formulas You Need to Know
-
-#### Descriptive Statistics
-- **Mean**: x̄ = Σ xᵢ / n
-- **Variance**: s² = Σ(xᵢ - x̄)² / (n-1)
-- **Standard Deviation**: s = √s²
-
-#### Hypothesis Testing
-- **Chi-squared**: χ² = Σ (Observed - Expected)² / Expected
-- **t-statistic (one sample)**: t = (x̄ - μ₀) / (s/√n)
-- **t-statistic (two sample)**: t = (x̄₁ - x̄₂) / (pooled_SE)
-- **Correlation**: r = Σ[(xᵢ - x̄)(yᵢ - ȳ)] / √[Σ(xᵢ - x̄)² × Σ(yᵢ - ȳ)²]
-
-#### Confidence Intervals
-- **For mean**: x̄ ± t₍α/2₎ × (s/√n)
-- **For difference**: (x̄₁ - x̄₂) ± t₍α/2₎ × pooled_SE
-
-#### Probability Distributions
-- **Binomial**: P(X=k) = C(n,k) × p^k × (1-p)^(n-k)
-- **Poisson**: P(X=k) = λ^k × e^(-λ) / k!
-- **Normal**: Use when n is large or data is naturally normal
-
-### P-value Interpretation
-- **p < 0.01**: Very strong evidence against null hypothesis
-- **p < 0.05**: Strong evidence against null hypothesis (commonly used cutoff)
-- **p < 0.10**: Some evidence against null hypothesis
-- **p ≥ 0.10**: Little or no evidence against null hypothesis
-
-### Common Mistakes to Avoid
-1. **Correlation ≠ Causation**: Just because variables are related doesn't mean one causes the other
-2. **Multiple testing**: Testing many hypotheses increases false positive rate
-3. **Pseudo-replication**: Treating non-independent observations as independent
-4. **Ignoring assumptions**: Check normality, equal variances, etc.
-5. **Cherry-picking**: Only reporting significant results
-
-### R Syntax Reminders
+**Comparing Two Groups**:
 ```r
-# Reading data
-data <- read.csv("filename.csv")
+boxplot(length ~ species, data=fish)
+```
 
-# Basic statistics
-mean(data$variable)
-sd(data$variable)
+**How to Interpret**:
+- **Central tendency**: Compare medians (lines in boxes)
+- **Spread**: Compare box widths and whisker lengths
+- **Outliers**: Look for dots beyond whiskers
+- **Skewness**: If median isn't centered in box
+
+**Example Description**: "Species Y has a higher median than Species X. Species X shows much greater variability, with a wider interquartile range and longer whiskers. Species Y appears more consistent in measurements."
+
+### Bootstrap vs Permutation (Critical Distinction)
+
+| Bootstrap | Permutation |
+|-----------|-------------|
+| **Purpose**: Estimate variability of a statistic | **Purpose**: Test if groups are different |
+| **Method**: Resample WITH replacement from original data | **Method**: Shuffle group labels WITHOUT replacement |
+| **Preserves**: Original data structure | **Breaks**: Any relationship between variables |
+| **Centered**: Around observed statistic | **Centered**: Around 0 (null hypothesis) |
+| **Use for**: Confidence intervals | **Use for**: p-values |
+
+**Bootstrap Example**:
+```r
+# Estimating uncertainty in mean difference
+boot <- replicate(1000, {
+  s <- sample(fish$length, size=50, replace=TRUE)
+  mean(s)
+})
+# Results center around observed mean
+```
+
+**Permutation Example**:
+```r
+# Testing if species have different means
+sim <- replicate(1000, {
+  shuffled_species <- sample(fish$species)
+  # Calculate difference with shuffled labels
+})
+# Results center around 0 if no real difference
+```
+
+### Common R Code Errors (Exam Focus)
+
+#### Bootstrap Error Pattern:
+```r
+# WRONG:
+boot = replicate(1000, {
+  s = sample(1:n, size = n, replace = TRUE)
+  mean(s)  # This calculates mean of ROW NUMBERS, not data!
+})
+
+# CORRECT:
+boot = replicate(1000, {
+  s = sample(data$variable, size = length(data$variable), replace = TRUE)
+  mean(s)  # This calculates mean of actual data values
+})
+```
+
+#### Permutation Error Pattern:
+```r
+# WRONG:
+sim = replicate(1000, {
+  s = sample(data$group)  # Shuffled but never used
+  mean(data$variable[data$group == "A"]) - mean(data$variable[data$group == "B"])
+  # Still using original groups!
+})
+
+# CORRECT:
+sim = replicate(1000, {
+  shuffled_groups = sample(data$group)  # Shuffle labels
+  mean(data$variable[shuffled_groups == "A"]) - mean(data$variable[shuffled_groups == "B"])
+  # Use shuffled labels
+})
+```
+
+### Linear Regression - Complete Exam Guide
+
+#### Setting Up Regression
+```r
+# Basic regression
+model <- lm(final_exam ~ assignment, data=students)
+summary(model)
+```
+
+#### Reading Regression Output
+```
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)      2.24023    2.04669   1.095     0.28    
+assignment       0.67210    0.06284  10.695 3.69e-13 ***
+```
+
+### EXAM PRACTICE PROBLEMS
+
+#### Problem Type 1: Box Plot Analysis
+**Given**: Two box plots comparing fish lengths by species
+**Skills Tested**:
+- Compare central tendency (medians)
+- Compare variability (IQR, whiskers)
+- Identify outliers
+- Write clear comparisons
+
+**Sample Answer Format**: "Species A has a higher median length than Species B (approximately X vs Y). Species B shows greater variability with a wider interquartile range and longer whiskers, suggesting more diverse lengths within this species."
+
+#### Problem Type 2: Bootstrap Code Debugging
+**Common Errors**:
+1. `mean(s)` where `s` contains row indices instead of actual data
+2. Not using `replace=TRUE` in sampling
+3. Sampling wrong variable or wrong size
+
+**Sample Problem**: 
+```r
+# Find the error:
+boot = replicate(1000, {
+  s = sample(1:nrow(data), size = nrow(data), replace = TRUE)
+  mean(s)  # ERROR: This is mean of row numbers!
+})
+
+# Fix:
+boot = replicate(1000, {
+  s = sample(data$variable, size = length(data$variable), replace = TRUE)
+  mean(s)  # Correct: mean of actual data values
+})
+```
+
+#### Problem Type 3: Permutation vs Bootstrap
+**Question**: "Explain when to use bootstrap vs permutation"
+**Answer**: 
+- **Bootstrap**: When estimating uncertainty in a statistic (confidence intervals)
+- **Permutation**: When testing hypotheses (p-values)
+- **Key difference**: Bootstrap preserves relationships, permutation breaks them
+
+#### Problem Type 4: ANOVA Application
+**Scenario**: Comparing difficulty of multiple quizzes
+**Steps**:
+1. Identify this as comparing 3+ group means → ANOVA
+2. H₀: All quiz means are equal
+3. H₁: At least one quiz mean differs
+4. Interpret F-statistic and p-value
+5. If significant, use post-hoc tests to find which pairs differ
+
+#### Problem Type 5: Regression Interpretation
+**Given**: R regression output
+**Must explain**:
+- Slope meaning in context
+- Significance of relationship (p-value)
+- R-squared interpretation
+- Sample size effects
+
+**Sample Answer**: "There is a significant linear relationship between assignment and final exam marks (p < 0.001). For each additional assignment point, final exam marks increase by 0.67 points on average. Assignment marks explain 74.6% of the variation in final exam performance."
+
+#### Must-Know R Functions for Exam
+```r
+# Summary statistics
 summary(data)
+mean(), median(), sd(), var()
 
-# Visualization
-hist(data$variable)
+# Visualization  
 boxplot(variable ~ group, data=data)
+hist(variable)
 plot(x, y)
 
-# Tests
-t.test(data$variable, mu=100)          # One-sample t-test
-t.test(variable ~ group, data=data)    # Two-sample t-test
-chisq.test(table)                      # Chi-squared test
-cor.test(x, y)                         # Correlation test
-lm(y ~ x, data=data)                   # Linear regression
+# Testing
+t.test(variable ~ group, data=data)
+aov(variable ~ group, data=data)
+lm(y ~ x, data=data)
+
+# Bootstrap/Permutation
+replicate(n, {...})
+sample(..., replace=TRUE)  # Bootstrap
+sample(...)  # Permutation
+
+# Data manipulation
+data.frame()
+c()  # Combine vectors
+rep()  # Repeat values
 ```
+
+#### Key Phrases for Full Marks
+- "There is strong evidence that..." (when p < 0.05)
+- "No evidence of difference..." (when p ≥ 0.05)  
+- "On average, [interpret slope] in context"
+- "X explains Y% of variation in..."
+- "The 95% confidence interval is..."
+
+Remember: Always interpret results in the context of the problem, not just statistically!
