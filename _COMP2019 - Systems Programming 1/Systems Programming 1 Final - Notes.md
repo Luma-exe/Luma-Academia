@@ -467,11 +467,59 @@ close(fd);
 
 - Manage space, time, interruptions, concurrency
 
-### Curses Library
+## Curses Library (C Language)
 
-- Screen as grid of cells
+The **curses** library is used to create **text-based User Interfaces (TUIs)** by treating the terminal as a **grid of cells**.
 
-- Functions: `initscr()`, `endwin()`, `refresh()`, `move()`, `addstr()`, `addch()`, `clear()`, `standout()`, `standend()`
+Each cell can hold:
+- A **character**
+- **Attributes** (e.g. bold, standout)
+- **Colors**
+
+---
+
+### Key Concepts
+
+- The screen is a **2D grid** of characters.
+- You can **move the cursor**, **draw text**, and **control attributes**.
+
+---
+
+### Common Functions
+
+| Function         | Description |
+|------------------|-------------|
+| `initscr()`      | Initializes the screen for curses mode. Must be called first. |
+| `endwin()`       | Ends curses mode and restores normal terminal behavior. |
+| `refresh()`      | Updates the actual screen with changes made in memory. |
+| `move(y, x)`     | Moves the cursor to row `y`, column `x`. |
+| `addstr("text")` | Writes a string at the current cursor location. |
+| `addch('c')`     | Writes a single character at the current cursor location. |
+| `clear()`        | Clears the screen. |
+| `standout()`     | Turns on standout mode (highlighted text). |
+| `standend()`     | Ends standout mode. |
+
+---
+
+### Example Usage
+
+```c
+#include <curses.h>
+
+int main() {
+    initscr();              // Start curses mode
+    clear();                // Clear screen
+    move(5, 10);            // Move cursor to (5, 10)
+    standout();             // Turn on standout mode
+    addstr("Hello World");  // Add highlighted text
+    standend();             // End standout mode
+    refresh();              // Show changes
+    getch();                // Wait for user input
+    endwin();               // End curses mode
+    return 0;
+}
+
+```
 
 ### Example: hello1.c
 
@@ -494,38 +542,60 @@ int main() {
 
 ### Processes Overview
 
-- Executing program with its own virtual CPU
+- A **process** is an executing program with its own **virtual CPU** and **memory space**.
+- Processes are isolated — each has its own **PID**, **memory**, and **execution state**.
+
+---
 
 ### Process Attributes
 
-- PID, priority, niceness, terminal, state
+- **PID** (Process ID): Unique identifier for each process
+- **PPID** (Parent PID): ID of the process that created it
+- **State**: Running, Sleeping, Zombie, etc.
+- **Priority**: Determines scheduling preference
+- **Niceness**: User-assigned priority adjustment
+- **Terminal**: Associated terminal device
+
+---
 
 ### Exploring Processes
 
-- `ps`, `ps -ax`
+- `ps`: Show current user’s processes  
+- `ps -ax`: Show all processes (regardless of user or terminal)
+
+---
 
 ### Memory Management
 
-- User vs kernel space
+- **User Space**: Process' private memory — code, stack, heap
+- **Kernel Space**: Shared system memory — used by the OS
+
+---
 
 ### Exec Family
 
-- `execl()`, `execvp()`, etc. Replace process image
+- Replaces the **current process image** with a new program
+- Common forms:
+  - `execl(path, arg0, arg1, ..., NULL)`
+  - `execv(path, argv)`
+  - `execvp(file, argv)` — searches `$PATH`
 
-### Fork
+---
+
+### Fork Example
 
 ```c
 pid_t pid = fork();
-if (pid == 0) { 
-    /* child process */
+if (pid == 0) {
+    // Child process
     execl("/bin/ls", "ls", "-l", NULL);
     perror("exec failed");
     exit(1);
-} else if (pid > 0) { 
-    /* parent process */
-    wait(NULL); // Wait for child to complete
+} else if (pid > 0) {
+    // Parent process
+    wait(NULL); // Wait for child
 } else {
-    /* fork failed */
+    // Fork failed
     perror("fork failed");
     exit(1);
 }
@@ -533,45 +603,107 @@ if (pid == 0) {
 
 ### Process Creation Pattern
 
-1. **fork()** creates an exact copy of the current process
-2. **exec()** replaces the process image with a new program
-3. **wait()** allows parent to wait for child completion
-4. **exit()** terminates the process
+1. **`fork()`**
+    - Creates a child process as a **copy** of the parent.
+    - Both processes continue execution independently.
+        
+    - Returns:
+        - `0` to the child
+        - Child’s PID to the parent
+        - `-1` if an error occurred
+            
+2. **`exec()`**
+    - Replaces the current process image with a new program.
+    - Variants: `execl()`, `execp()`, `execvp()`, etc.
+    - If successful, the current code **does not continue** after `exec()`.
+        
+3. **`wait()`**
+    - Parent process waits for a **child** process to finish.
+    - Returns child’s PID and stores its exit status.
+        
+4. **`exit()`**
+    - Terminates a process and returns an exit code to the parent.
+
+---
 
 ### Key Process Functions
 
-- `fork()`: Creates child process, returns 0 to child, PID to parent
-- `exec()` family: Replaces current process with new program
-- `wait()`: Parent waits for any child to terminate
-- `waitpid()`: Wait for specific child process
-- `getpid()`: Get current process ID
-- `getppid()`: Get parent process ID
+|Function|Description|
+|---|---|
+|`fork()`|Creates a new process. Returns 0 to child, PID to parent.|
+|`exec*()`|Replaces the current process image with a new one.|
+|`wait()`|Waits for any child process to terminate.|
+|`waitpid()`|Waits for a specific child process to finish.|
+|`getpid()`|Returns the current process ID.|
+|`getppid()`|Returns the parent process ID.|
 
+---
+
+### Summary
+
+- A typical pattern is: `fork()` → `exec()` → `wait()` in the parent.
+    
+- If `exec()` fails, handle with `perror()` and exit.
+    
+- Always use `wait()` in the parent to avoid zombie processes.
 ---
 
 ## Chapter 9: Shell
 
 ### The Shell
 
-- Interpreter for commands and scripts
+- The **shell** is a command-line interpreter that allows users to interact with the operating system.
+- It executes commands, launches programs, and supports scripting for automation.
+
+---
 
 ### Shell Scripts
 
-- Variables, `echo`, `read`, `set`, `export`, `unset`
+- A **shell script** is a file containing a series of shell commands.
+- It typically starts with a shebang (`#!/bin/sh` or `#!/bin/bash`).
+- Scripts can use:
+  - **Variables**
+  - **Control structures** (`if`, `for`, `while`)
+  - **Input/output commands**
 
-- Example:
+#### Common Commands
+
+- `echo`: Print to the terminal
+- `read`: Accept user input
+- `set`: Set shell options
+- `export`: Make variable available to sub-processes
+- `unset`: Remove a variable
+
+#### Example:
 
 ```bash
-
 #!/bin/sh
 
 echo "Hello, $USER"
-
+read -p "Enter your name: " name
+echo "Nice to meet you, $name!"
 ```
 
 ### I/O Redirection & Pipes
 
-- `>`, `<`, `2>`, `|`
+|Symbol|Meaning|Example|
+|---|---|---|
+|`>`|Redirect stdout to file (overwrite)|`ls > files.txt`|
+|`>>`|Redirect stdout to file (append)|`echo "done" >> log.txt`|
+|`<`|Redirect stdin from file|`sort < input.txt`|
+|`2>`|Redirect stderr to file|`./badcmd 2> errors.log`|
+|`&>`|Redirect both stdout and stderr|`make &> build.log`|
+|`|`|Pipe stdout to another command|
+
+---
+
+### Notes
+
+- Shell scripting is a powerful tool for automating tasks.
+    
+- Always make your script executable: `chmod +x script.sh`
+    
+- Run it with `./script.sh`
 
 ---
 
@@ -756,7 +888,7 @@ void *moving_msg(char *msg) {
 - **File Operations**: `open()`, `close()`, `read()`, `write()`, `lseek()`
 - **Process Management**: `fork()`, `exec()`, `wait()`, `exit()`
 - **Communication**: `pipe()`, `socket()`, `bind()`, `listen()`, `accept()`
-- **Thread Management**: `pthread_create()`, `pthread_join()`, `pthread_mutex_lock()```
+- **Thread Management**: `pthread_create()`, `pthread_join()`, `pthread_mutex_lock()`
 
 #### Memory Management Fundamentals
 - **Pointers**: Essential for C programming - understand pointer arithmetic, dereferencing, and memory allocation

@@ -4,56 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "fb8dec45ccad5bcf",
+        "id": "880816510d331680",
         "type": "tabs",
         "children": [
           {
-            "id": "d02a1a436459d2f0",
+            "id": "03c2c6d7dd3c1d2a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_COMP2019 - Systems Programming 1/Systems Programming 1 Final - Notes.md",
+                "file": "_COMP1014 - Thinking about Data/Thinking About Data Final - Notes.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Systems Programming 1 Final - Notes"
-            }
-          },
-          {
-            "id": "e4dcc76951fbd709",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_MATH1006 - Discrete Mathematics/Discrete Mathematics Final - Notes.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Discrete Mathematics Final - Notes"
-            }
-          },
-          {
-            "id": "1c361ac905fec73f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_MATH1006 - Discrete Mathematics/Class Test 2 - Notes.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Class Test 2 - Notes"
+              "title": "Thinking About Data Final - Notes"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -174,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_MATH1006 - Discrete Mathematics/Discrete Mathematics Final - Notes.md",
+                "file": "_COMP1014 - Thinking about Data/Thinking About Data Final - Notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Discrete Mathematics Final - Notes"
+              "title": "Outline of Thinking About Data Final - Notes"
             }
           },
           {
@@ -198,7 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 305.5
+    "width": 301.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -217,13 +186,16 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
+    "_COMP2009 - Data Structures and Algorithms/Lecture 10 - AVL Trees.md",
+    "_COMP1014 - Thinking about Data/Thinking About Data Final - Notes.md",
+    "_COMP1014 - Thinking about Data/Lecture 10 - Normality.md",
+    "_COMP2019 - Systems Programming 1/Systems Programming 1 Final - Notes.md",
     "_MATH1006 - Discrete Mathematics/Class Test 2 - Notes.md",
     "_MATH1006 - Discrete Mathematics/Discrete Mathematics Final - Notes.md",
+    "_MATH1006 - Discrete Mathematics/Lecture 10 - Induction, Recursion.md",
     "_MATH1006 - Discrete Mathematics/Class Test 1 - Notes.md",
     "_MATH1006 - Discrete Mathematics/Lecture 4 - Counting Principles.md",
-    "_COMP2019 - Systems Programming 1/Systems Programming 1 Final - Notes.md",
     "_MATH1006 - Discrete Mathematics/Lecture 11 - Graph Theory.md",
-    "_MATH1006 - Discrete Mathematics/Lecture 10 - Induction, Recursion.md",
     "_MATH1006 - Discrete Mathematics/Lecture 9 - Number Theory.md",
     "_MATH1006 - Discrete Mathematics/Lecture 8 - Logic.md",
     "_MATH1006 - Discrete Mathematics/Lecture 7 - Boolean Expressions, Karnaugh Maps.md",
@@ -232,7 +204,6 @@
     "_MATH1006 - Discrete Mathematics/Lecture 3 - Functions and Pigeonhole Principal.md",
     "_MATH1006 - Discrete Mathematics/Lecture 2 - Sets Continued.md",
     "_MATH1006 - Discrete Mathematics/Lecture 1 - Counting & Sets.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 10 - AVL Trees.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 3 - Pointers, Linked List and Stack.md",
     "_COMP2019 - Systems Programming 1/Lecture 2 - Pointers and Data Structures.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 11 - B-Trees and Heaps.md",
@@ -241,8 +212,6 @@
     "_COMP2009 - Data Structures and Algorithms/Lecture 5 - Recursion.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 12 - Sorting Algorithms.md",
     "_COMP2019 - Systems Programming 1/Lecture 7 - Event Driven Programming.md",
-    "_COMP2019 - Systems Programming 1/Lecture 12 - Threads & Concurrency.md",
-    "_COMP1014 - Thinking about Data/Lecture 11 - Normality tests and Transformations.md",
     "Personal/Lua",
     "Personal",
     "Images/Pasted image 20250521031709.png",
