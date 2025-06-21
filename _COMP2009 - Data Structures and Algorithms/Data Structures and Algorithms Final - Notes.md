@@ -21,6 +21,10 @@
 
 ## Chapter 1: Algorithm Analysis and Big-O Notation
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/XMUe3zFhM5c" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ### What is Algorithm Analysis?
 Algorithm analysis measures the efficiency of algorithms in terms of:
 - **Time Complexity:** Number of operations performed
@@ -163,6 +167,10 @@ void moveDisks(int n, char A, char C, char B) {
 ---
 
 ## Chapter 4: Hashing
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/FsfRsGFHuv4" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### Concept
 Hashing maps keys to array indices using a hash function for O(1) average-case operations.
