@@ -8,21 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b5a87443ea849de5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_COMP1014 - Thinking about Data/Thinking About Data Final - Notes.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Thinking About Data Final - Notes"
-            }
-          },
-          {
             "id": "03c2c6d7dd3c1d2a",
             "type": "leaf",
             "state": {
@@ -158,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_COMP1014 - Thinking about Data/Thinking About Data Final - Notes.md",
+                "file": "_COMP2009 - Data Structures and Algorithms/Data Structures and Algorithms Final - Notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Thinking About Data Final - Notes"
+              "title": "Outline of Data Structures and Algorithms Final - Notes"
             }
           },
           {
@@ -178,7 +163,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -199,8 +184,10 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "8a15118431b1f841",
+  "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
+    "_COMP2009 - Data Structures and Algorithms/Lecture 11 - B-Trees and Heaps.md",
+    "_COMP2009 - Data Structures and Algorithms/Lecture 7 - Basic Concepts of Trees, Binary Trees, and BST.md",
     "_COMP2009 - Data Structures and Algorithms/Data Structures and Algorithms Final - Notes.md",
     "_COMP1014 - Thinking about Data/Thinking About Data Final - Notes.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 1 - Introduction and Algorithm Design Part A.md",
@@ -223,10 +210,8 @@
     "_MATH1006 - Discrete Mathematics/Lecture 1 - Counting & Sets.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 3 - Pointers, Linked List and Stack.md",
     "_COMP2019 - Systems Programming 1/Lecture 2 - Pointers and Data Structures.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 11 - B-Trees and Heaps.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 9 - Graphs.md",
     "_COMP2009 - Data Structures and Algorithms/Lecture 4 - Algorithms with Queues and Priority Queues.md",
-    "_COMP2009 - Data Structures and Algorithms/Lecture 5 - Recursion.md",
     "Personal/Lua",
     "Personal",
     "Images/Pasted image 20250521031709.png",

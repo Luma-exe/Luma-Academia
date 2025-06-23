@@ -454,6 +454,7 @@ void insertionSort(int arr[], int n) {
 ### Advanced Sorts
 
 **Quick Sort - O(n log n) average, O(n²) worst:**
+
 ```cpp
 void quickSort(int arr[], int low, int high) {
     if (low < high) {
@@ -464,13 +465,90 @@ void quickSort(int arr[], int low, int high) {
 }
 ```
 
-**Heap Sort - O(n log n):**
-1. Build max heap
-2. Repeatedly extract maximum and reheap
+**Heap Sort - O(n log n):**  
+- Uses a **binary heap** structure.
+- Builds a **max heap**, then repeatedly extracts the max and re-heapifies.
 
-**Shell Sort - O(n^1.5):**
-- Improved insertion sort using gaps
-- Reduces inversions efficiently
+```cpp
+void heapify(int arr[], int n, int i) {
+    int largest = i; 
+    int left = 2*i + 1;
+    int right = 2*i + 2;
+
+    if (left < n && arr[left] > arr[largest])
+        largest = left;
+    
+    if (right < n && arr[right] > arr[largest])
+        largest = right;
+
+    if (largest != i) {
+        swap(arr[i], arr[largest]);
+        heapify(arr, n, largest);
+    }
+}
+
+void heapSort(int arr[], int n) {
+    // Build max heap
+    for (int i = n / 2 - 1; i >= 0; i--)
+        heapify(arr, n, i);
+
+    // Extract elements from heap one by one
+    for (int i = n - 1; i > 0; i--) {
+        swap(arr[0], arr[i]); // Move current root to end
+        heapify(arr, i, 0);   // Heapify reduced heap
+    }
+}
+```
+
+**Shell Sort - ~O(n^1.5):**
+
+- Generalization of insertion sort using **gap sequences**.
+- Starts with large gaps and reduces them to 1.
+- Efficient at reducing **inversions**.\
+
+```cpp
+void shellSort(int arr[], int n) {
+    for (int gap = n/2; gap > 0; gap /= 2) {
+        for (int i = gap; i < n; i++) {
+            int temp = arr[i];
+            int j;
+            for (j = i; j >= gap && arr[j - gap] > temp; j -= gap)
+                arr[j] = arr[j - gap];
+            arr[j] = temp;
+        }
+    }
+}
+```
+
+**Quick Sort - O(n log n) average, O(n²) worst:**
+
+- **Divide-and-conquer** strategy.
+- Picks a **pivot**, partitions the array, and recursively sorts the halves.
+
+```cpp
+int partition(int arr[], int low, int high) {
+    int pivot = arr[high]; 
+    int i = low - 1;
+
+    for (int j = low; j < high; j++) {
+        if (arr[j] <= pivot) {
+            i++;
+            swap(arr[i], arr[j]);
+        }
+    }
+    swap(arr[i+1], arr[high]);
+    return i + 1;
+}
+
+void quickSort(int arr[], int low, int high) {
+    if (low < high) {
+        int pi = partition(arr, low, high);
+
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
+    }
+}
+```
 
 ### Sorting Algorithm Comparison
 
@@ -545,7 +623,7 @@ Use randomness to improve performance or handle worst cases.
 
 ### Space-Time Tradeoffs
 - **Hashing:** More space for faster search
-- **Memoization:** Store results to avoid recomputation
+- **Memorization:** Store results to avoid recompilation
 - **Preprocessing:** Sort once for multiple binary searches
 
 ### Algorithm Selection Tips
