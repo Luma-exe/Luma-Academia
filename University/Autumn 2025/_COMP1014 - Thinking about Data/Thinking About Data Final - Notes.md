@@ -148,6 +148,10 @@ satisfaction <- factor(c("high", "low", "medium", "high"))
 - Testing if proportions are equal across groups
 - Checking if two categorical variables are independent
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/7_cs1YlZoug" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ### Type 1: Goodness-of-Fit Test
 **Question**: Does my data match what I expected?
 
@@ -175,6 +179,11 @@ chisq.test(observed, p = expected_prob)
 - **High p-value (≥ 0.05)**: The difference could easily be due to random chance
 
 ### Type 2: Test of Independence
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/y5nxiL6civU" frameborder="0" allowfullscreen></iframe>
+</div>
+
 **Question**: Are two categorical variables related?
 
 **Example**: Do men and women prefer different types of movies?
@@ -198,6 +207,14 @@ chisq.test(movie_data)
 ### Understanding Results
 - **Chi-squared statistic**: How far your data is from what you'd expect by chance
 - **Degrees of freedom (df)**: Related to how many categories you're comparing
+
+> [!faq] Notes
+> More in-depth notes on Degrees of freedom (df) below
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Cm0vFoGVMB8" frameborder="0" allowfullscreen></iframe>
+</div>
+
 - **p-value**: Probability that the difference is just random chance
 
 **Rule of Thumb**: 
@@ -228,6 +245,10 @@ chisq.test(movie_data)
   - Formula: s = √(variance)
   - Example: If standard deviation of heights is 5cm, most people are within 5cm of the average height
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/5wJUUgnMGWA" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ### Visualizing Data
 
 #### Histograms (For Continuous Data)
@@ -253,6 +274,10 @@ boxplot(height ~ gender, data=students)  # Compare heights by gender
 
 ### Randomisation Tests (The Core Idea)
 **Question**: Is the difference I observed real, or just random chance?
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/3zIaY2EwzN4" frameborder="0" allowfullscreen></iframe>
+</div>
 
 **The Method**:
 1. **Observe**: Calculate difference between groups
@@ -284,6 +309,10 @@ p_value <- sum(shuffled_diffs >= observed_diff) / 10000
 ## Chapter 4: T-tests, Confidence Intervals & Bootstrapping
 
 **What are t-tests?** They answer: "Is this difference in averages real, or just random variation?"
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/MUD390jtgQs" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### One-Sample t-test
 **Question**: Is my sample average different from a specific value?
@@ -323,6 +352,11 @@ t.test(before_scores, after_scores, paired = TRUE)
 3. Larger differences and smaller variability → more significant result
 
 ### Confidence Intervals
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/DT-fPG0Hff8" frameborder="0" allowfullscreen></iframe>
+</div>
+
 **What They Tell You**: "I'm 95% confident the true population mean is between X and Y"
 
 **Example**: If 95% CI for average height is [170cm, 175cm], we're quite confident the true population average height is somewhere in that range.
@@ -338,6 +372,11 @@ t.test(heights)  # Gives mean and 95% confidence interval
 ```
 
 ### Bootstrapping (The "Resampling Trick")
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Xz0x-8-cgaQ" frameborder="0" allowfullscreen></iframe>
+</div>
+
 **Problem**: Sometimes we can't use traditional formulas (data not normal, small sample, etc.)
 
 **Solution**: Bootstrap - resample your data many times to estimate uncertainty.
@@ -380,6 +419,10 @@ confidence_interval <- quantile(bootstrap_means, c(0.025, 0.975))
 ### Binomial Distribution
 **Used for**: Counting successes in a fixed number of independent trials.
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/6YzrVUVO9M0" frameborder="0" allowfullscreen></iframe>
+</div>
+
 **Examples**:
 - Flipping a coin 10 times, counting heads
 - Testing 100 light bulbs, counting how many work
@@ -411,6 +454,10 @@ pbinom(7, size=10, prob=0.5)  # Probability of 7 or fewer
 
 ### Poisson Distribution
 **Used for**: Counting rare events in a fixed time/space interval.
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/m0o-585xwW0" frameborder="0" allowfullscreen></iframe>
+</div>
 
 **Examples**:
 - Number of car accidents per day at an intersection
@@ -449,6 +496,11 @@ ppois(5, lambda=3)  # Probability of 5 or fewer
 | Example: 100 coin flips | Example: Phone calls per hour |
 
 ### Normal Approximation
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/rTPoXiQHI6M" frameborder="0" allowfullscreen></iframe>
+</div>
+
 **When sample size is large**, both distributions can be approximated by normal distribution:
 
 **Binomial → Normal**: When n×p ≥ 5 and n×(1-p) ≥ 5
@@ -458,6 +510,11 @@ ppois(5, lambda=3)  # Probability of 5 or fewer
 - Mean = λ, Standard deviation = √λ
 
 ### Confidence Intervals
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/DT-fPG0Hff8" frameborder="0" allowfullscreen></iframe>
+</div>
+
 **For proportions** (from binomial data):
 ```r
 # Exact method:
@@ -498,6 +555,10 @@ poisson.test(count, time_period)
 - Cons: May be unethical, artificial conditions
 
 ### Sampling Methods
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/pTuj57uXWlk" frameborder="0" allowfullscreen></iframe>
+</div>
 
 #### Random Sampling
 **Goal**: Every person in population has equal chance of being selected
@@ -595,6 +656,10 @@ Use adequate sample size
 
 ## Chapter 7: Correlation Test
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/11c9cs6WpJU" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ### Correlation Coefficient
 - r = Σ ((x_i - x̄)/s_x)((y_i - ȳ)/s_y)/(n-1)
 - Range [-1,1]
@@ -606,6 +671,10 @@ Use adequate sample size
 ---
 
 ## Chapter 8: Simple Linear Regression
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/WWqE7YHR4Jc" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### Model: y = a + b x + ɛ
 - b̂ = Σ(x_i - x̄)(y_i - ȳ)/Σ(x_i - x̄)²
@@ -621,6 +690,15 @@ Use adequate sample size
 ---
 
 ## Chapter 9: ANOVA & Post-hoc Tests
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/oOuu8IBd-yo" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/F2R63oTqXRg" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### One-Way ANOVA
 - H0: μ1=…=μK
