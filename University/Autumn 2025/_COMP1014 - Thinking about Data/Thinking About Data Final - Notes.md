@@ -165,12 +165,12 @@ satisfaction <- factor(c("high", "low", "medium", "high"))
 
 **Is this difference significant or just random variation?**
 
-**Formula**: χ² = Σ (Observed - Expected)²/Expected
+**Formula**: χ² = Σ (Observed - Expected)² / Expected
 
 ```r
 # In R:
 observed <- c(8, 12, 9, 11, 10, 10)
-expected_prob <- c(1/6, 1/6, 1/6, 1/6, 1/6, 1/6)  # Each should be 1/6
+expected_prob <- c(1/6, 1/6, 1/6, 1/6, 1/6, 1/6)  # Each should be 1/6 dice
 chisq.test(observed, p = expected_prob)
 ```
 
