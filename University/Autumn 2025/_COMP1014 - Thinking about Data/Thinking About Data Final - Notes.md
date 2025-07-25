@@ -137,6 +137,15 @@ satisfaction <- factor(c("high", "low", "medium", "high"))
 - **Unpredictability**: Can't predict next value from previous ones
 - **No Pattern**: No hidden structure or bias
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/videoseries?list=PLTNMv857s9WXg9tRi7wHU9cMgL1x140dO" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+  </iframe>
+</div>
+
 ---
 
 ## Chapter 2: Chi-squared Test (Comparing Categories)
@@ -148,11 +157,12 @@ satisfaction <- factor(c("high", "low", "medium", "high"))
 - Testing if proportions are equal across groups
 - Checking if two categorical variables are independent
 
+### Type 1: Goodness-of-Fit Test
+
 <div style="display: flex; justify-content: center; align-items: center;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/7_cs1YlZoug" frameborder="0" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ZNXso_riZag" frameborder="0" allowfullscreen></iframe>
 </div>
 
-### Type 1: Goodness-of-Fit Test
 **Question**: Does my data match what I expected?
 
 **Example**: You roll a die 60 times. If it's fair, you expect each number (1-6) to appear 10 times. You get:
@@ -181,7 +191,7 @@ chisq.test(observed, p = expected_prob)
 ### Type 2: Test of Independence
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/y5nxiL6civU" frameborder="0" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/NTHA9Qa81R8" frameborder="0" allowfullscreen></iframe>
 </div>
 
 **Question**: Are two categorical variables related?
@@ -212,7 +222,7 @@ chisq.test(movie_data)
 > More in-depth notes on Degrees of freedom (df) below
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/Cm0vFoGVMB8" frameborder="0" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/N20rl2llHno" frameborder="0" allowfullscreen></iframe>
 </div>
 
 - **p-value**: Probability that the difference is just random chance
