@@ -256,7 +256,7 @@ chisq.test(movie_data)
   - Example: If standard deviation of heights is 5cm, most people are within 5cm of the average height
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/5wJUUgnMGWA" frameborder="0" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/wpY9o_OyxoQ" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ### Visualizing Data
