@@ -321,7 +321,7 @@ p_value <- sum(shuffled_diffs >= observed_diff) / 10000
 **What are t-tests?** They answer: "Is this difference in averages real, or just random variation?"
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/MUD390jtgQs" frameborder="0" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/UetYS3PaHIo" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ### One-Sample t-test
@@ -671,12 +671,15 @@ Use adequate sample size
 </div>
 
 ### Correlation Coefficient
-- r = Σ ((x_i - x̄)/s_x)((y_i - ȳ)/s_y)/(n-1)
-- Range [-1,1]
+- $r = \frac{ \sum \left( \frac{x_i - \bar{x}}{s_x} \cdot \frac{y_i - \bar{y}}{s_y} \right) }{n - 1}$
+- Range: $[-1, 1]$
+  - $r = 1$: perfect positive correlation
+  - $r = -1$: perfect negative correlation
+  - $r = 0$: no linear correlation
 
-### Testing H0: ρ=0
-- t = r√(n-2)/√(1-r²), df=n-2
-- R: `cor.test(x,y)`
+### Testing $H_0: \rho = 0$
+- $t = \frac{r \sqrt{n - 2}}{\sqrt{1 - r^2}}$, with $df = n - 2$
+- In R: `cor.test(x, y)`
 
 ---
 
@@ -686,17 +689,29 @@ Use adequate sample size
   <iframe width="560" height="315" src="https://www.youtube.com/embed/WWqE7YHR4Jc" frameborder="0" allowfullscreen></iframe>
 </div>
 
-### Model: y = a + b x + ɛ
-- b̂ = Σ(x_i - x̄)(y_i - ȳ)/Σ(x_i - x̄)²
-- â = ȳ - b̂ x̄
+### Model: $y = a + b x + \varepsilon$
+- $\hat{b} = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2}$
+- $\hat{a} = \bar{y} - \hat{b} \bar{x}$
 
 ### Inference
-- SE_b = s/√Σ(x_i - x̄)², t = (b̂ - b0)/SE_b
-- R: `lm(y~x)` and `summary()`
+- $SE_b = \frac{s}{\sqrt{\sum (x_i - \bar{x})^2}}$, where $s = \sqrt{\frac{RSS}{n - 2}}$
+- $t = \frac{\hat{b} - b_0}{SE_b}$
+- In R:
+  ```r
+  model <- lm(y ~ x)
+  summary(model)
+```
 
 ### Diagnostics
-- Residuals, QQ-plot, R², RSS
 
+- Check residuals: randomness, mean near 0
+- QQ-plot: normality of residuals
+- $R^2$: proportion of variance explained
+- RSS: residual sum of squares
+- In R:
+```r
+plot(model)
+```
 ---
 
 ## Chapter 9: ANOVA & Post-hoc Tests
@@ -705,71 +720,179 @@ Use adequate sample size
   <iframe width="560" height="315" src="https://www.youtube.com/embed/oOuu8IBd-yo" frameborder="0" allowfullscreen></iframe>
 </div>
 
-
 <div style="display: flex; justify-content: center; align-items: center;">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/F2R63oTqXRg" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ### One-Way ANOVA
-- H0: μ1=…=μK
-- SS_B/df_B ÷ SS_W/df_W = F
-- df_B = K-1, df_W = N-K
-- R: `aov()`
+- Tests for equality of means across multiple groups
+- $H_0: \mu_1 = \mu_2 = \dots = \mu_K$
+- Test statistic:
+  $$
+  F = \frac{SS_B / df_B}{SS_W / df_W}
+  $$
+  - $SS_B$: sum of squares between groups
+  - $SS_W$: sum of squares within groups
+  - $df_B = K - 1$, $df_W = N - K$
 
-### Tukey HSD
-- Pairwise comparisons with familywise error control
-- R: `TukeyHSD()`
+- Large $F$ suggests significant difference between group means
 
+- In R:
+```r
+aov_model <- aov(y ~ group, data = dataset)
+summary(aov_model)
+```
+
+### Tukey HSD (Post-hoc Analysis)
+
+- Used after significant ANOVA to identify which group pairs differ
+- Controls familywise error rate
+- More powerful than Bonferroni for pairwise comparisons
+- In R:
+
+```r
+TukeyHSD(aov_model)
+```
 ---
 
 ## Chapter 10: Normality & Approximations
 
-### Normal Distribution
-- f(x)=1/(σ√2π) e^{-(x-μ)²/(2σ²)}
-- Standard normal Z=(X-μ)/σ
-- R: `pnorm`, `qnorm`
+### What is the Normal Distribution?
+- A **normal distribution** is a common way data is spread out. It looks like a bell-shaped curve.
+- Most values are near the average (mean), and fewer values are far from the average.
+- The formula for the normal distribution is:
+  $f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp\left( -\frac{(x - \mu)^2}{2\sigma^2} \right)$  
+  - $\mu$ is the mean (average)  
+  - $\sigma$ is the standard deviation (how spread out the data is)
 
-### CLT
-- x̄ ~ approx N(μ,σ²/n) for large n
+### What is a Z-score?
+- A **Z-score** tells us how many standard deviations a value is from the mean.
+- Formula: $Z = \frac{X - \mu}{\sigma}$  
+  - If $Z = 0$, the value is the mean.  
+  - If $Z = 2$, the value is 2 standard deviations above the mean.
+
+### R functions to use:
+- `pnorm(z)`: finds the probability that a value is less than $z$
+- `qnorm(p)`: finds the value that corresponds to a probability $p$
+
+---
+
+### Central Limit Theorem (CLT)
+- The **CLT** says that if you take the average of a large number of samples, the result will look like a normal distribution — even if the original data isn't normal!
+- For example: If we take the average height of 50 people many times, those averages will form a normal distribution.
+
+- The average of samples is:
+  $\bar{X} \sim N\left( \mu, \frac{\sigma^2}{n} \right)$  
+  This means the sample mean $\bar{X}$ is approximately normally distributed.
+
+---
 
 ### Continuity Correction
-- P(B>k)≈P(X>k+0.5)
-
-### χ², t, F Dist
-- χ²: Σ Z_i²
-- t: Z/√(χ²/df)
-- F: (χ²_k/k)/(χ²_m/m)
+- When we use a normal distribution to estimate probabilities for **discrete data** (like number of people), we adjust by **0.5**.
+- Example: To estimate $P(X > 5)$, use $P(X > 5.5)$
 
 ---
 
 ## Chapter 11: Normality Tests & Transformations
 
-### Shapiro–Wilk Test
-- H0: data normal
-- R: `shapiro.test(x)`
-
-### QQ-Plot
-- Compare sample quantiles vs theoretical
-- R: `qqnorm(x); qqline(x)`
-
-### Data Transformations
-- Log, sqrt, Box–Cox to stabilize variance/normalize data
+### Why Test for Normality?
+- Many statistical tests assume your data is **normally distributed**.
+- We test this to make sure those tests give correct results.
 
 ---
 
-## Chapter 12: Case Studies
+### Shapiro–Wilk Test
+- This test checks if your data is normal.
+- If the **p-value > 0.05**, your data is probably normal.
+- In R:
+  `shapiro.test(x)`
 
-### Power Analysis
-- Power = 1-β; β=Type II error
-- Factors: effect size, sample size, α, σ
-- R: `power.t.test()`
+---
 
-### Pseudo-replication
-- Avoid treating non-independent measures as independent
+### QQ-Plot (Quantile-Quantile Plot)
+- A graph that compares your data to a normal distribution.
+- If your data is normal, the dots will fall roughly on a straight line.
 
-### Base Rate Fallacy & Multiple Testing
-- Familywise error inflation
-- Adjust with Bonferroni, FDR (e.g., `p.adjust()`)
+- In R:
+  `qqnorm(x)`  
+  `qqline(x)`
+
+---
+
+### What to Do If Data Isn’t Normal?
+
+Use **data transformations** to make it more normal:
+- **Log transform**: for data with large values or right-skewed (use `log(x)`)
+- **Square root transform**: for counts or small values (use `sqrt(x)`)
+- **Box–Cox transform**: finds the best transformation automatically
+
+- In R:
+```r
+library(MASS)  
+boxcox(lm(y ~ x), lambda = seq(-2, 2, 0.1))
+```
+
+---
+
+## Chapter 12: Case Studies & Advanced Concepts
+
+### What is Power in Statistics?
+- **Power** is the chance that a test will find a true effect (i.e., reject a false null hypothesis).
+- Formula: $\text{Power} = 1 - \beta$
+- $\beta$ is the chance of **missing** a real effect (Type II error)
+- Higher power means you're more likely to detect true results.
+
+#### Things that affect power:
+- Sample size ($n$): more data = more power
+- Effect size: bigger differences are easier to detect
+- Standard deviation ($\sigma$): less variability = more power
+- Significance level ($\alpha$): usually 0.05
+
+- In R:
+```r
+power.t.test(n = NULL, delta = effect_size, sd = sigma,  
+sig.level = 0.05, power = 0.8, type = "two.sample")
+```
+
+
+---
+
+### What is Pseudo-replication?
+- Pseudo-replication happens when you **pretend you have more data than you really do**.
+- Example: Measuring 5 leaves from the same plant and treating them like 5 separate plants.
+- This gives **misleading results** and increases your error rate.
+
+---
+
+### Base Rate Fallacy
+- This is when you ignore how common or rare something is in the population.
+- Example: Even if a test is 99% accurate, testing for a **rare disease** can still lead to many false positives.
+- Important to **always consider the base rate** (how common the event is).
+
+---
+
+### Multiple Testing Problem
+- If you do **lots of tests**, some will come back significant just by **chance**.
+- This increases your chance of a **false positive** (Type I error).
+
+---
+
+### How to Fix Multiple Testing Problems
+
+#### Bonferroni Correction
+- Divide your significance level by the number of tests:
+$\alpha_{adj} = \frac{\alpha}{m}$
+- Very strict — lowers the chance of false positives, but also reduces power.
+
+#### False Discovery Rate (FDR)
+- Controls the **proportion** of false positives among all positives.
+- Less strict than Bonferroni.
+
+- In R:
+```r
+p.adjust(p_values, method = "bonferroni")  
+p.adjust(p_values, method = "fdr")
+```
 
 ---
 
@@ -971,3 +1094,5 @@ rep()  # Repeat values
 - "The 95% confidence interval is..."
 
 Remember: Always interpret results in the context of the problem, not just statistically!
+
+![[PDF copy (1).pdf]]
