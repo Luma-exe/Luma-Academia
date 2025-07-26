@@ -1000,99 +1000,318 @@ Coefficients:
 assignment       0.67210    0.06284  10.695 3.69e-13 ***
 ```
 
-### EXAM PRACTICE PROBLEMS
+**Interpretation**:
+- **Estimate**: For every 1-point increase in assignment score, final exam score increases by 0.672 points
+- **p-value**: 3.69e-13 (very significant, < 0.001)
+- **Intercept**: When assignment = 0, predicted final exam = 2.24
 
-#### Problem Type 1: Box Plot Analysis
-**Given**: Two box plots comparing fish lengths by species
-**Skills Tested**:
-- Compare central tendency (medians)
-- Compare variability (IQR, whiskers)
-- Identify outliers
-- Write clear comparisons
-
-**Sample Answer Format**: "Species A has a higher median length than Species B (approximately X vs Y). Species B shows greater variability with a wider interquartile range and longer whiskers, suggesting more diverse lengths within this species."
-
-#### Problem Type 2: Bootstrap Code Debugging
-**Common Errors**:
-1. `mean(s)` where `s` contains row indices instead of actual data
-2. Not using `replace=TRUE` in sampling
-3. Sampling wrong variable or wrong size
-
-**Sample Problem**: 
+#### Checking Model Assumptions
 ```r
-# Find the error:
-boot = replicate(1000, {
-  s = sample(1:nrow(data), size = nrow(data), replace = TRUE)
-  mean(s)  # ERROR: This is mean of row numbers!
-})
+# Residual plots
+plot(model)
 
-# Fix:
-boot = replicate(1000, {
-  s = sample(data$variable, size = length(data$variable), replace = TRUE)
-  mean(s)  # Correct: mean of actual data values
-})
+# Check for normality of residuals
+shapiro.test(residuals(model))
+
+# R-squared: proportion of variance explained
+summary(model)$r.squared
 ```
 
-#### Problem Type 3: Permutation vs Bootstrap
-**Question**: "Explain when to use bootstrap vs permutation"
-**Answer**: 
-- **Bootstrap**: When estimating uncertainty in a statistic (confidence intervals)
-- **Permutation**: When testing hypotheses (p-values)
-- **Key difference**: Bootstrap preserves relationships, permutation breaks them
+---
 
-#### Problem Type 4: ANOVA Application
-**Scenario**: Comparing difficulty of multiple quizzes
-**Steps**:
-1. Identify this as comparing 3+ group means → ANOVA
-2. H₀: All quiz means are equal
-3. H₁: At least one quiz mean differs
-4. Interpret F-statistic and p-value
-5. If significant, use post-hoc tests to find which pairs differ
+## Exam Guide
 
-#### Problem Type 5: Regression Interpretation
-**Given**: R regression output
-**Must explain**:
-- Slope meaning in context
-- Significance of relationship (p-value)
-- R-squared interpretation
-- Sample size effects
+### 1. Hypothesis Testing Steps (ALWAYS Follow This Order)
+1. **State hypotheses**: H₀ (null) and H₁ (alternative)
+2. **Choose test**: t-test, chi-squared, ANOVA, etc.
+3. **Check assumptions**: normality, independence, equal variance
+4. **Calculate test statistic and p-value**
+5. **Make decision**: p < 0.05 → reject H₀; p ≥ 0.05 → fail to reject H₀
+6. **Interpret in context**: What does this mean for the real problem?
 
-**Sample Answer**: "There is a significant linear relationship between assignment and final exam marks (p < 0.001). For each additional assignment point, final exam marks increase by 0.67 points on average. Assignment marks explain 74.6% of the variation in final exam performance."
+### 2. Quick Test Selection Guide
+- **One sample mean vs known value**: One-sample t-test
+- **Two means, independent groups**: Two-sample t-test
+- **Two means, same subjects measured twice**: Paired t-test
+- **More than two means**: ANOVA
+- **Two categorical variables**: Chi-squared test of independence
+- **One categorical variable vs expected**: Chi-squared goodness-of-fit
+- **Relationship between two continuous variables**: Correlation/regression
 
-#### Must-Know R Functions for Exam
+### 3. Essential R Commands (Memorize These!)
 ```r
 # Summary statistics
+mean(x); median(x); sd(x); var(x)
 summary(data)
-mean(), median(), sd(), var()
 
-# Visualization  
-boxplot(variable ~ group, data=data)
-hist(variable)
-plot(x, y)
+# Tests
+t.test(x, mu=value)                    # One sample
+t.test(x ~ group, data=df)             # Two sample
+t.test(before, after, paired=TRUE)     # Paired
+aov(y ~ group, data=df)                # ANOVA
+chisq.test(table)                      # Chi-squared
+cor.test(x, y)                         # Correlation
 
-# Testing
-t.test(variable ~ group, data=data)
-aov(variable ~ group, data=data)
-lm(y ~ x, data=data)
+# Regression
+model <- lm(y ~ x, data=df)
+summary(model)
+plot(model)  # Check assumptions
 
-# Bootstrap/Permutation
-replicate(n, {...})
-sample(..., replace=TRUE)  # Bootstrap
-sample(...)  # Permutation
+# Normality tests
+shapiro.test(x)
+qqnorm(x); qqline(x)
 
-# Data manipulation
-data.frame()
-c()  # Combine vectors
-rep()  # Repeat values
+# Confidence intervals
+t.test(x)$conf.int
 ```
 
-#### Key Phrases for Full Marks
-- "There is strong evidence that..." (when p < 0.05)
-- "No evidence of difference..." (when p ≥ 0.05)  
-- "On average, [interpret slope] in context"
-- "X explains Y% of variation in..."
-- "The 95% confidence interval is..."
+### 4. Bootstrap vs Permutation (Critical Difference!)
 
-Remember: Always interpret results in the context of the problem, not just statistically!
+**Bootstrap** - For confidence intervals:
+```r
+# Estimates uncertainty in YOUR statistic
+bootstrap <- replicate(1000, {
+  sample_data <- sample(original_data, size=n, replace=TRUE)
+  mean(sample_data)  # Or whatever statistic you want
+})
+# Results center around your observed value
+```
+
+**Permutation** - For hypothesis testing:
+```r
+# Tests if difference is real or random
+observed_diff <- mean(group1) - mean(group2)
+permutation <- replicate(1000, {
+  shuffled_groups <- sample(group_labels)  # Shuffle labels
+  mean(data[shuffled_groups=="A"]) - mean(data[shuffled_groups=="B"])
+})
+p_value <- sum(abs(permutation) >= abs(observed_diff)) / 1000
+```
+
+### 5. Common Exam Mistakes to Avoid
+- **Using row numbers instead of data values in bootstrap**
+- **Forgetting to use shuffled labels in permutation tests**
+- **Mixing up H₀ and H₁**
+- **Interpreting correlation as causation**
+- **Forgetting to check assumptions before using tests**
+- **Not interpreting results in the context of the problem**
+
+### 6. Assumption Checking Cheat Sheet
+**t-tests need**:
+- Normality (use `shapiro.test()` or QQ-plot)
+- Independence (think about how data was collected)
+
+**Chi-squared needs**:
+- Expected frequencies ≥ 5 in each cell
+
+**ANOVA needs**:
+- Normality of residuals
+- Equal variances across groups
+- Independence
+
+**Regression needs**:
+- Linear relationship
+- Normality of residuals
+- Constant variance (homoscedasticity)
+- Independence
+
+### 7. P-value Interpretation (Know This Cold!)
+- **p < 0.001**: Very strong evidence against H₀
+- **0.001 ≤ p < 0.01**: Strong evidence against H₀
+- **0.01 ≤ p < 0.05**: Moderate evidence against H₀ (traditionally "significant")
+- **0.05 ≤ p < 0.1**: Weak evidence against H₀
+- **p ≥ 0.1**: Little to no evidence against H₀
+
+### 8. Effect Size Matters Too!
+- Statistical significance ≠ practical significance
+- Large sample sizes can make tiny differences "significant"
+- Always consider: Is this difference meaningful in real life?
+
+### 9. Confidence Interval Quick Rules
+- **95% CI not containing 0**: Significant difference (for differences)
+- **95% CI not containing 1**: Significant effect (for ratios)
+- **Wider CI**: More uncertainty, smaller sample size
+- **Narrower CI**: Less uncertainty, larger sample size
+
+---
+
+## A4 Double-Sided Cheat Sheet (4 Sections)
+
+### SECTION 1: TEST SELECTION & R COMMANDS
+```
+TEST SELECTION FLOWCHART:
+→ 1 mean vs value: t.test(x, mu=val)
+→ 2 means independent: t.test(x~group, data=df)  
+→ 2 means paired: t.test(x,y, paired=T)
+→ 3+ means: aov(y~group); TukeyHSD()
+→ 2 categorical vars: chisq.test(table)
+→ Correlation: cor.test(x,y)
+→ Regression: lm(y~x); summary()
+
+ESSENTIAL R COMMANDS:
+Basic: mean(x), median(x), sd(x), var(x), summary(data)
+Plots: hist(x), boxplot(y~group), plot(x,y)
+Normal: shapiro.test(x), qqnorm(x), qqline(x)
+Tests: t.test(), chisq.test(), aov(), cor.test()
+Regression: model<-lm(y~x); summary(model); plot(model)
+CI: t.test(x)$conf.int, confint(model)
+Distributions: dbinom(k,n,p), dpois(k,λ), pnorm(z), qnorm(p)
+
+BOOTSTRAP (Confidence Intervals):
+boot <- replicate(1000, {
+  s <- sample(data, length(data), replace=T)
+  mean(s)  # or median, sd, etc.
+})
+CI: quantile(boot, c(0.025, 0.975))
+
+PERMUTATION (Hypothesis Testing):
+obs <- mean(A) - mean(B)
+perm <- replicate(1000, {
+  shuf <- sample(groups)
+  mean(data[shuf=="A"]) - mean(data[shuf=="B"])
+})
+p_val <- sum(abs(perm) >= abs(obs))/1000
+```
+
+### SECTION 2: HYPOTHESIS TESTING & P-VALUES
+```
+HYPOTHESIS TESTING STEPS (ALWAYS FOLLOW):
+1. H₀ vs H₁ (state clearly)
+2. Choose test & check assumptions  
+3. Calculate test statistic & p-value
+4. Decision: p<0.05→reject H₀, p≥0.05→fail to reject
+5. Interpret in CONTEXT of problem
+
+P-VALUE INTERPRETATION:
+p < 0.001: *** Very strong evidence against H₀
+0.001 ≤ p < 0.01: ** Strong evidence
+0.01 ≤ p < 0.05: * Moderate evidence (significant)
+0.05 ≤ p < 0.1: . Weak evidence  
+p ≥ 0.1: No evidence against H₀
+
+ASSUMPTIONS CHECK:
+t-test: Normality (shapiro.test, QQ-plot), Independence
+Chi²: Expected frequencies ≥ 5 in each cell
+ANOVA: Normality of residuals, Equal variances, Independence  
+Regression: Linearity, Normal residuals, Constant variance
+
+COMMON H₀/H₁ PAIRS:
+• H₀: μ = μ₀ vs H₁: μ ≠ μ₀ (two-tailed)
+• H₀: μ₁ = μ₂ vs H₁: μ₁ ≠ μ₂ (two groups)
+• H₀: Variables independent vs H₁: Variables related
+• H₀: β = 0 vs H₁: β ≠ 0 (regression slope)
+
+CONFIDENCE INTERVALS:
+95% CI interpretation: "95% confident true parameter is in this range"
+If CI doesn't contain 0: significant difference
+If CI doesn't contain 1: significant ratio/relative risk
+Wider CI = more uncertainty, smaller sample
+```
+
+### SECTION 3: FORMULAS & DISTRIBUTIONS
+```
+KEY FORMULAS:
+t-statistic: t = (x̄-μ)/(s/√n)  [one sample]
+             t = (x̄₁-x̄₂)/SE    [two sample]
+χ² statistic: χ² = Σ(O-E)²/E
+F-statistic: F = MSB/MSW  [ANOVA]
+Correlation: r = Σ(zₓzᵧ)/(n-1)
+Regression: ŷ = a + bx, where b = Σ(x-x̄)(y-ȳ)/Σ(x-x̄)²
+
+CONFIDENCE INTERVALS:
+Mean: x̄ ± t₍α/2₎ × (s/√n)
+Proportion: p̂ ± z₍α/2₎ × √(p̂(1-p̂)/n)
+Difference: (x̄₁-x̄₂) ± t₍α/2₎ × SE_diff
+
+DISTRIBUTIONS:
+Normal: N(μ,σ²), 68-95-99.7 rule
+t: heavier tails than normal, df = n-1
+χ²: right-skewed, df varies by test
+F: right-skewed, two df parameters
+
+Z-SCORES: Z = (X-μ)/σ
+Critical values: z₀.₀₂₅ = 1.96, t₀.₀₂₅ ≈ 2 (for large n)
+
+BINOMIAL: P(X=k) = C(n,k)×p^k×(1-p)^(n-k)
+Mean = np, Var = np(1-p)
+Normal approx when np≥5 and n(1-p)≥5
+
+POISSON: P(X=k) = λ^k×e^(-λ)/k!
+Mean = Var = λ
+Normal approx when λ≥5
+
+SAMPLE SIZE & POWER:
+Larger n → smaller SE → more power
+Power = 1-β = P(reject H₀ when H₁ true)
+Effect size = (μ₁-μ₂)/σ
+```
+
+### SECTION 4: INTERPRETATION & COMMON MISTAKES
+```
+REGRESSION INTERPRETATION:
+Slope (b): "For every 1-unit increase in X, Y increases by b units"
+Intercept (a): "When X=0, predicted Y=a"
+R²: "X explains R²% of variance in Y"
+p-value for slope: Tests if relationship exists (H₀: β=0)
+
+BOXPLOT READING:
+Box = IQR (25th to 75th percentile)
+Line in box = median
+Whiskers = 1.5×IQR from box edges
+Dots = outliers beyond whiskers
+Compare: medians (central tendency), box widths (spread)
+
+CORRELATION vs CAUSATION:
+Correlation ≠ Causation EVER
+Confounding variables can create false relationships
+Experimental design needed to prove causation
+
+BOOTSTRAP vs PERMUTATION:
+Bootstrap: Resample WITH replacement, estimates uncertainty
+         Use for: confidence intervals
+         Centers around: observed statistic
+Permutation: Shuffle labels WITHOUT replacement, tests differences  
+           Use for: p-values/hypothesis tests
+           Centers around: 0 (null hypothesis)
+
+FATAL CODING ERRORS:
+× sample(1:n, n, replace=T) → Use sample(data, n, replace=T)
+× Shuffling but not using shuffled labels in permutation
+× Using original groups after shuffle: data[group=="A"]
+  Should be: data[shuffled_group=="A"]
+
+ANOVA POST-HOC:
+Only do after significant ANOVA F-test
+TukeyHSD(): controls family-wise error rate
+Bonferroni: divide α by number of comparisons
+
+TYPE I & II ERRORS:
+Type I (α): Reject true H₀ (false positive)
+Type II (β): Fail to reject false H₀ (false negative)
+Power = 1-β
+
+EFFECT SIZE vs SIGNIFICANCE:
+Large samples can make tiny differences "significant"
+Always ask: "Is this practically meaningful?"
+Cohen's d: small=0.2, medium=0.5, large=0.8
+
+DEGREES OF FREEDOM:
+t-test: df = n-1 (one sample), df = n₁+n₂-2 (two sample)
+Chi²: df = (rows-1)×(cols-1) [independence test]
+      df = categories-1 [goodness of fit]
+ANOVA: df_between = k-1, df_within = N-k
+Regression: df = n-2
+
+QUICK DECISION RULES:
+p-value approach: p < α → reject H₀
+CI approach: CI excludes null value → reject H₀
+Critical value: |test stat| > critical value → reject H₀
+
+COMMON α LEVELS:
+α = 0.05 (most common, 5% error rate)
+α = 0.01 (stricter, 1% error rate)
+α = 0.10 (less strict, 10% error rate)
+```
 
 ![[PDF copy (1).pdf]]
+
