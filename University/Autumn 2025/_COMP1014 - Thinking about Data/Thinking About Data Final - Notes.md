@@ -1137,181 +1137,363 @@ p_value <- sum(abs(permutation) >= abs(observed_diff)) / 1000
 
 ## A4 Double-Sided Cheat Sheet (4 Sections)
 
-### SECTION 1: TEST SELECTION & R COMMANDS
+### SECTION 1: CHOOSING THE RIGHT TEST & BASIC R
 ```
-TEST SELECTION FLOWCHART:
-→ 1 mean vs value: t.test(x, mu=val)
-→ 2 means independent: t.test(x~group, data=df)  
-→ 2 means paired: t.test(x,y, paired=T)
-→ 3+ means: aov(y~group); TukeyHSD()
-→ 2 categorical vars: chisq.test(table)
-→ Correlation: cor.test(x,y)
-→ Regression: lm(y~x); summary()
+STEP 1: WHAT TYPE OF DATA DO YOU HAVE?
+• Numbers (height, weight, test scores) → Quantitative
+• Categories (gender, color, yes/no) → Categorical
 
-ESSENTIAL R COMMANDS:
-Basic: mean(x), median(x), sd(x), var(x), summary(data)
+STEP 2: WHAT QUESTION ARE YOU ASKING?
+→ Is one group's average different from expected? 
+   USE: One-sample t-test → t.test(x, mu=expected_value)
+   Example: Is average height 170cm? t.test(heights, mu=170)
+
+→ Do two groups have different averages (different people)?
+   USE: Two-sample t-test → t.test(x~group, data=df)  
+   Example: Men vs women heights? t.test(height~gender, data=df)
+
+→ Do measurements change (same people tested twice)?
+   USE: Paired t-test → t.test(before, after, paired=TRUE)
+   Example: Weight before vs after diet
+
+→ Do 3+ groups have different averages?
+   USE: ANOVA → aov(y~group, data=df); TukeyHSD()
+   Example: Heights across multiple countries
+
+→ Are two categories related to each other?
+   USE: Chi-squared → chisq.test(table_of_counts)
+   Example: Is gender related to favorite color?
+
+→ How strongly are two numbers related?
+   USE: Correlation → cor.test(x,y)
+   Example: Height and weight relationship
+
+→ Can I predict one number from another?
+   USE: Regression → model<-lm(y~x, data=df); summary(model)
+   Example: Predict exam score from study hours
+
+ESSENTIAL R COMMANDS YOU MUST KNOW:
+Data summary: mean(x), median(x), sd(x), summary(data)
 Plots: hist(x), boxplot(y~group), plot(x,y)
-Normal: shapiro.test(x), qqnorm(x), qqline(x)
-Tests: t.test(), chisq.test(), aov(), cor.test()
-Regression: model<-lm(y~x); summary(model); plot(model)
-CI: t.test(x)$conf.int, confint(model)
-Distributions: dbinom(k,n,p), dpois(k,λ), pnorm(z), qnorm(p)
+Check normal: shapiro.test(x), qqnorm(x), qqline(x)
+Get confidence intervals: t.test(x)$conf.int
 
-BOOTSTRAP (Confidence Intervals):
-boot <- replicate(1000, {
-  s <- sample(data, length(data), replace=T)
-  mean(s)  # or median, sd, etc.
-})
-CI: quantile(boot, c(0.025, 0.975))
+PROBABILITY DISTRIBUTIONS:
+Binomial (fixed trials, 2 outcomes): dbinom(k,n,p), pbinom(k,n,p)
+  When: Coin flips, pass/fail tests, yes/no surveys
+  Requirements: Fixed n, constant p, independent trials
+  Mean=np, Variance=np(1-p)
+  
+Poisson (rare events): dpois(k,λ), ppois(k,λ)  
+  When: Accidents per day, calls per hour, defects per batch
+  Requirements: Events random, rate constant, no simultaneous events
+  Mean=Variance=λ
+  
+Normal: pnorm(z), qnorm(p), dnorm(x)
+  Properties: Bell curve, 68-95-99.7 rule
+  Z-score: (x-μ)/σ, standardizes any normal distribution
 
-PERMUTATION (Hypothesis Testing):
-obs <- mean(A) - mean(B)
-perm <- replicate(1000, {
-  shuf <- sample(groups)
-  mean(data[shuf=="A"]) - mean(data[shuf=="B"])
-})
-p_val <- sum(abs(perm) >= abs(obs))/1000
+DATA TYPES & STRUCTURES:
+Vectors: c(1,2,3), ages[1], ages[ages>25]
+Data frames: data$column, data[row,col]
+Factors: factor(c("A","B","A")) for categories
+Missing data: is.na(x), na.omit(data)
+
+EXPERIMENTAL DESIGN BASICS:
+Population vs Sample: Study sample to infer about population
+Random sampling: sample(population, size=n)
+Bias types: Selection, response, confirmation, confounding
+Control principles: Randomization, control groups, blocking, replication
+
+ASSUMPTION CHECKING:
+Normality: shapiro.test(x), qqnorm(x), hist(x)
+  If p>0.05 in Shapiro → data is normal
+  QQ-plot: dots on line = normal
+Independence: Think about data collection method
+Equal variances: boxplot(), look at spread
+
+DATA TRANSFORMATIONS (when not normal):
+Log: log(x) for right-skewed data
+Square root: sqrt(x) for count data  
+Box-Cox: library(MASS); boxcox() finds best transformation
+
+BASIC STATISTICS CONCEPTS:
+Central tendency: mean (average), median (middle value)
+Spread: variance s², standard deviation s, range
+Outliers: Values >1.5×IQR beyond quartiles
+Skewness: Long tail left (negative) or right (positive)
 ```
 
-### SECTION 2: HYPOTHESIS TESTING & P-VALUES
+### SECTION 2: THE HYPOTHESIS TESTING PROCESS
 ```
-HYPOTHESIS TESTING STEPS (ALWAYS FOLLOW):
-1. H₀ vs H₁ (state clearly)
-2. Choose test & check assumptions  
-3. Calculate test statistic & p-value
-4. Decision: p<0.05→reject H₀, p≥0.05→fail to reject
-5. Interpret in CONTEXT of problem
+FOLLOW THESE 6 STEPS EVERY TIME:
+1. STATE YOUR HYPOTHESES:
+   H₀ (null): "No difference" or "No relationship"
+   H₁ (alternative): "There IS a difference" or "There IS a relationship"
+   
+2. CHECK ASSUMPTIONS:
+   t-tests: Data should be roughly normal, independent observations
+   Chi-squared: Expected counts ≥ 5 in each category
+   ANOVA: Normal residuals, equal variances between groups
+   Regression: Linear relationship, normal residuals
 
-P-VALUE INTERPRETATION:
-p < 0.001: *** Very strong evidence against H₀
-0.001 ≤ p < 0.01: ** Strong evidence
-0.01 ≤ p < 0.05: * Moderate evidence (significant)
-0.05 ≤ p < 0.1: . Weak evidence  
-p ≥ 0.1: No evidence against H₀
+3. RUN THE TEST & GET P-VALUE
 
-ASSUMPTIONS CHECK:
-t-test: Normality (shapiro.test, QQ-plot), Independence
-Chi²: Expected frequencies ≥ 5 in each cell
-ANOVA: Normality of residuals, Equal variances, Independence  
-Regression: Linearity, Normal residuals, Constant variance
+4. INTERPRET P-VALUE:
+   p < 0.001: *** Very strong evidence against H₀
+   0.001 ≤ p < 0.01: ** Strong evidence against H₀
+   0.01 ≤ p < 0.05: * Moderate evidence (traditionally "significant")
+   0.05 ≤ p < 0.1: Weak evidence against H₀
+   p ≥ 0.1: Little/no evidence against H₀
 
-COMMON H₀/H₁ PAIRS:
-• H₀: μ = μ₀ vs H₁: μ ≠ μ₀ (two-tailed)
-• H₀: μ₁ = μ₂ vs H₁: μ₁ ≠ μ₂ (two groups)
-• H₀: Variables independent vs H₁: Variables related
-• H₀: β = 0 vs H₁: β ≠ 0 (regression slope)
+5. MAKE DECISION:
+   If p < 0.05: Reject H₀ (there IS a difference/relationship)
+   If p ≥ 0.05: Fail to reject H₀ (no strong evidence of difference)
 
-CONFIDENCE INTERVALS:
-95% CI interpretation: "95% confident true parameter is in this range"
-If CI doesn't contain 0: significant difference
-If CI doesn't contain 1: significant ratio/relative risk
-Wider CI = more uncertainty, smaller sample
-```
+6. INTERPRET IN CONTEXT:
+   Always explain what this means for the real-world problem!
 
-### SECTION 3: FORMULAS & DISTRIBUTIONS
-```
-KEY FORMULAS:
-t-statistic: t = (x̄-μ)/(s/√n)  [one sample]
-             t = (x̄₁-x̄₂)/SE    [two sample]
-χ² statistic: χ² = Σ(O-E)²/E
-F-statistic: F = MSB/MSW  [ANOVA]
-Correlation: r = Σ(zₓzᵧ)/(n-1)
-Regression: ŷ = a + bx, where b = Σ(x-x̄)(y-ȳ)/Σ(x-x̄)²
+COMMON HYPOTHESIS PAIRS:
+• H₀: μ = 170 vs H₁: μ ≠ 170 (height example)
+• H₀: μ₁ = μ₂ vs H₁: μ₁ ≠ μ₂ (comparing two groups)
+• H₀: Variables independent vs H₁: Variables related (categories)
+• H₀: No relationship vs H₁: There is a relationship (correlation/regression)
 
-CONFIDENCE INTERVALS:
-Mean: x̄ ± t₍α/2₎ × (s/√n)
-Proportion: p̂ ± z₍α/2₎ × √(p̂(1-p̂)/n)
-Difference: (x̄₁-x̄₂) ± t₍α/2₎ × SE_diff
+CONFIDENCE INTERVALS QUICK RULES:
+• 95% CI means "95% confident the true value is in this range"
+• If CI for a difference doesn't include 0 → significant difference
+• Wider CI = more uncertainty (smaller sample, more variability)
 
-DISTRIBUTIONS:
-Normal: N(μ,σ²), 68-95-99.7 rule
-t: heavier tails than normal, df = n-1
-χ²: right-skewed, df varies by test
-F: right-skewed, two df parameters
+CHI-SQUARED TESTS DETAILED:
+Goodness-of-fit: Does data match expected pattern?
+  Example: Fair die should show each number 1/6 of time
+  H₀: Observed = Expected, H₁: Observed ≠ Expected
+  
+Independence: Are two categorical variables related?
+  Example: Gender vs favorite color independent?
+  H₀: Variables independent, H₁: Variables related
+  Expected = (row_total × col_total) / grand_total
 
-Z-SCORES: Z = (X-μ)/σ
-Critical values: z₀.₀₂₅ = 1.96, t₀.₀₂₅ ≈ 2 (for large n)
+RANDOMIZATION TESTS:
+Purpose: Test if observed difference could be due to chance
+Method: 
+1. Calculate observed difference
+2. Shuffle group labels 1000+ times  
+3. Calculate difference for each shuffle
+4. Count how many shuffled ≥ observed
+5. p-value = count/total_shuffles
 
-BINOMIAL: P(X=k) = C(n,k)×p^k×(1-p)^(n-k)
-Mean = np, Var = np(1-p)
-Normal approx when np≥5 and n(1-p)≥5
+BOOTSTRAP VS PERMUTATION:
+Bootstrap: Estimate uncertainty, WITH replacement, for CI
+Permutation: Test differences, shuffle labels, for p-values
 
-POISSON: P(X=k) = λ^k×e^(-λ)/k!
-Mean = Var = λ
-Normal approx when λ≥5
+CENTRAL LIMIT THEOREM:
+Sample means approach normal distribution as n increases
+Even if original data not normal, x̄ ~ N(μ, σ²/n)
+Rule of thumb: n ≥ 30 for CLT to apply
 
-SAMPLE SIZE & POWER:
-Larger n → smaller SE → more power
-Power = 1-β = P(reject H₀ when H₁ true)
-Effect size = (μ₁-μ₂)/σ
-```
-
-### SECTION 4: INTERPRETATION & COMMON MISTAKES
-```
-REGRESSION INTERPRETATION:
-Slope (b): "For every 1-unit increase in X, Y increases by b units"
-Intercept (a): "When X=0, predicted Y=a"
-R²: "X explains R²% of variance in Y"
-p-value for slope: Tests if relationship exists (H₀: β=0)
-
-BOXPLOT READING:
-Box = IQR (25th to 75th percentile)
-Line in box = median
-Whiskers = 1.5×IQR from box edges
-Dots = outliers beyond whiskers
-Compare: medians (central tendency), box widths (spread)
-
-CORRELATION vs CAUSATION:
-Correlation ≠ Causation EVER
-Confounding variables can create false relationships
-Experimental design needed to prove causation
-
-BOOTSTRAP vs PERMUTATION:
-Bootstrap: Resample WITH replacement, estimates uncertainty
-         Use for: confidence intervals
-         Centers around: observed statistic
-Permutation: Shuffle labels WITHOUT replacement, tests differences  
-           Use for: p-values/hypothesis tests
-           Centers around: 0 (null hypothesis)
-
-FATAL CODING ERRORS:
-× sample(1:n, n, replace=T) → Use sample(data, n, replace=T)
-× Shuffling but not using shuffled labels in permutation
-× Using original groups after shuffle: data[group=="A"]
-  Should be: data[shuffled_group=="A"]
-
-ANOVA POST-HOC:
-Only do after significant ANOVA F-test
-TukeyHSD(): controls family-wise error rate
-Bonferroni: divide α by number of comparisons
+EFFECT SIZE:
+Cohen's d: (mean₁ - mean₂) / pooled_standard_deviation
+Small: 0.2, Medium: 0.5, Large: 0.8
+R² in regression: proportion of variance explained
+Correlation strength: |r| 0.1=weak, 0.3=medium, 0.5=strong
 
 TYPE I & II ERRORS:
-Type I (α): Reject true H₀ (false positive)
-Type II (β): Fail to reject false H₀ (false negative)
-Power = 1-β
+Type I (α): False positive, reject true H₀
+Type II (β): False negative, fail to reject false H₀  
+Power = 1-β: Probability of detecting real effect
+Factors affecting power: sample size, effect size, α level, variability
 
-EFFECT SIZE vs SIGNIFICANCE:
-Large samples can make tiny differences "significant"
-Always ask: "Is this practically meaningful?"
-Cohen's d: small=0.2, medium=0.5, large=0.8
-
-DEGREES OF FREEDOM:
-t-test: df = n-1 (one sample), df = n₁+n₂-2 (two sample)
-Chi²: df = (rows-1)×(cols-1) [independence test]
-      df = categories-1 [goodness of fit]
-ANOVA: df_between = k-1, df_within = N-k
-Regression: df = n-2
-
-QUICK DECISION RULES:
-p-value approach: p < α → reject H₀
-CI approach: CI excludes null value → reject H₀
-Critical value: |test stat| > critical value → reject H₀
-
-COMMON α LEVELS:
-α = 0.05 (most common, 5% error rate)
-α = 0.01 (stricter, 1% error rate)
-α = 0.10 (less strict, 10% error rate)
+MULTIPLE TESTING PROBLEM:
+Testing many things increases false positive rate
+Solutions: Bonferroni (divide α by # tests), FDR control
+Example: 20 tests at α=0.05 → expect 1 false positive by chance
 ```
 
+### SECTION 3: KEY FORMULAS & WHEN TO USE THEM
+```
+TEST STATISTICS (what the computer calculates):
+One-sample t: t = (sample_mean - expected_value) / (standard_error)
+Two-sample t: t = (mean₁ - mean₂) / (standard_error_of_difference)
+Chi-squared: χ² = Σ(Observed - Expected)² / Expected
+ANOVA F: F = (variation_between_groups) / (variation_within_groups)
+Correlation: r ranges from -1 to +1 (strength of linear relationship)
+
+CONFIDENCE INTERVALS:
+Mean: sample_mean ± t_critical × (standard_deviation / √n)
+Difference: (mean₁ - mean₂) ± t_critical × standard_error
+
+DISTRIBUTIONS YOU NEED TO KNOW:
+Normal: Bell curve, symmetric, 68-95-99.7 rule
+t-distribution: Like normal but fatter tails, used for small samples
+Chi-squared: Right-skewed, used for categorical data tests
+F-distribution: Right-skewed, used for ANOVA
+
+PROBABILITY FUNCTIONS IN R:
+dbinom(k, n, p): Probability of exactly k successes in n trials
+pbinom(k, n, p): Probability of k or fewer successes
+dpois(k, λ): Probability of exactly k events (Poisson)
+pnorm(z): Probability of getting z or less (normal distribution)
+qnorm(p): What z-value gives probability p?
+
+SAMPLE SIZE & POWER:
+Larger sample size → smaller standard error → more power to detect differences
+Power = Probability of detecting a real effect when it exists
+Effect size = How big the difference actually is (Cohen's d: 0.2=small, 0.5=medium, 0.8=large)
+
+DEGREES OF FREEDOM (for finding critical values):
+One-sample t-test: df = n - 1
+Two-sample t-test: df = n₁ + n₂ - 2
+Chi-squared independence: df = (rows-1) × (columns-1)
+ANOVA: df_between = groups-1, df_within = total_observations-groups
+Regression: df = n - 2
+
+REGRESSION FORMULAS:
+Slope: b = Σ(x-x̄)(y-ȳ) / Σ(x-x̄)²
+Intercept: a = ȳ - b×x̄
+Prediction: ŷ = a + b×x
+Standard error of slope: SE_b = s / √Σ(x-x̄)²
+R²: proportion of variance in y explained by x
+
+ANOVA BREAKDOWN:
+Total variation = Between groups + Within groups
+F = MS_between / MS_within
+MS = Sum of Squares / degrees of freedom
+Large F → groups differ significantly
+Post-hoc tests (TukeyHSD) only after significant F
+
+NORMAL APPROXIMATIONS:
+Binomial→Normal when: np≥5 AND n(1-p)≥5
+  Use: mean=np, sd=√(np(1-p))
+Poisson→Normal when: λ≥5
+  Use: mean=variance=λ
+Continuity correction: Add/subtract 0.5 for discrete→continuous
+
+STANDARD ERROR FORMULAS:
+Mean: SE = s/√n
+Difference of means: SE = √(s₁²/n₁ + s₂²/n₂)
+Proportion: SE = √(p(1-p)/n)
+
+CORRELATION & CAUSATION:
+Correlation coefficient r: measures linear relationship strength
+r² = proportion of variance in y explained by x
+Causation requires: temporal order, mechanism, control of confounders
+Confounding: third variable affects both x and y
+
+Z-SCORE STANDARDIZATION:
+z = (x - μ) / σ
+Converts any normal distribution to standard normal (μ=0, σ=1)
+Critical values: z₀.₀₂₅ = ±1.96, z₀.₀₀₅ = ±2.58
+
+STATISTICAL POWER CALCULATION:
+Affected by: effect size, sample size, significance level, population variance
+power.t.test() in R for sample size planning
+Post-hoc power analysis less useful than prospective planning
+```
+
+### SECTION 4: INTERPRETATION & AVOIDING MISTAKES
+```
+HOW TO READ REGRESSION OUTPUT:
+Slope estimate: "For every 1-unit increase in X, Y changes by [slope] units"
+Intercept: "When X = 0, predicted Y = [intercept]"
+R-squared: "X explains [R²]% of the variation in Y"
+p-value for slope: Tests if relationship exists (H₀: slope = 0)
+Residual standard error: Average prediction error
+F-statistic: Overall model significance
+
+HOW TO READ BOX PLOTS:
+Box = middle 50% of data (25th to 75th percentile)
+Line in box = median (50th percentile)
+Whiskers = extend to furthest points within 1.5×(box height)
+Dots beyond whiskers = outliers (unusual values)
+Compare: medians (center), box widths (spread), whiskers (range)
+Skewed if median not centered in box
+
+BOOTSTRAP vs PERMUTATION (CRITICAL DIFFERENCE):
+Bootstrap: 
+- PURPOSE: Estimate uncertainty (confidence intervals)
+- METHOD: Resample your data WITH replacement
+- RESULT: Centers around your observed statistic
+- CODE: sample(data, length(data), replace=TRUE)
+
+Permutation:
+- PURPOSE: Test if groups really differ (p-values)
+- METHOD: Shuffle group labels (breaks any real relationship)
+- RESULT: Centers around 0 (no difference)
+- CODE: sample(group_labels) then use shuffled labels
+
+CORRELATION ≠ CAUSATION:
+Just because two things are related doesn't mean one causes the other!
+Confounding variables can create fake relationships
+Need experiments (not just observations) to prove causation
+Simpson's paradox: Overall trend reverses within subgroups
+
+DEADLY R CODING MISTAKES:
+× sample(1:n, replace=T) → should be sample(actual_data, replace=T)
+× Shuffling labels but still using original groups in calculations
+× Using data[group=="A"] instead of data[shuffled_group=="A"]
+× Calculating statistics on row numbers instead of actual data values
+× Forgetting paired=TRUE for before/after comparisons
+
+ANOVA FOLLOW-UP:
+Only do post-hoc tests (like TukeyHSD) AFTER significant ANOVA
+TukeyHSD controls error rate when comparing multiple groups
+Bonferroni: Divide α by number of comparisons (very conservative)
+Don't do multiple t-tests instead of ANOVA (inflates Type I error)
+
+TYPE I & II ERRORS:
+Type I (α): False positive - rejecting true H₀ (finding effect that's not real)
+Type II (β): False negative - missing real effect (failing to reject false H₀)
+α = 0.05 means 5% chance of Type I error
+Power = 1 - β = chance of detecting real effect
+
+STATISTICAL vs PRACTICAL SIGNIFICANCE:
+Large samples can make tiny differences "statistically significant"
+Always ask: "Is this difference big enough to matter in real life?"
+Report effect sizes along with p-values
+Clinical significance ≠ statistical significance
+
+QUICK DECISION CHECKLIST:
+□ Is p-value < 0.05? (significant)
+□ Does confidence interval exclude null value? (significant)
+□ Is effect size meaningful in practice?
+□ Did I check assumptions?
+□ Did I interpret in context of the problem?
+
+EXPERIMENTAL DESIGN PITFALLS:
+Pseudo-replication: Treating non-independent obs as independent
+Selection bias: Non-representative sampling
+Response bias: People lying/giving socially desirable answers
+Confounding: Other variables affecting outcome
+Hawthorne effect: People change behavior when being observed
+
+BASE RATE FALLACY:
+Ignore how rare/common something is in population
+Example: 99% accurate test for rare disease → many false positives
+Always consider prevalence when interpreting test results
+
+DATA TRANSFORMATIONS:
+When to use:
+- Log: Right-skewed data, multiplicative relationships
+- Square root: Count data, Poisson-distributed
+- Reciprocal: Rate data, hyperbolic relationships
+Box-Cox finds optimal transformation automatically
+
+ASSUMPTION VIOLATIONS & FIXES:
+Non-normal data: Transform, use non-parametric tests, bootstrap
+Unequal variances: Welch t-test, log transform
+Non-independence: Mixed models, account for clustering
+Outliers: Check for errors, robust methods, report sensitivity
+
+REPORTING RESULTS:
+Include: test statistic, df, p-value, effect size, confidence interval
+Example: "t(28) = 3.45, p < 0.01, Cohen's d = 0.89, 95% CI [2.1, 8.3]"
+Always interpret in context of original research question
+```
+
+2025 Cheat Sheet
+![[PDF 2 copy.pdf]]
+
+2024 Cheat Sheet
 ![[PDF copy (1).pdf]]
 
