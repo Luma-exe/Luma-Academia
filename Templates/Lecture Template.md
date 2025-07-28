@@ -1,7 +1,7 @@
 
 > [!faq] About this Lecture
-> Class: COMP2019
-> Subject: #systemsProgramming1
+> Class: INFS3003
+> Subject: #artificalIntelligence
 > Topics: #coding 
 > Date: {{date}} at {{time}}
 

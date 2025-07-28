@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "b908e7f351d6cbfe",
+        "id": "436c8759f5fc802c",
         "type": "tabs",
         "children": [
           {
-            "id": "0213c4d4335d2f1a",
+            "id": "f50efc1553802a55",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "University/Autumn 2025/_COMP1014 - Thinking about Data/Thinking About Data Final - Notes.md",
+                "file": "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Thinking About Data Final - Notes"
+              "title": "Lecture 1 - Introduction to Information Security"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "University/Autumn 2025/_COMP1014 - Thinking about Data/Thinking About Data Final - Notes.md",
+                "file": "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Thinking About Data Final - Notes"
+              "title": "Outline of Lecture 1 - Introduction to Information Security"
             }
           },
           {
@@ -186,6 +186,19 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
+    "_INFS 3003 Artificial Intelligence/Lecture 2 - Solving Problems by Searching.md",
+    "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 1 - Introduction to AI.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 1 - Introduction to AI 1.md",
+    "Templates/Lecture Template.md",
+    "University/Autumn 2025/_COMP1014 - Thinking about Data/Lecture 0 - Introduction to R.md",
+    "Templates/Definition Template.md",
+    "University/Autumn 2025/_COMP1014 - Thinking about Data/Thinking About Data Final - Notes.md",
+    "_INFS 3003 Artificial Intelligence",
+    "_INFO3019 Project Management",
+    "_INFO3006 Information Security",
+    "_COMP2004 Computer Networking",
+    "Untitled.md",
     "Images/PDF 2 copy.pdf",
     "Images/PDF copy (1).pdf",
     "Personal/Roblox Studio - Scripting.md",
@@ -200,7 +213,6 @@
     "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 13 - Algorithm Design Techniques.md",
     "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Data Structures and Algorithms Final - Notes.md",
     "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 7 - Basic Concepts of Trees, Binary Trees, and BST.md",
-    "University/Autumn 2025/_COMP1014 - Thinking about Data/Thinking About Data Final - Notes.md",
     "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 1 - Introduction and Algorithm Design Part A.md",
     "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 10 - AVL Trees.md",
     "University/Autumn 2025/_COMP1014 - Thinking about Data/Lecture 10 - Normality.md",
@@ -209,26 +221,14 @@
     "University/Autumn 2025/_MATH1006 - Discrete Mathematics/Lecture 10 - Induction, Recursion.md",
     "University/Autumn 2025/_MATH1006 - Discrete Mathematics/Class Test 1 - Notes.md",
     "University/Autumn 2025/_MATH1006 - Discrete Mathematics/Lecture 4 - Counting Principles.md",
-    "University/Autumn 2025/_MATH1006 - Discrete Mathematics/Lecture 11 - Graph Theory.md",
-    "University/Autumn 2025/_MATH1006 - Discrete Mathematics/Lecture 9 - Number Theory.md",
-    "University/Autumn 2025/_MATH1006 - Discrete Mathematics/Lecture 8 - Logic.md",
-    "University/Autumn 2025/_MATH1006 - Discrete Mathematics/Lecture 7 - Boolean Expressions, Karnaugh Maps.md",
-    "University/Autumn 2025/_MATH1006 - Discrete Mathematics/Lecture 6 - Inclusion-Exclusion Principle, Multinomial Coefficients.md",
-    "University/Autumn 2025/_MATH1006 - Discrete Mathematics/Lecture 5 - Unordered Selections.md",
-    "University/Autumn 2025/_MATH1006 - Discrete Mathematics/Lecture 3 - Functions and Pigeonhole Principal.md",
     "Personal/Lua",
-    "Personal",
     "Images/Pasted image 20250521031709.png",
     "Images/Pasted image 20250521031700.png",
     "Images/Pasted image 20250521025029.png",
     "Images/Pasted image 20250409155033.png",
     "Images/Pasted image 20250409155017.png",
     "Images/Pasted image 20250409155005.png",
-    "_COMP1014 - Thinking about Data/Untitled",
-    "LICENSE",
-    "language",
     "Images/Pasted image 20250320105548.png",
-    "codingasd",
     "Images/Pasted image 20250320133522.png",
     "Images/Pasted image 20250320111159.png",
     "Images/Pasted image 20250320110616.png",
