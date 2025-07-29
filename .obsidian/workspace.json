@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "436c8759f5fc802c",
+        "id": "0c110032846d5c63",
         "type": "tabs",
         "children": [
           {
-            "id": "f50efc1553802a55",
+            "id": "0469ad8ce61047b1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Lecture 1 - Introduction to Information Security"
+              "title": "New tab"
             }
           }
         ]
@@ -54,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#systemsProgramming1",
+                "query": "tag:#projectManagement",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -143,13 +138,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 1 - Introduction to Information Security"
+              "title": "Outline"
             }
           },
           {
@@ -186,25 +180,30 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
+    "_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf",
+    "_COMP2004 Computer Networking/COMP2004 - Commands.pdf",
+    "_INFO3006 Information Security/Lecture 2 - Classical Encryption Techniques.md",
+    "_COMP2004 Computer Networking/COMP2004 - Computer Networking 2.docx",
+    "_COMP2004 Computer Networking/COMP2004 - Commands 2.docx",
+    "COMP2004 - Commands.docx",
+    "COMP2004 - Computer Networking.docx",
+    "_COMP2004 Computer Networking/COMP2004 - Commands 1.docx",
+    "_COMP2004 Computer Networking/COMP2004 - Computer Networking 1.docx",
+    "_COMP2004 Computer Networking/COMP2004 - Commands.docx",
+    "_COMP2004 Computer Networking/COMP2004 - Computer Networking.docx",
+    "_COMP2004 Computer Networking/Untitled.md",
+    "_INFO3019 Project Management/Lecture 2 -  The Project Management in Information Technology.md",
+    "_INFO3019 Project Management/Lecture 1 - Project Management.md",
     "_INFS 3003 Artificial Intelligence/Lecture 2 - Solving Problems by Searching.md",
-    "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
     "_INFS 3003 Artificial Intelligence/Lecture 1 - Introduction to AI.md",
+    "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
     "_INFS 3003 Artificial Intelligence/Lecture 1 - Introduction to AI 1.md",
     "Templates/Lecture Template.md",
     "University/Autumn 2025/_COMP1014 - Thinking about Data/Lecture 0 - Introduction to R.md",
     "Templates/Definition Template.md",
     "University/Autumn 2025/_COMP1014 - Thinking about Data/Thinking About Data Final - Notes.md",
-    "_INFS 3003 Artificial Intelligence",
-    "_INFO3019 Project Management",
-    "_INFO3006 Information Security",
-    "_COMP2004 Computer Networking",
     "Untitled.md",
-    "Images/PDF 2 copy.pdf",
-    "Images/PDF copy (1).pdf",
     "Personal/Roblox Studio - Scripting.md",
-    "University",
-    "University/Spring 2025",
-    "University/Autumn 2025",
     "Autumn 2025.md",
     "Personal/Lua/Lua - OOP.md",
     "University/Autumn 2025/_COMP2019 - Systems Programming 1/Systems Programming 1 Final - Notes.md",
@@ -216,12 +215,6 @@
     "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 1 - Introduction and Algorithm Design Part A.md",
     "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 10 - AVL Trees.md",
     "University/Autumn 2025/_COMP1014 - Thinking about Data/Lecture 10 - Normality.md",
-    "University/Autumn 2025/_MATH1006 - Discrete Mathematics/Class Test 2 - Notes.md",
-    "University/Autumn 2025/_MATH1006 - Discrete Mathematics/Discrete Mathematics Final - Notes.md",
-    "University/Autumn 2025/_MATH1006 - Discrete Mathematics/Lecture 10 - Induction, Recursion.md",
-    "University/Autumn 2025/_MATH1006 - Discrete Mathematics/Class Test 1 - Notes.md",
-    "University/Autumn 2025/_MATH1006 - Discrete Mathematics/Lecture 4 - Counting Principles.md",
-    "Personal/Lua",
     "Images/Pasted image 20250521031709.png",
     "Images/Pasted image 20250521031700.png",
     "Images/Pasted image 20250521025029.png",

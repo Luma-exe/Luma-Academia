@@ -5,11 +5,6 @@
 > Topics: #coding 
 > Date: 2025-07-29 at 03:09
 
-# INFS 3003/3020 - Lecture 02: Search I - Solving Problems by Searching
-
-**Week 02, Spring 2025**  
-**Western Sydney University**
-
 ## Problem-Solving Agents
 
 ### Why Search Matters
