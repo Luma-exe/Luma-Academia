@@ -11,10 +11,15 @@
             "id": "0469ad8ce61047b1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "_INFO3019 Project Management/Lecture 2 -  The Project Management in Information Technology.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Lecture 2 -  The Project Management in Information Technology"
             }
           }
         ]
@@ -138,12 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "_INFO3019 Project Management/Lecture 2 -  The Project Management in Information Technology.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Lecture 2 -  The Project Management in Information Technology"
             }
           },
           {
@@ -157,7 +163,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -178,7 +184,7 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "dcc2ae5fbf1d3362",
+  "active": "0469ad8ce61047b1",
   "lastOpenFiles": [
     "_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf",
     "_COMP2004 Computer Networking/COMP2004 - Commands.pdf",
