@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_INFO3019 Project Management/Lecture 2 -  The Project Management in Information Technology.md",
+                "file": "_INFS 3003 Artificial Intelligence/Lecture 3 - Informed Search (Heuristic Search).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 2 -  The Project Management in Information Technology"
+              "title": "Lecture 3 - Informed Search (Heuristic Search)"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_INFO3019 Project Management/Lecture 2 -  The Project Management in Information Technology.md",
+                "file": "_INFS 3003 Artificial Intelligence/Lecture 3 - Informed Search (Heuristic Search).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 2 -  The Project Management in Information Technology"
+              "title": "Outline of Lecture 3 - Informed Search (Heuristic Search)"
             }
           },
           {
@@ -163,7 +163,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -184,11 +184,18 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "0469ad8ce61047b1",
+  "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
+    "_INFO3019 Project Management/Lecture 3 - Project Management Methodologies.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 3 - Informed Search (Heuristic Search).md",
+    "_INFO3019 Project Management/Lecture 2 -  The Project Management in Information Technology.md",
+    "_INFO3006 Information Security/Lecture 3 - Classical Encryption Continued.md",
+    "_INFO3006 Information Security/Lecture 2 - Classical Encryption Techniques.md",
+    "_INFO3019 Project Management/Lecture 1 - Project Management.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 1 - Introduction to AI.md",
+    "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
     "_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf",
     "_COMP2004 Computer Networking/COMP2004 - Commands.pdf",
-    "_INFO3006 Information Security/Lecture 2 - Classical Encryption Techniques.md",
     "_COMP2004 Computer Networking/COMP2004 - Computer Networking 2.docx",
     "_COMP2004 Computer Networking/COMP2004 - Commands 2.docx",
     "COMP2004 - Commands.docx",
@@ -198,11 +205,7 @@
     "_COMP2004 Computer Networking/COMP2004 - Commands.docx",
     "_COMP2004 Computer Networking/COMP2004 - Computer Networking.docx",
     "_COMP2004 Computer Networking/Untitled.md",
-    "_INFO3019 Project Management/Lecture 2 -  The Project Management in Information Technology.md",
-    "_INFO3019 Project Management/Lecture 1 - Project Management.md",
     "_INFS 3003 Artificial Intelligence/Lecture 2 - Solving Problems by Searching.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 1 - Introduction to AI.md",
-    "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
     "_INFS 3003 Artificial Intelligence/Lecture 1 - Introduction to AI 1.md",
     "Templates/Lecture Template.md",
     "University/Autumn 2025/_COMP1014 - Thinking about Data/Lecture 0 - Introduction to R.md",
@@ -219,8 +222,6 @@
     "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Data Structures and Algorithms Final - Notes.md",
     "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 7 - Basic Concepts of Trees, Binary Trees, and BST.md",
     "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 1 - Introduction and Algorithm Design Part A.md",
-    "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 10 - AVL Trees.md",
-    "University/Autumn 2025/_COMP1014 - Thinking about Data/Lecture 10 - Normality.md",
     "Images/Pasted image 20250521031709.png",
     "Images/Pasted image 20250521031700.png",
     "Images/Pasted image 20250521025029.png",
