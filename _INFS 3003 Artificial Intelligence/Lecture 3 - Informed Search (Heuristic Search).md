@@ -27,6 +27,10 @@
 
 ## Greedy Best-First Search
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/HMAHrQHmrUQ" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ### Introduction
 
 **Basic Idea**
@@ -94,6 +98,10 @@ Fn(G) = 0
 - Provides realistic geographical context for search algorithms
 
 ## A* Search
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/88I6IidylGc" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### Introduction and Preparation
 
@@ -163,6 +171,10 @@ Evaluation function: f(n) = h(n) + g(n)
 4. Repeat until goal is reached
 
 ## Memory Bounded Search
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/AnOQYr8nabc" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### Issues with A* Search
 
