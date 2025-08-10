@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "0c110032846d5c63",
+        "id": "d4e7e8614b4a8a23",
         "type": "tabs",
         "children": [
           {
-            "id": "0469ad8ce61047b1",
+            "id": "b244782b638fc560",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_INFO3006 Information Security/Lecture 2 - Classical Encryption Techniques.md",
+                "file": "_INFS 3003 Artificial Intelligence/Lecture 3 - Informed Search (Heuristic Search).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 2 - Classical Encryption Techniques"
+              "title": "Lecture 3 - Informed Search (Heuristic Search)"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_INFO3006 Information Security/Lecture 2 - Classical Encryption Techniques.md",
+                "file": "_INFS 3003 Artificial Intelligence/Lecture 3 - Informed Search (Heuristic Search).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 2 - Classical Encryption Techniques"
+              "title": "Outline of Lecture 3 - Informed Search (Heuristic Search)"
             }
           },
           {
@@ -186,15 +186,17 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
+    "_INFS 3003 Artificial Intelligence/Lecture 2 - Solving Problems by Searching.md",
+    "Templates/Definition Template Within Note.md",
+    "Templates/Definition Template.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 1 - Introduction to AI.md",
+    "_INFO3019 Project Management/Lecture 3 - Project Management Methodologies.md",
+    "_INFO3019 Project Management/Lecture 2 -  The Project Management in Information Technology.md",
     "_INFO3006 Information Security/Lecture 3 - Classical Encryption Continued.md",
     "_INFO3006 Information Security/Lecture 2 - Classical Encryption Techniques.md",
     "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
-    "_INFO3019 Project Management/Lecture 2 -  The Project Management in Information Technology.md",
-    "_INFO3019 Project Management/Lecture 3 - Project Management Methodologies.md",
     "_INFO3019 Project Management/Lecture 1 - Project Management.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 2 - Solving Problems by Searching.md",
     "_INFS 3003 Artificial Intelligence/Lecture 3 - Informed Search (Heuristic Search).md",
-    "_INFS 3003 Artificial Intelligence/Lecture 1 - Introduction to AI.md",
     "_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf",
     "_COMP2004 Computer Networking/COMP2004 - Commands.pdf",
     "_COMP2004 Computer Networking/COMP2004 - Computer Networking 2.docx",
@@ -209,7 +211,6 @@
     "_INFS 3003 Artificial Intelligence/Lecture 1 - Introduction to AI 1.md",
     "Templates/Lecture Template.md",
     "University/Autumn 2025/_COMP1014 - Thinking about Data/Lecture 0 - Introduction to R.md",
-    "Templates/Definition Template.md",
     "University/Autumn 2025/_COMP1014 - Thinking about Data/Thinking About Data Final - Notes.md",
     "Untitled.md",
     "Personal/Roblox Studio - Scripting.md",
@@ -221,7 +222,6 @@
     "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 13 - Algorithm Design Techniques.md",
     "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Data Structures and Algorithms Final - Notes.md",
     "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 7 - Basic Concepts of Trees, Binary Trees, and BST.md",
-    "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 1 - Introduction and Algorithm Design Part A.md",
     "Images/Pasted image 20250521031709.png",
     "Images/Pasted image 20250521031700.png",
     "Images/Pasted image 20250521025029.png",

@@ -27,11 +27,16 @@ Intelligent Action = Knowledge Representation + Search
 ### Definitions
 
 #### Intelligent Agent
-- **Definition**: A system that can perceive its environment and perform intelligent actions in that environment
+
+> [!faq] Definition of Intelligent Agent
+A system that can perceive its environment and perform intelligent actions in that environment
+
 - **Remember**: Intelligent action = Knowledge representation + Search
 
 #### Problem-Solving Agent
-- **Definition**: An intelligent agent that can search a path consisting of a sequence of actions to reach a goal state
+
+> [!faq] Definition of Problem-Solving Agent
+An intelligent agent that can search a path consisting of a sequence of actions to reach a goal state
 
 ### Problem-Solving Process
 
@@ -40,7 +45,7 @@ Intelligent Action = Knowledge Representation + Search
 **Four-Step Process**:
 
 1. **Goal Formulation**
-   - Goals organize behavior by limiting objectives and actions to be considered
+   - Goals organize behaviour by limiting objectives and actions to be considered
 
 2. **Problem Formulation**
    - Agent devises description of states and actions necessary to reach the goal
