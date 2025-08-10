@@ -112,6 +112,10 @@ Decryption: P = D_DecryptionKey(C)
 
 ## Caesar Cipher
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/fR8rVR72a6o" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ### Historical Background
 - **Named after**: Julius Caesar (100-44 BC)
 - **Original use**: Military message protection with k=3
@@ -248,6 +252,10 @@ E (12.02%), T (9.10%), A (8.12%), O (7.68%), I (7.31%), N (6.95%), S (6.28%), H 
 
 ## Monoalphabetic Cipher with Key
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ZJWKpviXPCo" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ### Method
 **Key-based substitution table construction**:
 
@@ -318,6 +326,10 @@ Ciphertext: H UINF NIAP OCSO H UINF INOCHIT
 - **Usage**: Each homophone used in rotation
 
 ## Playfair Cipher
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/-KjFbTK1IIw" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### Historical Background
 - **Inventor**: Charles Wheatstone (1854)

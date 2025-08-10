@@ -17,6 +17,10 @@ This lecture covers advanced classical encryption techniques including polyalpha
 
 ### Vigenère Cipher
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/E352JJ8xv48" frameborder="0" allowfullscreen></iframe>
+</div>
+
 #### Process
 1. Select a key from 26 letters
 2. Create key string as long as plaintext by repeating key letters
@@ -37,6 +41,10 @@ Decryption: w=z-d mod26, e=i-e mod26, ...
 ```
 
 ## Transposition Techniques (Transposition Cipher)
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/sHsnH1u03e4" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### Basic Concept
 - Rearranges characters of plaintext rather than substituting them
@@ -95,6 +103,10 @@ Result: COMPUTERSECURITY
 
 ## One-Time Pad
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/QVV_bUxxiZ8" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ### Definition
 - Encryption scheme by Joseph Mauborgne (AT&T)
 - Large non-repeating set of truly random key letters
@@ -149,6 +161,10 @@ E + F mod 26 = J
 - **Information Theory**: Opponent has no information for cryptanalysis since every key sequence is equally likely
 
 ## Hill Cipher
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/fffgRyr6PQ8" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### Background
 - **Inventor**: Lester Hill (American Mathematician, 1929)
@@ -239,6 +255,10 @@ Or column form:
 ```
 
 ## One-Way Hash Functions
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/f4HnmVb2M00" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### Definition and Purpose
 - **Hash Function**: Mathematical function taking variable-length input (pre-image) and converting to fixed-length output (hash value)
