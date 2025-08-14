@@ -163,8 +163,14 @@ E + F mod 26 = J
 ## Hill Cipher
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/fffgRyr6PQ8" frameborder="0" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/FUit_U0vwc4" frameborder="0" allowfullscreen></iframe>
 </div>
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/spHFyNFa2dA" frameborder="0" allowfullscreen></iframe>
+</div>
+
+![[Pasted image 20250814125723.png]]
 
 ### Background
 - **Inventor**: Lester Hill (American Mathematician, 1929)

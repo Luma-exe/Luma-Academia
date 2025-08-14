@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_INFS 3003 Artificial Intelligence/Lecture 3 - Informed Search (Heuristic Search).md",
+                "file": "_INFO3006 Information Security/Lecture 4 - DES and Symmetric Key Systems.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 3 - Informed Search (Heuristic Search)"
+              "title": "Lecture 4 - DES and Symmetric Key Systems"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_INFS 3003 Artificial Intelligence/Lecture 3 - Informed Search (Heuristic Search).md",
+                "file": "_INFO3006 Information Security/Lecture 4 - DES and Symmetric Key Systems.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 3 - Informed Search (Heuristic Search)"
+              "title": "Outline of Lecture 4 - DES and Symmetric Key Systems"
             }
           },
           {
@@ -186,17 +186,21 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "_INFS 3003 Artificial Intelligence/Lecture 2 - Solving Problems by Searching.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 2 - Search 1 Solving Problems by Searching.md",
+    "_INFO3019 Project Management/Lecture 4 -.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 4 - Search 3 Adversarial Search.md",
+    "_INFO3006 Information Security/Lecture 4 - DES and Symmetric Key Systems.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 3 - Search 2 Informed Search (Heuristic Search).md",
+    "_INFO3019 Project Management/Lecture 3 - Project Management Methodologies.md",
+    "_INFO3006 Information Security/Lecture 3 - Classical Encryption Continued.md",
+    "_INFO3019 Project Management/Lecture 2 -  The Project Management in Information Technology.md",
+    "Images/Pasted image 20250814125723.png",
+    "_INFO3006 Information Security/Lecture 2 - Classical Encryption Techniques.md",
     "Templates/Definition Template Within Note.md",
     "Templates/Definition Template.md",
     "_INFS 3003 Artificial Intelligence/Lecture 1 - Introduction to AI.md",
-    "_INFO3019 Project Management/Lecture 3 - Project Management Methodologies.md",
-    "_INFO3019 Project Management/Lecture 2 -  The Project Management in Information Technology.md",
-    "_INFO3006 Information Security/Lecture 3 - Classical Encryption Continued.md",
-    "_INFO3006 Information Security/Lecture 2 - Classical Encryption Techniques.md",
     "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
     "_INFO3019 Project Management/Lecture 1 - Project Management.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 3 - Informed Search (Heuristic Search).md",
     "_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf",
     "_COMP2004 Computer Networking/COMP2004 - Commands.pdf",
     "_COMP2004 Computer Networking/COMP2004 - Computer Networking 2.docx",
@@ -219,9 +223,6 @@
     "University/Autumn 2025/_COMP2019 - Systems Programming 1/Systems Programming 1 Final - Notes.md",
     "University/Autumn 2025/_COMP2019 - Systems Programming 1/Lecture 5 - Directories and File Systems Overview.md",
     "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 11 - B-Trees and Heaps.md",
-    "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 13 - Algorithm Design Techniques.md",
-    "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Data Structures and Algorithms Final - Notes.md",
-    "University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 7 - Basic Concepts of Trees, Binary Trees, and BST.md",
     "Images/Pasted image 20250521031709.png",
     "Images/Pasted image 20250521031700.png",
     "Images/Pasted image 20250521025029.png",
@@ -231,7 +232,6 @@
     "Images/Pasted image 20250320105548.png",
     "Images/Pasted image 20250320133522.png",
     "Images/Pasted image 20250320111159.png",
-    "Images/Pasted image 20250320110616.png",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
