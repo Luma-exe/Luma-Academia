@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "c234b9cdac389ab5",
+        "id": "d4e7e8614b4a8a23",
         "type": "tabs",
         "children": [
           {
-            "id": "73799d763643f685",
+            "id": "b244782b638fc560",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_INFO3019 Project Management/Lecture 4 - Project Integration Management and Ethics.md",
+                "file": "_INFO3019 Project Management/Lecture 5 - Project Stakeholder and Communication Management.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 4 - Project Integration Management and Ethics"
+              "title": "Lecture 5 - Project Stakeholder and Communication Management"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_INFO3019 Project Management/Lecture 4 - Project Integration Management and Ethics.md",
+                "file": "_INFO3019 Project Management/Lecture 5 - Project Stakeholder and Communication Management.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 4 - Project Integration Management and Ethics"
+              "title": "Outline of Lecture 5 - Project Stakeholder and Communication Management"
             }
           },
           {
@@ -171,6 +171,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "audio-recorder:Start/stop recording": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -186,25 +187,26 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "_INFO3019 Project Management/Lecture 3 - Project Management Methodologies.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 5 - Knowledge Representation I Agents, Representation, Reasoning and Logic.md",
+    "_INFO3019 Project Management/Lecture 5 - Project Stakeholder and Communication Management.md",
     "_INFO3019 Project Management/Lecture 4 - Project Integration Management and Ethics.md",
-    "_INFO3006 Information Security/Lecture 3 - Classical Encryption Continued.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 4 - Search 3 Adversarial Search.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 3 - Search 2 Informed Search (Heuristic Search).md",
-    "_INFS 3003 Artificial Intelligence/Lecture 2 - Search 1 Solving Problems by Searching.md",
-    "_INFO3006 Information Security/Lecture 4 - DES and Symmetric Key Systems.md",
-    "Images/Pasted image 20250814125723.png",
-    "_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf",
-    "_COMP2004 Computer Networking/Final Notes - Computer Networking.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 3 - Informed Search (Heuristic Search).md",
-    "_INFS 3003 Artificial Intelligence/Lecture 2 - Solving Problems by Searching.md",
-    "Templates/Definition Template Within Note.md",
-    "Templates/Definition Template.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 1 - Introduction to AI.md",
+    "_INFO3006 Information Security/Lecture 4 - Symmetric Key Systems - S-DES.md",
+    "_INFO3019 Project Management/Lecture 3 - Project Management Methodologies.md",
     "_INFO3019 Project Management/Lecture 2 -  The Project Management in Information Technology.md",
+    "_INFO3006 Information Security/Lecture 5 - DES and Symmetric Key Systems.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 4 - Search 3 Adversarial Search.md",
+    "_INFO3006 Information Security/Lecture 3 - Classical Encryption Continued.md",
     "_INFO3006 Information Security/Lecture 2 - Classical Encryption Techniques.md",
     "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 3 - Search 2 Informed Search (Heuristic Search).md",
+    "_INFS 3003 Artificial Intelligence/Lecture 2 - Search 1 Solving Problems by Searching.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 1 - Introduction to AI.md",
     "_INFO3019 Project Management/Lecture 1 - Project Management.md",
+    "_INFO3019 Project Management/Lecture 4 -.md",
+    "Images/Pasted image 20250814125723.png",
+    "Templates/Definition Template Within Note.md",
+    "Templates/Definition Template.md",
+    "_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf",
     "_COMP2004 Computer Networking/COMP2004 - Commands.pdf",
     "_COMP2004 Computer Networking/COMP2004 - Computer Networking 2.docx",
     "_COMP2004 Computer Networking/COMP2004 - Commands 2.docx",
@@ -214,6 +216,7 @@
     "_COMP2004 Computer Networking/COMP2004 - Computer Networking 1.docx",
     "_COMP2004 Computer Networking/COMP2004 - Commands.docx",
     "_COMP2004 Computer Networking/COMP2004 - Computer Networking.docx",
+    "_COMP2004 Computer Networking/Untitled.md",
     "_INFS 3003 Artificial Intelligence/Lecture 1 - Introduction to AI 1.md",
     "Templates/Lecture Template.md",
     "University/Autumn 2025/_COMP1014 - Thinking about Data/Lecture 0 - Introduction to R.md",
@@ -221,8 +224,6 @@
     "Untitled.md",
     "Personal/Roblox Studio - Scripting.md",
     "Autumn 2025.md",
-    "Personal/Lua/Lua - OOP.md",
-    "University/Autumn 2025/_COMP2019 - Systems Programming 1/Systems Programming 1 Final - Notes.md",
     "Images/Pasted image 20250521031709.png",
     "Images/Pasted image 20250521031700.png",
     "Images/Pasted image 20250521025029.png",
