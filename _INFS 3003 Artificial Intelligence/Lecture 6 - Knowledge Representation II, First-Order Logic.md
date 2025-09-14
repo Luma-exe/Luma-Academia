@@ -3,7 +3,7 @@
 > Class: INFS3003
 > Subject: #artificalIntelligence
 > Topics: #coding 
-> Date: 2025-09-14 at 21:23
+> Date: 2025-09-14 at 22:36
 
 ## Limitations of Propositional Logic in The Real World
 
@@ -378,10 +378,3 @@ KB = F ∪ {(1), (2), (3), (4), (5), (6)}
 - Using implication with existential quantifiers inappropriately
 - Misunderstanding quantifier scope and ordering
 - Confusing predicates with functions
-
-**Exam Focus Areas:**
-
-- Translating natural language statements to first-order logic
-- Determining truth values under different interpretations
-- Proving entailments using logical rules
-- Understanding the relationship between ∀ and ∃ quantifiers

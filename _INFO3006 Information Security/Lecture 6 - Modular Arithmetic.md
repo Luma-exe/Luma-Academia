@@ -1,6 +1,5 @@
 
 > [!faq] About this Lecture
-<<<<<<< HEAD
 > Class: INFO3006
 > Subject: #informationSecurity 
 > Topics: #coding 
