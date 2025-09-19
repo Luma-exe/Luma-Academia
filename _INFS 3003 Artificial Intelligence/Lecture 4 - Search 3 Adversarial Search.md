@@ -147,7 +147,7 @@ function MIN-VALUE(state) returns a utility value
 
 **Primary Problem:** The game tree grows exponentially with depth
 
-- Number of game states = O(b^d) where b = branching factor, d = depth
+- Number of game states = $O(b^d)$ where b = branching factor, d = depth
 - No algorithm can completely eliminate the exponential growth
 
 **Example Complexity:**
