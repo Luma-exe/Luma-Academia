@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_INFO3006 Information Security/Lecture 6 - Modular Arithmetic.md",
+                "file": "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 6 - Modular Arithmetic"
+              "title": "Lecture 1 - Introduction to Information Security"
             }
           }
         ]
@@ -54,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "`",
+                "query": "tag:#artificalIntelligence",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_INFO3006 Information Security/Lecture 6 - Modular Arithmetic.md",
+                "file": "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 6 - Modular Arithmetic"
+              "title": "Outline of Lecture 1 - Introduction to Information Security"
             }
           },
           {
@@ -187,14 +187,21 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
+    "_INFO3019 Project Management/Lecture 9 - Project Resource Management.md",
+    "_INFO3019 Project Management/Lecture 8 - Project Procurement Management.md",
+    "_INFO3019 Project Management/Lecture 7 - Project Schedule Management.md",
+    "_INFO3006 Information Security/Lecture 10 - Message Authentication.md",
+    "_INFO3006 Information Security/Lecture 9 - Key Distribution and Management.md",
+    "_INFO3006 Information Security/Lecture 8 - Public Key Algorithms.md",
     "_INFO3006 Information Security/Lecture 7 - Finite Fields.md",
-    "_INFO3006 Information Security/Lecture 6 - Modular Arithmetic.md",
-    "_INFO3006 Information Security/Lecture 5 - DES and Symmetric Key Systems.md",
-    "_INFO3006 Information Security/Lecture 4 - Symmetric Key Systems - S-DES.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 8 - Knowledge Representation IV, Complete Study Notes.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 9 - Classical Planning in Artificial Intelligence.md",
     "_INFS 3003 Artificial Intelligence/Lecture 7 - Knowledge Representation III Inference in First-order Logic.md",
     "_INFS 3003 Artificial Intelligence/Lecture 6 - Knowledge Representation II, First-Order Logic.md",
     "_INFS 3003 Artificial Intelligence/Lecture 5 - Knowledge Representation I Agents, Representation, Reasoning and Logic.md",
-    "_INFO3019 Project Management/Lecture 7 - Project Schedule Management.md",
+    "_INFO3006 Information Security/Lecture 4 - Symmetric Key Systems - S-DES.md",
+    "_INFO3006 Information Security/Lecture 5 - DES and Symmetric Key Systems.md",
+    "_INFO3006 Information Security/Lecture 6 - Modular Arithmetic.md",
     "_INFO3019 Project Management/Lecture 6 - Project Scope Management.md",
     "_INFO3019 Project Management/Lecture 5 - Project Stakeholder and Communication Management.md",
     "_INFS 3003 Artificial Intelligence/Lecture 7 - Knowledge Representation II.md",
@@ -206,14 +213,7 @@
     "_INFO3019 Project Management/Lecture 2 -  The Project Management in Information Technology.md",
     "_INFO3006 Information Security/Lecture 3 - Classical Encryption Continued.md",
     "_INFO3006 Information Security/Lecture 2 - Classical Encryption Techniques.md",
-    "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 3 - Search 2 Informed Search (Heuristic Search).md",
-    "_INFS 3003 Artificial Intelligence/Lecture 2 - Search 1 Solving Problems by Searching.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 1 - Introduction to AI.md",
-    "_INFO3019 Project Management/Lecture 1 - Project Management.md",
-    "_INFO3019 Project Management/Lecture 4 -.md",
     "Images/Pasted image 20250814125723.png",
-    "Templates/Definition Template Within Note.md",
     "_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf",
     "_COMP2004 Computer Networking/COMP2004 - Commands.pdf",
     "_COMP2004 Computer Networking/COMP2004 - Computer Networking 2.docx",
