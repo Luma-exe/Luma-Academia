@@ -4,41 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "d4e7e8614b4a8a23",
+        "id": "d4d1b729bf344211",
         "type": "tabs",
         "children": [
           {
-            "id": "b244782b638fc560",
+            "id": "186cf3fefe39ce0f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
+                "file": "University/Definitions/Cybersecurity/S-DES Explained.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 1 - Introduction to Information Security"
-            }
-          },
-          {
-            "id": "a1b48fb0102cfc3d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_INFO3006 Information Security/Lecture 10 - Message Authentication.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Lecture 10 - Message Authentication"
+              "title": "S-DES Explained"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_INFO3006 Information Security/Lecture 10 - Message Authentication.md",
+                "file": "University/Definitions/Cybersecurity/S-DES Explained.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 10 - Message Authentication"
+              "title": "Outline of S-DES Explained"
             }
           },
           {
@@ -201,33 +185,33 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "a1b48fb0102cfc3d",
+  "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
-    "_INFO3006 Information Security/Lecture 1 - Introduction to Information Security.md",
+    "University/Definitions/Cybersecurity",
+    "_INFS 3003 Artificial Intelligence/Lecture 5 - Knowledge Representation I Agents, Representation, Reasoning and Logic.md",
+    "University/Definitions/Cybersecurity/S-DES Explained.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 9 - Classical Planning in Artificial Intelligence.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 8 - Knowledge Representation IV, Complete Study Notes.md",
     "_INFO3019 Project Management/Lecture 9 - Project Resource Management.md",
     "_INFO3019 Project Management/Lecture 8 - Project Procurement Management.md",
-    "_INFO3019 Project Management/Lecture 7 - Project Schedule Management.md",
-    "_INFO3006 Information Security/Lecture 10 - Message Authentication.md",
     "_INFO3006 Information Security/Lecture 9 - Key Distribution and Management.md",
     "_INFO3006 Information Security/Lecture 8 - Public Key Algorithms.md",
-    "_INFO3006 Information Security/Lecture 7 - Finite Fields.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 8 - Knowledge Representation IV, Complete Study Notes.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 9 - Classical Planning in Artificial Intelligence.md",
+    "_INFO3006 Information Security/Lecture 10 - Message Authentication.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 4 - Search 3 Adversarial Search.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 3 - Search 2 Informed Search (Heuristic Search).md",
+    "_INFO3019 Project Management/Lecture 7 - Project Schedule Management.md",
+    "_INFO3019 Project Management/Lecture 5 - Project Stakeholder and Communication Management.md",
+    "_INFO3019 Project Management/Lecture 6 - Project Scope Management.md",
     "_INFS 3003 Artificial Intelligence/Lecture 7 - Knowledge Representation III Inference in First-order Logic.md",
     "_INFS 3003 Artificial Intelligence/Lecture 6 - Knowledge Representation II, First-Order Logic.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 5 - Knowledge Representation I Agents, Representation, Reasoning and Logic.md",
+    "_INFO3006 Information Security/Lecture 7 - Finite Fields.md",
+    "_INFO3006 Information Security/Lecture 6 - Modular Arithmetic.md",
+    "_INFS 3003 Artificial Intelligence/Lecture 6 - First-order Logic - Knowledge Representation II.md",
     "_INFO3006 Information Security/Lecture 4 - Symmetric Key Systems - S-DES.md",
     "_INFO3006 Information Security/Lecture 5 - DES and Symmetric Key Systems.md",
-    "_INFO3006 Information Security/Lecture 6 - Modular Arithmetic.md",
-    "_INFO3019 Project Management/Lecture 6 - Project Scope Management.md",
-    "_INFO3019 Project Management/Lecture 5 - Project Stakeholder and Communication Management.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 7 - Knowledge Representation II.md",
     "_INFO3019 Project Management/Lecture 2 - The Project Management in Information Technology.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 4 - Search 3 Adversarial Search.md",
     "_INFO3019 Project Management/Lecture 4 - Project Integration Management and Ethics.md",
     "_INFO3019 Project Management/Lecture 3 - Project Management Methodologies.md",
-    "_INFO3019 Project Management/Lecture 2 -  The Project Management in Information Technology.md",
     "_INFO3006 Information Security/Lecture 3 - Classical Encryption Continued.md",
     "Images/Pasted image 20250814125723.png",
     "_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf",
