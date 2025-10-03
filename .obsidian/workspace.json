@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "University/Definitions/Cybersecurity/S-DES Explained.md",
+                "file": "University/Definitions/Cybersecurity/S-DES (Simplified Data Encryption Standard).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "S-DES Explained"
+              "title": "S-DES (Simplified Data Encryption Standard)"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "University/Definitions/Cybersecurity/S-DES Explained.md",
+                "file": "University/Definitions/Cybersecurity/S-DES (Simplified Data Encryption Standard).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of S-DES Explained"
+              "title": "Outline of S-DES (Simplified Data Encryption Standard)"
             }
           },
           {
@@ -189,7 +189,7 @@
   "lastOpenFiles": [
     "University/Definitions/Cybersecurity",
     "_INFS 3003 Artificial Intelligence/Lecture 5 - Knowledge Representation I Agents, Representation, Reasoning and Logic.md",
-    "University/Definitions/Cybersecurity/S-DES Explained.md",
+    "University/Definitions/Cybersecurity/S-DES (Simplified Data Encryption Standard).md",
     "_INFS 3003 Artificial Intelligence/Lecture 9 - Classical Planning in Artificial Intelligence.md",
     "_INFS 3003 Artificial Intelligence/Lecture 8 - Knowledge Representation IV, Complete Study Notes.md",
     "_INFO3019 Project Management/Lecture 9 - Project Resource Management.md",
