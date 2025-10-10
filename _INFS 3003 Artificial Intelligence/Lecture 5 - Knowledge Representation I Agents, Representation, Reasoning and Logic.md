@@ -98,7 +98,7 @@ Knowledge could come from two sources:
 **Example:**
 
 - x ≥ y: represent a relationship between x and y (syntax)
-- x ≥ y is False if x is a smaller number than y (semantics)
+- If x ≥ y is False if x is a smaller number than y so x < y (semantics)
 
 **Model as Interpretation:** For language L = {P, Q, R}, there are 8 different interpretations:
 
@@ -377,3 +377,200 @@ C₁₁ ∧ Face_right ∧ Forward ⇒ C₁₂
 ```
 
 This framework allows the agent to reason about safe moves, avoid pits, and plan paths to the gold using logical inference.
+
+## Summary: Knowledge Representation Terms and Concepts
+
+### Foundational Terms
+
+**Sentence**
+
+- An assertion about the world expressed in a knowledge representation language
+- Can be atomic (simple) or complex (built from multiple sentences using connectives)
+
+**Axiom**
+
+- A sentence that is given as true without being derived from other sentences
+- Foundation statements in a knowledge base that don't require proof
+
+**Knowledge Representation Language**
+
+- A formal language with defined syntax and semantics used to express knowledge
+- Types include programming languages, natural languages, logic languages, and knowledge graphs
+
+**Knowledge Base (KB)**
+
+- A collection of sentences represented in a knowledge representation language
+- Contains all the facts and rules an agent knows about the world
+
+**Syntax**
+
+- The rules that define how sentences are properly constructed in a language
+- Determines what constitutes a valid sentence structure
+
+**Semantics**
+
+- Defines the meaning and truth values of sentences
+- Determines when sentences are true or false in different situations
+
+### Reasoning and Logic Terms
+
+**Inference**
+
+- The process of deriving new sentences from existing ones in the knowledge base
+- Uses logical rules to generate new knowledge
+- Notation: KB ⊢ α means "α can be inferred from KB"
+
+**Model**
+
+- A possible world or interpretation in which sentences can be evaluated as true or false
+- An assignment of truth values to all propositional symbols
+- If sentence α is true in model m, then m satisfies α or m is a model of α
+- M(α) denotes the set of all models of α
+
+**Entailment** (⊨)
+
+- A semantic relationship between sentences
+- α ⊨ β means α entails β: whenever α is true, β must also be true
+- KB ⊨ α means α is true in all models where KB is true
+- Relationship: M(α) ⊆ M(β)
+
+**Soundness**
+
+- A property of inference algorithms that guarantees truth preservation
+- If KB ⊢ α, then KB ⊨ α
+- Only derives sentences that are actually entailed
+
+**Completeness**
+
+- A property of inference algorithms that can derive everything that is entailed
+- If KB ⊨ α, then KB ⊢ α
+- Can find all logical consequences
+
+**Valid Sentence**
+
+- A sentence that is true in ALL possible models
+- Example: P ∨ ¬P (law of excluded middle)
+
+**Satisfiable Sentence**
+
+- A sentence that is true in SOME model (at least one)
+- Not contradictory; has at least one interpretation where it's true
+
+### Agent Architecture Terms
+
+**Knowledge Level**
+
+- The most abstract level describing what the agent knows
+- Represents the agent's understanding of the world
+
+**Logic Level**
+
+- The level where knowledge is encoded into formal sentences using logic
+- Bridges abstract knowledge and concrete implementation
+
+**Implementation Level**
+
+- The physical architecture and data structures that store and process knowledge
+- How the agent is actually built
+
+**Percept**
+
+- Input information the agent receives from the environment
+- Observations about the real world
+
+**Tell Operation**
+
+- Adds a new sentence to the knowledge base
+- Updates the agent's knowledge with new information
+
+**Ask Operation**
+
+- Queries the knowledge base to determine if something is true
+- Used to make decisions based on current knowledge
+
+### Propositional Logic Terms
+
+**Logical Constants**
+
+- True and False (the two truth values)
+
+**Propositional Symbols**
+
+- Variables representing propositions (P, Q, R, etc.)
+- Can be true or false
+
+**Logical Connectives**
+
+- Operators that combine propositions:
+    - ¬ (not/negation)
+    - ∧ (and/conjunction)
+    - ∨ (or/disjunction)
+    - ⇒ (implies/implication)
+    - ⇔ (if and only if/biconditional)
+
+**Atomic Sentence**
+
+- A simple sentence: True, False, or a propositional symbol
+- Cannot be broken down further
+
+**Complex Sentence**
+
+- Built from atomic sentences using logical connectives
+- Can be decomposed into simpler parts
+
+### Inference Rules
+
+**Modus Ponens**
+
+- From P and P ⇒ Q, infer Q
+- If we know something and know it implies something else, we can conclude that something else
+
+**And-Elimination**
+
+- From P ∧ Q, infer P (or Q)
+- If we know a conjunction is true, each conjunct is true
+
+**And-Introduction**
+
+- From P and Q, infer P ∧ Q
+- If we know two things separately, we know their conjunction
+
+**Or-Introduction**
+
+- From P, infer P ∨ Q
+- If we know something is true, we know any disjunction containing it is true
+
+### Approaches to Building Knowledge Bases
+
+**Declarative Approach**
+
+- Start with empty KB and add sentences explicitly
+- Agent designer tells facts to the agent
+- Separates knowledge from reasoning process
+
+**Procedural Approach**
+
+- Encode behaviors directly as program code
+- Knowledge is implicit in the procedures
+- Less flexible but potentially more efficient
+
+### Key Relationships
+
+**Entailment vs. Inference**
+
+- Entailment (⊨) is semantic: about truth in models
+- Inference (⊢) is syntactic: about deriving sentences using rules
+- Ideal system: KB ⊨ α if and only if KB ⊢ α
+
+**Model Satisfaction**
+
+- m satisfies α means α is true in model m
+- M(α) is the set of all models satisfying α
+- α ⊨ β means M(α) ⊆ M(β)
+
+**Proof Structure**
+
+- A sequence of sentences S₁, S₂, ..., Sₙ where:
+    - S₁ comes from KB
+    - Sₙ is the goal sentence
+    - Each intermediate sentence is either from KB or derived by inference rules
