@@ -253,28 +253,66 @@ F | F | F
 
 #### Entailment and Inference
 
-**Entailment (⊨)**: Semantic relationship
+##### Entailment (⊨): Semantic relationship
+
+Entailment is about **meaning and truth in all possible models**.  
+It says that one statement logically follows from another.  
+If `α ⊨ β`, then every time `α` is true, `β` must also be true — there’s no model where `α` is true and `β` is false.
+
 ```
-α ⊨ β means: 
-In every model where α is true, β is also true
-M(α) ⊆ M(β)
+α ⊨ β  
+means: In every model where α is true, β is also true  
+M(α) ⊆ M(β)  (the set of models of α is contained within those of β)
 ```
 
-**Knowledge Base Entailment**:
+##### Knowledge Base Entailment:
+
+This applies the same idea to a **set of known facts and rules** (the Knowledge Base).  
+If the knowledge base logically entails a statement, that statement must be true in every model where the KB is true.
+
 ```
 KB ⊨ α means:
 When all sentences in KB are true, α must be true
 ```
 
-**Inference (⊢)**: Syntactic procedure
+Example:  
+If the KB says
+
+- `All humans are mortal`
+- `Socrates is a human`  
+    then `KB ⊨ Socrates is mortal`.
+
+It’s truth-based reasoning — not about proof steps but about what must be true in all interpretations of the KB.
+
+##### Inference (⊢): Syntactic procedure
+
+Inference is about **deriving** conclusions from the KB using formal **rules** (not checking all models). It’s the _mechanical proof process_ side of logic.
+
 ```
 KB ⊢ α means:
 α can be derived from KB using inference rules
 ```
 
+Example rule (Modus Ponens):
+
+```
+P,  P ⇒ Q  
+----------
+     Q
+```
+
+If an inference system is **sound**, everything it derives (⊢) is also true (⊨).  
+If it’s **complete**, it can derive everything that’s true according to entailment.
+
+**In short:**
+- ⊨ means “must be true” (semantic, about truth in all models)
+- ⊢ means “can be proved” (syntactic, about what can be derived by rules)
+- A good logical system makes ⊨ and ⊢ line up perfectly.
+
 ---
 
 #### Inference Rules
+From the top we can infer the bottom
 
 **Modus Ponens**:
 ```
@@ -484,7 +522,7 @@ Brother(John, Tom) ∨ Brother(John, Peter) → ⊤
 ```
 
 ---
-
+ 
 #### Models in First-Order Logic
 
 **Single Sentence Model**:

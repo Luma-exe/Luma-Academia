@@ -4,22 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "d4d1b729bf344211",
+        "id": "c3ea936db558b238",
         "type": "tabs",
         "children": [
           {
-            "id": "186cf3fefe39ce0f",
+            "id": "01729fc9b104ac2a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "_INFO3006 Information Security/Lecture 13 - Subject Review.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
+                "file": "_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Lecture 13 - Subject Review"
+              "icon": "lucide-file-text",
+              "title": "COMP2004 - Computer Networking"
             }
           }
         ]
@@ -143,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_INFO3006 Information Security/Lecture 13 - Subject Review.md",
+                "file": "_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 13 - Subject Review"
+              "title": "Outline of COMP2004 - Computer Networking"
             }
           },
           {
@@ -163,7 +160,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -185,13 +182,16 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "186cf3fefe39ce0f",
+  "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
+    "_COMP2004 Computer Networking/COMP2004 - Commands.pdf",
+    "_INFS 3003 Artificial Intelligence/Lecture 13 - Subject Review.md",
+    "_INFS 3003 Artificial Intelligence/Untitled.base",
+    "_INFO3006 Information Security/Lecture 13 - Subject Review.md",
+    "_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf",
     "_INFO3006 Information Security/Lecture 12 - Security Management & Cybersecurity Challenges.md",
     "_INFO3006 Information Security/Lecture 11 - User Authentication.md",
-    "_INFO3006 Information Security/Lecture 13 - Subject Review.md",
     "_INFO3006 Information Security/Lecture 10 - Message Authentication.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 13 - Subject Review.md",
     "University/Spring 2025",
     "_INFS 3003 Artificial Intelligence/Lecture 12 - Introduction to Machine Learning II Unsupervised Learning and Reinforcement Learning.md",
     "_INFS 3003 Artificial Intelligence/Lecture 11 - Machine Learning I Supervised Learning.md",
@@ -214,16 +214,12 @@
     "_INFS 3003 Artificial Intelligence/Lecture 3 - Search 2 Informed Search (Heuristic Search).md",
     "University/Spring 2025/_INFO3019 Project Management/Lecture 7 - Project Schedule Management.md",
     "University/Spring 2025/_INFO3019 Project Management/Lecture 5 - Project Stakeholder and Communication Management.md",
-    "University/Spring 2025/_INFO3019 Project Management/Lecture 6 - Project Scope Management.md",
     "Images/Pasted image 20250814125723.png",
-    "_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf",
-    "_COMP2004 Computer Networking/COMP2004 - Commands.pdf",
     "_COMP2004 Computer Networking/COMP2004 - Computer Networking 2.docx",
     "_COMP2004 Computer Networking/COMP2004 - Commands 2.docx",
     "COMP2004 - Commands.docx",
     "COMP2004 - Computer Networking.docx",
     "_COMP2004 Computer Networking/COMP2004 - Commands 1.docx",
-    "_COMP2004 Computer Networking/COMP2004 - Computer Networking 1.docx",
     "Images/Pasted image 20250521031709.png",
     "Images/Pasted image 20250521031700.png",
     "Images/Pasted image 20250521025029.png",

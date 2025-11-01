@@ -24,6 +24,8 @@
 - Review assignment questions and answers
 - Focus on understanding concepts, not just memorization
 
+---
+
 ## Core Security Concepts
 
 ### Security Requirements
