@@ -4,19 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "c3ea936db558b238",
+        "id": "719c631607706359",
         "type": "tabs",
         "children": [
           {
-            "id": "01729fc9b104ac2a",
+            "id": "de815246fe4110e3",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf"
+                "file": "University/Spring 2025/_INFO3006 Information Security/Lecture 13 - Subject Review.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-file-text",
-              "title": "COMP2004 - Computer Networking"
+              "icon": "lucide-file",
+              "title": "Lecture 13 - Subject Review"
             }
           }
         ]
@@ -140,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf",
+                "file": "University/Spring 2025/_INFO3006 Information Security/Lecture 13 - Subject Review.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of COMP2004 - Computer Networking"
+              "title": "Outline of Lecture 13 - Subject Review"
             }
           },
           {
@@ -184,42 +187,42 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "_COMP2004 Computer Networking/COMP2004 - Commands.pdf",
-    "_INFS 3003 Artificial Intelligence/Lecture 13 - Subject Review.md",
+    "University/Spring 2025/_COMP2004 Computer Networking/COMP2004 - Commands.pdf",
+    "University/Spring 2025/_INFS 3003 Artificial Intelligence/Lecture 13 - Subject Review.md",
     "_INFS 3003 Artificial Intelligence/Untitled.base",
-    "_INFO3006 Information Security/Lecture 13 - Subject Review.md",
-    "_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf",
-    "_INFO3006 Information Security/Lecture 12 - Security Management & Cybersecurity Challenges.md",
-    "_INFO3006 Information Security/Lecture 11 - User Authentication.md",
-    "_INFO3006 Information Security/Lecture 10 - Message Authentication.md",
+    "University/Spring 2025/_INFO3006 Information Security/Lecture 13 - Subject Review.md",
+    "University/Spring 2025/_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf",
+    "University/Spring 2025/_INFO3006 Information Security/Lecture 12 - Security Management & Cybersecurity Challenges.md",
+    "University/Spring 2025/_INFO3006 Information Security/Lecture 11 - User Authentication.md",
+    "University/Spring 2025/_INFO3006 Information Security/Lecture 10 - Message Authentication.md",
     "University/Spring 2025",
-    "_INFS 3003 Artificial Intelligence/Lecture 12 - Introduction to Machine Learning II Unsupervised Learning and Reinforcement Learning.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 11 - Machine Learning I Supervised Learning.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 7 - Knowledge Representation III Inference in First-order Logic.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 10 - Planning in the Real World.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 9 - Classical Planning in Artificial Intelligence.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 8 - Knowledge Representation IV.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 6 - Knowledge Representation II, First-Order Logic.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 4 - Search 3 Adversarial Search.md",
-    "_INFO3006 Information Security/Lecture 5 - DES and Symmetric Key Systems.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 5 - Knowledge Representation I Agents, Representation, Reasoning and Logic.md",
-    "_INFO3006 Information Security/Lecture 6 - Modular Arithmetic.md",
-    "_INFO3006 Information Security/Lecture 7 - Finite Fields.md",
-    "_INFO3006 Information Security/Lecture 8 - Public Key Algorithms.md",
-    "_INFO3006 Information Security/Lecture 9 - Key Distribution and Management.md",
+    "University/Spring 2025/_INFS 3003 Artificial Intelligence/Lecture 12 - Introduction to Machine Learning II Unsupervised Learning and Reinforcement Learning.md",
+    "University/Spring 2025/_INFS 3003 Artificial Intelligence/Lecture 11 - Machine Learning I Supervised Learning.md",
+    "University/Spring 2025/_INFS 3003 Artificial Intelligence/Lecture 7 - Knowledge Representation III Inference in First-order Logic.md",
+    "University/Spring 2025/_INFS 3003 Artificial Intelligence/Lecture 10 - Planning in the Real World.md",
+    "University/Spring 2025/_INFS 3003 Artificial Intelligence/Lecture 9 - Classical Planning in Artificial Intelligence.md",
+    "University/Spring 2025/_INFS 3003 Artificial Intelligence/Lecture 8 - Knowledge Representation IV.md",
+    "University/Spring 2025/_INFS 3003 Artificial Intelligence/Lecture 6 - Knowledge Representation II, First-Order Logic.md",
+    "University/Spring 2025/_INFS 3003 Artificial Intelligence/Lecture 4 - Search 3 Adversarial Search.md",
+    "University/Spring 2025/_INFO3006 Information Security/Lecture 5 - DES and Symmetric Key Systems.md",
+    "University/Spring 2025/_INFS 3003 Artificial Intelligence/Lecture 5 - Knowledge Representation I Agents, Representation, Reasoning and Logic.md",
+    "University/Spring 2025/_INFO3006 Information Security/Lecture 6 - Modular Arithmetic.md",
+    "University/Spring 2025/_INFO3006 Information Security/Lecture 7 - Finite Fields.md",
+    "University/Spring 2025/_INFO3006 Information Security/Lecture 8 - Public Key Algorithms.md",
+    "University/Spring 2025/_INFO3006 Information Security/Lecture 9 - Key Distribution and Management.md",
     "University/Definitions/Cybersecurity/S-DES (Simplified Data Encryption Standard).md",
     "University/Definitions/Cybersecurity",
     "University/Spring 2025/_INFO3019 Project Management/Lecture 9 - Project Resource Management.md",
     "University/Spring 2025/_INFO3019 Project Management/Lecture 8 - Project Procurement Management.md",
-    "_INFS 3003 Artificial Intelligence/Lecture 3 - Search 2 Informed Search (Heuristic Search).md",
+    "University/Spring 2025/_INFS 3003 Artificial Intelligence/Lecture 3 - Search 2 Informed Search (Heuristic Search).md",
     "University/Spring 2025/_INFO3019 Project Management/Lecture 7 - Project Schedule Management.md",
     "University/Spring 2025/_INFO3019 Project Management/Lecture 5 - Project Stakeholder and Communication Management.md",
     "Images/Pasted image 20250814125723.png",
-    "_COMP2004 Computer Networking/COMP2004 - Computer Networking 2.docx",
-    "_COMP2004 Computer Networking/COMP2004 - Commands 2.docx",
+    "University/Spring 2025/_COMP2004 Computer Networking/COMP2004 - Computer Networking 2.docx",
+    "University/Spring 2025/_COMP2004 Computer Networking/COMP2004 - Commands 2.docx",
     "COMP2004 - Commands.docx",
     "COMP2004 - Computer Networking.docx",
-    "_COMP2004 Computer Networking/COMP2004 - Commands 1.docx",
+    "University/Spring 2025/_COMP2004 Computer Networking/COMP2004 - Commands 1.docx",
     "Images/Pasted image 20250521031709.png",
     "Images/Pasted image 20250521031700.png",
     "Images/Pasted image 20250521025029.png",
