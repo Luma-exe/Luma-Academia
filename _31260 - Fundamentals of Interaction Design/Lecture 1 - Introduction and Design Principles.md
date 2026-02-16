@@ -1,7 +1,7 @@
 
 > [!faq] About this Lecture 
-> Class: 31260 | 42017 Fundamentals of Interaction Design 
-> Subject: #interactionDesign #HCI #designPrinciples 
+> Class: 31260
+> Subject: #fundamentalsOfInteractionDesign 
 > Date: 21/02/2025 
 > Topics: #design #usability #affordances #signifiers #constraints
 
