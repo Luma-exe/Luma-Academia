@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_31260 - Fundamentals of Interaction Design/Lecture 1 - Introduction and Design Principles.md",
+                "file": "_33130 - Mathematics 1/Lecture 1 - Introduction to Vectors and 3D Space.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 1 - Introduction and Design Principles"
+              "title": "Lecture 1 - Introduction to Vectors and 3D Space"
             }
           }
         ]
@@ -54,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#interactionDesign",
+                "query": "tag:#artificalIntelligence",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_31260 - Fundamentals of Interaction Design/Lecture 1 - Introduction and Design Principles.md",
+                "file": "_33130 - Mathematics 1/Lecture 1 - Introduction to Vectors and 3D Space.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 1 - Introduction and Design Principles"
+              "title": "Outline of Lecture 1 - Introduction to Vectors and 3D Space"
             }
           },
           {
@@ -163,7 +163,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -185,11 +185,13 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "de815246fe4110e3",
+  "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "University/Western Sydney University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 1 - Introduction and Algorithm Design Part A.md",
     "_31260 - Fundamentals of Interaction Design/Lecture 1 - Introduction and Design Principles.md",
-    "University/Western Sydney University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Data Structures and Algorithms Final - Notes.md",
+    "University/Western Sydney University/Autumn 2025/_MATH1006 - Discrete Mathematics/Lecture 9 - Number Theory.md",
+    "University/Western Sydney University/Autumn 2025/_MATH1006 - Discrete Mathematics/Lecture 4 - Counting Principles.md",
+    "_33130 - Mathematics 1/Lecture 1 - Introduction to Vectors and 3D Space.md",
+    "University/Western Sydney University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 1 - Introduction and Algorithm Design Part A.md",
     "_31260 - Fundamentals of Interaction Design",
     "University/Western Sydney University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 2 - Algorithm Analysis and Search Algorithms.md",
     "University/Western Sydney University/Autumn 2025/_COMP1014 - Thinking about Data/Lecture 0 - Introduction to R.md",
@@ -221,8 +223,6 @@
     "University/Western Sydney University/Spring 2025/_INFO3006 Information Security/Lecture 7 - Finite Fields.md",
     "University/Western Sydney University/Spring 2025/_INFO3006 Information Security/Lecture 8 - Public Key Algorithms.md",
     "University/Western Sydney University/Spring 2025/_INFO3006 Information Security/Lecture 9 - Key Distribution and Management.md",
-    "University/Definitions/Cybersecurity/S-DES (Simplified Data Encryption Standard).md",
-    "University/Western Sydney University/Spring 2025/_INFO3019 Project Management/Lecture 9 - Project Resource Management.md",
     "Images/Pasted image 20250814125723.png",
     "Images/Pasted image 20250521031709.png",
     "Images/Pasted image 20250521031700.png",
