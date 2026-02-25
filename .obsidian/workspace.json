@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_33130 - Mathematics 1/Lecture 2 - 3D Vectors, Planes, Lines & Cross‑Product Essentials.md",
+                "file": "_31260 - Fundamentals of Interaction Design/Lecture 2 - Interaction Design Process.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 2 - 3D Vectors, Planes, Lines & Cross‑Product Essentials"
+              "title": "Lecture 2 - Interaction Design Process"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_33130 - Mathematics 1/Lecture 2 - 3D Vectors, Planes, Lines & Cross‑Product Essentials.md",
+                "file": "_31260 - Fundamentals of Interaction Design/Lecture 2 - Interaction Design Process.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 2 - 3D Vectors, Planes, Lines & Cross‑Product Essentials"
+              "title": "Outline of Lecture 2 - Interaction Design Process"
             }
           },
           {
@@ -185,11 +185,12 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "de815246fe4110e3",
+  "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "_33130 - Mathematics 1/Lecture 1 - Introduction to Vectors and 3D Space.md",
-    "_33130 - Mathematics 1/Lecture 2 - 3D Vectors, Planes, Lines & Cross‑Product Essentials.md",
     "_31260 - Fundamentals of Interaction Design/Lecture 1 - Introduction and Design Principles.md",
+    "_31260 - Fundamentals of Interaction Design/Lecture 2 - Interaction Design Process.md",
+    "_33130 - Mathematics 1/Lecture 2 - 3D Vectors, Planes, Lines & Cross‑Product Essentials.md",
+    "_33130 - Mathematics 1/Lecture 1 - Introduction to Vectors and 3D Space.md",
     "University/Western Sydney University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Lecture 1 - Introduction and Algorithm Design Part A.md",
     "University/Western Sydney University/Autumn 2025/_COMP2009 - Data Structures and Algorithms/Data Structures and Algorithms Final - Notes.md",
     "University/Western Sydney University/Autumn 2025/_MATH1006 - Discrete Mathematics/Lecture 10 - Induction, Recursion.md",
@@ -222,7 +223,6 @@
     "University/Western Sydney University/Spring 2025/_INFS 3003 Artificial Intelligence/Lecture 10 - Planning in the Real World.md",
     "University/Western Sydney University/Spring 2025/_INFS 3003 Artificial Intelligence/Lecture 9 - Classical Planning in Artificial Intelligence.md",
     "University/Western Sydney University/Spring 2025/_INFS 3003 Artificial Intelligence/Lecture 8 - Knowledge Representation IV.md",
-    "University/Western Sydney University/Spring 2025/_INFS 3003 Artificial Intelligence/Lecture 6 - Knowledge Representation II, First-Order Logic.md",
     "Images/Pasted image 20250814125723.png",
     "Images/Pasted image 20250521031709.png",
     "Images/Pasted image 20250521031700.png",
