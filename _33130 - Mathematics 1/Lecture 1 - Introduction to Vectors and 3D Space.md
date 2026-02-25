@@ -16,6 +16,10 @@
 
 ---
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/EzJP9uwV3ms" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ## 2D and 3D Coordinate Systems
 
 ### Points in Two Dimensions
@@ -79,13 +83,17 @@ $$d = \sqrt{(1-0)^2 + (4-1)^2 + (2-0)^2} = \sqrt{1 + 9 + 4} = \sqrt{14}$$
 
 ---
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/rcDXQ-5H8mk" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ## Introduction to Vectors
 
 ### Scalars vs Vectors
 
-| Type | Description | Examples |
-|---|---|---|
-| **Scalar** | Completely specified by a single number | Temperature, Mass, Air pressure, Charge, Energy |
+| Type       | Description                              | Examples                                                        |
+| ---------- | ---------------------------------------- | --------------------------------------------------------------- |
+| **Scalar** | Completely specified by a single number  | Temperature, Mass, Air pressure, Charge, Energy                 |
 | **Vector** | Specified by a magnitude AND a direction | Velocity, Acceleration, Electric field, Force, Momentum, Torque |
 
 > There are also more complicated objects called **tensors**, which generalise both scalars and vectors.
@@ -154,6 +162,10 @@ $$\langle -1, 2, 3 \rangle = -\hat{\mathbf{i}} + 2\hat{\mathbf{j}} + 3\hat{\math
 - When a vector represents the line joining two points $A$ and $B$, write it as $\overrightarrow{AB}$
 
 ---
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/VzX8KJKFhlM" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## The Dot Product
 
@@ -287,6 +299,10 @@ Only the component of force **in the direction of motion** contributes to work â
 $$F_{\text{eff}} = \mathbf{F}_w \cdot \hat{\mathbf{n}}$$
 
 ---
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/gXn2wmZkpLI" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Scalar and Vector Projections
 
