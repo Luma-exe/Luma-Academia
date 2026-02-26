@@ -5,682 +5,432 @@
 > Date: 25/02/2025 
 > Topics: #math #vectors #3D
 
-## Planes  
+# Vector Representation of Lines and Planes
 
-### 1️⃣ Plain‑English introduction  
-A **plane** is a flat, infinitely large sheet that extends in all directions. In three‑dimensional space a plane can be described by a simple algebraic equation that relates the three coordinates $x$, $y$ and $z$.  
+## Position Vectors
 
-### 2️⃣ Real‑world analogy  
-Think of a **wall** in a room. The wall is flat and stretches forever left‑right and up‑down (ignoring the floor and ceiling). The equation of a plane tells you exactly where that wall is located in the room.  
+A **position vector** describes the location of a point in 3D space. It is written using the symbol $\mathbf{r}$:
 
-> **Mapping:**  
-> - The wall ↔ the plane  
-> - The height of the wall above the floor ↔ the constant term in the equation  
+$$\mathbf{r} = x\hat{i} + y\hat{j} + z\hat{k} = \langle x, y, z \rangle$$
 
-### 3️⃣ Formal definition (Cartesian form)  
+- $\hat{i}$, $\hat{j}$, $\hat{k}$ are the **unit vectors** pointing along the $x$, $y$, and $z$ axes respectively
+- $x$, $y$, $z$ are the **components** of the vector
+- Think of this as: "go $x$ steps in the $x$-direction, $y$ steps in the $y$-direction, $z$ steps in the $z$-direction"
 
-$$
-a\,x + b\,y + c\,z = \text{Const.}
-$$
+The **magnitude** (length) of the position vector is:
 
-### 4️⃣ Explain every part  
+$$|\mathbf{r}| = |\langle x, y, z \rangle| = \sqrt{x^2 + y^2 + z^2}$$
 
-| Symbol | Meaning (plain English) |
-|--------|--------------------------|
-| $a, b, c$ | Numbers that tell how steep the plane is in the $x$, $y$ and $z$ directions. |
-| $x, y, z$ | The three coordinates of any point on the plane. |
-| “Const.” | A single number that shifts the whole plane without changing its tilt. |
+- This is just the 3D version of Pythagoras' theorem
+- Example: A sphere of radius 3 centred at the origin is represented by all points where $|\mathbf{r}| = 3$
 
-### 5️⃣ Fully worked examples  
+---
 
-#### Example 1 – Plane $z = 1$  
+## Parametric vs Cartesian Representations
 
-**Step 1:** Write the equation in the form $a x + b y + c z = \text{Const.}$  
-- Here $a = 0$ (no $x$ term), $b = 0$ (no $y$ term), $c = 1$ (coefficient of $z$), and Const = 1.  
+When $x$, $y$, and $z$ are each functions of a single variable $t$, the result is a **curve in 3D space**.
 
-**Step 2:** Choose a point to test, e.g. $(2,\, -3,\, 1)$.  
+### Parametric Representation
 
-**Step 3:** Substitute the coordinates into the left‑hand side:  
+A **parametric representation** expresses each coordinate as a function of $t$:
 
-$$
-0\cdot 2 \;+\; 0\cdot (-3) \;+\; 1\cdot 1 \;=\; 1
-$$
+$$x(t) = F(t), \quad y(t) = G(t), \quad z(t) = H(t)$$
 
-**Step 4:** Compare with the right‑hand side (Const = 1). They are equal, so the point lies on the plane.  
+- $t$ is the **parameter** — think of it as "time" or just a number you plug in to get points on the curve
+- Each value of $t$ gives you one specific point $\langle x(t), y(t), z(t) \rangle$ on the curve
+- As $t$ changes, you trace out the full curve
 
-**Answer:** The plane $z = 1$ is a horizontal sheet exactly one unit above the $xy$-plane.  
+**Example (2D):**
+- Curve (a): $x(t) = 2t$, $y(t) = -t$
+  - At $t=0$: point $(0, 0)$
+  - At $t=1$: point $(2, -1)$
+  - At $t=3$: point $(6, -3)$
+  - This traces out a straight line
+- Curve (b): $x(t) = \cos t$, $y(t) = \sin t$
+  - At $t=0$: point $(1, 0)$
+  - At $t = \frac{\pi}{4}$: point $\left(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right)$
+  - At $t = \frac{\pi}{2}$: point $(0, 1)$
+  - This traces out a **circle** of radius 1
 
-#### Example 2 – Plane $y = 2$  
+### Cartesian Representation
 
-**Step 1:** Identify coefficients: $a = 0$, $b = 1$, $c = 0$, Const = 2.  
+A **Cartesian representation** expresses the curve as a direct relationship between $x$, $y$, $z$ — with no parameter:
 
-**Step 2:** Test point $(5,\,2,\,-4)$.  
+$$f(x) = g(y) = h(z)$$
 
-**Step 3:** Plug in:  
+- You can convert from parametric to Cartesian by **eliminating** $t$
+- Example from curve (a): from $x = 2t$ we get $t = \frac{x}{2}$, and from $y = -t$ we get $t = -y$, so the Cartesian form is $\frac{x}{2} = -y$, i.e. $y = -\frac{x}{2}$
 
-$$
-0\cdot 5 \;+\; 1\cdot 2 \;+\; 0\cdot (-4) \;=\; 2
-$$
+---
 
-**Step 4:** The left‑hand side equals the constant 2, so the point is on the plane.  
+## Vector Equations of Lines
 
-**Answer:** This plane is a vertical sheet parallel to the $xz$-plane, located at $y = 2$.  
+A straight line in 3D can be written in **vector form** as:
 
-#### Example 3 – Plane $x + y + z = 1$  
+$$\mathbf{r}(t) = \mathbf{a} + t\mathbf{p}$$
 
-**Step 1:** Coefficients are $a = 1$, $b = 1$, $c = 1$, Const = 1.  
+Where:
+- $\mathbf{a} = \langle a_1, a_2, a_3 \rangle$ is any **known point on the line**
+- $\mathbf{p} = \langle p_1, p_2, p_3 \rangle$ is the **direction vector** of the line (points along the line)
+- $t$ is a scalar parameter — different values of $t$ give different points on the line
+- Think of it as: "start at point $\mathbf{a}$, then move in direction $\mathbf{p}$ by amount $t$"
 
-**Step 2:** Test point $(1,\,0,\,0)$.  
+### Finding the Direction Vector from Two Points
 
-**Step 3:** Compute:  
+If two points $A$ and $B$ lie on the line, the direction vector is:
 
-$$
-1\cdot 1 \;+\; 1\cdot 0 \;+\; 1\cdot 0 \;=\; 1
-$$
+$$\mathbf{p} = \overrightarrow{AB} = B - A$$
 
-**Step 4:** The sum equals the constant 1, so the point lies on the plane.  
+- Subtract the coordinates of $A$ from $B$ component by component
 
-**Answer:** This plane cuts through the three axes, forming a triangular “slice” of space.  
+**Example:** Find the vector equation of the line through $A(1,1,3)$ and $B(2,1,-1)$
 
-### 6️⃣ Meaning of the answer  
-Each equation tells you exactly where a flat sheet sits in 3‑D space; any point that satisfies the equation belongs to that sheet.  
+- $\mathbf{a} = \langle 1, 1, 3 \rangle$ (use point $A$)
+- $\mathbf{p} = \overrightarrow{AB} = \langle 2,1,-1 \rangle - \langle 1,1,3 \rangle = \langle 1, 0, -4 \rangle$
+- Vector equation: $\mathbf{r}(t) = \langle 1,1,3 \rangle + t\langle 1,0,-4 \rangle = \langle 1+t,\ 1,\ 3-4t \rangle$
 
-### 7️⃣ One‑sentence summary  
-A plane in 3‑D is described by a linear equation $a x + b y + c z = \text{Const.}$ that all its points satisfy.  
+---
 
----  
+## Cartesian Equation of a Line
 
-## Vector Representation of Planes  
+Starting from the vector equation $\mathbf{r}(t) = \mathbf{a} + t\mathbf{p}$, we can write component by component:
 
-### 1️⃣ Plain‑English introduction  
-Instead of a single algebraic equation, we can describe a plane using **vectors**: a point on the plane and two direction arrows that lie inside the plane.  
+$$x = a_1 + tp_1 \implies t = \frac{x - a_1}{p_1}$$
+$$y = a_2 + tp_2 \implies t = \frac{y - a_2}{p_2}$$
+$$z = a_3 + tp_3 \implies t = \frac{z - a_3}{p_3}$$
 
-### 2️⃣ Real‑world analogy  
-Imagine a **fabric sheet** stretched on a table.  
-- Pick one corner of the sheet and call it point **$a$** (the anchor).  
-- Pull two ribbons across the sheet; the ribbons point in directions **$p$** and **$q$**.  
-Every point on the sheet can be reached by sliding along the ribbons a certain amount.  
+Since all three expressions equal $t$, the **Cartesian (symmetric) equation of a line** is:
 
-> **Mapping:**  
-> - Corner of sheet ↔ point $a$ (a known point on the plane)  
-> - Ribbon 1 ↔ vector $p$ (first direction vector)  
-> - Ribbon 2 ↔ vector $q$ (second direction vector)  
+$$\frac{x - a_1}{p_1} = \frac{y - a_2}{p_2} = \frac{z - a_3}{p_3}$$
 
-### 3️⃣ Formal definition  
+- This eliminates the parameter $t$ entirely
+- Each fraction represents the same value of $t$
+- The denominator $p_i$ is the $i$-th component of the direction vector
+- The numerator $x - a_i$ is how far you are from the known point
 
-$$
-\mathbf{r}(u,v) \;=\; \mathbf{a} \;+\; u\,\mathbf{p} \;+\; v\,\mathbf{q}
-$$
+**Continuing the example above** ($A(1,1,3)$, $\mathbf{p} = \langle 1,0,-4 \rangle$):
 
-### 4️⃣ Explain every part  
+$$\frac{x-1}{1} = \frac{y-1}{0} = \frac{z-3}{-4}$$
 
-| Symbol | Meaning |
-|--------|---------|
-| $\mathbf{r}(u,v)$ | Position vector of a generic point on the plane (depends on scalars $u$ and $v$). |
-| $\mathbf{a}$ | A fixed vector pointing to a known point on the plane. |
-| $\mathbf{p},\mathbf{q}$ | Two non‑parallel vectors that lie **inside** the plane. |
-| $u, v$ | Real numbers (scalars) that tell how far to travel along $\mathbf{p}$ and $\mathbf{q}$. |
+> **Note:** When a component of $\mathbf{p}$ is 0, it means the line does not move in that direction. So $p_2 = 0$ means $y = a_2 = 1$ (constant), and you simply write $y = 1$ as a separate condition.
 
-### 5️⃣ Fully worked example  
+---
 
-**Problem:** Find a vector equation of the plane that passes through $A(1,2,3)$ and is parallel to  
+# Planes
 
-$$
-\mathbf{p}= \langle 0,\,1,\,-1\rangle ,\qquad 
-\mathbf{q}= \langle 1,\,0,\,-1\rangle .
-$$
+## What is a Plane?
 
-**Step 1 – Write $\mathbf{a}$.**  
-The vector to point $A$ is $\mathbf{a}= \langle 1,\,2,\,3\rangle$.  
+A **plane** is a flat, infinite 2D surface in 3D space. Any equation of the form:
 
-**Step 2 – Insert $\mathbf{p}$ and $\mathbf{q}$.**  
+$$ax + by + cz = \text{const}$$
 
-$$
-\mathbf{r}(u,v)=\langle 1,2,3\rangle \;+\; u\langle 0,1,-1\rangle \;+\; v\langle 1,0,-1\rangle .
-$$
+describes a plane, where $a$, $b$, $c$ are constants.
 
-**Step 3 – Expand component‑wise.**  
+**Examples:**
+- $z = 1$ — a horizontal plane at height 1
+- $y = 2$ — a vertical plane at $y = 2$
+- $x + y + z = 1$ — a tilted plane cutting all three axes
 
-- $x$-component: $1 + u\cdot 0 + v\cdot 1 = 1 + v$  
-- $y$-component: $2 + u\cdot 1 + v\cdot 0 = 2 + u$  
-- $z$-component: $3 + u\cdot (-1) + v\cdot (-1) = 3 - u - v$
+---
 
-Thus  
+## Vector Representation of a Plane
 
-$$
-\boxed{\;\mathbf{r}(u,v)=\langle\,1+v,\; 2+u,\; 3-u-v\,\rangle\;}
-$$
+Any two **non-parallel vectors** $\mathbf{p}$ and $\mathbf{q}$ together define a plane. Any plane can be written as:
 
-**Answer:** Every point $(x,y,z)$ on the plane can be written as $(1+v,\;2+u,\;3-u-v)$ for some real numbers $u$ and $v$.  
+$$\mathbf{r}(u, v) = \mathbf{a} + u\mathbf{p} + v\mathbf{q}$$
 
-### 6️⃣ Meaning of the answer  
-The formula tells you how to start at the known point $A$ and then move any amount along the two given direction arrows to reach any other point on the same flat sheet.  
+Where:
+- $\mathbf{a}$ is a **known point on the plane**
+- $\mathbf{p}$ and $\mathbf{q}$ are **two vectors that lie in the plane** (they define its orientation)
+- $u$ and $v$ are **scalar parameters** — varying them gives every point on the plane
+- Think of it as: "start at $\mathbf{a}$, then slide $u$ steps in direction $\mathbf{p}$ and $v$ steps in direction $\mathbf{q}$"
 
-### 7️⃣ One‑sentence summary  
-A plane can be described by a point $\mathbf{a}$ plus any combination $u\mathbf{p}+v\mathbf{q}$ of two non‑parallel direction vectors.  
+**Example:** Find a vector equation of the plane through $A(1,2,3)$ parallel to $\mathbf{p} = \langle 0,1,-1 \rangle$ and $\mathbf{q} = \langle 1,0,-1 \rangle$
 
----  
+- $\mathbf{a} = \langle 1, 2, 3 \rangle$
+- The vector equation is: $\mathbf{r}(u,v) = \langle 1,2,3 \rangle + u\langle 0,1,-1 \rangle + v\langle 1,0,-1 \rangle$
 
-## Normals to a Plane  
+---
 
-### 1️⃣ Plain‑English introduction  
-A **normal vector** is an arrow that sticks straight out of a plane, like a flagpole planted on a sheet of fabric. Knowing a normal and one point on the plane lets you write the plane’s Cartesian equation.  
+## Normal Vectors and the Normal Form of a Plane
 
-### 2️⃣ Real‑world analogy  
-Picture a **flagpole** on a flat lawn.  
-- The lawn is the plane.  
-- The flagpole points **perpendicular** (at a right angle) to the lawn.  
+A plane can also be defined by a **normal vector** $\mathbf{n}$ (a vector perpendicular to the plane) and a point $\mathbf{a}$ on the plane.
 
-> **Mapping:**  
-> - Flagpole ↔ normal vector $\mathbf{n}$  
-> - A point on the lawn ↔ point $\mathbf{a}$ used in the equation  
+### Key Idea
 
-### 3️⃣ Formal definition (Cartesian form using a normal)  
+For any point $\mathbf{r}$ on the plane:
+- The vector $(\mathbf{r} - \mathbf{a})$ **lies in the plane**
+- The vector $(\mathbf{r} - \mathbf{a})$ is always **perpendicular** to the normal $\mathbf{n}$
+- Two perpendicular vectors have a **dot product of zero**
 
-$$
-\mathbf{n}\cdot(\mathbf{r}-\mathbf{a}) = 0
-$$
+Therefore:
 
-which expands to  
+$$(\mathbf{r} - \mathbf{a}) \cdot \mathbf{n} = 0$$
 
-$$
-a\,x + b\,y + c\,z = d,
-$$
+This is the **normal (vector) form** of the plane equation.
 
-where $\mathbf{n}= \langle a,b,c\rangle$ and $d = \mathbf{n}\cdot\mathbf{a}$.  
+### Expanding to Cartesian Form
 
-### 4️⃣ Explain every part  
+Let $\mathbf{n} = \langle n_1, n_2, n_3 \rangle$, $\mathbf{a} = \langle a_1, a_2, a_3 \rangle$, $\mathbf{r} = \langle x, y, z \rangle$:
 
-| Symbol | Meaning |
-|--------|---------|
-| $\mathbf{n}$ | Normal vector $\langle a,b,c\rangle$; points straight out of the plane. |
-| $\mathbf{r}$ | Generic position vector $\langle x,y,z\rangle$ of any point on the plane. |
-| $\mathbf{a}$ | Position vector of a known point on the plane. |
-| “$\cdot$” | Dot product (multiply corresponding components and add). |
-| $0$ | The result of the dot product is zero because $\mathbf{r}-\mathbf{a}$ lies **in** the plane and is perpendicular to $\mathbf{n}$. |
-| $d$ | A single number equal to $\mathbf{n}\cdot\mathbf{a}$; shifts the plane. |
+$$(\langle x,y,z \rangle - \langle a_1, a_2, a_3 \rangle) \cdot \langle n_1, n_2, n_3 \rangle = 0$$
 
-### 5️⃣ Fully worked example – Cartesian equation from three points  
+$$n_1 x + n_2 y + n_3 z - (a_1 n_1 + a_2 n_2 + a_3 n_3) = 0$$
 
-**Problem:** Find the Cartesian equation of the plane passing through  
+$$\boxed{n_1 x + n_2 y + n_3 z = a_1 n_1 + a_2 n_2 + a_3 n_3}$$
 
-$$
-A(3,-2,0),\quad B(-1,2,-1),\quad C(0,0,4).
-$$
+- The **normal vector components** $\langle n_1, n_2, n_3 \rangle$ become the **coefficients** $a$, $b$, $c$ in $ax + by + cz = \text{const}$
+- The right-hand side is just a constant (the dot product $\mathbf{a} \cdot \mathbf{n}$)
 
-**Step 1 – Compute two direction vectors in the plane.**  
+---
 
-$$
-\mathbf{AB}= \mathbf{B}-\mathbf{A}= \langle -1-3,\; 2-(-2),\; -1-0\rangle = \langle -4,\; 4,\; -1\rangle .
-$$
+## Finding the Normal Using the Cross Product
 
-$$
-\mathbf{AC}= \mathbf{C}-\mathbf{A}= \langle 0-3,\; 0-(-2),\; 4-0\rangle = \langle -3,\; 2,\; 4\rangle .
-$$
+If three points $A$, $B$, $C$ lie on a plane, the normal vector can be found using the **cross product**:
 
-**Step 2 – Find a normal vector by crossing $\mathbf{AB}$ and $\mathbf{AC}$.**  
+$$\mathbf{n} = \overrightarrow{AB} \times \overrightarrow{AC}$$
 
-Recall the cross‑product formula  
+- $\overrightarrow{AB} = B - A$ and $\overrightarrow{AC} = C - A$ are two vectors **lying in the plane**
+- Their cross product gives a vector **perpendicular to both**, i.e. perpendicular to the plane
+- This is why the cross product is so powerful for plane problems!
 
-$$
-\mathbf{AB}\times\mathbf{AC}= 
-\begin{vmatrix}
-\mathbf{i} & \mathbf{j} & \mathbf{k}\\
--4 & 4 & -1\\
--3 & 2 & 4
-\end{vmatrix}
-$$
+**Step-by-step process to find the Cartesian equation of a plane through 3 points:**
+1. Find $\overrightarrow{AB} = B - A$ and $\overrightarrow{AC} = C - A$
+2. Compute $\mathbf{n} = \overrightarrow{AB} \times \overrightarrow{AC}$
+3. Use any one of the three points (say $A$) and the normal form: $\mathbf{n} \cdot (\mathbf{r} - A) = 0$
+4. Expand to get $ax + by + cz = \text{const}$
 
-> ⚠️ **Watch out — the $j$ component always gets a MINUS sign**.  
+**Example:** Find the Cartesian equation of the plane through $A(3,-2,0)$, $B(-1,2,-1)$, $C(0,0,4)$
 
-Compute each component:
+- $\overrightarrow{AB} = \langle -1-3,\ 2-(-2),\ -1-0 \rangle = \langle -4, 4, -1 \rangle$
+- $\overrightarrow{AC} = \langle 0-3,\ 0-(-2),\ 4-0 \rangle = \langle -3, 2, 4 \rangle$
+- $\mathbf{n} = \overrightarrow{AB} \times \overrightarrow{AC}$ (computed using the cross product formula below)
 
-- **$i$-component:** $(4)(4) - (-1)(2) = 16 - (-2) = 18$  
-- **$j$-component:** $-\big[(-4)(4) - (-1)(-3)\big] = -\big[-16 - 3\big] = -(-19) = 19$  
-- **$k$-component:** $(-4)(2) - (4)(-3) = -8 - (-12) = 4$
+---
 
-Thus  
+# The Cross Product
 
-$$
-\mathbf{n}= \langle 18,\; 19,\; 4\rangle .
-$$
+## What is the Cross Product?
 
-**Step 3 – Compute $d = \mathbf{n}\cdot\mathbf{a}$ using point $A$.**  
+The **cross product** takes two vectors and produces a **new vector** that is perpendicular to both.
 
-$$
-d = \langle 18,19,4\rangle \cdot \langle 3,-2,0\rangle 
-   = 18\cdot 3 \;+\; 19\cdot (-2) \;+\; 4\cdot 0
-   = 54 \;-\; 38 \;+\; 0
-   = 16 .
-$$
+| Operation | Input | Output | Tells you |
+|-----------|-------|--------|-----------|
+| Dot product | Two vectors | Scalar | How much two vectors point in the **same direction** |
+| Cross product | Two vectors | Vector | How much two vectors are **perpendicular**, and gives the **normal** to the plane they define |
 
-**Step 4 – Write the Cartesian equation.**  
+The cross product of vectors $\mathbf{a}$ and $\mathbf{b}$ is written $\mathbf{a} \times \mathbf{b}$.
 
-$$
-18x \;+\; 19y \;+\; 4z \;=\; 16 .
-$$
+---
 
-**Answer:** The plane through the three given points satisfies $18x + 19y + 4z = 16$.  
+## Formula for the Cross Product
 
-### 6️⃣ Meaning of the answer  
-The numbers $18,19,4$ tell you the direction the plane is “facing” (its normal). Any point whose coordinates satisfy the equation lies on that flat sheet.  
+$$\mathbf{a} \times \mathbf{b} = (a_2 b_3 - a_3 b_2)\hat{i} - (a_1 b_3 - a_3 b_1)\hat{j} + (a_1 b_2 - a_2 b_1)\hat{k}$$
 
-### 7️⃣ One‑sentence summary  
-A plane’s normal vector, found via a cross product of two direction vectors, together with one point, yields the simple linear equation $a x + b y + c z = d$.  
+This is often remembered as a **determinant**:
 
----  
+$$\mathbf{a} \times \mathbf{b} = \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3 \end{vmatrix}$$
 
-## Position Vector & Its Magnitude  
+Where:
+- $\mathbf{a} = \langle a_1, a_2, a_3 \rangle$
+- $\mathbf{b} = \langle b_1, b_2, b_3 \rangle$
 
-### 1️⃣ Plain‑English introduction  
-A **position vector** points from the origin (0,0,0) to a point $(x,y,z)$ in space. Its **magnitude** (length) tells you how far that point is from the origin.  
+### How to Compute It (Step by Step)
 
-### 2️⃣ Real‑world analogy  
-Imagine a **straight arrow** nailed at the origin and reaching out to a spot on a wall. The arrow’s length is the distance from the origin to that spot.  
+To find the $\hat{i}$ component: **cover the first column**, take the 2×2 determinant of what remains:
 
-> **Mapping:**  
-> - Arrow ↔ position vector $\mathbf{r}$  
-> - Length of arrow ↔ magnitude $|\mathbf{r}|$  
+$$\hat{i}: \quad a_2 b_3 - a_3 b_2$$
 
-### 3️⃣ Formal definitions  
+To find the $\hat{j}$ component: **cover the second column**, take the 2×2 determinant, and **negate**:
 
-$$
-\mathbf{r}= x\,\mathbf{i}+ y\,\mathbf{j}+ z\,\mathbf{k}
-$$
+$$-\hat{j}: \quad -(a_1 b_3 - a_3 b_1)$$
 
-$$
-|\mathbf{r}| = \sqrt{x^{2}+y^{2}+z^{2}}
-$$
+To find the $\hat{k}$ component: **cover the third column**, take the 2×2 determinant:
 
-### 4️⃣ Explain every part  
+$$\hat{k}: \quad a_1 b_2 - a_2 b_1$$
 
-| Symbol | Meaning |
-|--------|---------|
-| $\mathbf{i},\mathbf{j},\mathbf{k}$ | Unit vectors pointing in the $x$, $y$, and $z$ directions respectively. |
-| $x, y, z$ | Coordinates of the point. |
-| $|\mathbf{r}|$ | Length (distance) of the vector from the origin. |
-| $\sqrt{\;}$ | Square‑root operation (the number that, when squared, gives the inside). |
+**Example:** Calculate $\mathbf{a} \times \mathbf{b}$ where $\mathbf{a} = \langle 1, 2, 0 \rangle$ and $\mathbf{b} = \langle 0, 3, 1 \rangle$
 
-### 5️⃣ Fully worked example  
+- $\hat{i}$: $(2)(1) - (0)(3) = 2$
+- $\hat{j}$: $-[(1)(1) - (0)(0)] = -1$
+- $\hat{k}$: $(1)(3) - (2)(0) = 3$
+- Result: $\mathbf{a} \times \mathbf{b} = \langle 2, -1, 3 \rangle$
 
-**Problem:** Find the magnitude of the position vector for the point $P(2,-3,6)$.  
+**Example:** Calculate $\mathbf{a} \times \mathbf{b}$ where $\mathbf{a} = \langle 1, 0, 2 \rangle$ and $\mathbf{b} = \langle -1, 1, 1 \rangle$
 
-**Step 1 – Write the vector.**  
+- $\hat{i}$: $(0)(1) - (2)(1) = -2$
+- $\hat{j}$: $-[(1)(1) - (2)(-1)] = -[1 + 2] = -3$
+- $\hat{k}$: $(1)(1) - (0)(-1) = 1$
+- Result: $\mathbf{a} \times \mathbf{b} = \langle -2, -3, 1 \rangle$
 
-$$
-\mathbf{r}= 2\mathbf{i} - 3\mathbf{j} + 6\mathbf{k}
-$$
+---
 
-**Step 2 – Square each component.**  
+## Geometric Meaning of the Cross Product
 
-- $2^{2}=4$  
-- $(-3)^{2}=9$  
-- $6^{2}=36$
+$$\mathbf{a} \times \mathbf{b} = |\mathbf{a}||\mathbf{b}|\sin\theta\ \hat{n}$$
 
-**Step 3 – Add the squares.**  
+Where:
+- $\theta$ is the **angle between** $\mathbf{a}$ and $\mathbf{b}$
+- $\hat{n}$ is the **unit normal vector** perpendicular to both $\mathbf{a}$ and $\mathbf{b}$
+- $|\mathbf{a} \times \mathbf{b}| = |\mathbf{a}||\mathbf{b}|\sin\theta$ is the **area of the parallelogram** formed by $\mathbf{a}$ and $\mathbf{b}$
 
-$$
-4 + 9 + 36 = 49
-$$
+---
 
-**Step 4 – Take the square root.**  
+## The Right-Hand Rule
 
-$$
-|\mathbf{r}| = \sqrt{49}=7
-$$
+Since there are **two directions** perpendicular to any plane, we need a convention to pick one. We use the **right-hand rule**:
 
-**Answer:** The point $P$ is 7 units away from the origin.  
+- Point your right-hand fingers in the direction of $\mathbf{a}$
+- Curl them toward $\mathbf{b}$
+- Your thumb points in the direction of $\mathbf{a} \times \mathbf{b}$
 
-### 6️⃣ Meaning of the answer  
-The distance tells you how far you would have to walk straight from the origin to reach the point $P$.  
+This ensures a consistent, unambiguous result.
 
-### 7️⃣ One‑sentence summary  
-A position vector $\mathbf{r}=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}$ has length $|\mathbf{r}|=\sqrt{x^{2}+y^{2}+z^{2}}$.  
+---
 
----  
+## Unit Vectors and the Right-Handed Coordinate System
 
-## Parametric & Cartesian Representations of Curves  
+The standard unit vectors $\hat{i}$, $\hat{j}$, $\hat{k}$ form a **right-handed coordinate system**:
 
-### 1️⃣ Plain‑English introduction  
-A **parametric curve** describes a path by giving each coordinate as a function of a single parameter (usually called $t$). The **Cartesian** form eliminates the parameter and relates the coordinates directly.  
+$$\hat{i} \times \hat{j} = \hat{k}$$
+$$\hat{j} \times \hat{k} = \hat{i}$$
+$$\hat{k} \times \hat{i} = \hat{j}$$
 
-### 2️⃣ Real‑world analogy  
-Think of a **movie timeline**: the parameter $t$ is the clock. At each second ($t$) the actor’s position on the screen is given by $(x(t),y(t),z(t))$. If you forget the clock and just look at the picture, you can sometimes describe the actor’s location with a single equation (Cartesian).  
+And reversing the order flips the sign:
 
-> **Mapping:**  
-> - Clock → parameter $t$  
-> - Actor’s screen coordinates → $x(t), y(t), z(t)$  
+$$\hat{j} \times \hat{i} = -\hat{k}, \quad \hat{k} \times \hat{j} = -\hat{i}, \quad \hat{i} \times \hat{k} = -\hat{j}$$
 
-### 3️⃣ Formal definitions  
+---
 
-- **Parametric equations:**  
+## Properties of the Cross Product
 
-$$
-x = f(t),\qquad y = g(t),\qquad z = h(t)
-$$
+### Not Commutative
 
-- **Cartesian equation:** an equation $F(x,y,z)=0$ obtained by eliminating $t$.  
+$$\mathbf{a} \times \mathbf{b} \neq \mathbf{b} \times \mathbf{a}$$
 
-### 4️⃣ Explain every part  
+In fact: $\mathbf{a} \times \mathbf{b} = -(\mathbf{b} \times \mathbf{a})$ — swapping the order **negates** the result.
 
-| Symbol | Meaning |
-|--------|---------|
-| $t$ | A real number that “drives” the motion; think of it as time. |
-| $f,g,h$ | Functions that tell you the $x$, $y$, $z$ coordinates for each $t$. |
-| $F(x,y,z)=0$ | A relation that all points on the curve satisfy without reference to $t$. |
+### Distributive Over Addition
 
-### 5️⃣ Fully worked examples  
+$$\mathbf{a} \times (\mathbf{b} + \mathbf{c}) = \mathbf{a} \times \mathbf{b} + \mathbf{a} \times \mathbf{c}$$
 
-#### Example A – Linear parametric curve (2‑D)  
+### Scalar Multiplication
 
-Given  
+For any scalar $k$:
 
-$$
-x(t)=2t,\qquad y(t)=-t .
-$$
+$$\mathbf{a} \times (k\mathbf{b}) = (k\mathbf{a}) \times \mathbf{b} = k(\mathbf{a} \times \mathbf{b})$$
 
-**Step 1 – Solve one equation for $t$.**  
-From $x = 2t$ we get $t = \dfrac{x}{2}$.
+### Cross Product with Itself is Zero
 
-**Step 2 – Substitute $t$ into the other equation.**  
+$$\mathbf{a} \times \mathbf{a} = \mathbf{0}$$
 
-$$
-y = -\left(\dfrac{x}{2}\right) = -\dfrac{x}{2}.
-$$
+- This makes sense geometrically: $\sin\theta = \sin 0 = 0$, so the magnitude is zero
+- Also: if $\mathbf{a}$ and $\mathbf{b}$ are **parallel**, then $\mathbf{a} \times \mathbf{b} = \mathbf{0}$
 
-**Step 3 – Write the Cartesian form.**  
+### Perpendicularity Check
 
-$$
-y = -\dfrac{x}{2}.
-$$
+$$\mathbf{a} \cdot (\mathbf{a} \times \mathbf{b}) = 0$$
 
-**Answer:** The curve is a straight line through the origin with slope $-\tfrac12$.  
+- The cross product is always perpendicular to **both** original vectors
 
-#### Example B – Circular parametric curve (2‑D)  
+---
 
-Given  
+# Applications of the Cross Product
 
-$$
-x(t)=\cos t,\qquad y(t)=\sin t .
-$$
+## Torque
 
-**Step 1 – Recall the Pythagorean identity:** $\cos^{2}t + \sin^{2}t = 1$.
+**Torque** measures the rotational effect of a force. It is defined as:
 
-**Step 2 – Square each parametric equation.**  
+$$\boldsymbol{\tau} = \mathbf{r} \times \mathbf{F}$$
 
-$$
-x^{2}= \cos^{2}t,\qquad y^{2}= \sin^{2}t .
-$$
+Where:
+- $\mathbf{r}$ is the **displacement vector** from the pivot point to where the force is applied
+- $\mathbf{F}$ is the **applied force vector**
+- $\boldsymbol{\tau}$ (tau) is the **torque vector** — its direction gives the axis of rotation (right-hand rule), its magnitude gives the rotational strength
 
-**Step 3 – Add the squares.**  
+The **magnitude** of the torque is:
 
-$$
-x^{2}+y^{2}= \cos^{2}t + \sin^{2}t = 1.
-$$
+$$|\boldsymbol{\tau}| = |\mathbf{r}||\mathbf{F}|\sin\theta$$
 
-**Step 4 – Write the Cartesian equation.**  
+Where $\theta$ is the angle between $\mathbf{r}$ and $\mathbf{F}$.
 
-$$
-x^{2}+y^{2}=1.
-$$
+- Maximum torque occurs when $\theta = 90°$ (force applied perpendicular to the arm)
+- Zero torque when $\theta = 0°$ or $180°$ (force along the arm direction)
 
-**Answer:** The curve is the unit circle centred at the origin.  
+**Example:** A 10 kg mass hangs from a 1 m arm:
+- Weight force: $F = mg = 10 \times 9.8 = 98$ N, directed downward
+- $\mathbf{r} = \langle 1, 0, 0 \rangle$ (1 m along x-axis)
+- $\mathbf{F} = \langle 0, -98, 0 \rangle$ (downward)
+- $\boldsymbol{\tau} = \mathbf{r} \times \mathbf{F} = \langle 1,0,0 \rangle \times \langle 0,-98,0 \rangle = \langle (0)(0)-(0)(-98),\ (0)(0)-(1)(0),\ (1)(-98)-(0)(0) \rangle = \langle 0, 0, -98 \rangle$
+- Magnitude: $|\boldsymbol{\tau}| = 98$ N·m
 
-### 6️⃣ Meaning of the answer  
-The Cartesian equations give a direct geometric description (a line or a circle) that matches the motion described by the parameter $t$.  
+---
 
-### 7️⃣ One‑sentence summary  
-Parametric equations use a single parameter $t$ to trace a curve; eliminating $t$ yields a Cartesian equation that directly relates $x$, $y$ (and possibly $z$).  
+## Magnetic Force on a Charged Particle
 
----  
+The force on a charged particle moving through a magnetic field is:
 
-## Vector Equation of a Line  
+$$\mathbf{F} = q\mathbf{v} \times \mathbf{B}$$
 
-### 1️⃣ Plain‑English introduction  
-A straight line in space can be written as a **vector equation** that starts at a known point and moves in a fixed direction.  
+Where:
+- $q$ is the **charge** of the particle (in Coulombs)
+- $\mathbf{v}$ is the **velocity** of the particle
+- $\mathbf{B}$ is the **magnetic field** vector
+- $\mathbf{F}$ is the resulting **force** on the particle
 
-### 2️⃣ Real‑world analogy  
-Imagine **walking** from a known landmark (point $a$) while always stepping in the same direction (vector $p$). After $t$ steps you are at a new location.  
+Key observations:
+- The force is **always perpendicular** to both $\mathbf{v}$ and $\mathbf{B}$ (because it's a cross product)
+- This means the force never does work on the particle — it only changes direction, not speed
+- The particle moves in a **circular or helical path** as a result
+- If the particle moves parallel to $\mathbf{B}$, then $\mathbf{v} \times \mathbf{B} = \mathbf{0}$ — no force acts
 
-> **Mapping:**  
-> - Landmark ↔ point $\mathbf{a}$ (a point on the line)  
-> - Step direction ↔ vector $\mathbf{p}$ (direction of the line)  
-> - Number of steps ↔ scalar $t$  
+---
 
-### 3️⃣ Formal definition  
+## Rotations About an Axis
 
-$$
-\mathbf{r}(t)=\mathbf{a}+t\,\mathbf{p}
-$$
+Cross products appear naturally whenever something **rotates about an axis**:
+- Spinning wheels — the angular velocity vector $\boldsymbol{\omega}$ points along the rotation axis
+- Tornadoes — the rotation vector points vertically
+- Rotating rigid bodies in mechanics
 
-### 4️⃣ Explain every part  
+The **velocity of a rotating point** is given by:
 
-| Symbol | Meaning |
-|--------|---------|
-| $\mathbf{r}(t)$ | Position vector of a generic point on the line, depending on $t$. |
-| $\mathbf{a}$ | Fixed vector to a known point on the line. |
-| $\mathbf{p}$ | Direction vector; tells you which way the line points. |
-| $t$ | Real number (scalar) that scales the direction vector; each value of $t$ gives a different point. |
+$$\mathbf{v} = \boldsymbol{\omega} \times \mathbf{r}$$
 
-### 5️⃣ Fully worked examples  
+Where:
+- $\boldsymbol{\omega}$ (omega) is the **angular velocity vector** (magnitude = speed of rotation, direction = axis of rotation by right-hand rule)
+- $\mathbf{r}$ is the **position vector** from the axis to the point
+- $\mathbf{v}$ is the **linear velocity** of the point
 
-#### Example 1 – Line through $A(-1,-1)$ parallel to $\mathbf{p}= \langle 2,-1\rangle$ (2‑D)  
+---
 
-**Step 1 – Write $\mathbf{a}$.**  
-$\mathbf{a}= \langle -1,-1\rangle$.  
+# Summary: Key Formulas to Know
 
-**Step 2 – Insert into the formula.**  
+## Lines
 
-$$
-\mathbf{r}(t)=\langle -1,-1\rangle + t\langle 2,-1\rangle .
-$$
+| Form | Formula |
+|------|---------|
+| Vector form | $\mathbf{r}(t) = \mathbf{a} + t\mathbf{p}$ |
+| Cartesian (symmetric) form | $\frac{x-a_1}{p_1} = \frac{y-a_2}{p_2} = \frac{z-a_3}{p_3}$ |
+| Direction from two points | $\mathbf{p} = \overrightarrow{AB} = B - A$ |
 
-**Step 3 – Expand components.**  
+## Planes
 
-- $x(t)= -1 + 2t$  
-- $y(t)= -1 - t$
+| Form | Formula |
+|------|---------|
+| General Cartesian | $ax + by + cz = \text{const}$ |
+| Vector (parametric) | $\mathbf{r}(u,v) = \mathbf{a} + u\mathbf{p} + v\mathbf{q}$ |
+| Normal (vector) form | $(\mathbf{r} - \mathbf{a}) \cdot \mathbf{n} = 0$ |
+| Normal from 3 points | $\mathbf{n} = \overrightarrow{AB} \times \overrightarrow{AC}$ |
 
-**Step 4 – Obtain Cartesian form.**  
-Solve the first equation for $t$: $t = \dfrac{x+1}{2}$.  
-Plug into the second:  
+## Cross Product
 
-$$
-y = -1 - \left(\dfrac{x+1}{2}\right) = -1 - \dfrac{x}{2} - \dfrac{1}{2}= -\dfrac{x}{2} - \dfrac{3}{2}.
-$$
-
-Multiply by 2 to clear fractions:  
-
-$$
-2y = -x - 3 \quad\Longrightarrow\quad x + 2y + 3 = 0.
-$$
-
-**Answer:** The line’s vector equation is $\mathbf{r}(t)=\langle -1+2t,\; -1-t\rangle$; its Cartesian equation is $x + 2y + 3 = 0$.  
-
-#### Example 2 – Line through $A(1,1,3)$ and $B(2,1,-1)$ (3‑D)  
-
-**Step 1 – Find direction vector $\mathbf{p}= \mathbf{B}-\mathbf{A}$.**  
-
-$$
-\mathbf{p}= \langle 2-1,\; 1-1,\; -1-3\rangle = \langle 1,\,0,\,-4\rangle .
-$$
-
-**Step 2 – Write $\mathbf{a}= \langle 1,1,3\rangle$.**  
-
-**Step 3 – Form the vector equation.**  
-
-$$
-\mathbf{r}(t)=\langle 1,1,3\rangle + t\langle 1,0,-4\rangle .
-$$
-
-**Step 4 – Component form.**  
-
-- $x(t)= 1 + t$  
-- $y(t)= 1 + 0\cdot t = 1$  
-- $z(t)= 3 - 4t$
-
-**Step 5 – Write Cartesian (standard) form.**  
-
-Because the $y$-component is constant, we write it separately:  
-
-$$
-y = 1 .
-$$
-
-For the other two components, solve each for $t$:  
-
-$$
-t = x - 1 \quad\text{(from }x = 1 + t\text{)} ,
-$$
-$$
-t = \frac{3 - z}{4} \quad\text{(from }z = 3 - 4t\text{)} .
-$$
-
-Set them equal:  
-
-$$
-x - 1 = \frac{3 - z}{4}.
-$$
-
-Multiply by 4:  
-
-$$
-4(x - 1) = 3 - z \;\Longrightarrow\; 4x - 4 = 3 - z .
-$$
-
-Rearrange:  
-
-$$
-4x + z = 7 .
-$$
-
-**Final standard form (including the separate $y$ equation):**  
-
-$$
-\boxed{\; y = 1,\qquad 4x + z = 7 \;}
-$$
-
-> **Note:** The direction vector’s $y$-component is zero, so we cannot divide by it; we write $y=1$ as a separate equation.  
-
-**Answer:** The line passes through $(1,1,3)$ and $(2,1,-1)$; its vector equation is $\mathbf{r}(t)=\langle 1+t,\;1,\;3-4t\rangle$ and its Cartesian description is $y=1,\;4x+z=7$.  
-
-### 6️⃣ Meaning of the answer  
-The vector equation tells you how to start at point $A$ and walk in the direction of $\mathbf{p}$. The Cartesian equations give a simple set of algebraic conditions that any point on the line must satisfy.  
-
-### 7️⃣ One‑sentence summary  
-A line can be written as $\mathbf{r}(t)=\mathbf{a}+t\mathbf{p}$; converting to Cartesian form yields equations that directly relate the coordinates.  
-
----  
-
-## Torque (Cross‑Product Application)  
-
-### 1️⃣ Plain‑English introduction  
-**Torque** measures how effectively a force makes something rotate around a pivot point. It is the cross product of the **position vector** (from the pivot to the point where the force is applied) and the **force vector**.  
-
-### 2️⃣ Real‑world analogy  
-Think of using a **wrench** to loosen a bolt.  
-- The length of the wrench from the bolt to your hand is the position vector $\mathbf{r}$.  
-- The push you apply on the handle is the force vector $\mathbf{F}$.  
-The torque tells you how much turning power you generate.  
-
-> **Mapping:**  
-> - Wrench length ↔ $\mathbf{r}$  
-> - Push on the handle ↔ $\mathbf{F}$  
-> - Turning effect ↔ torque $\boldsymbol{\tau}$  
-
-### 3️⃣ Formal definition  
-
-$$
-\boldsymbol{\tau}= \mathbf{r}\times\mathbf{F}
-$$
-
-### 4️⃣ Explain every part  
-
-| Symbol | Meaning |
-|--------|---------|
-| $\boldsymbol{\tau}$ | Torque vector; points along the axis of rotation, following the right‑hand rule. |
-| $\mathbf{r}$ | Position vector from the pivot (origin) to the point where the force acts. |
-| $\mathbf{F}$ | Force vector (magnitude and direction of the push or pull). |
-| $\times$ | Cross product (produces a vector perpendicular to both inputs). |
-
-### 5️⃣ Fully worked example  
-
-**Problem:** A force $\mathbf{F}= \langle 0,\,5,\,0\rangle$ N is applied at the end of a 1‑m long wrench that points along the $x$-axis, i.e. $\mathbf{r}= \langle 1,\,0,\,0\rangle$ m. Find the torque.  
-
-**Step 1 – Write the vectors.**  
-
-$$
-\mathbf{r}= \langle 1,0,0\rangle,\qquad \mathbf{F}= \langle 0,5,0\rangle .
-$$
-
-**Step 2 – Set up the cross‑product determinant.**  
-
-$$
-\boldsymbol{\tau}= 
-\begin{vmatrix}
-\mathbf{i} & \mathbf{j} & \mathbf{k}\\
-1 & 0 & 0\\
-0 & 5 & 0
-\end{vmatrix}
-$$
-
-**Step 3 – Compute the $i$-component:**  
-
-$$
-(0)(0) - (0)(5) = 0 - 0 = 0 .
-$$
-
-**Step 4 – Compute the $j$-component (remember the minus sign):**  
-
-$$
-- \big[ (1)(0) - (0)(0) \big] = - (0 - 0) = 0 .
-$$
-
-**Step 5 – Compute the $k$-component:**  
-
-$$
-(1)(5) - (0)(0) = 5 - 0 = 5 .
-$$
-
-**Step 6 – Assemble the torque vector:**  
-
-$$
-\boldsymbol{\tau}= \langle 0,\,0,\,5\rangle\ \text{N·m}.
-$$
-
-**Answer:** The torque points in the positive $z$-direction with magnitude $5$ N·m.  
-
-### 6️⃣ Meaning of the answer  
-A torque of $5$ N·m about the $z$-axis means the wrench would try to rotate the bolt counter‑clockwise when viewed from above.  
-
-### 7️⃣ One‑sentence summary  
-Torque equals the cross product $\mathbf{r}\times\mathbf{F}$; it points along the axis of rotation and its magnitude tells how strong the turning effect is.  
-
----  
-
-## Magnetic Force on a Moving Charge  
-
-### 1️⃣ Plain‑English introduction  
-A charged particle moving through a magnetic field experiences a force that is perpendicular to both its velocity and the magnetic field. This force is given by the cross product $\mathbf{v}\times\mathbf{B}$ multiplied by the charge $q$.  
-
-### 2️⃣ Real‑world analogy  
-Imagine a **boat** (the charge) moving across a **river current** (magnetic field). The current pushes the boat sideways, not forward or backward.  
-
-> **Mapping:**  
-> - Boat’s speed and direction ↔ velocity $\mathbf{v}$  
-> - River flow ↔ magnetic field $\mathbf{B}$  
-> - Resulting sideways push ↔ magnetic force $\mathbf{F}$  
-
-### 3️⃣ Formal definition  
-
-$$
-\mathbf{F}= q\,(\mathbf{v}\times\mathbf{B})
-$$
-
-### 4️⃣ Explain every part  
-
-| Symbol | Meaning |
-|--------|---------|
-| $\mathbf{F}$ | Magnetic force vector (newtons). |
-| $q$ | Electric charge (coulombs). |
-| $\mathbf{v}$ | Velocity vector of the particle (m/s). |
-| \
+| Property | Formula |
+|----------|---------|
+| Component form | $\mathbf{a} \times \mathbf{b} = \langle a_2 b_3 - a_3 b_2,\ -(a_1 b_3 - a_3 b_1),\ a_1 b_2 - a_2 b_1 \rangle$ |
+| Geometric magnitude | $|\mathbf{a} \times \mathbf{b}| = |\mathbf{a}||\mathbf{b}|\sin\theta$ |
+| Anti-commutative | $\mathbf{a} \times \mathbf{b} = -(\mathbf{b} \times \mathbf{a})$ |
+| Self cross product | $\mathbf{a} \times \mathbf{a} = \mathbf{0}$ |
+| Torque | $\boldsymbol{\tau} = \mathbf{r} \times \mathbf{F}$ |
+| Magnetic force | $\mathbf{F} = q\mathbf{v} \times \mathbf{B}$ |
+| Rotational velocity | $\mathbf{v} = \boldsymbol{\omega} \times \mathbf{r}$ |

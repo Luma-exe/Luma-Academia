@@ -5,639 +5,866 @@
 > Date: 26/02/2025 
 > Topics: #design #usability #affordances #signifiers #constraints
 
-## 1. What Is **Design**?  
+---
 
-### 1.1 Plain‑English Introduction  
-Design is **the act of planning and creating something that solves a problem**. Think of it as drawing a map before you start a road trip – you sketch, prototype, or build a model first so you know the route works before you drive.  
+## 1. What Is Design?
 
-### 1.2 Formal Definition  
-> **Design** = *a purposeful construction (sketch, prototype, or finished product) that improves an existing situation by solving a brief (a description of the problem to be solved).*  
+### Plain-English Introduction
+Design is the act of planning and creating something that solves a problem. Before anything is built, designers sketch, prototype, or model their idea first — this way they can test whether it actually works before committing time and money to the real thing.
 
-### 1.3 Explain Every Part  
+Design is not just about making things look good. It is fundamentally about solving a problem for a specific group of people within specific constraints.
 
-| Term | Meaning (plain English) |
-|------|--------------------------|
-| **Construction** | The making of a tangible or digital artifact (e.g., a sketch, a cardboard model, a software mock‑up). |
-| **Improvement** | Changing something from “how it is now” to a “better version”. |
-| **Brief** | A short written statement that tells the designer *what* problem needs solving and *any constraints* (budget, time, users, etc.). |
-| **Prototype** | A low‑fidelity (quick, cheap) version used to test ideas. |
-| **Sketch** | A hand‑drawn or digital outline that captures the shape or flow of an idea. |
-| **Finished design** | The final, polished product ready for release (e.g., a graphic, an app screen). |
-| **Problem‑solving activity** | Any step that moves you from “I have a problem” to “I have a solution”. |
+### Formal Definition
 
-### 1.4 Fully Worked Example – From Brief to Sketch  
+> **Design** = a purposeful construction — sketch, prototype, or finished product — that improves an existing situation by solving a defined brief.
 
-**Scenario:** Your brief says: *“Create a portable notebook holder that reduces the weight of carrying a 2 kg textbook.”*  
+### Every Term Explained
 
-1. **Identify the existing situation** – A student carries a 2 kg textbook in a regular backpack.  
-2. **Define the preferred situation** – The textbook is held in a lightweight holder that adds only 0.2 kg.  
+| Term | Plain-English Meaning |
+|------|----------------------|
+| **Construction** | The making of a tangible or digital artifact — a sketch, a cardboard model, a software mock-up. |
+| **Improvement** | Changing something from how it is now to a better version. |
+| **Brief** | A short written statement that tells the designer what problem needs solving and what constraints apply (budget, time, users, materials). |
+| **Prototype** | A quick, cheap version of the design used to test ideas before building the real thing. |
+| **Sketch** | A hand-drawn or digital outline that captures the shape or flow of an idea. |
+| **Finished design** | The final polished product ready for release. |
+| **Problem-solving activity** | Any step that moves you from "I have a problem" to "I have a solution". |
 
-**Step 1 – Sketch a concept**  
-- Draw a rectangular frame that fits the book (30 cm × 20 cm × 2 cm).  
-- Add two side straps (5 cm wide).  
+### Fully Worked Example — From Brief to Prototype
 
-**Step 2 – Estimate material weight**  
-- Assume cardboard density = 0.6 g / cm³.  
-- Volume of frame = (30 × 20 × 2) cm³ = 1 200 cm³.  
-- Weight = 1 200 cm³ × 0.6 g/cm³ = 720 g = **0.72 kg**.  
+**Brief:** Create a portable notebook holder that reduces the burden of carrying a 2 kg textbook. The holder must add no more than 0.2 kg.
 
-**Step 3 – Compare to brief**  
-- Desired added weight ≤ 0.2 kg, but our cardboard holder adds 0.72 kg → **Too heavy**.  
+**Step 1 — Identify the existing situation.**
+A student carries a 2 kg textbook in a regular backpack with no dedicated holder.
 
-**Step 4 – Iterate** (choose lighter material)  
-- Switch to thin foam board density = 0.2 g / cm³.  
-- New weight = 1 200 cm³ × 0.2 g/cm³ = 240 g = **0.24 kg**.  
+**Step 2 — Define the preferred situation.**
+The textbook sits in a lightweight holder that adds at most 0.2 kg to the total weight carried.
 
-**Result:** The foam‑board prototype meets the brief’s weight limit (0.24 kg ≈ 0.2 kg).  
+**Step 3 — Sketch a concept.**
+Draw a rectangular frame sized to fit the book: 30 cm × 20 cm × 2 cm, with two 5 cm side straps.
 
-> **What the answer means:** We have a concrete, low‑cost prototype that satisfies the brief’s weight limit.  
+**Step 4 — Estimate the weight of the first material (cardboard).**
 
-### 1.5 Connections  
-- **Remember how we said** a design is a *simulation* before the final product – the foam‑board prototype is that simulation.  
-- **Similar to** the “sketch → prototype → finished design” pipeline we’ll see later in the **Design Thinking** process.  
+- Cardboard density = 0.6 g/cm³
+- Volume of frame = 30 × 20 × 2 = 1,200 cm³
+- Weight = 1,200 × 0.6 = 720 g = **0.72 kg**
 
-### 1.6 One‑Sentence Summary  
-Design is the purposeful creation of a sketch, prototype, or final product that improves an existing situation by solving a defined brief.  
+This exceeds the brief's limit of 0.2 kg. The design fails. We must iterate.
 
-### 1.7 Exam Hints & Common Mistakes  
+**Step 5 — Iterate with a lighter material (foam board).**
 
-> **⚠️ Exam Hint:** Always state the *existing* and *preferred* situation before you start sketching.  
-> **Common mistake:** Treating a prototype as the final design – remember a prototype is only for testing, not for release.  
+- Foam board density = 0.2 g/cm³
+- Volume is still 1,200 cm³
+- Weight = 1,200 × 0.2 = 240 g = **0.24 kg**
 
----  
+This is close to the limit but still slightly over. In a real project you would iterate again. For this example we accept it as close enough to proceed to user testing.
 
-## 2. **Design as a Simulation**  
+**Answer:** The foam-board sketch is our first prototype. It shows the concept is feasible and gives us something physical to test with users.
 
-### 2.1 Plain‑English Introduction  
-Before you build the real thing, you **simulate** (imitate) it with a model or sketch so you can see if it works.  
+> **What this means in practice:** We discovered the material problem at the sketch stage, not after spending money on production. This is exactly why we design before we build.
 
-### 2.2 Formal Definition  
-> **Simulation** = *a representation (digital or physical) of a future product used to explore its behavior before actual production.*  
+### Connections
+- This sketch becomes the starting point for the prototype in Section 3.
+- The brief structure used here is formalised in Section 6.
 
-### 2.3 Explain Every Part  
+### One-Sentence Summary
+Design is the purposeful creation of a sketch, prototype, or finished product that improves an existing situation by satisfying a defined brief.
 
-| Symbol | Explanation |
-|--------|--------------|
-| **Model** | A simplified version that captures essential features (size, shape, interaction). |
-| **Imitation** | Copying the look or function without full functionality. |
-| **Explore behavior** | Test how the design reacts to user actions, loads, etc. |
+### Exam Hints
 
-### 2.4 Fully Worked Example – Digital Wireframe Simulation  
+> Always state the existing situation and the preferred situation before proposing any solution. A brief without both is incomplete.
+> 
+> **Common mistake:** Treating a prototype as the finished design. A prototype is for testing only — it is never the final product.
 
-**Task:** Simulate a mobile app screen for a “Well‑being Tracker”.  
+---
 
-1. **Choose a tool** – Figma (free design software).  
-2. **Create a frame** – 360 px × 640 px (standard phone size).  
-3. **Add UI elements** –  
-   - Header (height = 50 px) → “My Well‑being”.  
-   - Three buttons (width = 300 px, height = 60 px) labeled *Mood*, *Exercise*, *Sleep*.  
+## 2. Design as a Simulation
 
-**Calculate total pixel area used by buttons:**  
+### Plain-English Introduction
+Before you build the real thing you **simulate** it — you create a representation of it that is cheap and quick to make. The simulation lets you see whether your idea works, find problems early, and avoid wasting resources on something that does not work.
 
-- Area of one button = 300 px × 60 px = 18 000 px².  
-- Three buttons → 3 × 18 000 px² = **54 000 px²**.  
+A simulation does not need to be perfect. It just needs to be realistic enough to answer the question you are trying to answer.
 
-**Interpretation:** Buttons occupy 54 000 px² of the 230 400 px² screen (≈ 23 %).  
+### Formal Definition
 
-> **Result:** The wireframe shows that buttons take a reasonable portion of the screen, confirming the layout works before any coding.  
+> **Simulation** = a physical or digital representation of a future product used to explore its behaviour and identify problems before actual production begins.
 
-### 2.5 Connections  
-- **Link to** the **Figma** tool mentioned in the brief (Section 3).  
-- **Similar to** the low‑fidelity prototype we built in Section 1.4.  
+### Every Term Explained
 
-### 2.6 One‑Sentence Summary  
-A simulation is a quick, low‑cost model that lets designers test ideas before building the real product.  
+| Term | Plain-English Meaning |
+|------|----------------------|
+| **Model** | A simplified version that captures the essential features — size, shape, layout, interaction — without full functionality. |
+| **Imitation** | Copying the look or behaviour of something without building the full thing. |
+| **Explore behaviour** | Testing how the design responds to user actions before it is real. |
+| **Low-fidelity** | Rough and quick — paper, cardboard, basic wireframes. |
+| **High-fidelity** | Detailed and realistic — colour, interactions, close to the final product. |
 
-### 2.7 Exam Hints & Common Mistakes  
+### Fully Worked Example — Wireframe Simulation in Figma
 
-> **⚠️ Exam Hint:** State the purpose of the simulation (e.g., “to test layout density”).  
-> **Common mistake:** Forgetting to measure the simulation (e.g., not counting pixel area).  
+**Task:** Simulate the layout of a mobile "Well-being Tracker" app screen before writing any code.
 
----  
+**Step 1 — Choose the tool.** Use Figma (free, browser-based design software).
 
-## 3. **Design as a Prototype**  
+**Step 2 — Set the frame size.** Create a frame 360 px wide × 640 px tall — a standard Android phone screen size.
 
-### 3.1 Plain‑English Introduction  
-A **prototype** is a *working, but not final*, version of a product that you can touch, click, or test.  
+**Step 3 — Add the UI elements.**
 
-### 3.2 Formal Definition  
-> **Prototype** = *a tangible or digital artifact that implements enough features of the intended design to allow user testing and feedback.*  
+| Element | Size | Label |
+|---------|------|-------|
+| Header | 360 px wide × 50 px tall | "My Well-being" |
+| Button 1 | 300 px wide × 60 px tall | Mood |
+| Button 2 | 300 px wide × 60 px tall | Exercise |
+| Button 3 | 300 px wide × 60 px tall | Sleep |
 
-### 3.3 Explain Every Part  
+**Step 4 — Check whether the layout fits.** Calculate how much vertical space the buttons require including 20 px gaps between them:
 
-| Part | Meaning |
-|------|---------|
-| **Tangible** | Physical (e.g., cardboard, 3‑D printed). |
-| **Digital** | Screen‑based (e.g., clickable mock‑up). |
-| **Enough features** | Only the core functions needed to evaluate the concept. |
-| **User testing** | Real people interact with the prototype and give feedback. |
+- Three buttons: 3 × 60 px = 180 px
+- Two gaps between buttons: 2 × 20 px = 40 px
+- Header: 50 px
+- Total used: 180 + 40 + 50 = **270 px**
+- Screen height available: 640 px
+- Remaining space: 640 − 270 = **370 px** for content, footer, and padding
 
-### 3.4 Fully Worked Example – Low‑Fidelity Paper Prototype  
+**Answer:** The layout fits comfortably within the screen. The simulation confirms the structure before a single line of code is written.
 
-**Goal:** Test the “Backpack with built‑in book holder” from Section 1.4.  
+> **What this means in practice:** If the buttons had not fit, we would have discovered that now — in Figma, where fixing it takes seconds — rather than after coding the whole screen.
 
-1. **Materials:** A4 paper, scissors, tape, marker.  
-2. **Build steps:**  
-   - Cut a rectangle 30 cm × 20 cm (front panel).  
-   - Fold a 2 cm flap to simulate the book slot.  
-   - Attach two 5 cm straps using tape.  
+### Connections
+- This wireframe simulation is a low-fidelity prototype of the type described in Section 3.
+- The Figma workflow is expanded further in Section 7.
 
-3. **Measure total weight:**  
-   - Paper density ≈ 0.08 g / cm³.  
-   - Volume = 30 × 20 × 0.2 cm (paper thickness) = 120 cm³.  
-   - Weight = 120 cm³ × 0.08 g/cm³ = **9.6 g** ≈ 0.01 kg.  
+### One-Sentence Summary
+A simulation is a quick, low-cost representation of a future product that lets designers find and fix problems before building the real thing.
 
-4. **User test:** Ask a peer to place a 2 kg textbook into the slot.  
+### Exam Hints
 
-5. **Feedback:** Peer reports the slot is too shallow; needs 3 cm depth.  
+> Always state the *purpose* of your simulation — what specific question are you trying to answer with it?
+>
+> **Common mistake:** Building a simulation without a clear question to answer. A simulation that tests nothing teaches nothing.
 
-6. **Iterate:** Redraw slot to 3 cm depth, recalculate weight:  
+---
 
-   - New volume = 30 × 20 × 0.3 cm = 180 cm³.  
-   - New weight = 180 cm³ × 0.08 g/cm³ = **14.4 g** ≈ 0.014 kg.  
+## 3. Design as a Prototype
 
-**Result:** The revised paper prototype still adds negligible weight (< 0.02 kg) and meets the user’s depth requirement.  
+### Plain-English Introduction
+A **prototype** is a working but not final version of a product that you can touch, click, or test with real users. It is more developed than a sketch but less polished than the finished product. The whole point of a prototype is to find problems while they are still cheap to fix.
 
-> **Interpretation:** The prototype helped us discover a usability issue (slot depth) before any expensive materials were used.  
+Prototypes come in two broad types. A **low-fidelity prototype** is rough and cheap — paper, cardboard, printed screens taped together. A **high-fidelity prototype** is detailed and close to the final product — a clickable Figma mock-up with real colours and interactions.
 
-### 3.5 Connections  
-- **Relates to** the **iteration** concept (Section 5).  
-- **Uses** the **sketching** stage (Section 4).  
+### Formal Definition
 
-### 3.6 One‑Sentence Summary  
-A prototype is a testable version of a design that lets you gather real user feedback before final production.  
+> **Prototype** = a tangible or digital artifact that implements enough features of the intended design to allow user testing and feedback.
 
-### 3.7 Exam Hints & Common Mistakes  
+### Every Term Explained
 
-> **⚠️ Exam Hint:** Always state what *features* the prototype includes and why those are enough for testing.  
-> **Common mistake:** Building a high‑fidelity prototype too early, wasting time and resources.  
+| Term | Plain-English Meaning |
+|------|----------------------|
+| **Tangible** | Physical — something you can hold, like cardboard or 3D-printed parts. |
+| **Digital** | Screen-based — something you can click, like a Figma prototype. |
+| **Enough features** | Only the core functions needed to test the concept — not everything, just what matters right now. |
+| **User testing** | Real people interact with the prototype and tell you what works and what does not. |
+| **Low-fidelity** | Rough and cheap. Used early to test ideas quickly. |
+| **High-fidelity** | Detailed and realistic. Used later to test the near-final design. |
 
----  
+### Fully Worked Example — Low-Fidelity Paper Prototype
 
-## 4. **Design as a Sketch**  
+**Goal:** Test whether the book holder from Section 1 is usable before committing to materials.
 
-### 4.1 Plain‑English Introduction  
-A **sketch** is a quick, hand‑drawn picture that captures the shape, layout, or flow of an idea.  
+**Step 1 — Gather materials.** A4 paper, scissors, tape, marker.
 
-### 4.2 Formal Definition  
-> **Sketch** = *a low‑detail visual representation (paper or digital) used to explore form, layout, or interaction early in the design process.*  
+**Step 2 — Build the prototype.**
+- Cut a rectangle 30 cm × 20 cm for the front panel.
+- Fold a 2 cm flap along the bottom to simulate the book slot.
+- Attach two 5 cm strips of tape as straps on the sides.
 
-### 4.3 Explain Every Part  
+**Step 3 — Estimate the prototype's weight.**
 
-| Element | Plain‑English Meaning |
-|---------|-----------------------|
-| **Low‑detail** | No fine shading, colors, or exact measurements – just the gist. |
-| **Visual representation** | Shows what the product *looks like* or *how it works*. |
-| **Explore** | Allows rapid changes; you can erase and redraw. |
+- Paper density = 0.08 g/cm³
+- Paper thickness = 0.2 cm
+- Volume = 30 × 20 × 0.2 = 120 cm³
+- Weight = 120 × 0.08 = **9.6 g = 0.01 kg**
 
-### 4.4 Fully Worked Example – Sketching a Mobile Dashboard  
+The paper prototype adds virtually no weight, so it does not interfere with the weight test — it is only for testing the shape and usability.
 
-1. **Draw a rectangle** 10 cm × 18 cm (paper size).  
-2. **Divide into three horizontal bands** (each 5 cm high) for *Header*, *Content*, *Footer*.  
-3. **Add icons** – draw simple circles (≈ 0.5 cm radius) for *Home*, *Search*, *Profile*.  
+**Step 4 — Conduct a user test.** Ask a peer to place a 2 kg textbook into the slot.
 
-**Count elements:**  
+**Step 5 — Record feedback.** Peer reports: "The slot is too shallow — the book keeps sliding out. I need at least 3 cm depth."
 
-- Total circles = 3 (icons).  
-- Each circle area = π × (0.5 cm)² ≈ 3.14 × 0.25 cm² = **0.785 cm²**.  
-- All icons area = 3 × 0.785 cm² = **2.355 cm²**.  
+**Step 6 — Iterate.** Redraw the slot to 3 cm depth and rebuild.
 
-**Interpretation:** The icons occupy a tiny fraction of the total screen (180 cm²), confirming they won’t dominate the layout.  
+- New volume = 30 × 20 × 0.3 = 180 cm³
+- New weight = 180 × 0.08 = **14.4 g = 0.014 kg**
 
-### 4.5 Connections  
-- **Sketches** become **low‑fidelity prototypes** (Section 3).  
-- **Sketches** are the first step before moving to **digital wireframes in Figma** (Section 2).  
+Still negligible. The revised prototype passes the depth requirement.
 
-### 4.6 One‑Sentence Summary  
-A sketch is a quick, low‑detail drawing that helps you explore a design’s shape and layout early on.  
+**Answer:** The paper prototype cost almost nothing and took minutes to build, but it revealed a critical usability problem — the slot depth — before any real materials were purchased.
 
-### 4.7 Exam Hints & Common Mistakes  
+> **What this means in practice:** The user test told us something the sketch could never tell us: that the slot needed to be deeper. We found this out with paper and tape, not with expensive materials.
 
-> **⚠️ Exam Hint:** Mention why you chose the layout (e.g., “to separate navigation from content”).  
-> **Common mistake:** Treating a sketch as a final design – always keep it rough and editable.  
+### Connections
+- This prototype is built from the sketch created in Section 1 and Section 4.
+- The iteration process used here is the core of the design cycle described in Section 11.
 
----  
+### One-Sentence Summary
+A prototype is a testable version of a design — cheap enough to build quickly, realistic enough to learn from.
 
-## 5. **Design as an Improvement on Something (Problem‑Solving Activity)**  
+### Exam Hints
 
-### 5.1 Plain‑English Introduction  
-Design is **solving a problem** by making something *better* than what already exists.  
+> When describing a prototype, always state: what fidelity it is (low or high), what features it includes, and what specific question it is designed to test.
+>
+> **Common mistake:** Building a high-fidelity prototype too early. If you spend hours making something beautiful and then discover in testing that the core concept does not work, you have wasted all of that time.
 
-### 5.2 Formal Definition  
-> **Improvement** = *the measurable change that moves a product or service from its current state toward a defined, better state.*  
+---
 
-### 5.3 Explain Every Part  
+## 4. Design as a Sketch
 
-| Term | Meaning |
-|------|---------|
-| **Current state** | How the product works today (e.g., heavy textbooks). |
-| **Better state** | Desired outcome (e.g., lighter, portable holder). |
-| **Measurable change** | Something you can count (weight reduction, time saved). |
+### Plain-English Introduction
+A **sketch** is the fastest, cheapest way to get an idea out of your head and onto paper. It is deliberately rough — no rulers, no precise measurements, no colours. The goal is to explore as many ideas as possible quickly, before committing to any of them.
 
-### 5.4 Fully Worked Example – Reducing Time to Find a Book  
+Sketching is not about drawing skill. It is about thinking visually and quickly.
 
-**Current situation:** A student spends **5 minutes** searching a bookshelf for a textbook.  
+### Formal Definition
 
-**Goal:** Reduce search time by **60 %**.  
+> **Sketch** = a low-detail visual representation — on paper or digital canvas — used to explore form, layout, or interaction early in the design process.
 
-1. **Calculate target time:**  
-   - Desired reduction = 5 min × 0.60 = **3 min**.  
-   - Target time = 5 min − 3 min = **2 min**.  
+### Every Term Explained
 
-2. **Design solution:** Add a **QR‑code label** on each book that links to a digital catalogue.  
+| Term | Plain-English Meaning |
+|------|----------------------|
+| **Low-detail** | No fine shading, exact colours, or precise measurements — just enough to communicate the idea. |
+| **Visual representation** | Shows what the product looks like or how it works, not just describes it in words. |
+| **Explore** | Allows rapid changes — you can erase and redraw in seconds. |
+| **Form** | The shape and physical appearance of the design. |
+| **Layout** | How elements are arranged on a screen or page. |
+| **Interaction** | How a user moves through or uses the design. |
 
-3. **Estimate time saved per scan:**  
-   - Scanning QR code = **5 seconds**.  
-   - Looking up catalogue = **10 seconds**.  
-   - Total = **15 seconds** ≈ **0.25 min**.  
+### Fully Worked Example — Sketching a Mobile Dashboard
 
-4. **Compare to target:**  
-   - New time = 0.25 min (scan) + 0.5 min (walking to shelf) = **0.75 min**.  
-   - Reduction = 5 min − 0.75 min = **4.25 min** (85 % reduction).  
+**Goal:** Sketch a layout for the Well-being Tracker app screen before opening Figma.
 
-**Result:** The QR‑code system exceeds the 60 % goal, improving the user’s experience.  
+**Step 1 — Draw the phone outline.** A rectangle approximately 6 cm × 10 cm on paper.
 
-### 5.5 Connections  
-- **Links to** the **brief** concept (Section 6).  
-- **Shows** how **quantitative research** (time measurement) can validate an improvement (Section 9).  
+**Step 2 — Divide into zones.** Split the rectangle into three horizontal bands:
 
-### 5.6 One‑Sentence Summary  
-Design improves an existing situation by creating a measurable, better outcome that solves a defined problem.  
+| Zone | Height | Purpose |
+|------|--------|---------|
+| Header | top 2 cm | App title and navigation |
+| Content | middle 5 cm | Main buttons or data |
+| Footer | bottom 3 cm | Secondary navigation |
 
-### 5.7 Exam Hints & Common Mistakes  
+**Step 3 — Add the buttons.** Draw three rectangles in the content zone labelled Mood, Exercise, Sleep. Keep them evenly spaced.
 
-> **⚠️ Exam Hint:** Always express improvement as a percentage or absolute number.  
-> **Common mistake:** Forgetting to define the *baseline* (current state) before measuring improvement.  
+**Step 4 — Add icons.** Draw a small circle (approximately 0.5 cm radius) at the left of each button label.
 
----  
+**Step 5 — Annotate.** Write a short note next to each element explaining its purpose. For example: "Mood button → opens mood diary screen."
 
-## 6. **Brief & Solution**  
+**Answer:** The sketch takes under 5 minutes and gives you a visual plan to work from when building the Figma wireframe. It also reveals layout decisions early — for example, whether three buttons fit comfortably in the content zone — without opening any software.
 
-### 6.1 Plain‑English Introduction  
-A **brief** tells you *what* problem to solve and *what* constraints exist. A **solution** is the answer you create to satisfy that brief.  
+> **What this means in practice:** Sketching before opening Figma saves time. You make the big structural decisions with a pencil, so you are not figuring out the layout while also learning software.
 
-### 6.2 Formal Definition  
+### Connections
+- This sketch is the direct input to the low-fidelity prototype in Section 3.
+- The sketch becomes the basis for the Figma wireframe in Section 7.
 
-- **Brief** = *a concise document that outlines the design problem, target users, constraints, and success criteria.*  
-- **Solution** = *the design artifact(s) that meet the brief’s requirements.*  
+### One-Sentence Summary
+A sketch is a quick, rough drawing that externalises an idea so it can be evaluated, discussed, and iterated before any time is invested in building.
 
-### 6.3 Explain Every Part  
+### Exam Hints
 
-| Brief Element | Explanation |
-|---------------|-------------|
-| **Problem statement** | What is wrong now? |
-| **Target users** | Who will use the design? |
-| **Constraints** | Limits on cost, time, materials, technology. |
-| **Success criteria** | How we will know the design works (e.g., “≤ 0.2 kg added weight”). |
+> When describing a sketch, always explain why you chose that layout — what design decision does it represent?
+>
+> **Common mistake:** Treating a sketch as a final design and feeling reluctant to change it. Sketches are meant to be thrown away or redrawn. If you are not willing to change it, it is no longer a sketch.
 
-| Solution Element | Explanation |
-|------------------|-------------|
-| **Artifact** | The actual product (prototype, sketch, digital mock‑up). |
-| **Evidence of success** | Test results, user feedback, metrics. |
+---
 
-### 6.4 Fully Worked Example – Writing a Brief  
+## 5. Design as Improvement — The Problem-Solving Activity
 
-**Problem:** Students carry heavy textbooks (average 2 kg each).  
+### Plain-English Introduction
+Every design starts with a problem. Design is the activity of moving from the current situation — which is unsatisfactory in some way — to a preferred situation that is better. The improvement must be **measurable**: you need to be able to show, with numbers or evidence, that the new design is actually better than what existed before.
 
-**Target users:** University undergraduates (age 18‑25).  
+### Formal Definition
 
-**Constraints:**  
-- Material cost ≤ £5 per unit.  
-- Added weight ≤ 0.2 kg.  
+> **Improvement** = the measurable change that moves a product or service from its current state to a defined, better state.
 
-**Success criteria:**  
-- User can lift the holder + book with one hand.  
-- Weight measured ≤ 0.2 kg.  
+### Every Term Explained
 
-**Solution (prototype):** Foam‑board holder (see Section 1.4).  
+| Term | Plain-English Meaning |
+|------|----------------------|
+| **Current state** | How the product or situation works today — the starting point. |
+| **Preferred state** | The desired outcome — what better looks like. |
+| **Measurable change** | Something you can count or observe: weight saved, time reduced, errors eliminated, satisfaction score increased. |
 
-**Test result:** Measured weight = 0.24 kg → **fails** weight criterion.  
+### Fully Worked Example — Reducing Textbook Search Time
 
-**Iterate:** Switch to thin aluminum sheet (density = 2.7 g / cm³, thickness = 0.1 cm).  
+**Current situation:** A student spends an average of 5 minutes searching a bookshelf to find the right textbook.
 
-- Volume = 30 × 20 × 0.1 cm³ = 60 cm³.  
-- Weight = 60 cm³ × 2.7 g/cm³ = 162 g = **0.162 kg**.  
+**Preferred situation:** The student finds any textbook in under 2 minutes.
 
-**Now the solution meets the brief.**  
+**Step 1 — Define the target improvement.**
 
-### 6.5 Connections  
-- **Brief** is the starting point for **iteration** (Section 5).  
-- **Solution** becomes the **prototype** (Section 3).  
+- Target reduction: 60% of 5 minutes = 3 minutes saved
+- Target time: 5 − 3 = **2 minutes**
 
-### 6.6 One‑Sentence Summary  
-A brief defines the problem and limits; a solution is the design that satisfies those requirements.  
+**Step 2 — Propose a design solution.** Add a QR-code label to each book that links to a digital catalogue showing its shelf location.
 
-### 6.7 Exam Hints & Common Mistakes  
+**Step 3 — Estimate the new time with the QR solution.**
 
-> **⚠️ Exam Hint:** Always list *all* four brief elements before proposing a solution.  
-> **Common mistake:** Ignoring constraints (e.g., cost) when evaluating a solution.  
+| Action | Time |
+|--------|------|
+| Scan QR code on phone | 5 seconds |
+| Read shelf location from catalogue | 10 seconds |
+| Walk to correct shelf | 30 seconds |
+| Total | 45 seconds = **0.75 minutes** |
 
----  
+**Step 4 — Calculate the actual improvement.**
 
-## 7. **Prototyping Stage & Sketching**  
+- Time saved = 5 − 0.75 = **4.25 minutes**
+- Percentage improvement = (4.25 ÷ 5) × 100 = **85%**
 
-### 7.1 Plain‑English Introduction  
-The **prototyping stage** is where you turn sketches into testable models. **Sketching** is the quick drawing that feeds the prototype.  
+This exceeds the 60% target.
 
-### 7.2 Formal Definition  
+**Answer:** The QR-code system reduces textbook search time from 5 minutes to 45 seconds — an 85% improvement, exceeding the design brief's 60% target.
 
-- **Prototyping stage** = *the phase in the design process where low‑ to high‑fidelity artifacts are built for user testing.*  
-- **Sketching** = *the act of drawing ideas on paper or a digital canvas to explore form and interaction.*  
+> **What this means in practice:** By measuring both the current state and the outcome, we can prove the design works. Without measurement, "it feels faster" is not an acceptable answer in design practice or in an exam.
 
-### 7.3 Explain Every Part  
+### Connections
+- The improvement target becomes the success criterion in a brief (Section 6).
+- Measuring improvement is an application of quantitative research (Section 9).
 
-| Part | Meaning |
-|------|---------|
-| **Low‑fidelity** | Rough, cheap, often paper or cardboard. |
-| **High‑fidelity** | Detailed, close to final look (colors, interactions). |
-| **Figma** | A cloud‑based design tool for creating high‑fidelity UI mock‑ups. |
-| **Iteration** | Repeating sketch → prototype → test → improve. |
+### One-Sentence Summary
+Design improvement is only real if it is measurable — always define the current state, the target, and show the evidence that the target was met.
 
-### 7.4 Fully Worked Example – From Sketch to High‑Fidelity Mock‑up  
+### Exam Hints
 
-**Step 1 – Sketch (low‑fidelity):**  
-- Hand‑draw a phone screen with three buttons (see Section 4).  
+> Always express improvement as both an absolute number and a percentage. "Search time dropped from 5 minutes to 45 seconds — an 85% reduction" is a complete answer. "It is faster" is not.
+>
+> **Common mistake:** Describing the preferred situation without stating the current situation first. Without a baseline you cannot demonstrate improvement.
 
-**Step 2 – Build low‑fidelity prototype:**  
-- Cut cardstock to 9 cm × 16 cm, glue printed button labels.  
+---
 
-**Step 3 – Test with a peer:**  
-- Peer clicks each button (paper‑based “press” simulation).  
-- Feedback: Buttons too close together.  
+## 6. Brief and Solution
 
-**Step 4 – Refine sketch:**  
-- Increase button spacing to 2 cm apart.  
+### Plain-English Introduction
+A **brief** is the written document that defines the design problem before any designing begins. It sets out what needs to be solved, who it is being solved for, what limits apply, and how you will know when you have succeeded. Without a brief, design becomes guesswork.
 
-**Step 5 – Create high‑fidelity mock‑up in Figma:**  
+A **solution** is the design artifact — prototype, product, or system — that satisfies the brief's requirements. The solution is only valid if it can be tested against the brief's success criteria.
 
-| Parameter | Value |
-|-----------|-------|
-| Frame size | 360 px × 640 px |
-| Button width | 300 px |
-| Button height | 60 px |
-| Button vertical spacing | 30 px (instead of 10 px) |
-| Colors | Primary: #0066CC, Background: #F5F5F5 |
+### Formal Definitions
 
-**Step 6 – Export assets:**  
-- Export PNG of each button (size 300 × 60 px).  
+> **Brief** = a concise document that outlines the design problem, target users, constraints, and success criteria.
+>
+> **Solution** = the design artifact or system that demonstrably meets the brief's requirements.
 
-**Step 7 – Validate:**  
-- Measure total vertical space used:  
-  - Header = 50 px  
-  - 3 × (60 px + 30 px spacing) = 270 px  
-  - Footer = 50 px  
-  - Total = 50 + 270 + 50 = **370 px** (≈ 58 % of screen height).  
+### Every Term Explained
 
-**Result:** The high‑fidelity mock‑up respects the spacing feedback and is ready for interactive prototyping.  
+**Brief elements:**
 
-### 7.5 Connections  
-- **Sketching** feeds directly into **low‑fi prototyping** (Section 3).  
-- **Figma** is the tool for **high‑fi** work (Section 2).  
+| Element | Plain-English Meaning |
+|---------|----------------------|
+| **Problem statement** | What is wrong with the current situation? Be specific. |
+| **Target users** | Who will use this design? Describe them specifically. |
+| **Constraints** | The hard limits — cost, time, materials, technology, regulations. |
+| **Success criteria** | The measurable conditions that the solution must satisfy to be accepted. |
 
-### 7.6 One‑Sentence Summary  
-The prototyping stage turns sketches into testable models, moving from cheap paper versions to polished digital mock‑ups.  
+**Solution elements:**
 
-### 7.7 Exam Hints & Common Mistakes  
+| Element | Plain-English Meaning |
+|---------|----------------------|
+| **Artifact** | The actual design output — prototype, sketch, digital mock-up, finished product. |
+| **Evidence of success** | Test results, measurements, or user feedback that show the success criteria were met. |
 
-> **⚠️ Exam Hint:** Show the progression: sketch → low‑fi → feedback → high‑fi.  
-> **Common mistake:** Skipping the low‑fi test and jumping straight to high‑fi, which wastes time if major issues are missed.  
+### Fully Worked Example — Writing and Testing a Brief
 
----  
+**Problem statement:** University students carry heavy textbooks averaging 2 kg each, causing physical discomfort.
 
-## 8. **Human‑Centered Design (HCD)**  
+**Target users:** University undergraduates aged 18–25 who carry multiple textbooks daily.
 
-### 8.1 Plain‑English Introduction  
-**Human‑Centered Design** means **designing with real people** at every step, not just for them. It’s a two‑way conversation: designers listen, users test, designers improve.  
+**Constraints:**
+- Material cost must not exceed £5 per unit
+- Added weight must not exceed 0.2 kg
+- Must be manufacturable from standard materials
 
-### 8.2 Formal Definition  
-> **Human‑Centered Design** = *a design approach that involves users throughout the process (empathize, define, ideate, prototype, test) to ensure solutions meet real needs.*  
+**Success criteria:**
+- A user can lift the holder plus book with one hand
+- Measured weight of holder is ≤ 0.2 kg
+- Material cost per unit is ≤ £5
 
-### 8.3 Explain Every Part  
+**Proposed solution:** Aluminium sheet holder (tested after foam board failed).
 
-| Phase | What it means |
-|-------|----------------|
-| **Empathize** | Understand users’ feelings, motivations, and pain points (via interviews, observations). |
-| **Define** | Turn insights into a clear problem statement. |
-| **Ideate** | Generate many ideas (divergent thinking). |
-| **Prototype** | Build low‑ to high‑fidelity versions to explore ideas. |
-| **Test** | Let users try the prototypes and give feedback. |
+**Test the foam board solution first:**
 
-### 8.4 Fully Worked Example – Empathy Interview & Persona Creation  
+- Foam board density = 0.2 g/cm³, volume = 1,200 cm³
+- Weight = 1,200 × 0.2 = 240 g = **0.24 kg**
+- Result: **FAILS** — exceeds the 0.2 kg limit
 
-**Step 1 – Conduct interview (qualitative):**  
-- Ask “What frustrates you about studying at home?”  
-- Participant says: *“I lose track of time and end up feeling stressed.”*  
+> **Important:** Note that Section 1 described the foam board result as "close enough" for initial testing. Here in Section 6, where we are formally testing against the brief's success criteria, 0.24 kg is a clear failure. The brief's criteria are strict. This is the difference between informal prototyping and formal evaluation.
 
-**Step 2 – Code the response:**  
-- Tag = **Time‑Management Frustration**.  
+**Iterate — test the aluminium solution:**
 
-**Step 3 – Aggregate (quantitative count):**  
-- 5 out of 8 participants mention time‑management → **62.5 %**.  
+- Aluminium density = 2.7 g/cm³, thickness = 0.1 cm
+- Volume = 30 × 20 × 0.1 = 60 cm³
+- Weight = 60 × 2.7 = 162 g = **0.162 kg**
+- Result: **PASSES** — under the 0.2 kg limit
 
-**Step 4 – Create persona:**  
+**Answer:** The aluminium holder satisfies the weight criterion. The next step is to verify the cost criterion and conduct a user test for the one-handed lift criterion.
+
+### Connections
+- The success criteria in the brief directly use the measurable improvement approach from Section 5.
+- The solution artifact is the prototype built using the process in Section 3.
+
+### One-Sentence Summary
+A brief defines the problem, the users, the limits, and the success criteria; a solution is only valid when it demonstrably satisfies all four.
+
+### Exam Hints
+
+> In an exam, always write out all four brief elements explicitly before proposing or evaluating any solution. A solution that ignores a constraint is not a valid solution.
+>
+> **Common mistake:** Evaluating a solution only against one or two success criteria and ignoring the others. All criteria must be checked.
+
+---
+
+## 7. The Prototyping Stage and Sketching — From Idea to High-Fidelity
+
+### Plain-English Introduction
+The prototyping stage is the part of the design process where ideas become physical or digital objects that can be tested. It always begins with sketching, moves to low-fidelity prototypes for early testing, and progresses to high-fidelity prototypes once the core concept is validated.
+
+The key principle is: **test early with cheap prototypes so that expensive mistakes are never made.**
+
+> **How this connects to what you already know:** Sections 3 and 4 explained sketching and prototyping individually. This section shows how they work together as a progression: sketch → low-fi prototype → user feedback → high-fi prototype.
+
+### Formal Definitions
+
+> **Prototyping stage** = the phase in the design process where low- to high-fidelity artifacts are built and tested with users.
+>
+> **Sketching** = the act of drawing ideas on paper or a digital canvas to explore form, layout, and interaction quickly and cheaply.
+
+### Every Term Explained
+
+| Term | Plain-English Meaning |
+|------|----------------------|
+| **Low-fidelity (low-fi)** | Rough and cheap — paper, cardboard, hand-drawn screens. Used for early concept testing. |
+| **High-fidelity (high-fi)** | Detailed and realistic — colours, real interactions, close to the final product. Used for final validation. |
+| **Figma** | A browser-based design tool used to create high-fidelity digital mock-ups and interactive prototypes. |
+| **Iteration** | The cycle of sketch → build → test → improve, repeated until the design satisfies the brief. |
+| **User feedback** | What real users tell you after interacting with a prototype — the primary input for iteration. |
+
+### Fully Worked Example — From Paper Sketch to High-Fidelity Figma Mock-up
+
+**Goal:** Design the Well-being Tracker app screen, starting from a sketch and finishing with a validated high-fidelity prototype.
+
+**Step 1 — Sketch (low-fidelity, on paper).**
+Draw the phone outline with three labelled buttons: Mood, Exercise, Sleep. Keep buttons evenly spaced. This takes under 5 minutes.
+
+**Step 2 — Build a low-fidelity paper prototype.**
+Cut cardstock to 9 cm × 16 cm. Print and glue three button labels. This is now something a user can physically interact with.
+
+**Step 3 — Conduct a low-fidelity user test.**
+Ask a peer to "press" each button (they tap the paper label). Record feedback.
+
+Feedback received: "The buttons are too close together — I keep hitting the wrong one."
+
+**Step 4 — Iterate the sketch.**
+Increase the gap between buttons from 10 px equivalent spacing to 30 px equivalent spacing. Redraw the sketch.
+
+**Step 5 — Build the high-fidelity mock-up in Figma.**
+
+| Parameter | Original value | Revised value |
+|-----------|---------------|---------------|
+| Frame size | 360 × 640 px | 360 × 640 px (unchanged) |
+| Button width | 300 px | 300 px (unchanged) |
+| Button height | 60 px | 60 px (unchanged) |
+| Vertical gap between buttons | 10 px | 30 px |
+| Primary colour | — | #0066CC |
+| Background colour | — | #F5F5F5 |
+
+**Step 6 — Validate the revised layout fits the screen.**
+
+- Header: 50 px
+- 3 buttons: 3 × 60 px = 180 px
+- 2 gaps between buttons: 2 × 30 px = 60 px
+- Footer: 50 px
+- Total vertical space used: 50 + 180 + 60 + 50 = **340 px**
+- Screen height: 640 px
+- Remaining space: 640 − 340 = **300 px** for content and padding
+
+The revised layout fits. The spacing change does not break the layout.
+
+**Answer:** The high-fidelity prototype reflects the feedback from the low-fidelity test. The button spacing problem was found with paper and tape, not after hours of Figma work.
+
+> **What this means in practice:** The low-fidelity test saved time. If we had built the high-fidelity version first, we would have had to redo all the spacing work after the user test.
+
+### Connections
+- The sketch in Step 1 uses the technique from Section 4.
+- The low-fidelity prototype in Step 2 uses the technique from Section 3.
+- The Figma wireframe connects to the simulation approach in Section 2.
+
+### One-Sentence Summary
+The prototyping stage progresses from rough sketches to polished high-fidelity mock-ups, with user testing at each stage ensuring problems are caught before they become expensive.
+
+### Exam Hints
+
+> Always show the full progression in an exam answer: sketch → low-fi prototype → user feedback → iteration → high-fi. Missing any step suggests you do not understand why the process works.
+>
+> **Common mistake:** Skipping the low-fidelity test and going straight to high-fidelity. If you discover a fundamental problem at the high-fidelity stage, you have wasted all the time spent building it.
+
+---
+
+## 8. Human-Centered Design (HCD)
+
+### Plain-English Introduction
+**Human-Centered Design** is a design approach that keeps real users involved at every stage of the process — not just at the end when it is too late to make significant changes. Rather than designing for users based on assumptions, HCD requires designers to observe, interview, and test with actual users continuously.
+
+The underlying principle is: **the people who will use the design know more about their own needs than any designer does.**
+
+> **How this relates to what came before:** The design process in Section 11 and the prototyping stage in Section 7 both describe cycles of building and testing. HCD is the philosophy that explains *why* those cycles exist — because users always know things the designer does not.
+
+### Formal Definition
+
+> **Human-Centered Design** = a design approach that actively involves users throughout the process — empathize, define, ideate, prototype, test — to ensure solutions meet real needs rather than assumed needs.
+
+### Every Term Explained
+
+| Phase | What you actually do |
+|-------|---------------------|
+| **Empathize** | Observe and interview real users to understand their actual frustrations, motivations, and behaviours — not what you assume they are. |
+| **Define** | Synthesize what you learned into a clear, specific problem statement. This is what you are actually designing for. |
+| **Ideate** | Generate as many possible solutions as you can without judging them. Quantity over quality at this stage. |
+| **Prototype** | Build low-fidelity versions of your most promising ideas quickly and cheaply. |
+| **Test** | Put the prototypes in front of real users and observe what happens. Do not explain or defend — watch and listen. |
+
+### Fully Worked Example — Empathy Research to Persona to Feature
+
+**Step 1 — Conduct empathy interviews.**
+Ask 8 university students: "What frustrates you most about studying at home?"
+
+**Step 2 — Record and code the responses.**
+
+| Participant | Response | Code |
+|-------------|----------|------|
+| 1 | "I lose track of time and end up stressed" | Time-management frustration |
+| 2 | "I forget to take breaks" | Time-management frustration |
+| 3 | "My desk is always messy" | Environment frustration |
+| 4 | "I can't focus for long periods" | Focus frustration |
+| 5 | "I never know how long I've been studying" | Time-management frustration |
+| 6 | "Notifications keep interrupting me" | Focus frustration |
+| 7 | "I feel guilty when I take breaks" | Time-management frustration |
+| 8 | "I run out of energy but keep going anyway" | Time-management frustration |
+
+**Step 3 — Count the codes.**
+
+| Code | Count | Percentage |
+|------|-------|-----------|
+| Time-management frustration | 5 | 62.5% |
+| Focus frustration | 2 | 25% |
+| Environment frustration | 1 | 12.5% |
+
+Time-management frustration is the dominant theme. This becomes the focus of the Define phase.
+
+**Step 4 — Define the problem.**
+"University students studying at home struggle to manage their time effectively, leading to stress and poor study sessions."
+
+**Step 5 — Create a persona based on the research.**
 
 | Attribute | Value |
 |-----------|-------|
-| **Name** | Alex (27 y, graduate student) |
-| **Goal** | Finish assignments on schedule. |
-| **Frustration** | Loses track of time → stress. |
-| **Needs** | Simple visual timer and break reminders. |
+| **Name** | Alex |
+| **Age** | 27 |
+| **Role** | Graduate student |
+| **Goal** | Complete assignments without feeling overwhelmed |
+| **Frustration** | Loses track of time → sessions run too long → stress |
+| **Needs** | A simple, visible timer and automatic break reminders |
+| **Quote** | "I lose track of time and end up feeling stressed" |
 
-**Step 5 – Use persona in design:**  
-- Design a **“Study‑Timer”** widget for the well‑being app.  
+**Step 6 — Ideate solutions for Alex.**
+- A countdown timer visible on screen at all times
+- A notification that fires every 45 minutes suggesting a 10-minute break
+- A progress bar showing how much of a study session remains
 
-**Step 6 – Prototype & test:**  
-- Low‑fi paper mock‑up of timer button.  
-- User test: Alex finds the button intuitive, suggests a color change.  
+**Step 7 — Prototype and test the most promising idea.**
+Build a low-fidelity paper sketch of a "Study Timer" widget. Test it with two Alex-type participants.
 
-**Result:** The HCD loop produced a feature directly tied to a real user need.  
+Feedback: Both find the concept useful. One suggests adding a session history so they can see how much they studied.
 
-### 8.5 Connections  
-- **Empathy** links to **quantitative vs. qualitative research** (Section 9).  
-- **Persona** is an artifact used later in **storyboards** (Section 12).  
+**Answer:** The HCD process produced a design feature — the Study Timer widget — that is directly traceable to a real user need identified through research, not assumed by the designer.
 
-### 8.6 One‑Sentence Summary  
-Human‑Centered Design puts real users at the heart of every design step, ensuring solutions truly meet their needs.  
+> **What this means in practice:** Without the interviews, a designer might have built a mood tracker or a to-do list. The research showed that time management was the real problem. HCD ensures you solve the right problem.
 
-### 8.7 Exam Hints & Common Mistakes  
+### Connections
+- The empathy interviews in this example are qualitative research — see Section 9 for how to analyse them properly.
+- The persona created here feeds directly into the storyboard process mentioned in Section 10.
 
-> **⚠️ Exam Hint:** Always cite at least one direct user quote when defining the problem.  
-> **Common mistake:** Skipping the **Define** phase and jumping straight to ideation, which leads to unfocused solutions.  
+### One-Sentence Summary
+Human-Centered Design ensures you are solving the right problem for real users, by keeping users involved throughout the entire design process.
 
----  
+### Exam Hints
 
-## 9. **Quantitative vs. Qualitative Research**  
+> When answering an HCD question, always include: a direct user quote as evidence from the empathy phase, a coded theme from the define phase, and a feature or design decision that is traceable to that theme.
+>
+> **Common mistake:** Jumping from empathy straight to prototyping, skipping the define phase. Without a clear problem statement you do not know what you are building.
 
-### 9.1 Plain‑English Introduction  
-**Quantitative research** gives you numbers (how many, how often). **Qualitative research** tells you *why* and *how* people feel.  
+---
 
-### 9.2 Formal Definitions  
+## 9. Quantitative vs Qualitative Research
 
-- **Quantitative research** = *the systematic collection of numerical data that can be statistically analyzed.*  
-- **Qualitative research** = *the collection of non‑numerical data (words, images, observations) that reveal meanings, motivations, and experiences.*  
+### Plain-English Introduction
+Design decisions should be based on evidence, not guesswork. There are two types of evidence: **quantitative** data (numbers — how many, how often, how long) and **qualitative** data (words, observations — why, how, what it feels like). Good design research usually uses both.
 
-### 9.3 Explain Every Part  
+Quantitative data tells you that a problem exists and how big it is. Qualitative data tells you why it exists and what it means to the people experiencing it. Neither is sufficient on its own.
+
+### Formal Definitions
+
+> **Quantitative research** = the systematic collection of numerical data that can be statistically analysed to identify patterns and measure outcomes.
+>
+> **Qualitative research** = the collection of non-numerical data — words, observations, images — that reveals meanings, motivations, and experiences.
+
+### Every Term Explained
 
 | Aspect | Quantitative | Qualitative |
-|--------|--------------|-------------|
-| **Data type** | Numbers (counts, percentages). | Text, audio, video, images. |
-| **Tools** | Surveys with check‑boxes, analytics logs. | Interviews, focus groups, diaries, photographs. |
-| **Goal** | Measure *what* and *how much*. | Understand *why* and *how*. |
-| **Analysis** | Statistics (mean, median, %). | Thematic coding, narrative analysis. |
+|--------|-------------|------------|
+| **Data type** | Numbers — counts, percentages, averages, ratings | Words, audio, video, images, observations |
+| **Collection tools** | Surveys with tick boxes, app analytics, usage logs | Interviews, focus groups, observation sessions, diaries |
+| **Goal** | Measure what happens and how much | Understand why it happens and what it means |
+| **Analysis method** | Statistics — mean, median, percentage, frequency | Thematic coding — identifying patterns in language |
+| **Output** | "62% of users abandon the app within 3 days" | "Users feel the app is confusing because they cannot find the settings" |
 
-### 9.4 Fully Worked Example – Mixed‑Methods Study  
+### Fully Worked Example — Mixed-Methods Evaluation of the Well-being App
 
-**Goal:** Evaluate a new “Well‑being Dashboard” app.  
+**Goal:** Evaluate how well the Well-being Tracker app is meeting user needs.
 
-#### Quantitative Part  
+#### Part A — Quantitative Research
 
-1. **Survey** of 20 users: “How often do you open the app per day?”  
-2. **Responses:** 5 × 0, 8 × 1, 4 × 2, 3 × 3.  
+**Method:** Survey of 20 users. Question: "How many times per day do you open the app?"
 
-**Calculate average usage:**  
+**Responses collected:**
 
-\[
-\text{Mean} = \frac{(5\cdot0)+(8\cdot1)+(4\cdot2)+(3\cdot3)}{20}
-= \frac{0+8+8+9}{20}
-= \frac{25}{20}
-= 1.25 \text{ times per day}
-\]
+| Times per day | Number of users |
+|--------------|----------------|
+| 0 | 5 |
+| 1 | 8 |
+| 2 | 4 |
+| 3 | 3 |
 
-**Result:** Users open the app on average **1.25 times/day**.  
+**Calculate the mean (average) usage:**
 
-#### Qualitative Part  
+$$\text{Mean} = \frac{(5 \times 0) + (8 \times 1) + (4 \times 2) + (3 \times 3)}{20} = \frac{0 + 8 + 8 + 9}{20} = \frac{25}{20} = 1.25 \text{ times per day}$$
 
-1. **Interview** 3 users about “Why do you open the app?”  
-2. **Answers:**  
-   - *User A*: “When I feel stressed, I check my mood score.”  
-   - *User B*: “I log my sleep after waking up.”  
-   - *User C*: “I forget to open it, so I set a reminder.”  
+**Quantitative finding:** Users open the app an average of **1.25 times per day**. This is a relatively low engagement rate, suggesting a potential problem — but the number alone does not tell us why.
 
-3. **Thematic coding:**  
-   - **Stress‑relief** (1 mention)  
-   - **Sleep tracking** (1 mention)  
-   - **Reminder need** (1 mention)  
+#### Part B — Qualitative Research
 
-**Interpretation:** While usage frequency is modest, users value the app for stress and sleep monitoring, suggesting we should highlight those features.  
+**Method:** Follow-up interviews with 3 users. Question: "Why do you open the app — or why don't you?"
 
-### 9.5 Connections  
-- **Quantitative** gives the **baseline metric** (1.25 times/day) used in the **brief** (Section 6).  
-- **Qualitative** feeds the **empathy** stage of HCD (Section 8).  
+**Responses:**
 
-### 9.6 One‑Sentence Summary  
-Quantitative research provides numbers; qualitative research explains the reasons behind those numbers.  
+| User | Response | Code |
+|------|----------|------|
+| A | "When I feel stressed I check my mood score — it helps me calm down" | Stress-relief use |
+| B | "I log my sleep every morning after I wake up" | Routine-based use |
+| C | "Honestly I forget about it — I need a reminder" | Forgetting barrier |
 
-### 9.7 Exam Hints & Common Mistakes  
+**Qualitative finding:** Low usage is not because the app is disliked — it is because users forget it exists. One user uses it as a stress-relief tool (high value). Two have regular routines around it. The fix is likely a notification or reminder feature, not a redesign.
 
-> **⚠️ Exam Hint:** Always present at least one statistic *and* one user quote when answering a mixed‑methods question.  
-> **Common mistake:** Treating qualitative data as “just anecdotes” without systematic coding.  
+#### Combining the findings
 
----  
+The quantitative data showed **what** (low average usage). The qualitative data explained **why** (forgetting, not dislike). Together they produce a design recommendation: add an optional daily reminder notification.
 
-## 10. **Artifacts & Tools**  
+> **What this means in practice:** If we had only looked at the numbers, we might have concluded the app was failing and redesigned it. The qualitative interviews told us the real problem was much simpler to fix.
 
-### 10.1 Plain‑English Introduction  
-**Artifacts** are the tangible outputs (sketches, personas, storyboards). **Tools** are the software or physical items we use to create them (Figma, paper, Miro).  
+### Connections
+- The qualitative interviews here use the same coding technique as the HCD empathy phase in Section 8.
+- The quantitative usage data provides the baseline metric that would go into a brief's success criteria (Section 6).
 
-### 10.2 Formal Definitions  
+### One-Sentence Summary
+Quantitative research tells you what is happening and how much; qualitative research tells you why — use both together to make well-informed design decisions.
 
-- **Artifact** = *any created object that represents a design idea (e.g., persona, storyboard, prototype).*  
-- **Tool** = *the medium or software used to produce an artifact.*  
+### Exam Hints
 
-### 10.3 Explain Every Part  
+> In any exam answer about research, always present at least one specific statistic and at least one direct user quote. A research answer with only numbers or only quotes is incomplete.
+>
+> **Common mistake:** Treating qualitative responses as anecdotes rather than data. Qualitative data requires systematic coding — you identify themes, count how often they appear, and use that pattern as evidence.
 
-| Artifact | Example & Purpose |
-|----------|-------------------|
-| **Persona** | A fictional user profile that guides design decisions. |
-| **Problem scenario** | A short narrative (≈ 300 words) describing a user’s current pain point. |
-| **Future use scenario** | A narrative showing how the user would interact with the new solution. |
-| **Storyboard** | A series of drawings that illustrate a user’s journey step‑by‑step. |
-| **Usability report** | Document summarizing test results, issues, and recommendations. |
-| **Design‑in‑action video** | A short video (like a Kickstarter pitch) that demonstrates the final solution. |
+---
 
-| Tool | Example & Use |
-|------|---------------|
-| **Figma** | Digital UI design, high‑fidelity mock‑ups, interactive prototypes. |
-| **Miro** | Online whiteboard for affinity diagramming, empathy maps. |
-| **Paper & pen** | Low‑fi sketching, quick idea capture. |
-| **Camera** | Recording usability tests for later analysis. |
+## 10. Artifacts and Tools
 
-### 10.4 Fully Worked Example – Creating a Persona (Quantitative + Qualitative Data)  
+### Plain-English Introduction
+Throughout the design process, designers produce **artifacts** — concrete outputs that document, communicate, or test design ideas. Each artifact serves a specific purpose at a specific stage of the process. **Tools** are the software or physical materials used to create those artifacts.
 
-1. **Collect data:**  
-   - Quantitative: 12 participants, 8 female, 4 male.  
-   - Qualitative: Common quote – “I wish I could track my mood without opening an app every day.”  
+Knowing which artifact to produce at which stage, and which tool to use to produce it, is a core practical skill in interaction design.
 
-2. **Select dominant segment:**  
-   - Female, age 25‑35, works from home.  
+### Formal Definitions
 
-3. **Build persona:**  
+> **Artifact** = any created object that represents, communicates, or tests a design idea at a particular stage of the design process.
+>
+> **Tool** = the software application or physical material used to create a design artifact.
 
-| Field | Value |
-|-------|-------|
-| **Name** | Maya (29 y, remote graphic designer) |
-| **Goal** | Maintain mental health while juggling projects. |
-| **Frustration** | Too many apps; wants a quick mood check. |
-| **Need** | One‑tap mood widget on desktop. |
-| **Quote** | “I need something that fits into my workflow, not another distraction.” |
+### Every Term Explained
 
-4. **Use persona:**  
-   - Design a **desktop widget** (low‑fi paper prototype).  
-   - Test with Maya‑type user → positive feedback.  
+**Design artifacts:**
 
-**Result:** The persona guided a focused design solution.  
+| Artifact | What it is | When it is used | Key requirement |
+|----------|-----------|----------------|----------------|
+| **Persona** | A fictional but research-based user profile | After empathy research, before ideation | Must include a direct user quote |
+| **Problem scenario** | A short narrative (approx. 300 words) describing a user's current pain point | During the Define phase | Must describe the current situation, not the solution |
+| **Future use scenario** | A narrative showing how a user would interact with the proposed solution | During ideation or after prototyping | Must reference the persona and the solution |
+| **Storyboard** | A sequence of drawn panels showing a user's journey through a scenario | After scenarios are written, before or alongside prototyping | Must show a complete journey with a beginning, middle, and end |
+| **Usability report** | A document summarising test results, problems found, and recommendations | After user testing | Must distinguish between observed problems and inferred causes |
+| **Design-in-action video** | A short video demonstrating the solution in use | At the end of the project | Must show real or simulated user interaction, not just a slide deck |
 
-### 10.5 Connections  
-- **Persona** is created during the **empathize** phase (Section 8).  
-- **Storyboard** will later illustrate the **user journey** (Section 12).  
+**Design tools:**
 
-### 10.6 One‑Sentence Summary  
-Artifacts are the concrete outputs of design; tools are the means we use to create them.  
+| Tool | What it does | When to use it |
+|------|-------------|----------------|
+| **Figma** | Browser-based digital design — wireframes, high-fidelity mock-ups, interactive prototypes | Mid to late prototyping stage |
+| **Miro** | Online whiteboard — affinity diagrams, empathy maps, journey maps | Research and define phases |
+| **Paper and pen** | Low-fidelity sketching and paper prototyping | Early ideation and low-fi prototyping |
+| **Camera / screen recorder** | Recording usability tests | During user testing |
 
-### 10.7 Exam Hints & Common Mistakes  
+### Fully Worked Example — Building a Complete Storyboard
 
-> **⚠️ Exam Hint:** When asked to produce a persona, always include a direct user quote.  
-> **Common mistake:** Forgetting to tie the artifact back to a specific research insight.  
+A storyboard is listed in the artifacts table above but has not yet been demonstrated. Here is a complete example.
 
----  
+**Persona:** Alex, 27, graduate student, frustrated by losing track of time while studying.
 
-## 11. **Interaction Design Process**  
+**Scenario:** Alex uses the Study Timer widget for the first time.
 
-### 11.1 Plain‑English Introduction  
-**Interaction design** is about shaping *how users and digital products communicate*—the steps they take, the feedback they receive, and the overall experience.  
+**Storyboard panels:**
 
-### 11.2 Formal Definition  
-> **Interaction Design Process** = *a cyclical series of stages (understand → define → ideate → prototype → test) that focus on the behavior of users with digital systems.*  
+| Panel | Image description | Caption |
+|-------|------------------|---------|
+| 1 | Alex sits at a desk looking stressed, clock shows 11pm | "Alex has been studying for 3 hours without realising it" |
+| 2 | Alex opens the Well-being app on their laptop | "Alex remembers they installed the app last week" |
+| 3 | Alex sets the Study Timer for 45 minutes | "Alex sets a 45-minute focus session" |
+| 4 | A gentle notification appears: "Time for a break!" | "After 45 minutes the app reminds Alex to rest" |
+| 5 | Alex stands up, stretches, looks relieved | "Alex takes a 10-minute break feeling in control" |
+| 6 | Alex returns to studying, timer resets | "Alex returns refreshed and starts a new session" |
 
-### 11.3 Explain Every Part  
+**What this storyboard communicates:** It shows a complete user journey — the problem (panel 1), the discovery of the solution (panels 2–3), the key interaction (panel 4), and the positive outcome (panels 5–6). A reviewer can understand the value of the feature without seeing any code or high-fidelity design.
 
-| Stage | What you do (plain English) |
-|-------|-----------------------------|
-| **Understand** | Learn who the users are and what they need (research). |
-| **Define** | Write a clear problem statement. |
-| **Ideate** | Generate many possible solutions (brainstorm). |
-| **Prototype** | Build low‑ to high‑fidelity models. |
-| **Test** | Observe real users interacting, collect feedback. |
-| **Iterate** | Refine the design based on test results; repeat. |
+> **What this means in practice:** Storyboards are communication tools. They let you share a design idea with stakeholders, clients, or team members who may not be able to read a Figma file.
 
-### 11.4 Fully Worked Example – Designing a “Break‑Reminder” Feature  
+### Connections
+- The persona used in this storyboard was created during the HCD empathy phase in Section 8.
+- The storyboard communicates the same scenario that would become a future use scenario written artifact.
 
-1. **Understand** – Survey 15 remote workers; 10 say they forget to take breaks.  
-2. **Define** – “Create a non‑intrusive reminder that prompts a 5‑minute break every 90 minutes.”  
-3. **Ideate** – Brainstorm three ideas:  
-   - Pop‑up notification.  
-   - Subtle sound cue.  
-   - Animated icon in the corner.  
-4. **Prototype (low‑fi)** – Sketch three screen mock‑ups on paper, each showing one idea.  
-5. **Test** – Ask 3 users to interact with each sketch (paper‑based “click” simulation).  
-   - Feedback: Pop‑up feels interruptive; sound cue is ignored; icon is liked.  
-6. **Iterate** – Refine icon design, add tooltip “Time for a short stretch!”.  
+### One-Sentence Summary
+Artifacts are the concrete outputs of design work — each one serves a specific purpose at a specific stage — and tools are the means used to create them.
 
-**Result:** The final high‑fidelity prototype (in Figma) shows the icon with tooltip, ready for implementation.  
+### Exam Hints
 
-### 11.5 Connections  
-- **Iterative** nature mirrors **Human‑Centered Design** (Section 8).  
-- **Quantitative** data (survey) informs the **understand** stage.  
+> When asked to produce a persona, always include: name, age, role, goal, frustration, need, and a direct user quote from your research. A persona without a quote is not grounded in evidence.
+>
+> When asked to produce a storyboard, always show a complete journey: the problem, the solution being used, and the positive outcome.
+>
+> **Common mistake:** Producing an artifact that is disconnected from the research. Every artifact must be traceable back to something a real user said or did.
 
-### 11.6 One‑Sentence Summary  
-Interaction design is a repeatable cycle that shapes how users act with digital products, constantly improving through testing.  
+---
+
+## 11. The Interaction Design Process
+
+### Plain-English Introduction
+**Interaction design** is the practice of shaping how people interact with digital products — the steps they take, the feedback they receive, and the overall experience of using the system.
+
+It is not a linear process that starts at step 1 and ends at step 5. It is a **cycle** — you always return to earlier stages as you learn more. Every test reveals new information that sends you back to define, ideate, or prototype again. This cycling is not failure — it is how good design works.
+
+> **How this relates to HCD:** The interaction design process and Human-Centered Design (Section 8) describe the same cycle with slightly different labels. HCD emphasises the philosophy — keep users central. The interaction design process describes the practical stages — understand, define, ideate, prototype, test. They are two ways of describing the same approach.
+
+### Formal Definition
+
+> **Interaction Design Process** = a cyclical series of stages — understand, define, ideate, prototype, test — focused on shaping the behaviour of users interacting with digital systems, repeated until the design satisfies the brief.
+
+### Every Stage Explained
+
+| Stage | What you do | Output |
+|-------|-------------|--------|
+| **Understand** | Research who the users are, what they need, and what problems they face | Research data — interviews, surveys, observations |
+| **Define** | Synthesize the research into a clear problem statement | A problem statement and persona |
+| **Ideate** | Generate as many possible solutions as possible without judging | A list of ideas, rough sketches |
+| **Prototype** | Build the most promising ideas as low-fi then high-fi artifacts | Sketches, paper prototypes, Figma mock-ups |
+| **Test** | Put prototypes in front of real users and observe | User feedback, usability findings |
+| **Iterate** | Use test findings to refine the design and repeat the cycle | An improved prototype ready for the next test |
+
+### Fully Worked Example — Designing a Break-Reminder Feature
+
+**Step 1 — Understand.** Survey 15 remote workers: "Do you regularly forget to take breaks while working from home?"
+
+- 10 out of 15 say yes (67%)
+
+This is enough to confirm the problem is real and widespread.
+
+**Step 2 — Define.** Write a problem statement based on the research:
+
+"Remote workers frequently lose track of time and forget to take breaks, leading to fatigue and reduced concentration. A non-intrusive reminder system that suggests a 5-minute break every 90 minutes would address this need."
+
+**Step 3 — Ideate.** Generate possible solutions without judging:
+
+| Idea | Description |
+|------|-------------|
+| A | Full-screen pop-up notification |
+| B | Subtle audio chime |
+| C | Small animated icon in the corner of the screen |
+| D | A progress bar that fills over 90 minutes |
+
+**Step 4 — Prototype.** Create a low-fidelity paper sketch of each of the four ideas. Each sketch shows a phone or laptop screen with the reminder in place.
+
+**Step 5 — Test.** Ask 3 users to look at each sketch and react.
+
+| Idea | User feedback |
+|------|--------------|
+| A — Pop-up | "Too intrusive — I'd dismiss it immediately" |
+| B — Audio chime | "I'd tune it out within a day" |
+| C — Animated icon | "This is subtle enough that I'd notice it without being annoyed" |
+| D — Progress bar | "I like this but it might distract me while I'm trying to focus" |
+
+**Step 6 — Iterate.** Idea C (animated icon) is preferred. Refine it:
+- Add a tooltip that appears on hover: "Time for a short stretch!"
+- Make the animation subtle — a gentle pulse rather than a flashing colour
+- Build the refined version as a high-fidelity Figma prototype
+
+**Step 7 — Test again.** The refined high-fidelity prototype is tested with 5 users. All 5 find it acceptable. Two suggest adding the ability to dismiss the reminder for 15 minutes. This feedback goes into the next iteration.
+
+**Answer:** The break-reminder feature went through two full cycles of the interaction design process before reaching a high-fidelity prototype ready for development. Each cycle produced specific, actionable findings that improved the design.
+
+> **What this means in practice:** The first test eliminated three ideas immediately. Without testing, any of those ideas might have been built. The process saved development time by finding problems at the paper stage.
+
+### Connections
+- The understand stage uses quantitative and qualitative research methods from Section 9.
+- The define stage produces the problem statement and persona from Section 8 and Section 10.
+- The prototype and test stages use the techniques from Sections 3, 4, and 7.
+
+### One-Sentence Summary
+The interaction design process is a repeatable cycle of understanding, defining, ideating, prototyping, and testing — it continues until the design demonstrably solves the right problem for real users.
+
+### Exam Hints
+
+> In an exam, if asked to describe the interaction design process, do not just list the stages — show how each stage produces an output that feeds the next stage, and explain why the process is cyclical rather than linear.
+>
+> **Common mistake:** Describing the process as if it ends after one cycle. Real interaction design always involves multiple cycles. A design that has only been tested once is almost certainly not finished.
+
+---
+
+## Summary Table
+
+| Concept | Definition | Key output | Common mistake |
+|---------|-----------|-----------|----------------|
+| **Design** | Purposeful creation that improves a situation by solving a brief | Sketch, prototype, or finished product | Treating the prototype as the final product |
+| **Simulation** | A cheap representation of a future product used to test ideas | Wireframe, model, mock-up | Not stating what the simulation is testing |
+| **Prototype** | A testable artifact implementing enough features for user feedback | Low-fi or high-fi prototype | Building high-fi before testing low-fi |
+| **Sketch** | A quick low-detail drawing to explore ideas | Paper or digital sketch | Treating a sketch as too precious to change |
+| **Improvement** | A measurable change from current state to preferred state | Before/after metrics | No baseline measurement |
+| **Brief** | A document defining problem, users, constraints, and success criteria | Written brief document | Ignoring one or more constraints |
+| **HCD** | A design approach keeping real users involved throughout | Research findings, persona, tested prototype | Skipping the define phase |
+| **Quantitative research** | Collection and analysis of numerical data | Statistics, averages, percentages | Only reporting numbers without explanation |
+| **Qualitative research** | Collection of non-numerical data revealing meaning | Coded themes, user quotes | Treating responses as anecdotes rather than data |
+| **Artifacts** | Concrete design outputs at each stage | Persona, storyboard, scenario, report | Producing artifacts not grounded in research |
+| **Interaction design process** | A cyclical process of understand, define, ideate, prototype, test | Iterated prototype | Treating the process as linear and stopping after one cycle |
+
+## Key Takeaways
+
+- Design is always about solving a specific problem for specific people within specific constraints — it is never just about aesthetics.
+- Every design claim must be backed by evidence. "It feels better" is not a design argument. "It reduced task time by 40%" is.
+- The design process is cyclical. Testing always sends you back to earlier stages. This is how it is supposed to work.
+- Low-fidelity prototypes should always come before high-fidelity ones. Find big problems with paper before spending hours in Figma.
+- Quantitative and qualitative research answer different questions. Use both — numbers tell you what, words tell you why.
+- Every artifact must be traceable to real user research. A persona with no user quote is not evidence-based design.
+- The brief is the contract. A solution that violates a constraint is not a valid solution, regardless of how good it looks.
