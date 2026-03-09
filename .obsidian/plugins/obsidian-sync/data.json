@@ -1,0 +1,8 @@
+{
+  "serverUrl": "192.168.0.148:8089",
+  "authToken": "6b03dcc99d3233482404f836afd1a5e161f6f99ad66a3a8ccf98781c7d1a2597",
+  "deviceId": "ad09228e-20f5-4977-8a35-3cd48889245d",
+  "enabled": true,
+  "uploadOnConnect": true,
+  "downloadOnConnect": false
+}

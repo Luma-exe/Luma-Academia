@@ -1,0 +1,10 @@
+{
+  "id": "homesync",
+  "name": "HomeSync",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "Real-time vault sync via your own home server.",
+  "author": "Luma",
+  "authorUrl": "https://github.com/Luma-exe",
+  "isDesktopOnly": true
+}
