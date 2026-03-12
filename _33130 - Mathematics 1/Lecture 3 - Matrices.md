@@ -209,7 +209,7 @@ $$\Delta = \begin{vmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} 
 $$= a_{11}(a_{22}a_{33} - a_{23}a_{32}) - a_{12}(a_{21}a_{33} - a_{23}a_{31}) + a_{13}(a_{21}a_{32} - a_{22}a_{31})$$
 
 ### Steps to Compute a 3×3 Determinant
-
+	
 1. Take the **top row** elements: $a_{11},\ a_{12},\ a_{13}$
 2. Apply signs: $+,\ -,\ +$
 3. Multiply each by the determinant of the **minor matrix** (the $2 \times 2$ matrix left after removing that element's row and column)
