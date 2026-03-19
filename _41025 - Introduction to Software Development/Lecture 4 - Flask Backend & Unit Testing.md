@@ -1,3 +1,4 @@
+
 > [!faq] About this Lecture 
 > Class: 41025
 > Subject: #introductionToSoftwareDevelopment

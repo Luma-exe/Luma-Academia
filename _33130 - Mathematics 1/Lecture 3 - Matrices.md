@@ -5,6 +5,10 @@
 > Date: 05/03/2025 
 > Topics: #math
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/yRwQ7A6jVLk" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ## What is a Matrix?
 
 - A **matrix** is a rectangular array of numbers arranged in rows and columns

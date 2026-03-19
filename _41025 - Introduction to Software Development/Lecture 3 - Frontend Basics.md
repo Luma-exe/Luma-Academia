@@ -3,7 +3,7 @@
 > Class: 41025
 > Subject: #introductionToSoftwareDevelopment
 > Date: 12/03/2025 
-> Topics: 
+> Topics: #javascript #html #css
 
 ## Static Webpages with HTML
 
