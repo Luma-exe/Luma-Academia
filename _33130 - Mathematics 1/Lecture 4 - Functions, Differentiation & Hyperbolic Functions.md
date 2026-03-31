@@ -87,11 +87,13 @@ $$h'(x) = A \cdot f'(x) + B \cdot g'(x)$$
 
 $$\frac{dy}{dx} = u \frac{dv}{dx} + v \frac{du}{dx}$$
 
-- In plain words: **(first times derivative of second) + (second times derivative of first)**
+- In plain words: **(first x derivative of second) + (second x derivative of first)**
 - Example: If $y = x^2 \sin x$, then:
   - $u = x^2$, so $\frac{du}{dx} = 2x$
   - $v = \sin x$, so $\frac{dv}{dx} = \cos x$
   - Therefore: $\frac{dy}{dx} = x^2 \cos x + 2x \sin x$
+
+![[Pasted image 20260324102107.png]]
 
 ---
 
