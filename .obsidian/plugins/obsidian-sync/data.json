@@ -2,7 +2,7 @@
   "serverUrl": "lumaplayground.com:8089",
   "authToken": "01096f27b98f97c63eeda2efec3f7edbe3154f65116439d19d8af75556cbd281",
   "deviceId": "0f1eb12d-715f-4616-90f2-1e99fff951cf",
-  "enabled": true,
+  "enabled": false,
   "uploadOnConnect": false,
   "downloadOnConnect": false
 }
