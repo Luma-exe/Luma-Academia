@@ -5,7 +5,7 @@
 > Date: 2/04/2025 
 > Topics: #design 
 
-**Incomplete Missing Part 2**
+# **Incomplete Missing Part 2**
 
 ## Recap — What We've Covered So Far
 

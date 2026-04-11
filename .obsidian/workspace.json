@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_41025 - Introduction to Software Development/Lecture 6 - Connecting Backend to the Database.md",
+                "file": "_31260 - Fundamentals of Interaction Design/Lecture 7 - Scenarios, Storyboards & Prototypes.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 6 - Connecting Backend to the Database"
+              "title": "Lecture 7 - Scenarios, Storyboards & Prototypes"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_41025 - Introduction to Software Development/Lecture 6 - Connecting Backend to the Database.md",
+                "file": "_31260 - Fundamentals of Interaction Design/Lecture 7 - Scenarios, Storyboards & Prototypes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 6 - Connecting Backend to the Database"
+              "title": "Outline of Lecture 7 - Scenarios, Storyboards & Prototypes"
             }
           },
           {
@@ -163,7 +163,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -187,8 +187,13 @@
   },
   "active": "626b4c54c6d62428",
   "lastOpenFiles": [
-    "_41025 - Introduction to Software Development/Lecture 7 - Controller of MVC.md",
+    "_31268 - Web Systems/Lecture 7 - Security.md",
+    "_31268 - Web Systems/Lecture 6 - Operating Systems III.md",
+    "_31260 - Fundamentals of Interaction Design/Lecture 7 - Scenarios, Storyboards & Prototypes.md",
+    "_31260 - Fundamentals of Interaction Design/Lecture 6 - Conceptualising Interaction.md",
+    "_41025 - Introduction to Software Development/Lecture 0 - Agile, Requirements & Planning, Setups.md",
     "_41025 - Introduction to Software Development/Lecture 6 - Connecting Backend to the Database.md",
+    "_41025 - Introduction to Software Development/Lecture 7 - Controller of MVC.md",
     "_41025 - Introduction to Software Development/Lecture 5 - Database Design & Implementation.md",
     "_41025 - Introduction to Software Development/Lecture 4 - Flask Backend & Unit Testing.md",
     "_33130 - Mathematics 1/Lecture 7 - Integration Techniques.md",
@@ -197,11 +202,9 @@
     "_33130 - Mathematics 1/Lecture 4 - Functions, Differentiation & Hyperbolic Functions.md",
     "_33130 - Mathematics 1/Lecture 2 - 3D Vectors, Planes, Lines & Cross‑Product Essentials.md",
     "_33130 - Mathematics 1/Lecture 5 - Inverse Functions, Logarithms & Inverse Trig Hyperbolic Functions.md",
-    "_31260 - Fundamentals of Interaction Design/Lecture 6 - Conceptualising Interaction.md",
     "desktop.ini",
     "_31260 - Fundamentals of Interaction Design/Lecture 5 - Representing Users in the Design Process.md",
     "_31260 - Fundamentals of Interaction Design/Lecture 4 - Designing Technology for People Cognitive and Perceptual Aspects of Interactions.md",
-    "_31268 - Web Systems/Lecture 6 - Operating Systems III.md",
     "University/Western Sydney University/Spring 2025/_INFO3019 Project Management/Lecture 2 - The Project Management in Information Technology.md",
     "_31268 - Web Systems/Lecture 5 - CSS.md",
     "_41025 - Introduction to Software Development/Lecture 3 - Frontend Basics.md",
@@ -212,9 +215,6 @@
     "_31268 - Web Systems/Lecture 1 - Introduction to Web Systems.md",
     "Images/Pasted image 20260324102107.png",
     "_31260 - Fundamentals of Interaction Design/Lecture 2 - Design Principles, Usability, and Heuristics.md",
-    "_31260 - Fundamentals of Interaction Design/Lecture 1 - Introduction and Design Principles.md",
-    "_31260 - Fundamentals of Interaction Design/Lecture 3 - Interaction Design Process.md",
-    "_33130 - Mathematics 1/Lecture 1 - Introduction to Vectors and 3D Space.md",
     "_31260 - Fundamentals of Interaction Design",
     "_41025 - Introduction to Software Development",
     "_33130 - Mathematics 1",
