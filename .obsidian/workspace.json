@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_31260 - Fundamentals of Interaction Design/Lecture 7 - Scenarios, Storyboards & Prototypes.md",
+                "file": "_31268 - Web Systems/Lecture 7 - Security.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 7 - Scenarios, Storyboards & Prototypes"
+              "title": "Lecture 7 - Security"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_31260 - Fundamentals of Interaction Design/Lecture 7 - Scenarios, Storyboards & Prototypes.md",
+                "file": "_31268 - Web Systems/Lecture 7 - Security.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 7 - Scenarios, Storyboards & Prototypes"
+              "title": "Outline of Lecture 7 - Security"
             }
           },
           {
@@ -187,16 +187,18 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
+    "_31268 - Web Systems/Lecture 8 - Computer Science I.md",
     "_31268 - Web Systems/Lecture 7 - Security.md",
-    "_31268 - Web Systems/Lecture 6 - Operating Systems III.md",
+    "_31268 - Web Systems/Lecture 1 - Introduction to Web Systems.md",
+    "_33130 - Mathematics 1/Lecture 7 - Integration Techniques.md",
     "_31260 - Fundamentals of Interaction Design/Lecture 7 - Scenarios, Storyboards & Prototypes.md",
+    "_31268 - Web Systems/Lecture 6 - Operating Systems III.md",
     "_31260 - Fundamentals of Interaction Design/Lecture 6 - Conceptualising Interaction.md",
     "_41025 - Introduction to Software Development/Lecture 0 - Agile, Requirements & Planning, Setups.md",
     "_41025 - Introduction to Software Development/Lecture 6 - Connecting Backend to the Database.md",
     "_41025 - Introduction to Software Development/Lecture 7 - Controller of MVC.md",
     "_41025 - Introduction to Software Development/Lecture 5 - Database Design & Implementation.md",
     "_41025 - Introduction to Software Development/Lecture 4 - Flask Backend & Unit Testing.md",
-    "_33130 - Mathematics 1/Lecture 7 - Integration Techniques.md",
     "_33130 - Mathematics 1/Lecture 6 - Integration and Applications.md",
     "_33130 - Mathematics 1/Lecture 3 - Matrices.md",
     "_33130 - Mathematics 1/Lecture 4 - Functions, Differentiation & Hyperbolic Functions.md",
@@ -212,9 +214,7 @@
     "_31268 - Web Systems/Lecture 3 - Operating Systems II.md",
     "_31268 - Web Systems/Lecture 2 - Operating Systems I.md",
     "_31268 - Web Systems/Lecture 1 - 6 Notes.md",
-    "_31268 - Web Systems/Lecture 1 - Introduction to Web Systems.md",
     "Images/Pasted image 20260324102107.png",
-    "_31260 - Fundamentals of Interaction Design/Lecture 2 - Design Principles, Usability, and Heuristics.md",
     "_31260 - Fundamentals of Interaction Design",
     "_41025 - Introduction to Software Development",
     "_33130 - Mathematics 1",
