@@ -191,8 +191,12 @@ $$\frac{d}{dx} \log_e(u) = \frac{1}{u} \cdot \frac{du}{dx}$$
 
 ---
 
-## Logarithmic Differentiation
+<div style="display: flex; justify-content: center; align-items: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/9z1Dz60mWcQ" frameborder="0" allowfullscreen></iframe>
+</div>
 
+## Logarithmic Differentiation
+ 
 - A technique for differentiating **complicated products, quotients, or power functions**
 - Works by taking $\ln$ of both sides, applying log laws to simplify, then differentiating
 
