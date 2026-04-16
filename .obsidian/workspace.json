@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_31268 - Web Systems/Lecture 7 - Security.md",
+                "file": "_41025 - Introduction to Software Development/Lecture 8 - Frontend-Backend Integration.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 7 - Security"
+              "title": "Lecture 8 - Frontend-Backend Integration"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_31268 - Web Systems/Lecture 7 - Security.md",
+                "file": "_41025 - Introduction to Software Development/Lecture 8 - Frontend-Backend Integration.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 7 - Security"
+              "title": "Outline of Lecture 8 - Frontend-Backend Integration"
             }
           },
           {
@@ -163,7 +163,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -185,20 +185,20 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "626b4c54c6d62428",
+  "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "_31268 - Web Systems/Lecture 8 - Computer Science I.md",
-    "_31268 - Web Systems/Lecture 7 - Security.md",
     "_41025 - Introduction to Software Development/Lecture 7 - Controller of MVC.md",
-    "_41025 - Introduction to Software Development/Lecture 8 -.md",
-    "_33130 - Mathematics 1/Lecture 8 -.md",
+    "_41025 - Introduction to Software Development/Lecture 8 - Frontend-Backend Integration.md",
+    "_33130 - Mathematics 1/Lecture 8 - Complex Numbers.md",
+    "_33130 - Mathematics 1/Lecture 7 - Methods of Integration.md",
+    "_33130 - Mathematics 1/Lecture 5 - Inverse Functions, Logarithms & Inverse Trig Hyperbolic Functions.md",
+    "_33130 - Mathematics 1/Lecture 6 - Integration.md",
+    "_31268 - Web Systems/Lecture 7 - Security.md",
+    "_31268 - Web Systems/Lecture 8 - Computer Science I.md",
     "_31260 - Fundamentals of Interaction Design/Lecture 8 - Immersion, Engagement & Usability Evaluation.md",
     "_31260 - Fundamentals of Interaction Design/Lecture 7 - Scenarios, Storyboards & Prototypes.md",
-    "_33130 - Mathematics 1/Lecture 6 - Integration and Applications.md",
-    "_33130 - Mathematics 1/Lecture 5 - Inverse Functions, Logarithms & Inverse Trig Hyperbolic Functions.md",
     "_33130 - Mathematics 1/Lecture 1 - Introduction to Vectors and 3D Space.md",
     "_33130 - Mathematics 1/Lecture 4 - Functions, Differentiation & Hyperbolic Functions.md",
-    "_33130 - Mathematics 1/Lecture 7 - Integration Techniques.md",
     "_31268 - Web Systems/Lecture 6 - Operating Systems III.md",
     "_31268 - Web Systems/Lecture 1 - Introduction to Web Systems.md",
     "_31260 - Fundamentals of Interaction Design/Lecture 6 - Conceptualising Interaction.md",
