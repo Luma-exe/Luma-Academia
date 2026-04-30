@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_41025 - Introduction to Software Development/Lecture 10 - React Frontend.md",
+                "file": "_33130 - Mathematics 1/Mathematics 1 - Final Notes.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 10 - React Frontend"
+              "title": "Mathematics 1 - Final Notes"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_41025 - Introduction to Software Development/Lecture 10 - React Frontend.md",
+                "file": "_33130 - Mathematics 1/Mathematics 1 - Final Notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 10 - React Frontend"
+              "title": "Outline of Mathematics 1 - Final Notes"
             }
           },
           {
@@ -187,8 +187,9 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "_41025 - Introduction to Software Development/Lecture 9 - Extending Software Features.md",
     "_41025 - Introduction to Software Development/Lecture 10 - React Frontend.md",
+    "_33130 - Mathematics 1/Mathematics 1 - Final Notes.md",
+    "_41025 - Introduction to Software Development/Lecture 9 - Extending Software Features.md",
     "_41025 - Introduction to Software Development/Lecture 8 - Frontend-Backend Integration.md",
     "_31260 - Fundamentals of Interaction Design/Lecture 6 - Designing Interactions Input-Output Technologies.md",
     "_31260 - Fundamentals of Interaction Design/Lecture 10 -  Digital Prototyping and Future Pathways.md",
@@ -212,7 +213,6 @@
     "_31268 - Web Systems/Lecture 1 - Introduction to Web Systems.md",
     "_41025 - Introduction to Software Development/Lecture 0 - Agile, Requirements & Planning, Setups.md",
     "_41025 - Introduction to Software Development/Lecture 6 - Connecting Backend to the Database.md",
-    "_41025 - Introduction to Software Development/Lecture 5 - Database Design & Implementation.md",
     "desktop.ini",
     "Images/Pasted image 20260324102107.png",
     "_31260 - Fundamentals of Interaction Design",
