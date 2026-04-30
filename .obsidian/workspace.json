@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_31260 - Fundamentals of Interaction Design/Lecture 6 - Designing Interactions Input-Output Technologies.md",
+                "file": "_41025 - Introduction to Software Development/Lecture 10 - React Frontend.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 6 - Designing Interactions Input-Output Technologies"
+              "title": "Lecture 10 - React Frontend"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_31260 - Fundamentals of Interaction Design/Lecture 6 - Designing Interactions Input-Output Technologies.md",
+                "file": "_41025 - Introduction to Software Development/Lecture 10 - React Frontend.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 6 - Designing Interactions Input-Output Technologies"
+              "title": "Outline of Lecture 10 - React Frontend"
             }
           },
           {
@@ -187,9 +187,12 @@
   },
   "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
+    "_41025 - Introduction to Software Development/Lecture 9 - Extending Software Features.md",
+    "_41025 - Introduction to Software Development/Lecture 10 - React Frontend.md",
+    "_41025 - Introduction to Software Development/Lecture 8 - Frontend-Backend Integration.md",
+    "_31260 - Fundamentals of Interaction Design/Lecture 6 - Designing Interactions Input-Output Technologies.md",
     "_31260 - Fundamentals of Interaction Design/Lecture 10 -  Digital Prototyping and Future Pathways.md",
     "_31260 - Fundamentals of Interaction Design/Lecture 9 -  Overload, Mystery & Friction.md",
-    "_31260 - Fundamentals of Interaction Design/Lecture 6 - Designing Interactions Input-Output Technologies.md",
     "_31260 - Fundamentals of Interaction Design/Lecture 8 - Immersion, Engagement & Usability Evaluation.md",
     "_31260 - Fundamentals of Interaction Design/Lecture 7 - Scenarios, Storyboards & Prototypes.md",
     "_31268 - Web Systems/Lecture 10 - Networking.md",
@@ -201,7 +204,6 @@
     "_33130 - Mathematics 1/Lecture 8 - Complex Numbers.md",
     "_33130 - Mathematics 1/Lecture 4 - Functions, Differentiation & Hyperbolic Functions.md",
     "_41025 - Introduction to Software Development/Lecture 7 - Controller of MVC.md",
-    "_41025 - Introduction to Software Development/Lecture 8 - Frontend-Backend Integration.md",
     "_33130 - Mathematics 1/Lecture 5 - Inverse Functions, Logarithms & Inverse Trig Hyperbolic Functions.md",
     "_33130 - Mathematics 1/Lecture 6 - Integration.md",
     "_31268 - Web Systems/Lecture 7 - Security.md",
@@ -211,8 +213,6 @@
     "_41025 - Introduction to Software Development/Lecture 0 - Agile, Requirements & Planning, Setups.md",
     "_41025 - Introduction to Software Development/Lecture 6 - Connecting Backend to the Database.md",
     "_41025 - Introduction to Software Development/Lecture 5 - Database Design & Implementation.md",
-    "_41025 - Introduction to Software Development/Lecture 4 - Flask Backend & Unit Testing.md",
-    "_33130 - Mathematics 1/Lecture 3 - Matrices.md",
     "desktop.ini",
     "Images/Pasted image 20260324102107.png",
     "_31260 - Fundamentals of Interaction Design",
