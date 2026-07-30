@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "6e73bea6ab740a2b",
+        "id": "0ab1cb63fa415af4",
         "type": "tabs",
         "children": [
           {
-            "id": "626b4c54c6d62428",
+            "id": "9e9ef00bc06f6e04",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_33130 - Mathematics 1/Mathematics 1 - Final Notes.md",
+                "file": "_41052 - Advanced Algorithms/Lecture 1 - Dynamic Programming.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Mathematics 1 - Final Notes"
+              "title": "Lecture 1 - Dynamic Programming"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_33130 - Mathematics 1/Mathematics 1 - Final Notes.md",
+                "file": "_41052 - Advanced Algorithms/Lecture 1 - Dynamic Programming.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Mathematics 1 - Final Notes"
+              "title": "Outline of Lecture 1 - Dynamic Programming"
             }
           },
           {
@@ -163,7 +163,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -185,54 +185,54 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "8a15118431b1f841",
+  "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "_41025 - Introduction to Software Development/Lecture 10 - React Frontend.md",
-    "_33130 - Mathematics 1/Mathematics 1 - Final Notes.md",
-    "_41025 - Introduction to Software Development/Lecture 9 - Extending Software Features.md",
-    "_41025 - Introduction to Software Development/Lecture 8 - Frontend-Backend Integration.md",
-    "_31260 - Fundamentals of Interaction Design/Lecture 6 - Designing Interactions Input-Output Technologies.md",
-    "_31260 - Fundamentals of Interaction Design/Lecture 10 -  Digital Prototyping and Future Pathways.md",
-    "_31260 - Fundamentals of Interaction Design/Lecture 9 -  Overload, Mystery & Friction.md",
-    "_31260 - Fundamentals of Interaction Design/Lecture 8 - Immersion, Engagement & Usability Evaluation.md",
-    "_31260 - Fundamentals of Interaction Design/Lecture 7 - Scenarios, Storyboards & Prototypes.md",
-    "_31268 - Web Systems/Lecture 10 - Networking.md",
-    "_31268 - Web Systems/Lecture 9 - Computer Science II.md",
-    "_33130 - Mathematics 1/Lecture 9 - Second Order Differential Equations.md",
-    "_31268 - Web Systems/Lecture 8 - Computer Science I.md",
-    "_33130 - Mathematics 1/Lecture 9 - First Order Differential Equations.md",
-    "_33130 - Mathematics 1/Lecture 7 - Methods of Integration.md",
-    "_33130 - Mathematics 1/Lecture 8 - Complex Numbers.md",
-    "_33130 - Mathematics 1/Lecture 4 - Functions, Differentiation & Hyperbolic Functions.md",
-    "_41025 - Introduction to Software Development/Lecture 7 - Controller of MVC.md",
-    "_33130 - Mathematics 1/Lecture 5 - Inverse Functions, Logarithms & Inverse Trig Hyperbolic Functions.md",
-    "_33130 - Mathematics 1/Lecture 6 - Integration.md",
-    "_31268 - Web Systems/Lecture 7 - Security.md",
-    "_33130 - Mathematics 1/Lecture 1 - Introduction to Vectors and 3D Space.md",
-    "_31268 - Web Systems/Lecture 6 - Operating Systems III.md",
-    "_31268 - Web Systems/Lecture 1 - Introduction to Web Systems.md",
-    "_41025 - Introduction to Software Development/Lecture 0 - Agile, Requirements & Planning, Setups.md",
-    "_41025 - Introduction to Software Development/Lecture 6 - Connecting Backend to the Database.md",
+    "University/University of Technology Sydney/Autumn 2026/_31260 - Fundamentals of Interaction Design/Lecture 1 - Introduction and Design Principles.md",
+    "_41052 - Advanced Algorithms/Lecture 1 - Dynamic Programming.md",
+    "README.md",
+    "To Do List.md",
+    "University/University of Technology Sydney/Autumn 2026/_41025 - Introduction to Software Development/Final Presentation Notes.md",
+    "_48433 - Software Architecture",
     "desktop.ini",
+    "_41052 - Advanced Algorithms",
+    "University/University of Technology Sydney/Autumn 2026",
+    "University/University of Technology Sydney",
+    "Images/Pasted image 20260514125622.png",
+    "Images/Pasted image 20260514125601.png",
+    "Images/Pasted image 20260514125536.png",
+    "Images/Pasted image 20260514125522.png",
+    "Images/Pasted image 20260514125458.png",
+    "Images/Pasted image 20260514125437.png",
+    "University/University of Technology Sydney/Autumn 2026/_31268 - Web Systems/Lecture 7 - Security.md",
+    "University/Western Sydney University/Spring 2025/_INFO3006 Information Security/Lecture 8 - Public Key Algorithms.md",
+    "University/University of Technology Sydney/Autumn 2026/_31268 - Web Systems/Lecture 8 - Computer Science I.md",
+    "University/University of Technology Sydney/Autumn 2026/_31268 - Web Systems/Lecture 10 - Networking.md",
+    "University/University of Technology Sydney/Autumn 2026/_31268 - Web Systems/Lecture 9 - Computer Science II.md",
+    "University/University of Technology Sydney/Autumn 2026/_33130 - Mathematics 1/Mathematics 1 - Final Notes.md",
+    "University/University of Technology Sydney/Autumn 2026/_41025 - Introduction to Software Development/Lecture 10 - React Frontend.md",
+    "University/University of Technology Sydney/Autumn 2026/_41025 - Introduction to Software Development/Lecture 9 - Extending Software Features.md",
+    "University/University of Technology Sydney/Autumn 2026/_41025 - Introduction to Software Development/Lecture 8 - Frontend-Backend Integration.md",
+    "University/University of Technology Sydney/Autumn 2026/_31260 - Fundamentals of Interaction Design/Lecture 6 - Designing Interactions Input-Output Technologies.md",
+    "University/University of Technology Sydney/Autumn 2026/_31260 - Fundamentals of Interaction Design/Lecture 10 -  Digital Prototyping and Future Pathways.md",
+    "University/University of Technology Sydney/Autumn 2026/_31260 - Fundamentals of Interaction Design/Lecture 9 -  Overload, Mystery & Friction.md",
+    "University/University of Technology Sydney/Autumn 2026/_31260 - Fundamentals of Interaction Design/Lecture 8 - Immersion, Engagement & Usability Evaluation.md",
+    "University/University of Technology Sydney/Autumn 2026/_31260 - Fundamentals of Interaction Design/Lecture 7 - Scenarios, Storyboards & Prototypes.md",
+    "University/University of Technology Sydney/Autumn 2026/_33130 - Mathematics 1/Lecture 9 - Second Order Differential Equations.md",
+    "University/University of Technology Sydney/Autumn 2026/_33130 - Mathematics 1/Lecture 9 - First Order Differential Equations.md",
+    "University/University of Technology Sydney/Autumn 2026/_33130 - Mathematics 1/Lecture 7 - Methods of Integration.md",
+    "University/University of Technology Sydney/Autumn 2026/_33130 - Mathematics 1/Lecture 8 - Complex Numbers.md",
+    "University/University of Technology Sydney/Autumn 2026/_33130 - Mathematics 1/Lecture 4 - Functions, Differentiation & Hyperbolic Functions.md",
+    "University/University of Technology Sydney/Autumn 2026/_41025 - Introduction to Software Development/Lecture 7 - Controller of MVC.md",
+    "University/University of Technology Sydney/Autumn 2026/_33130 - Mathematics 1/Lecture 5 - Inverse Functions, Logarithms & Inverse Trig Hyperbolic Functions.md",
     "Images/Pasted image 20260324102107.png",
-    "_31260 - Fundamentals of Interaction Design",
-    "_41025 - Introduction to Software Development",
-    "_33130 - Mathematics 1",
+    "University/University of Technology Sydney/Autumn 2026/_31260 - Fundamentals of Interaction Design",
+    "University/University of Technology Sydney/Autumn 2026/_41025 - Introduction to Software Development",
+    "University/University of Technology Sydney/Autumn 2026/_33130 - Mathematics 1",
     "_33116 - Design, Data, and Decisions",
-    "_31268 - Web Systems",
-    "University/Western Sydney University",
-    "University/Western Sydney University/Spring 2025/_COMP2004 Computer Networking/COMP2004 - Commands.pdf",
-    "_INFS 3003 Artificial Intelligence/Untitled.base",
-    "University/Western Sydney University/Spring 2025/_COMP2004 Computer Networking/COMP2004 - Computer Networking.pdf",
+    "University/University of Technology Sydney/Autumn 2026/_31268 - Web Systems",
     "Images/Pasted image 20250814125723.png",
     "Images/Pasted image 20250521031709.png",
     "Images/Pasted image 20250521031700.png",
-    "Images/Pasted image 20250521025029.png",
-    "Images/Pasted image 20250409155033.png",
-    "Images/Pasted image 20250409155017.png",
-    "Images/Pasted image 20250409155005.png",
-    "Images/Pasted image 20250320105548.png",
-    "Images/Pasted image 20250320133522.png",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
