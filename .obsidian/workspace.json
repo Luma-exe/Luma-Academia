@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_41052 - Advanced Algorithms/Lecture 1 - Dynamic Programming.md",
+                "file": "_41080 - Theory of Computing Science/Lecture 1 - Introduction to Turing Machines.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 1 - Dynamic Programming"
+              "title": "Lecture 1 - Introduction to Turing Machines"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_41052 - Advanced Algorithms/Lecture 1 - Dynamic Programming.md",
+                "file": "_41080 - Theory of Computing Science/Lecture 1 - Introduction to Turing Machines.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 1 - Dynamic Programming"
+              "title": "Outline of Lecture 1 - Introduction to Turing Machines"
             }
           },
           {
@@ -163,7 +163,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -185,15 +185,19 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "8a15118431b1f841",
+  "active": "dcc2ae5fbf1d3362",
   "lastOpenFiles": [
-    "University/University of Technology Sydney/Autumn 2026/_31260 - Fundamentals of Interaction Design/Lecture 1 - Introduction and Design Principles.md",
+    "_41052 - Advanced Algorithms/Lecture 2 - 2D Dynamic Programming.md",
+    "_41080 - Theory of Computing Science/Lecture 1 - Introduction to Turing Machines.md",
     "_41052 - Advanced Algorithms/Lecture 1 - Dynamic Programming.md",
+    "_41080 - Theory of Computing Science",
+    "_48433 - Software Architecture/Lecture 1 -.md",
+    "desktop.ini",
+    "University/University of Technology Sydney/Autumn 2026/_31260 - Fundamentals of Interaction Design/Lecture 1 - Introduction and Design Principles.md",
     "README.md",
     "To Do List.md",
     "University/University of Technology Sydney/Autumn 2026/_41025 - Introduction to Software Development/Final Presentation Notes.md",
     "_48433 - Software Architecture",
-    "desktop.ini",
     "_41052 - Advanced Algorithms",
     "University/University of Technology Sydney/Autumn 2026",
     "University/University of Technology Sydney",
@@ -221,15 +225,11 @@
     "University/University of Technology Sydney/Autumn 2026/_33130 - Mathematics 1/Lecture 9 - First Order Differential Equations.md",
     "University/University of Technology Sydney/Autumn 2026/_33130 - Mathematics 1/Lecture 7 - Methods of Integration.md",
     "University/University of Technology Sydney/Autumn 2026/_33130 - Mathematics 1/Lecture 8 - Complex Numbers.md",
-    "University/University of Technology Sydney/Autumn 2026/_33130 - Mathematics 1/Lecture 4 - Functions, Differentiation & Hyperbolic Functions.md",
-    "University/University of Technology Sydney/Autumn 2026/_41025 - Introduction to Software Development/Lecture 7 - Controller of MVC.md",
-    "University/University of Technology Sydney/Autumn 2026/_33130 - Mathematics 1/Lecture 5 - Inverse Functions, Logarithms & Inverse Trig Hyperbolic Functions.md",
     "Images/Pasted image 20260324102107.png",
     "University/University of Technology Sydney/Autumn 2026/_31260 - Fundamentals of Interaction Design",
     "University/University of Technology Sydney/Autumn 2026/_41025 - Introduction to Software Development",
     "University/University of Technology Sydney/Autumn 2026/_33130 - Mathematics 1",
     "_33116 - Design, Data, and Decisions",
-    "University/University of Technology Sydney/Autumn 2026/_31268 - Web Systems",
     "Images/Pasted image 20250814125723.png",
     "Images/Pasted image 20250521031709.png",
     "Images/Pasted image 20250521031700.png",

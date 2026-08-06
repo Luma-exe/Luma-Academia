@@ -1,7 +1,7 @@
 > [!faq] About this Lecture 
 > Class: 41052
 > Subject: #advancedAlgorithms
-> Date: 21/02/2025 
+> Date: 21/07/2025 
 > Topics: #coding #coding/language/cpp #dataStructuresAndAlgorthims 
 
 Course: Advanced Algorithms Topics covered: Longest Path in a DAG, Bellman–Ford, Maximum Subarray Sum, Longest Increasing Subsequence, Coin Change
